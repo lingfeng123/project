@@ -34,4 +34,4 @@ is_show          是否匿名
 member_id          拼吧发起人ID
 total_star         总星数
 total_time         总评价次数
-average_star       平均次数
+average_star       平均次数么么么么

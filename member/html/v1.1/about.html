@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta content="maximum-dpr=2" name="flexible" />
+    <meta content="modeName=750-12" name="grid" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="js/lib/flexible_css.debug.js"></script>
+    <script src="js/lib/flexible.debug.js"></script>
+    <script src="js/lib/makegrid.debug.js"></script>
+    <title>关于空瓶子</title>
+    <style type="text/css">
+        body,html{width:100%;height:100%;color:#fff}
+        .grid-wrap{background:#292627;color:#7b7b7b;min-height:100%}
+        .body{width:100%;min-height:100%}
+        .img,.img img,.message{width:100%}
+        .message{padding:.533333rem 0}
+        .text-p{line-height:.6rem}
+        [data-dpr="1"] .text-p{font-size:13px}
+        [data-dpr="2"] .text-p{font-size:26px}
+        [data-dpr="3"] .text-p{font-size:39px}
+        .text-bold{font-weight:700}
+        .text-title{margin:.2rem 0}
+        .text-fff{color:#fff}
+        .top_wrap{display:flex;flex-direction:column;align-items:center;padding-top:24px;padding-bottom:15px}
+        .title{margin-top:5px;font-size:18px;color:#fff}
+        .describe_wrap{padding:0 12px 15px}
+        .describe_text{line-height:19px;color:#8f949a;font-size:14px}
+        .common_wrap{height:44px;padding:0 12px 0;display:flex;justify-content:space-between;align-items:center;font-size:14px;color:#fff;background-color:#322d2e}
+        .bb{border-bottom:1px solid #4a4849}
+        .bar_arrow{width:8px;vertical-align:middle;padding:0 4px}
+        .phone{color:#fff;text-decoration:none}
+        .phone:hover{text-decoration:none}
+
+    </style>
+</head>
+<body>
+<div class="grid-wrap">
+</div>
+<script type="text/template" id="grid-html">
+    <div class="body">
+        <div class="message">
+            <div class="top_wrap">
+                <image src="image/logo@2x.png" alt="" class="logo_img"></image>
+                <text class="title">空瓶子</text>
+                <text class="version fs24 co7b7b7b"> </text>
+            </div>
+            <div class="describe_wrap">
+                <text class="describe_text">空瓶子是一个集酒吧预定、移动单点、社交娱乐为一体的互联网服务平台，是既专业又好玩的夜猫集聚地。在越来越便捷高效的互联网时代，空瓶子应运而生，为都市娱乐提供一站式服务，满足您对都市娱乐的一切愿景！</text>
+            </div>
+
+            <div class="common_wrap bb bgc">
+                <text class="fs30">客户电话</text>
+                <div class="right" bindtap="call">
+                    <a href="tel:400-1608-198" class="phone" >400-1608-198</a>
+                    <image src="image/bar_arrow@2x.png"  class="bar_arrow posi_img"></image>
+                </div>
+            </div>
+
+            <div class="common_wrap bb bgc">
+                <text class="fs30">官方微博</text>
+                <text class="fs28">@空瓶子官方微博</text>
+            </div>
+
+            <div class="common_wrap bb bgc">
+                <text class="fs30">合作邮箱</text>
+                <text class="fs28">kf@sc-csj.com</text>
+            </div>
+
+            <div class="common_wrap bgc">
+                <text class="fs30">官方网址</text>
+                <text class="fs28">www.kongpingzi.net</text>
+            </div>
+        </div>
+    </div>
+</script>
+<script src="js/lib/jquery.min.js"></script>
+<script>
+    function fillHtml() {
+        var html = document.querySelector('#grid-html').innerHTML;
+        var wrap = document.querySelector('.grid-wrap');
+        wrap.innerHTML = html;
+        var params = lib.flexible.gridParams;
+
+        for (var i = 1; i <= params.columnCount; i++) {
+            (function(j) {
+                Array.prototype.slice.call(wrap.querySelectorAll('.grid .col-' + j)).forEach(function(el) {
+                    var info = el.querySelector('.info');
+                    var a = el.querySelector('.a');
+                    if (info) {
+                        info.innerHTML = 'c' + j;
+                    }
+                    if (a) {
+                        a.innerHTML = (params.columnXUnit * j + params.gutterXUnit * (j - 1)) + 'a';
+                    }
+                });
+            })(i);
+        }
+    }
+
+    fillHtml();
+</script>
+</body>
+</html>
+

@@ -1,0 +1,165 @@
+[ 2018-05-08T10:15:17+08:00 ] 127.0.0.1 /v1.1/bar/barInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `api_bar` WHERE `id` = 43 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT api_bar.*,api_merchant.title,api_merchant.address,api_merchant.begin_time,api_merchant.end_time,api_member.nickname,api_member.sex,api_member.is_auth,api_member.avatar,api_member.signature,api_comment_barstar.average_star,(api_bar.woman_number+api_bar.man_number) as total_number,api_bar_member.pay_status,api_bar_member.pay_type,api_bar_member.id as order_id,api_bar_member.pay_no as order_no,api_bar_member.created_time as pay_time,api_bar_member.is_evaluate FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id = api_bar.id AND api_bar_member.member_id = 25 left join api_comment_barstar ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.id = '43' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT `order_id` FROM `api_bar_order` WHERE `bar_id` = 43 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT `employee_id`,`employee_realname`,`employee_avatar`,`employee_tel` FROM `api_order` WHERE `id` = 47 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT `seat_number`,`goods_seat_id`,`max_people`,`floor_price`,`set_price`,`total_people` FROM `api_order_seat` WHERE `order_id` = 47 LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-05-08T10:17:42+08:00 ] 127.0.0.1 /v1.1/order/check_buy_auth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0410s ]
+SQL: SELECT `begin_time`,`end_time`,`open_buy` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-05-08T10:20:25+08:00 ] 127.0.0.1 /v1.1/order/check_buy_auth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `begin_time`,`end_time`,`open_buy` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-05-08T10:38:33+08:00 ] 127.0.0.1 /v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_member_blacklist` [ RunTime:0.0400s ]
+SQL: SELECT `black_member_id` FROM `api_member_blacklist` WHERE `member_id` = 6  [ RunTime:0.0390s ]
+SQL: SELECT round(2 * 6378.137* ASIN(SQRT(POW(SIN(PI()*(0-c.lat)/360),2)+COS(PI()*0/180)* COS(c.lat * PI()/180)*POW(SIN(PI()*(0-c.lng)/360),2))),1) as juli,a.*,b.nickname,b.avatar,b.sex,b.age,b.is_auth,c.title,c.begin_time,d.average_star,(select count(*) from api_bar_member where bar_id=a.id and pay_status in (1,2)) as count,(a.woman_number + a.man_number) as total_number,((a.woman_number + a.man_number)-(select count(*) from api_bar_member where bar_id=a.id and pay_status <> 0)) as rest_number FROM api_bar a left join api_member b ON b.id=a.member_id left join api_merchant c ON c.id=a.merchant_id left join api_comment_barstar d ON d.member_id = a.member_id  WHERE a.bar_status = 1 ORDER BY juli asc , id desc LIMIT 0,20   [ RunTime:0.0420s ]
+SQL: SELECT `pay_status`,`id` FROM `api_bar_member` WHERE `bar_id` = 44 AND `member_id` = 6 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-08T10:39:38+08:00 ] 127.0.0.1 /v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `black_member_id` FROM `api_member_blacklist` WHERE `member_id` = 31  [ RunTime:0.0370s ]
+SQL: SELECT round(2 * 6378.137* ASIN(SQRT(POW(SIN(PI()*(0-c.lat)/360),2)+COS(PI()*0/180)* COS(c.lat * PI()/180)*POW(SIN(PI()*(0-c.lng)/360),2))),1) as juli,a.*,b.nickname,b.avatar,b.sex,b.age,b.is_auth,c.title,c.begin_time,d.average_star,(select count(*) from api_bar_member where bar_id=a.id and pay_status in (1,2)) as count,(a.woman_number + a.man_number) as total_number,((a.woman_number + a.man_number)-(select count(*) from api_bar_member where bar_id=a.id and pay_status <> 0)) as rest_number FROM api_bar a left join api_member b ON b.id=a.member_id left join api_merchant c ON c.id=a.merchant_id left join api_comment_barstar d ON d.member_id = a.member_id  WHERE a.bar_status = 1 ORDER BY juli asc , id desc LIMIT 0,20   [ RunTime:0.0390s ]
+SQL: SELECT `pay_status`,`id` FROM `api_bar_member` WHERE `bar_id` = 44 AND `member_id` = 31 LIMIT 1   [ RunTime:0.0370s ]
+
+[ 2018-05-08T10:43:00+08:00 ] 127.0.0.1 /v1.1/bar/barInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `api_bar` WHERE `id` = 43 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT api_bar.*,api_merchant.title,api_merchant.address,api_merchant.begin_time,api_merchant.end_time,api_member.nickname,api_member.sex,api_member.is_auth,api_member.avatar,api_member.signature,api_comment_barstar.average_star,(api_bar.woman_number+api_bar.man_number) as total_number,api_bar_member.pay_status,api_bar_member.pay_type,api_bar_member.id as order_id,api_bar_member.pay_no as order_no,api_bar_member.created_time as pay_time,api_bar_member.is_evaluate FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id = api_bar.id AND api_bar_member.member_id = 25 left join api_comment_barstar ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.id = '43' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT `order_id` FROM `api_bar_order` WHERE `bar_id` = 43 LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT `employee_id`,`employee_realname`,`employee_avatar`,`employee_tel` FROM `api_order` WHERE `id` = 47 LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT `seat_number`,`goods_seat_id`,`max_people`,`floor_price`,`set_price`,`total_people` FROM `api_order_seat` WHERE `order_id` = 47 LIMIT 1   [ RunTime:0.0370s ]
+
+[ 2018-05-08T10:44:36+08:00 ] 127.0.0.1 /v1.1/bar/barInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `api_bar` WHERE `id` = 43 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT api_bar.*,api_merchant.title,api_merchant.address,api_merchant.begin_time,api_merchant.end_time,api_member.nickname,api_member.sex,api_member.is_auth,api_member.avatar,api_member.signature,api_comment_barstar.average_star,(api_bar.woman_number+api_bar.man_number) as total_number,api_bar_member.pay_status,api_bar_member.pay_type,api_bar_member.id as order_id,api_bar_member.pay_no as order_no,api_bar_member.created_time as pay_time,api_bar_member.is_evaluate FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id = api_bar.id AND api_bar_member.member_id = 25 left join api_comment_barstar ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.id = '43' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT `order_id` FROM `api_bar_order` WHERE `bar_id` = 43 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT `employee_id`,`employee_realname`,`employee_avatar`,`employee_tel` FROM `api_order` WHERE `id` = 47 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT `seat_number`,`goods_seat_id`,`max_people`,`floor_price`,`set_price`,`total_people` FROM `api_order_seat` WHERE `order_id` = 47 LIMIT 1   [ RunTime:0.0370s ]
+
+[ 2018-05-08T10:44:47+08:00 ] 127.0.0.1 /v1.1/bar/barInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `api_bar` WHERE `id` = 43 LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT api_bar.*,api_merchant.title,api_merchant.address,api_merchant.begin_time,api_merchant.end_time,api_member.nickname,api_member.sex,api_member.is_auth,api_member.avatar,api_member.signature,api_comment_barstar.average_star,(api_bar.woman_number+api_bar.man_number) as total_number,api_bar_member.pay_status,api_bar_member.pay_type,api_bar_member.id as order_id,api_bar_member.pay_no as order_no,api_bar_member.created_time as pay_time,api_bar_member.is_evaluate FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id = api_bar.id AND api_bar_member.member_id = 6 left join api_comment_barstar ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.id = '43' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT `order_id` FROM `api_bar_order` WHERE `bar_id` = 43 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT `employee_id`,`employee_realname`,`employee_avatar`,`employee_tel` FROM `api_order` WHERE `id` = 47 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT `seat_number`,`goods_seat_id`,`max_people`,`floor_price`,`set_price`,`total_people` FROM `api_order_seat` WHERE `order_id` = 47 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-08T10:44:58+08:00 ] 127.0.0.1 /v1.1/bar/barInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `api_bar` WHERE `id` = 20 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT api_bar.*,api_merchant.title,api_merchant.address,api_merchant.begin_time,api_merchant.end_time,api_member.nickname,api_member.sex,api_member.is_auth,api_member.avatar,api_member.signature,api_comment_barstar.average_star,(api_bar.woman_number+api_bar.man_number) as total_number,api_bar_member.pay_status,api_bar_member.pay_type,api_bar_member.id as order_id,api_bar_member.pay_no as order_no,api_bar_member.created_time as pay_time,api_bar_member.is_evaluate FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id = api_bar.id AND api_bar_member.member_id = 6 left join api_comment_barstar ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.id = '20' LIMIT 1   [ RunTime:0.0410s ]
+
+[ 2018-05-08T10:48:08+08:00 ] 127.0.0.1 /v1.1/bar/barInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `api_bar` WHERE `id` = 45 LIMIT 1   [ RunTime:0.0360s ]
+
+[ 2018-05-08T10:48:13+08:00 ] 127.0.0.1 /v1.1/bar/barInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `api_bar` WHERE `id` = 43 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT api_bar.*,api_merchant.title,api_merchant.address,api_merchant.begin_time,api_merchant.end_time,api_member.nickname,api_member.sex,api_member.is_auth,api_member.avatar,api_member.signature,api_comment_barstar.average_star,(api_bar.woman_number+api_bar.man_number) as total_number,api_bar_member.pay_status,api_bar_member.pay_type,api_bar_member.id as order_id,api_bar_member.pay_no as order_no,api_bar_member.created_time as pay_time,api_bar_member.is_evaluate FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id = api_bar.id AND api_bar_member.member_id = 6 left join api_comment_barstar ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.id = '43' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT `order_id` FROM `api_bar_order` WHERE `bar_id` = 43 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT `employee_id`,`employee_realname`,`employee_avatar`,`employee_tel` FROM `api_order` WHERE `id` = 47 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT `seat_number`,`goods_seat_id`,`max_people`,`floor_price`,`set_price`,`total_people` FROM `api_order_seat` WHERE `order_id` = 47 LIMIT 1   [ RunTime:0.0380s ]
+
+[ 2018-05-08T11:11:37+08:00 ] 127.0.0.1 /v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `black_member_id` FROM `api_member_blacklist` WHERE `member_id` = 6  [ RunTime:0.0410s ]
+SQL: SELECT round(2 * 6378.137* ASIN(SQRT(POW(SIN(PI()*(0-c.lat)/360),2)+COS(PI()*0/180)* COS(c.lat * PI()/180)*POW(SIN(PI()*(0-c.lng)/360),2))),1) as juli,a.*,b.nickname,b.avatar,b.sex,b.age,b.is_auth,c.title,c.begin_time,d.average_star,(select count(*) from api_bar_member where bar_id=a.id and pay_status in (1,2)) as count,(a.woman_number + a.man_number) as total_number,((a.woman_number + a.man_number)-(select count(*) from api_bar_member where bar_id=a.id and pay_status <> 0)) as rest_number FROM api_bar a left join api_member b ON b.id=a.member_id left join api_merchant c ON c.id=a.merchant_id left join api_comment_barstar d ON d.member_id = a.member_id  WHERE a.bar_status = 1 ORDER BY juli asc , id desc LIMIT 0,20   [ RunTime:0.0430s ]
+SQL: SELECT `pay_status`,`id` FROM `api_bar_member` WHERE `bar_id` = 46 AND `member_id` = 6 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT `pay_status`,`id` FROM `api_bar_member` WHERE `bar_id` = 45 AND `member_id` = 6 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT `pay_status`,`id` FROM `api_bar_member` WHERE `bar_id` = 44 AND `member_id` = 6 LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-05-08T17:47:41+08:00 ] 127.0.0.1 /v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `black_member_id` FROM `api_member_blacklist` WHERE `member_id` = 6  [ RunTime:0.0400s ]
+SQL: SELECT round(2 * 6378.137* ASIN(SQRT(POW(SIN(PI()*(0-c.lat)/360),2)+COS(PI()*0/180)* COS(c.lat * PI()/180)*POW(SIN(PI()*(0-c.lng)/360),2))),1) as juli,a.*,b.nickname,b.avatar,b.sex,b.age,b.is_auth,c.title,c.begin_time,d.average_star,(select count(*) from api_bar_member where bar_id=a.id and pay_status in (1,2)) as count,(a.woman_number + a.man_number) as total_number,((a.woman_number + a.man_number)-(select count(*) from api_bar_member where bar_id=a.id and pay_status <> 0)) as rest_number FROM api_bar a left join api_member b ON b.id=a.member_id left join api_merchant c ON c.id=a.merchant_id left join api_comment_barstar d ON d.member_id = a.member_id  WHERE a.bar_status = 1 ORDER BY juli asc , id desc LIMIT 0,20   [ RunTime:0.0420s ]
+SQL: SELECT `pay_status`,`id` FROM `api_bar_member` WHERE `bar_id` = 51 AND `member_id` = 6 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT `pay_status`,`id` FROM `api_bar_member` WHERE `bar_id` = 50 AND `member_id` = 6 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT `pay_status`,`id` FROM `api_bar_member` WHERE `bar_id` = 44 AND `member_id` = 6 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-08T17:53:58+08:00 ] 127.0.0.1 /v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `black_member_id` FROM `api_member_blacklist` WHERE `member_id` = 6  [ RunTime:0.0360s ]
+SQL: SELECT round(2 * 6378.137* ASIN(SQRT(POW(SIN(PI()*(0-c.lat)/360),2)+COS(PI()*0/180)* COS(c.lat * PI()/180)*POW(SIN(PI()*(0-c.lng)/360),2))),1) as juli,a.*,b.nickname,b.avatar,b.sex,b.age,b.is_auth,c.title,c.begin_time,d.average_star,(select count(*) from api_bar_member where bar_id=a.id and pay_status in (1,2)) as count,(a.woman_number + a.man_number) as total_number,((a.woman_number + a.man_number)-(select count(*) from api_bar_member where bar_id=a.id and pay_status <> 0)) as rest_number FROM api_bar a left join api_member b ON b.id=a.member_id left join api_merchant c ON c.id=a.merchant_id left join api_comment_barstar d ON d.member_id = a.member_id  WHERE a.bar_status = 1 ORDER BY juli asc , id desc LIMIT 0,20   [ RunTime:0.0410s ]
+SQL: SELECT `pay_status`,`id` FROM `api_bar_member` WHERE `bar_id` = 51 AND `member_id` = 6 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT `pay_status`,`id` FROM `api_bar_member` WHERE `bar_id` = 50 AND `member_id` = 6 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT `pay_status`,`id` FROM `api_bar_member` WHERE `bar_id` = 44 AND `member_id` = 6 LIMIT 1   [ RunTime:0.0380s ]
+

@@ -1,0 +1,164 @@
+<extend name="Public/common"/>
+<block name="main">
+
+    <hr />
+    <h4 class="h2">订单信息</h4>
+    <hr />
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">订单ID</div>
+        <div class="layui-col-xs9">{$detail.id}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">订单编号</div>
+        <div class="layui-col-xs9">{$detail.order_no}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">酒吧名称</div>
+        <div class="layui-col-xs9">{$detail.merchant_title}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">用户昵称</div>
+        <div class="layui-col-xs9">{$detail.nickname}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">联系人姓名</div>
+        <div class="layui-col-xs9">{$detail.contacts_realname}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">联系人电话</div>
+        <div class="layui-col-xs9">{$detail.contacts_tel}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">联系人性别</div>
+        <div class="layui-col-xs9">{$sex[$detail['contacts_sex']]}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">订单总价</div>
+        <div class="layui-col-xs9">{$detail['total_price']}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">实付金额</div>
+        <div class="layui-col-xs9">{$detail['pay_price']}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">结算价格</div>
+        <div class="layui-col-xs9">{$detail['purchase_price']}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">优惠金额</div>
+        <div class="layui-col-xs9">{$detail['discount_money']}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">订单状态</div>
+        <div class="layui-col-xs9">{$order_status[$detail['status']]}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">结算状态</div>
+        <div class="layui-col-xs9">{$settlement_status[$detail['settlement_status']]}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">订单类型</div>
+        <div class="layui-col-xs9">{$order_type[$detail['order_type']]}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">支付方式</div>
+        <div class="layui-col-xs9">{$payment[$detail['payment']]}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">订单描述</div>
+        <div class="layui-col-xs9">{$detail['description']}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">到店日期</div>
+        <div class="layui-col-xs9">{$detail['arrives_time']}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">延期时间</div>
+        <div class="layui-col-xs9">{$detail['incr_time']}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">订单创建时间</div>
+        <div class="layui-col-xs9">{$detail['created_time']}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">员工姓名</div>
+        <div class="layui-col-xs9">{$detail['employee_realname']}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">员工头像</div>
+        <div class="layui-col-xs9"><if condition="$detail['employee_avatar']"><img src="{$attachment_url}{$detail['employee_avatar']}" height="50" /></if></div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">员工电话</div>
+        <div class="layui-col-xs9">{$detail['employee_tel']}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">订单更新日期</div>
+        <div class="layui-col-xs9">{$detail['updated_time']}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">关联逾期卡套</div>
+        <div class="layui-col-xs9"><if condition="$detail['relation_order_no']">{$detail['relation_order_no']}<else />无</if></div>
+    </div>
+
+    <hr />
+    <h4 class="h2">商品信息</h4>
+    <hr />
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">卡座ID</div>
+        <div class="layui-col-xs9">{$detail['goods_seat_id']}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">卡座编号</div>
+        <div class="layui-col-xs9">{$detail['seat_number']}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">最大容纳人数</div>
+        <div class="layui-col-xs9">{$detail['max_people']}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">最低消费</div>
+        <div class="layui-col-xs9">{$detail['floor_price']}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">预定价格</div>
+        <div class="layui-col-xs9">{$detail['set_price']}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">到店人数</div>
+        <div class="layui-col-xs9">{$detail['total_people']}</div>
+    </div>
+
+</block>
+<block name="myScript">
+</block>

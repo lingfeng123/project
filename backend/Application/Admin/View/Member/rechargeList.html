@@ -1,0 +1,39 @@
+<extend name="Public/common"/>
+<block name="main">
+    <fieldset class="layui-elem-field">
+        <legend>会员充值记录</legend>
+        <div class="layui-field-box">
+            <table class="layui-table">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>名称</th>
+                    <th>订单编号</th>
+                    <th>类型</th>
+                    <th>充值金额</th>
+                    <th>充值时间</th>
+                </tr>
+                </thead>
+                <tbody>
+                <volist name="recharge_list" id="vo">
+                    <tr>
+                        <td>{$vo['id']}</td>
+                        <td>{$vo['title']}</td>
+                        <td>{$vo['order_no']}</td>
+                        <td>充值</td>
+                        <td>{$vo['change_money']}</td>
+                        <td>{$vo['trade_time']|date='Y-m-d H:i:s',###}</td>
+                    </tr>
+                </volist>
+                <tr>
+                    <td align="right" nowrap="true" colspan="11">
+                        <div class="pagination">
+                            {$pageHtml}
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </fieldset>
+</block>

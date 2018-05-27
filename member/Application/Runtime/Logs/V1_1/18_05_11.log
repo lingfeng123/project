@@ -1,0 +1,571 @@
+[ 2018-05-11T10:53:35+08:00 ] 127.0.0.1 /v1.1/order/orderDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `id`,`order_no`,`merchant_id`,`member_id`,`contacts_realname`,`contacts_tel`,`contacts_sex`,`total_price`,`pay_price`,`purchase_price`,`discount_money`,`status`,`order_type`,`payment`,`description`,`arrives_time`,`incr_time`,`employee_id`,`employee_realname`,`employee_avatar`,`employee_tel`,`cancel_reason`,`card_id`,`is_bar`,`created_time`,`obegin_time`,`oend_time`,from_unixtime(created_time) as format_time,`relation_order_no`,`relation_order_id`,is_evaluate as is_comment FROM `api_order` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT title as merchant_title,`logo`,tel as merchant_tel,`begin_time`,`end_time` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0370s ]
+SQL: SELECT `deductible` FROM `api_coupon` WHERE `id` = 14 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_order_pack` [ RunTime:0.0380s ]
+SQL: SELECT goods_pack_id as pack_id,title as pack_title,price as pack_price,image as pack_image,amount as pack_amount,`goods_type`,`market_price`,`pack_description` FROM `api_order_pack` WHERE `order_no` = '1526007053725279'  [ RunTime:0.0370s ]
+
+[ 2018-05-11T10:55:08+08:00 ] 127.0.0.1 /v1.1/order/orderDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT `id`,`order_no`,`merchant_id`,`member_id`,`contacts_realname`,`contacts_tel`,`contacts_sex`,`total_price`,`pay_price`,`purchase_price`,`discount_money`,`status`,`order_type`,`payment`,`description`,`arrives_time`,`incr_time`,`employee_id`,`employee_realname`,`employee_avatar`,`employee_tel`,`cancel_reason`,`card_id`,`is_bar`,`created_time`,`obegin_time`,`oend_time`,from_unixtime(created_time) as format_time,`relation_order_no`,`relation_order_id`,is_evaluate as is_comment FROM `api_order` WHERE `id` = 8 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT title as merchant_title,`logo`,tel as merchant_tel,`begin_time`,`end_time` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT `deductible` FROM `api_coupon` WHERE `id` = 14 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT goods_pack_id as pack_id,title as pack_title,price as pack_price,image as pack_image,amount as pack_amount,`goods_type`,`market_price`,`pack_description` FROM `api_order_pack` WHERE `order_no` = '1526007053725279'  [ RunTime:0.0380s ]
+
+[ 2018-05-11T13:46:31+08:00 ] 127.0.0.1 /v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT api_bar.*,api_member.nickname,api_member.is_auth,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.end_time,api_merchant.title,api_comment_barstar.average_star,api_bar_member.id as order_id,api_bar_member.is_evaluate,(select count(id) from api_comment_bar where bar_id = api_bar.id ) as comment_count,api_bar_member.pay_status,(select count(A.id) from api_bar as A inner join api_bar_member as B ON B.bar_id = A.id AND B.member_id =6 where A.top_bar_id = api_bar.id) winecount FROM `api_bar_member` inner join api_bar ON api_bar.id = api_bar_member.bar_id AND api_bar.member_id <>6 left join api_member ON api_member.id = api_bar.member_id left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar_member.member_id = '6' AND api_bar.is_xu = 0 AND api_bar_member.pay_status IN (1,2) ORDER BY id desc LIMIT 0,20   [ RunTime:0.0420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` inner join api_bar ON api_bar.id = api_bar_member.bar_id AND api_bar.member_id <>6 left join api_member ON api_member.id = api_bar.member_id left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar_member.member_id = '6' AND api_bar.is_xu = 0 AND api_bar_member.pay_status IN (1,2) LIMIT 1   [ RunTime:0.0410s ]
+
+[ 2018-05-11T13:47:17+08:00 ] 127.0.0.1 /v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT api_bar.*,api_member.nickname,api_member.is_auth,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.end_time,api_merchant.title,api_comment_barstar.average_star,api_bar_member.id as order_id,api_bar_member.is_evaluate,(select count(id) from api_comment_bar where bar_id = api_bar.id ) as comment_count,api_bar_member.pay_status,(select count(A.id) from api_bar as A inner join api_bar_member as B ON B.bar_id = A.id AND B.member_id =6 where A.top_bar_id = api_bar.id) winecount FROM `api_bar_member` inner join api_bar ON api_bar.id = api_bar_member.bar_id AND api_bar.member_id <>6 left join api_member ON api_member.id = api_bar.member_id left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar_member.member_id = '6' AND api_bar.is_xu = 0 AND api_bar_member.pay_status IN (1,2) ORDER BY id desc LIMIT 0,20   [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` inner join api_bar ON api_bar.id = api_bar_member.bar_id AND api_bar.member_id <>6 left join api_member ON api_member.id = api_bar.member_id left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar_member.member_id = '6' AND api_bar.is_xu = 0 AND api_bar_member.pay_status IN (1,2) LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-11T13:49:39+08:00 ] 127.0.0.1 /v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-05-11T13:50:27+08:00 ] 127.0.0.1 /v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT api_bar.*,api_member.nickname,api_member.is_auth,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.end_time,api_merchant.title,api_comment_barstar.average_star,api_bar_member.id as order_id,api_bar_member.is_evaluate,(select count(id) from api_comment_bar where bar_id = api_bar.id ) as comment_count,api_bar_member.pay_status,(select count(A.id) from api_bar as A inner join api_bar_member as B ON B.bar_id = A.id AND B.member_id =6 where A.top_bar_id = api_bar.id) winecount FROM `api_bar_member` inner join api_bar ON api_bar.id = api_bar_member.bar_id AND api_bar.member_id <>6 left join api_member ON api_member.id = api_bar.member_id left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar_member.member_id = '6' AND api_bar.is_xu = 0 AND api_bar_member.pay_status IN (1,2) ORDER BY id desc LIMIT 0,20   [ RunTime:0.0390s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` inner join api_bar ON api_bar.id = api_bar_member.bar_id AND api_bar.member_id <>6 left join api_member ON api_member.id = api_bar.member_id left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar_member.member_id = '6' AND api_bar.is_xu = 0 AND api_bar_member.pay_status IN (1,2) LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-11T13:50:50+08:00 ] 127.0.0.1 /v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT api_bar.*,api_member.nickname,api_member.is_auth,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.title,api_merchant.end_time,api_comment_barstar.average_star,api_bar_member.id as order_id,api_bar_member.pay_status,api_bar_member.is_evaluate,(select count(A.id) from api_bar as A inner join api_bar_member as B ON B.bar_id = A.id AND B.member_id =6 where A.top_bar_id = api_bar.id) winecount FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id=api_bar.id AND api_bar_member.pay_status in (1,2) AND api_bar_member.member_id=6 left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.member_id = '6' AND api_bar.is_xu = 0 ORDER BY id desc LIMIT 0,20   [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.member_id = '6' AND api_bar.is_xu = 0 LIMIT 1   [ RunTime:0.0420s ]
+
+[ 2018-05-11T13:53:36+08:00 ] 127.0.0.1 /v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT api_bar.*,api_member.nickname,api_member.is_auth,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.title,api_merchant.end_time,api_comment_barstar.average_star,api_bar_member.id as order_id,api_bar_member.pay_status,api_bar_member.is_evaluate,(select count(A.id) from api_bar as A inner join api_bar_member as B ON B.bar_id = A.id AND B.member_id =5 where A.top_bar_id = api_bar.id) winecount FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id=api_bar.id AND api_bar_member.pay_status in (1,2) AND api_bar_member.member_id=5 left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.member_id = '5' AND api_bar.is_xu = 0 ORDER BY id desc LIMIT 0,20   [ RunTime:0.0440s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.member_id = '5' AND api_bar.is_xu = 0 LIMIT 1   [ RunTime:0.0420s ]
+
+[ 2018-05-11T14:05:33+08:00 ] 127.0.0.1 /v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT api_bar.*,api_member.nickname,api_member.is_auth,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.title,api_merchant.end_time,api_comment_barstar.average_star,api_bar_member.id as order_id,api_bar_member.pay_status,(select count(A.id) from api_bar as A inner join api_bar_member as B ON B.bar_id = A.id AND B.member_id =5 where A.top_bar_id = api_bar.id) winecount FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id=api_bar.id AND api_bar_member.pay_status in (1,2) AND api_bar_member.member_id=5 left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.member_id = '5' AND api_bar.is_xu = 0 ORDER BY id desc LIMIT 0,20   [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.member_id = '5' AND api_bar.is_xu = 0 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0390s ]
+SQL: SELECT COUNT(id) AS tp_count FROM `api_comment_bar` WHERE `bar_id` = 10 LIMIT 1   [ RunTime:0.0380s ]
+
+[ 2018-05-11T15:25:18+08:00 ] 127.0.0.1 /v1.1/bar/checkBarGoodsPack
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-05-11T15:26:20+08:00 ] 127.0.0.1 /v1.1/bar/checkBarGoodsPack
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-05-11T15:26:55+08:00 ] 127.0.0.1 /v1.1/bar/checkBarGoodsPack
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-05-11T15:27:53+08:00 ] 127.0.0.1 /v1.1/bar/checkBarGoodsPack
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-05-11T15:28:01+08:00 ] 127.0.0.1 /v1.1/bar/checkBarGoodsPack
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-05-11T15:29:10+08:00 ] 127.0.0.1 /v1.1/bar/checkBarGoodsPack
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-05-11T15:29:31+08:00 ] 127.0.0.1 /v1.1/bar/checkBarGoodsPack
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-05-11T15:29:37+08:00 ] 127.0.0.1 /v1.1/bar/checkBarGoodsPack
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 1146:Table 'kpzformaldata.api_bar_id' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `api_bar_id`
+ERR: 1146:Table 'kpzformaldata.api_bar_id' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `api_bar_id`
+
+[ 2018-05-11T15:30:04+08:00 ] 127.0.0.1 /v1.1/bar/checkBarGoodsPack
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `arrives_time`,`merchant_id` FROM `api_bar` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0650s ]
+SQL: SELECT * FROM `api_goods_pack` WHERE `id` IN (9,2) AND `status` = 1  [ RunTime:0.0660s ]
+
+[ 2018-05-11T15:44:51+08:00 ] 127.0.0.1 /v1.1/bar/checkBarGoodsPack
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0710s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0720s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0720s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0710s ]
+SQL: SELECT `arrives_time`,`merchant_id` FROM `api_bar` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0710s ]
+SQL: SHOW COLUMNS FROM `api_goods_pack` [ RunTime:0.0700s ]
+SQL: SELECT * FROM `api_goods_pack` WHERE `id` IN (9) AND `status` = 1  [ RunTime:0.0700s ]
+
+[ 2018-05-11T15:45:38+08:00 ] 127.0.0.1 /v1.1/bar/checkBarGoodsPack
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0680s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0700s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0690s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0690s ]
+SQL: SELECT `arrives_time`,`merchant_id` FROM `api_bar` WHERE `id` = 5 LIMIT 1   [ RunTime:0.0690s ]
+SQL: SHOW COLUMNS FROM `api_goods_pack` [ RunTime:0.0720s ]
+SQL: SELECT * FROM `api_goods_pack` WHERE `id` IN (9) AND `status` = 1  [ RunTime:0.0680s ]
+
+[ 2018-05-11T15:48:30+08:00 ] 127.0.0.1 /v1.1/renew/orderList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0860s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `top_order_id` = 39 LIMIT 1   [ RunTime:0.0710s ]
+SQL: SELECT id as order_id,`order_no`,`total_price`,`pay_price`,`discount_money`,`status`,`order_type`,`payment`,`description`,`desk_number`,`created_time` FROM `api_order` WHERE `top_order_id` = 39 ORDER BY id desc LIMIT 20,20   [ RunTime:0.0710s ]
+SQL: SHOW COLUMNS FROM `api_order_pack` [ RunTime:0.0700s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT `order_id`,`goods_pack_id`,`title`,`amount`,`price`,`image`,`pack_description`,`market_price`,`goods_type` FROM `api_order_pack` WHERE `order_id` IN () 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT `order_id`,`goods_pack_id`,`title`,`amount`,`price`,`image`,`pack_description`,`market_price`,`goods_type` FROM `api_order_pack` WHERE `order_id` IN () 
+
+[ 2018-05-11T15:49:49+08:00 ] 127.0.0.1 /v1.1/renew/orderList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0680s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `top_order_id` = 39 LIMIT 1   [ RunTime:0.0670s ]
+SQL: SELECT id as order_id,`order_no`,`total_price`,`pay_price`,`discount_money`,`status`,`order_type`,`payment`,`description`,`desk_number`,`created_time` FROM `api_order` WHERE `top_order_id` = 39 ORDER BY id desc LIMIT 20,20   [ RunTime:0.0660s ]
+
+[ 2018-05-11T15:50:39+08:00 ] 127.0.0.1 /v1.1/renew/orderList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0670s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `top_order_id` = 39 LIMIT 1   [ RunTime:0.0650s ]
+SQL: SELECT id as order_id,`order_no`,`total_price`,`pay_price`,`discount_money`,`status`,`order_type`,`payment`,`description`,`desk_number`,`created_time` FROM `api_order` WHERE `top_order_id` = 39 ORDER BY id desc LIMIT 20,20   [ RunTime:0.0660s ]
+
+[ 2018-05-11T15:52:00+08:00 ] 127.0.0.1 /v1.1/renew/orderList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0700s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `top_order_id` = 39 LIMIT 1   [ RunTime:0.0690s ]
+SQL: SELECT id as order_id,`order_no`,`total_price`,`pay_price`,`discount_money`,`status`,`order_type`,`payment`,`description`,`desk_number`,`created_time` FROM `api_order` WHERE `top_order_id` = 39 ORDER BY id desc LIMIT 20,20   [ RunTime:0.0680s ]
+
+[ 2018-05-11T15:56:48+08:00 ] 127.0.0.1 /v1.1/renew/checkWinePackStock
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0680s ]
+SQL: SELECT `merchant_id`,`arrives_time` FROM `api_order` WHERE `id` = 39 LIMIT 1   [ RunTime:0.0650s ]
+SQL: SELECT `id` FROM `api_order` WHERE `merchant_id` = 1 AND `status` = 1 AND `top_order_id` = 39 LIMIT 1   [ RunTime:0.0660s ]
+SQL: SELECT `id` FROM `api_order` WHERE `merchant_id` = 1 AND `status` = 7 AND `top_order_id` = 39 LIMIT 1   [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0670s ]
+SQL: SELECT `begin_time`,`end_time` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0660s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Controller\RenewController.class.php 第 151 行.
+SQL: SHOW COLUMNS FROM `api_goods_pack` [ RunTime:0.0670s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') AND `status` = 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `api_goods_pack` WHERE `id` IN () AND `status` = 1 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') AND `status` = 1' at line 1
+ [ SQL语句 ] : SELECT * FROM `api_goods_pack` WHERE `id` IN () AND `status` = 1 
+
+[ 2018-05-11T15:57:27+08:00 ] 127.0.0.1 /v1.1/renew/checkWinePackStock
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0700s ]
+SQL: SELECT `merchant_id`,`arrives_time` FROM `api_order` WHERE `id` = 39 LIMIT 1   [ RunTime:0.0680s ]
+SQL: SELECT `id` FROM `api_order` WHERE `merchant_id` = 1 AND `status` = 1 AND `top_order_id` = 39 LIMIT 1   [ RunTime:0.0680s ]
+SQL: SELECT `id` FROM `api_order` WHERE `merchant_id` = 1 AND `status` = 7 AND `top_order_id` = 39 LIMIT 1   [ RunTime:0.0700s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0690s ]
+SQL: SELECT `begin_time`,`end_time` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0690s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Controller\RenewController.class.php 第 151 行.
+
+[ 2018-05-11T15:57:45+08:00 ] 127.0.0.1 /v1.1/renew/checkWinePackStock
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0740s ]
+SQL: SELECT `merchant_id`,`arrives_time` FROM `api_order` WHERE `id` = 39 LIMIT 1   [ RunTime:0.0700s ]
+SQL: SELECT `id` FROM `api_order` WHERE `merchant_id` = 1 AND `status` = 1 AND `top_order_id` = 39 LIMIT 1   [ RunTime:0.0690s ]
+SQL: SELECT `id` FROM `api_order` WHERE `merchant_id` = 1 AND `status` = 7 AND `top_order_id` = 39 LIMIT 1   [ RunTime:0.0700s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0690s ]
+SQL: SELECT `begin_time`,`end_time` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0700s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Controller\RenewController.class.php 第 151 行.
+
+[ 2018-05-11T15:58:05+08:00 ] 127.0.0.1 /v1.1/renew/checkWinePackStock
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0670s ]
+SQL: SELECT `merchant_id`,`arrives_time` FROM `api_order` WHERE `id` = 39 LIMIT 1   [ RunTime:0.0660s ]
+SQL: SELECT `id` FROM `api_order` WHERE `merchant_id` = 1 AND `status` = 1 AND `top_order_id` = 39 LIMIT 1   [ RunTime:0.0640s ]
+SQL: SELECT `id` FROM `api_order` WHERE `merchant_id` = 1 AND `status` = 7 AND `top_order_id` = 39 LIMIT 1   [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0670s ]
+SQL: SELECT `begin_time`,`end_time` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0650s ]
+
+[ 2018-05-11T15:58:21+08:00 ] 127.0.0.1 /v1.1/renew/checkWinePackStock
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0700s ]
+SQL: SELECT `merchant_id`,`arrives_time` FROM `api_order` WHERE `id` = 39 LIMIT 1   [ RunTime:0.0690s ]
+SQL: SELECT `id` FROM `api_order` WHERE `merchant_id` = 1 AND `status` = 1 AND `top_order_id` = 39 LIMIT 1   [ RunTime:0.0670s ]
+SQL: SELECT `id` FROM `api_order` WHERE `merchant_id` = 1 AND `status` = 7 AND `top_order_id` = 39 LIMIT 1   [ RunTime:0.0680s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0700s ]
+SQL: SELECT `begin_time`,`end_time` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0680s ]
+SQL: SHOW COLUMNS FROM `api_goods_pack` [ RunTime:0.0690s ]
+SQL: SELECT * FROM `api_goods_pack` WHERE `id` IN (9,2) AND `status` = 1  [ RunTime:0.0690s ]
+
+[ 2018-05-11T15:58:40+08:00 ] 127.0.0.1 /v1.1/renew/checkWinePackStock
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0660s ]
+SQL: SELECT `merchant_id`,`arrives_time` FROM `api_order` WHERE `id` = 39 LIMIT 1   [ RunTime:0.0690s ]
+SQL: SELECT `id` FROM `api_order` WHERE `merchant_id` = 1 AND `status` = 1 AND `top_order_id` = 39 LIMIT 1   [ RunTime:0.0660s ]
+SQL: SELECT `id` FROM `api_order` WHERE `merchant_id` = 1 AND `status` = 7 AND `top_order_id` = 39 LIMIT 1   [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0650s ]
+SQL: SELECT `begin_time`,`end_time` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0700s ]
+SQL: SHOW COLUMNS FROM `api_goods_pack` [ RunTime:0.0650s ]
+SQL: SELECT * FROM `api_goods_pack` WHERE `id` IN (9,2) AND `status` = 1  [ RunTime:0.0660s ]
+
+[ 2018-05-11T17:09:45+08:00 ] 127.0.0.1 /v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_member_blacklist` [ RunTime:0.0430s ]
+SQL: SELECT `black_member_id` FROM `api_member_blacklist` WHERE `member_id` = 6  [ RunTime:0.0410s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc，bar_status asc LIMIT 0,20' at line 1
+ [ SQL语句 ] : SELECT round(2 * 6378.137* ASIN(SQRT(POW(SIN(PI()*(0-c.lat)/360),2)+COS(PI()*0/180)* COS(c.lat * PI()/180)*POW(SIN(PI()*(0-c.lng)/360),2))),1) as juli,a.*,b.nickname,b.avatar,b.sex,b.age,b.is_auth,c.title,c.begin_time,d.average_star,(select count(*) from api_bar_member where bar_id=a.id and pay_status in (1,2)) as count,(a.woman_number + a.man_number) as total_number,((a.woman_number + a.man_number)-(select count(*) from api_bar_member where bar_id=a.id and pay_status <> 0)) as rest_number FROM api_bar a left join api_member b ON b.id=a.member_id left join api_merchant c ON c.id=a.merchant_id left join api_comment_barstar d ON d.member_id = a.member_id  WHERE a.bar_status IN (1,7) AND a.is_xu = 0 ORDER BY juli asc , id desc，bar_status asc LIMIT 0,20  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc，bar_status asc LIMIT 0,20' at line 1
+ [ SQL语句 ] : SELECT round(2 * 6378.137* ASIN(SQRT(POW(SIN(PI()*(0-c.lat)/360),2)+COS(PI()*0/180)* COS(c.lat * PI()/180)*POW(SIN(PI()*(0-c.lng)/360),2))),1) as juli,a.*,b.nickname,b.avatar,b.sex,b.age,b.is_auth,c.title,c.begin_time,d.average_star,(select count(*) from api_bar_member where bar_id=a.id and pay_status in (1,2)) as count,(a.woman_number + a.man_number) as total_number,((a.woman_number + a.man_number)-(select count(*) from api_bar_member where bar_id=a.id and pay_status <> 0)) as rest_number FROM api_bar a left join api_member b ON b.id=a.member_id left join api_merchant c ON c.id=a.merchant_id left join api_comment_barstar d ON d.member_id = a.member_id  WHERE a.bar_status IN (1,7) AND a.is_xu = 0 ORDER BY juli asc , id desc，bar_status asc LIMIT 0,20  
+
+[ 2018-05-11T17:10:24+08:00 ] 127.0.0.1 /v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_member_blacklist` [ RunTime:0.0380s ]
+SQL: SELECT `black_member_id` FROM `api_member_blacklist` WHERE `member_id` = 6  [ RunTime:0.0390s ]
+SQL: SELECT round(2 * 6378.137* ASIN(SQRT(POW(SIN(PI()*(0-c.lat)/360),2)+COS(PI()*0/180)* COS(c.lat * PI()/180)*POW(SIN(PI()*(0-c.lng)/360),2))),1) as juli,a.*,b.nickname,b.avatar,b.sex,b.age,b.is_auth,c.title,c.begin_time,d.average_star,(select count(*) from api_bar_member where bar_id=a.id and pay_status in (1,2)) as count,(a.woman_number + a.man_number) as total_number,((a.woman_number + a.man_number)-(select count(*) from api_bar_member where bar_id=a.id and pay_status <> 0)) as rest_number FROM api_bar a left join api_member b ON b.id=a.member_id left join api_merchant c ON c.id=a.merchant_id left join api_comment_barstar d ON d.member_id = a.member_id  WHERE a.bar_status IN (1,7) AND a.is_xu = 0 ORDER BY juli asc , id desc , bar_status asc LIMIT 0,20   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0380s ]
+SQL: SELECT `pay_status`,`id` FROM `api_bar_member` WHERE `bar_id` = 21 AND `member_id` = 6 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT `pay_status`,`id` FROM `api_bar_member` WHERE `bar_id` = 20 AND `member_id` = 6 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT `pay_status`,`id` FROM `api_bar_member` WHERE `bar_id` = 18 AND `member_id` = 6 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT `pay_status`,`id` FROM `api_bar_member` WHERE `bar_id` = 8 AND `member_id` = 6 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT `pay_status`,`id` FROM `api_bar_member` WHERE `bar_id` = 7 AND `member_id` = 6 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-11T17:10:44+08:00 ] 127.0.0.1 /v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `api_member_blacklist` [ RunTime:0.0340s ]
+SQL: SELECT `black_member_id` FROM `api_member_blacklist` WHERE `member_id` = 6  [ RunTime:0.0350s ]
+SQL: SELECT round(2 * 6378.137* ASIN(SQRT(POW(SIN(PI()*(0-c.lat)/360),2)+COS(PI()*0/180)* COS(c.lat * PI()/180)*POW(SIN(PI()*(0-c.lng)/360),2))),1) as juli,a.*,b.nickname,b.avatar,b.sex,b.age,b.is_auth,c.title,c.begin_time,d.average_star,(select count(*) from api_bar_member where bar_id=a.id and pay_status in (1,2)) as count,(a.woman_number + a.man_number) as total_number,((a.woman_number + a.man_number)-(select count(*) from api_bar_member where bar_id=a.id and pay_status <> 0)) as rest_number FROM api_bar a left join api_member b ON b.id=a.member_id left join api_merchant c ON c.id=a.merchant_id left join api_comment_barstar d ON d.member_id = a.member_id  WHERE a.bar_status IN (1,7) AND a.is_xu = 0 ORDER BY juli asc , id desc , bar_status asc LIMIT 0,20   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0350s ]
+SQL: SELECT `pay_status`,`id` FROM `api_bar_member` WHERE `bar_id` = 21 AND `member_id` = 6 LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT `pay_status`,`id` FROM `api_bar_member` WHERE `bar_id` = 20 AND `member_id` = 6 LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT `pay_status`,`id` FROM `api_bar_member` WHERE `bar_id` = 18 AND `member_id` = 6 LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT `pay_status`,`id` FROM `api_bar_member` WHERE `bar_id` = 8 AND `member_id` = 6 LIMIT 1   [ RunTime:0.0340s ]
+SQL: SELECT `pay_status`,`id` FROM `api_bar_member` WHERE `bar_id` = 7 AND `member_id` = 6 LIMIT 1   [ RunTime:0.0340s ]
+
+[ 2018-05-11T17:11:26+08:00 ] 127.0.0.1 /v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_member_blacklist` [ RunTime:0.0380s ]
+SQL: SELECT `black_member_id` FROM `api_member_blacklist` WHERE `member_id` = 6  [ RunTime:0.0370s ]
+SQL: SELECT round(2 * 6378.137* ASIN(SQRT(POW(SIN(PI()*(0-c.lat)/360),2)+COS(PI()*0/180)* COS(c.lat * PI()/180)*POW(SIN(PI()*(0-c.lng)/360),2))),1) as juli,a.*,b.nickname,b.avatar,b.sex,b.age,b.is_auth,c.title,c.begin_time,d.average_star,(select count(*) from api_bar_member where bar_id=a.id and pay_status in (1,2)) as count,(a.woman_number + a.man_number) as total_number,((a.woman_number + a.man_number)-(select count(*) from api_bar_member where bar_id=a.id and pay_status <> 0)) as rest_number FROM api_bar a left join api_member b ON b.id=a.member_id left join api_merchant c ON c.id=a.merchant_id left join api_comment_barstar d ON d.member_id = a.member_id  WHERE a.bar_status IN (1,7) AND a.is_xu = 0 ORDER BY juli asc, bar_status asc, id desc  LIMIT 0,20   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0390s ]
+SQL: SELECT `pay_status`,`id` FROM `api_bar_member` WHERE `bar_id` = 21 AND `member_id` = 6 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT `pay_status`,`id` FROM `api_bar_member` WHERE `bar_id` = 7 AND `member_id` = 6 LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT `pay_status`,`id` FROM `api_bar_member` WHERE `bar_id` = 20 AND `member_id` = 6 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT `pay_status`,`id` FROM `api_bar_member` WHERE `bar_id` = 18 AND `member_id` = 6 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT `pay_status`,`id` FROM `api_bar_member` WHERE `bar_id` = 8 AND `member_id` = 6 LIMIT 1   [ RunTime:0.0370s ]
+
+[ 2018-05-11T17:54:52+08:00 ] 127.0.0.1 /v1.1/order/orderDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT `id`,`order_no`,`merchant_id`,`member_id`,`contacts_realname`,`contacts_tel`,`contacts_sex`,`total_price`,`pay_price`,`purchase_price`,`discount_money`,`status`,`order_type`,`payment`,`description`,`arrives_time`,`incr_time`,`employee_id`,`employee_realname`,`employee_avatar`,`employee_tel`,`cancel_reason`,`card_id`,`is_bar`,`created_time`,`obegin_time`,`oend_time`,from_unixtime(created_time) as format_time,`relation_order_no`,`relation_order_id`,is_evaluate as is_comment FROM `api_order` WHERE `id` = 71 LIMIT 1   [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0420s ]
+SQL: SELECT title as merchant_title,`logo`,tel as merchant_tel,`begin_time`,`end_time` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0410s ]
+SQL: SELECT `deductible` FROM `api_coupon` WHERE `id` = 28 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_order_pack` [ RunTime:0.0420s ]
+SQL: SELECT goods_pack_id as pack_id,title as pack_title,price as pack_price,image as pack_image,amount as pack_amount,`goods_type`,`market_price`,`pack_description` FROM `api_order_pack` WHERE `order_no` = '1526031446213761'  [ RunTime:0.0400s ]
+SQL: SELECT SUM(price) AS tp_sum FROM `api_order_pack` WHERE `order_id` = 71 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_order_seat` [ RunTime:0.0420s ]
+SQL: SELECT goods_seat_id as seat_id,`max_people`,`floor_price`,`set_price`,`total_people`,`seat_number` FROM `api_order_seat` WHERE `order_no` = '1526031446213761' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0420s ]
+SQL: SELECT api_member_privilege.delayed FROM `api_member` INNER JOIN api_member_privilege ON api_member_privilege.level = api_member.level  WHERE api_member.id = '14' LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-05-11T17:56:22+08:00 ] 127.0.0.1 /v1.1/order/orderDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT `id`,`order_no`,`merchant_id`,`member_id`,`contacts_realname`,`contacts_tel`,`contacts_sex`,`total_price`,`pay_price`,`purchase_price`,`discount_money`,`status`,`order_type`,`payment`,`description`,`arrives_time`,`incr_time`,`employee_id`,`employee_realname`,`employee_avatar`,`employee_tel`,`cancel_reason`,`card_id`,`is_bar`,`created_time`,`obegin_time`,`oend_time`,from_unixtime(created_time) as format_time,`relation_order_no`,`relation_order_id`,is_evaluate as is_comment FROM `api_order` WHERE `id` = 71 LIMIT 1   [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0420s ]
+SQL: SELECT title as merchant_title,`logo`,tel as merchant_tel,`begin_time`,`end_time` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0420s ]
+SQL: SELECT `deductible` FROM `api_coupon` WHERE `id` = 28 LIMIT 1   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_order_pack` [ RunTime:0.0420s ]
+SQL: SELECT goods_pack_id as pack_id,title as pack_title,price as pack_price,image as pack_image,amount as pack_amount,`goods_type`,`market_price`,`pack_description` FROM `api_order_pack` WHERE `order_no` = '1526031446213761'  [ RunTime:0.0420s ]
+ERR: 1054:Unknown column 'pack_amount' in 'field list'
+ [ SQL语句 ] : SELECT SUM(price * pack_amount) AS tp_sum FROM `api_order_pack` WHERE `order_id` = 71 LIMIT 1  
+ERR: 1054:Unknown column 'pack_amount' in 'field list'
+ [ SQL语句 ] : SELECT SUM(price * pack_amount) AS tp_sum FROM `api_order_pack` WHERE `order_id` = 71 LIMIT 1  
+
+[ 2018-05-11T18:07:12+08:00 ] 127.0.0.1 /v1.1/order/orderDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT `id`,`order_no`,`merchant_id`,`member_id`,`contacts_realname`,`contacts_tel`,`contacts_sex`,`total_price`,`pay_price`,`purchase_price`,`discount_money`,`status`,`order_type`,`payment`,`description`,`arrives_time`,`incr_time`,`employee_id`,`employee_realname`,`employee_avatar`,`employee_tel`,`cancel_reason`,`card_id`,`is_bar`,`created_time`,`obegin_time`,`oend_time`,from_unixtime(created_time) as format_time,`relation_order_no`,`relation_order_id`,is_evaluate as is_comment FROM `api_order` WHERE `id` = 71 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0380s ]
+SQL: SELECT title as merchant_title,`logo`,tel as merchant_tel,`begin_time`,`end_time` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0390s ]
+SQL: SELECT `deductible` FROM `api_coupon` WHERE `id` = 28 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_order_pack` [ RunTime:0.0390s ]
+SQL: SELECT goods_pack_id as pack_id,title as pack_title,price as pack_price,image as pack_image,amount as pack_amount,`goods_type`,`market_price`,`pack_description` FROM `api_order_pack` WHERE `order_no` = '1526031446213761'  [ RunTime:0.0380s ]
+NOTIC: [8] Undefined index: price D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\OrderModel.class.php 第 303 行.
+SQL: SHOW COLUMNS FROM `api_order_seat` [ RunTime:0.0400s ]
+SQL: SELECT goods_seat_id as seat_id,`max_people`,`floor_price`,`set_price`,`total_people`,`seat_number` FROM `api_order_seat` WHERE `order_no` = '1526031446213761' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0390s ]
+SQL: SELECT api_member_privilege.delayed FROM `api_member` INNER JOIN api_member_privilege ON api_member_privilege.level = api_member.level  WHERE api_member.id = '14' LIMIT 1   [ RunTime:0.0370s ]
+
+[ 2018-05-11T18:09:58+08:00 ] 127.0.0.1 /v1.1/order/orderDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT `id`,`order_no`,`merchant_id`,`member_id`,`contacts_realname`,`contacts_tel`,`contacts_sex`,`total_price`,`pay_price`,`purchase_price`,`discount_money`,`status`,`order_type`,`payment`,`description`,`arrives_time`,`incr_time`,`employee_id`,`employee_realname`,`employee_avatar`,`employee_tel`,`cancel_reason`,`card_id`,`is_bar`,`created_time`,`obegin_time`,`oend_time`,from_unixtime(created_time) as format_time,`relation_order_no`,`relation_order_id`,is_evaluate as is_comment FROM `api_order` WHERE `id` = 71 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0390s ]
+SQL: SELECT title as merchant_title,`logo`,tel as merchant_tel,`begin_time`,`end_time` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0400s ]
+SQL: SELECT `deductible` FROM `api_coupon` WHERE `id` = 28 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_order_pack` [ RunTime:0.0380s ]
+SQL: SELECT goods_pack_id as pack_id,title as pack_title,price as pack_price,image as pack_image,amount as pack_amount,`goods_type`,`market_price`,`pack_description` FROM `api_order_pack` WHERE `order_no` = '1526031446213761'  [ RunTime:0.0380s ]
+NOTIC: [8] Undefined index: price D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\OrderModel.class.php 第 304 行.
+SQL: SHOW COLUMNS FROM `api_order_seat` [ RunTime:0.0390s ]
+SQL: SELECT goods_seat_id as seat_id,`max_people`,`floor_price`,`set_price`,`total_people`,`seat_number` FROM `api_order_seat` WHERE `order_no` = '1526031446213761' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0380s ]
+SQL: SELECT api_member_privilege.delayed FROM `api_member` INNER JOIN api_member_privilege ON api_member_privilege.level = api_member.level  WHERE api_member.id = '14' LIMIT 1   [ RunTime:0.0380s ]
+
+[ 2018-05-11T18:10:40+08:00 ] 127.0.0.1 /v1.1/order/orderDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT `id`,`order_no`,`merchant_id`,`member_id`,`contacts_realname`,`contacts_tel`,`contacts_sex`,`total_price`,`pay_price`,`purchase_price`,`discount_money`,`status`,`order_type`,`payment`,`description`,`arrives_time`,`incr_time`,`employee_id`,`employee_realname`,`employee_avatar`,`employee_tel`,`cancel_reason`,`card_id`,`is_bar`,`created_time`,`obegin_time`,`oend_time`,from_unixtime(created_time) as format_time,`relation_order_no`,`relation_order_id`,is_evaluate as is_comment FROM `api_order` WHERE `id` = 71 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0380s ]
+SQL: SELECT title as merchant_title,`logo`,tel as merchant_tel,`begin_time`,`end_time` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0390s ]
+SQL: SELECT `deductible` FROM `api_coupon` WHERE `id` = 28 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_order_pack` [ RunTime:0.0390s ]
+SQL: SELECT goods_pack_id as pack_id,title as pack_title,price as pack_price,image as pack_image,amount as pack_amount,`goods_type`,`market_price`,`pack_description` FROM `api_order_pack` WHERE `order_no` = '1526031446213761'  [ RunTime:0.0390s ]
+NOTIC: [8] Undefined index: price D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\OrderModel.class.php 第 304 行.
+NOTIC: [8] Undefined index: amount D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\OrderModel.class.php 第 304 行.
+SQL: SHOW COLUMNS FROM `api_order_seat` [ RunTime:0.0390s ]
+SQL: SELECT goods_seat_id as seat_id,`max_people`,`floor_price`,`set_price`,`total_people`,`seat_number` FROM `api_order_seat` WHERE `order_no` = '1526031446213761' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0400s ]
+SQL: SELECT api_member_privilege.delayed FROM `api_member` INNER JOIN api_member_privilege ON api_member_privilege.level = api_member.level  WHERE api_member.id = '14' LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-11T18:11:15+08:00 ] 127.0.0.1 /v1.1/order/orderDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT `id`,`order_no`,`merchant_id`,`member_id`,`contacts_realname`,`contacts_tel`,`contacts_sex`,`total_price`,`pay_price`,`purchase_price`,`discount_money`,`status`,`order_type`,`payment`,`description`,`arrives_time`,`incr_time`,`employee_id`,`employee_realname`,`employee_avatar`,`employee_tel`,`cancel_reason`,`card_id`,`is_bar`,`created_time`,`obegin_time`,`oend_time`,from_unixtime(created_time) as format_time,`relation_order_no`,`relation_order_id`,is_evaluate as is_comment FROM `api_order` WHERE `id` = 71 LIMIT 1   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0400s ]
+SQL: SELECT title as merchant_title,`logo`,tel as merchant_tel,`begin_time`,`end_time` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0380s ]
+SQL: SELECT `deductible` FROM `api_coupon` WHERE `id` = 28 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_order_pack` [ RunTime:0.0400s ]
+SQL: SELECT goods_pack_id as pack_id,title as pack_title,price as pack_price,image as pack_image,amount as pack_amount,`goods_type`,`market_price`,`pack_description` FROM `api_order_pack` WHERE `order_no` = '1526031446213761'  [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_order_seat` [ RunTime:0.0400s ]
+SQL: SELECT goods_seat_id as seat_id,`max_people`,`floor_price`,`set_price`,`total_people`,`seat_number` FROM `api_order_seat` WHERE `order_no` = '1526031446213761' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0400s ]
+SQL: SELECT api_member_privilege.delayed FROM `api_member` INNER JOIN api_member_privilege ON api_member_privilege.level = api_member.level  WHERE api_member.id = '14' LIMIT 1   [ RunTime:0.0380s ]
+
+[ 2018-05-11T18:12:09+08:00 ] 127.0.0.1 /v1.1/order/orderDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0370s ]
+SQL: SELECT `id`,`order_no`,`merchant_id`,`member_id`,`contacts_realname`,`contacts_tel`,`contacts_sex`,`total_price`,`pay_price`,`purchase_price`,`discount_money`,`status`,`order_type`,`payment`,`description`,`arrives_time`,`incr_time`,`employee_id`,`employee_realname`,`employee_avatar`,`employee_tel`,`cancel_reason`,`card_id`,`is_bar`,`created_time`,`obegin_time`,`oend_time`,from_unixtime(created_time) as format_time,`relation_order_no`,`relation_order_id`,is_evaluate as is_comment FROM `api_order` WHERE `id` = 71 LIMIT 1   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0380s ]
+SQL: SELECT title as merchant_title,`logo`,tel as merchant_tel,`begin_time`,`end_time` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0380s ]
+SQL: SELECT `deductible` FROM `api_coupon` WHERE `id` = 28 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_order_pack` [ RunTime:0.0370s ]
+SQL: SELECT goods_pack_id as pack_id,title as pack_title,price as pack_price,image as pack_image,amount as pack_amount,`goods_type`,`market_price`,`pack_description` FROM `api_order_pack` WHERE `order_no` = '1526031446213761'  [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_order_seat` [ RunTime:0.0370s ]
+SQL: SELECT goods_seat_id as seat_id,`max_people`,`floor_price`,`set_price`,`total_people`,`seat_number` FROM `api_order_seat` WHERE `order_no` = '1526031446213761' LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0380s ]
+SQL: SELECT api_member_privilege.delayed FROM `api_member` INNER JOIN api_member_privilege ON api_member_privilege.level = api_member.level  WHERE api_member.id = '14' LIMIT 1   [ RunTime:0.0350s ]
+

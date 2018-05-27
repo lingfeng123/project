@@ -1,0 +1,260 @@
+body {
+  background-image: url("../img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: -apple-system-font, Helvetica Neue, sans-serif;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.top {
+  margin-top: 1.066667rem;
+  margin-bottom: 1.013333rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top > img {
+  width: 2.64rem;
+  height: 2.64rem;
+}
+
+.top > p {
+  color: #fede29;
+  font-weight: bold;
+}
+
+[data-dpr="1"] .top > p {
+  font-size: 18px;
+}
+
+[data-dpr="2"] .top > p {
+  font-size: 36px;
+}
+
+[data-dpr="3"] .top > p {
+  font-size: 54px;
+}
+
+.top_1 {
+  margin: 0.533333rem 0 0.186667rem;
+}
+
+.content {
+  margin: 1.013333rem auto;
+  width: 7.6rem;
+  line-height: 0.586667rem;
+  border: 0.04rem solid #ffd225;
+  padding: 0.44rem 0.266667rem;
+}
+
+.content .content_1 {
+  color: #fff;
+}
+
+[data-dpr="1"] .content .content_1 {
+  font-size: 15px;
+}
+
+[data-dpr="2"] .content .content_1 {
+  font-size: 30px;
+}
+
+[data-dpr="3"] .content .content_1 {
+  font-size: 45px;
+}
+
+.content .content_2 {
+  color: #fede29;
+  margin-bottom: 0.213333rem;
+}
+
+[data-dpr="1"] .content .content_2 {
+  font-size: 15px;
+}
+
+[data-dpr="2"] .content .content_2 {
+  font-size: 30px;
+}
+
+[data-dpr="3"] .content .content_2 {
+  font-size: 45px;
+}
+
+.content .content_3 {
+  color: #19f6f9;
+  line-height: 0.453333rem;
+}
+
+[data-dpr="1"] .content .content_3 {
+  font-size: 12px;
+}
+
+[data-dpr="2"] .content .content_3 {
+  font-size: 24px;
+}
+
+[data-dpr="3"] .content .content_3 {
+  font-size: 36px;
+}
+
+.queren_wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.queren {
+  width: 8.133333rem;
+  height: 1.173333rem;
+}
+
+.tankuang_wrap {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.tan_content_wrap {
+  width: 8.213333rem;
+  border-radius: 0.16rem;
+  background-color: #fff;
+}
+
+.title_wrap {
+  height: 1.066667rem;
+  background-color: #d71f6a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title_wrap > p {
+  color: #fff;
+}
+
+[data-dpr="1"] .title_wrap > p {
+  font-size: 18px;
+}
+
+[data-dpr="2"] .title_wrap > p {
+  font-size: 36px;
+}
+
+[data-dpr="3"] .title_wrap > p {
+  font-size: 54px;
+}
+
+.miaosu_wrap {
+  padding: 0.306667rem 0.4rem;
+}
+
+.miaosu_wrap > p {
+  font-size: 0.4rem;
+  color: #000;
+  line-height: 0.586667rem;
+}
+
+.input_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.533333rem;
+}
+
+.input_wrap > input {
+  padding-left: 0.266667rem;
+  width: 6.8rem;
+  height: 1.173333rem;
+  color: #333;
+  border: 0.013333rem solid #b6b6b6;
+  background-color: #f2f1f1;
+}
+
+[data-dpr="1"] .input_wrap > input {
+  font-size: 18px;
+}
+
+[data-dpr="2"] .input_wrap > input {
+  font-size: 36px;
+}
+
+[data-dpr="3"] .input_wrap > input {
+  font-size: 54px;
+}
+
+.input_wrap >input::-webkit-input-placeholder {
+  color: #b6b6b6;
+}
+
+[data-dpr="1"] .input_wrap >input::-webkit-input-placeholder {
+  font-size: 18px;
+}
+
+[data-dpr="2"] .input_wrap >input::-webkit-input-placeholder {
+  font-size: 36px;
+}
+
+[data-dpr="3"] .input_wrap >input::-webkit-input-placeholder {
+  font-size: 54px;
+}
+
+.click_wrap {
+  margin: auto;
+  width: 7.066667rem;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.266667rem;
+}
+
+.btn {
+  width: 2.773333rem;
+  height: 1.173333rem;
+  border-radius: 0.533333rem;
+  color: #fff;
+  outline: none;
+  border: none;
+}
+
+[data-dpr="1"] .btn {
+  font-size: 15px;
+}
+
+[data-dpr="2"] .btn {
+  font-size: 30px;
+}
+
+[data-dpr="3"] .btn {
+  font-size: 45px;
+}
+
+.quxiao {
+  background-color: #facb01;
+}
+
+.submit {
+  background-color: #e44b3b;
+}
+
+.queren_btn {
+  border-radius: 0.586667rem;
+  width: 8.133333rem;
+  height: 1.173333rem;
+  font-size: 0.48rem;
+  color: #b1532e;
+  background-image: url("../img/confirmgetwine.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  outline: none;
+}

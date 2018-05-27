@@ -1,0 +1,463 @@
+[ 2018-04-08T15:22:45+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 1054:Unknown column 'pi_merchant.end_time' in 'field list'
+ [ SQL语句 ] : SELECT api_bar.*,api_member.nickname,api_member.sex,api_member.avatar,api_merchant.begin_time,pi_merchant.end_time,api_merchant.title,api_comment_barstar.average_star,api_bar_member.id as order_id,api_bar_member.is_evaluate,(select count(id) from api_comment_bar where bar_id = api_bar.id ) as comment_count,api_bar_member.pay_status,(select count(id) from api_bar as A where A.top_bar_id = api_bar.id) winecount FROM `api_bar_member` inner join api_bar ON api_bar.id = api_bar_member.bar_id left join api_member ON api_member.id = api_bar.member_id left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar_member.member_id = '14' AND api_bar.bar_type = '1' AND api_bar.is_xu = 0 AND api_bar_member.pay_status IN (1,2) LIMIT 0,20  
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 351 行.
+
+[ 2018-04-08T15:23:31+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1054:Unknown column 'pi_merchant.end_time' in 'field list'
+ [ SQL语句 ] : SELECT api_bar.*,api_member.nickname,api_member.sex,api_member.avatar,api_merchant.begin_time,pi_merchant.end_time,api_merchant.title,api_comment_barstar.average_star,api_bar_member.id as order_id,api_bar_member.is_evaluate,(select count(id) from api_comment_bar where bar_id = api_bar.id ) as comment_count,api_bar_member.pay_status,(select count(id) from api_bar as A where A.top_bar_id = api_bar.id) winecount FROM `api_bar_member` inner join api_bar ON api_bar.id = api_bar_member.bar_id left join api_member ON api_member.id = api_bar.member_id left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar_member.member_id = '14' AND api_bar.bar_type = '1' AND api_bar.is_xu = 0 AND api_bar_member.pay_status IN (1,2) LIMIT 0,20  
+
+[ 2018-04-08T15:23:51+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1054:Unknown column 'pi_merchant.end_time' in 'field list'
+ [ SQL语句 ] : SELECT api_bar.*,api_member.nickname,api_member.sex,api_member.avatar,api_merchant.begin_time,pi_merchant.end_time,api_merchant.title,api_comment_barstar.average_star,api_bar_member.id as order_id,api_bar_member.is_evaluate,(select count(id) from api_comment_bar where bar_id = api_bar.id ) as comment_count,api_bar_member.pay_status,(select count(id) from api_bar as A where A.top_bar_id = api_bar.id) winecount FROM `api_bar_member` inner join api_bar ON api_bar.id = api_bar_member.bar_id left join api_member ON api_member.id = api_bar.member_id left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar_member.member_id = '14' AND api_bar.bar_type = '1' AND api_bar.is_xu = 0 AND api_bar_member.pay_status IN (1,2) LIMIT 0,20  
+
+[ 2018-04-08T16:22:22+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 381 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 382 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 381 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 382 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 381 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 382 行.
+
+[ 2018-04-08T16:22:45+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: is_evaluate D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 361 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 381 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 382 行.
+NOTIC: [8] Undefined index: is_evaluate D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 361 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 381 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 382 行.
+NOTIC: [8] Undefined index: is_evaluate D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 361 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 381 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 382 行.
+NOTIC: [8] Undefined index: is_evaluate D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 361 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 381 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 382 行.
+
+[ 2018-04-08T16:24:06+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: is_evaluate D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 359 行.
+
+[ 2018-04-08T16:26:19+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 381 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 382 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 381 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 382 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 381 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 382 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 381 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 382 行.
+
+[ 2018-04-08T16:31:55+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/getMemberPart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: avatar D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 469 行.
+NOTIC: [8] Undefined index: avatar D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 470 行.
+
+[ 2018-04-08T16:41:06+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/getMemberPart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: avatar D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 469 行.
+NOTIC: [8] Undefined index: avatar D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 470 行.
+
+[ 2018-04-08T16:41:47+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/getMemberPart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: avatar D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 469 行.
+NOTIC: [8] Undefined index: avatar D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 470 行.
+
+[ 2018-04-08T16:43:06+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/getMemberPart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: avatar D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 469 行.
+NOTIC: [8] Undefined index: avatar D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 470 行.
+
+[ 2018-04-08T16:43:51+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/getMemberPart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: avatar D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 469 行.
+NOTIC: [8] Undefined index: avatar D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 470 行.
+
+[ 2018-04-08T16:45:30+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/getMemberPart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: avatar D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 469 行.
+
+[ 2018-04-08T16:46:45+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/getMemberPart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: avatar D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 470 行.
+
+[ 2018-04-08T16:50:40+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/getMemberPart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: average_star D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 474 行.
+NOTIC: [8] Undefined index: average_star D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 474 行.
+NOTIC: [8] Undefined index: average_star D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 474 行.
+NOTIC: [8] Undefined index: average_star D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 474 行.
+
+[ 2018-04-08T16:51:48+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/getMemberPart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-08T16:57:31+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/getMemberPart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-08T16:57:47+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/getMemberPart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-08T18:05:50+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-08T18:06:03+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 395 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 396 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 395 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 396 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 395 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 396 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 395 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 396 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 395 行.
+NOTIC: [8] Undefined index: end_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 396 行.
+
+[ 2018-04-08T18:26:07+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/commentBar
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-08T20:06:49+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: bar D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Think\Db\Driver.class.php 第 1002 行.
+
+[ 2018-04-08T20:07:08+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: bar D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Think\Db\Driver.class.php 第 1002 行.
+
+[ 2018-04-08T20:07:25+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: bar D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Think\Db\Driver.class.php 第 1002 行.
+
+[ 2018-04-08T20:08:40+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: bar D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Think\Db\Driver.class.php 第 1002 行.
+
+[ 2018-04-08T20:09:07+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: bar D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Think\Db\Driver.class.php 第 1002 行.
+
+[ 2018-04-08T20:09:52+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-08T20:10:33+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: bar D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Think\Db\Driver.class.php 第 1002 行.
+
+[ 2018-04-08T20:11:18+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: bar D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Think\Db\Driver.class.php 第 1002 行.
+
+[ 2018-04-08T20:11:47+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-08T20:12:14+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-08T20:12:42+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: bar D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Think\Db\Driver.class.php 第 1002 行.
+
+[ 2018-04-08T20:14:20+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-08T20:14:51+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-08T20:15:25+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-08T20:15:31+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-08T20:16:20+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: bar D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Think\Db\Driver.class.php 第 1002 行.
+
+[ 2018-04-08T20:16:25+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: bar D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Think\Db\Driver.class.php 第 1002 行.
+
+[ 2018-04-08T20:17:47+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: bar D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Think\Db\Driver.class.php 第 1002 行.
+
+[ 2018-04-08T20:18:46+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-08T20:18:57+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-08T20:25:33+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-08T20:25:48+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-08T20:32:59+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-08T20:33:18+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-08T20:33:58+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-08T20:35:11+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-08T20:35:39+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-08T20:36:39+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+

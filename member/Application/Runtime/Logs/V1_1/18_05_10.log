@@ -1,0 +1,353 @@
+[ 2018-05-10T11:49:53+08:00 ] 127.0.0.1 /v1.1/order/check_buy_auth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `sanpack_stock`,`kapack_stock`,`preordain_cycle`,`begin_time`,`end_time`,`open_buy` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_goods_pack` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_goods_pack` WHERE `id` IN (9,2) AND `status` = 1  [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_goods_pack_stock` [ RunTime:0.0380s ]
+SQL: SELECT `goods_id`,`day_sales` FROM `api_goods_pack_stock` WHERE `date` = 20180510 AND `merchant_id` = 1  [ RunTime:0.0370s ]
+
+[ 2018-05-10T11:50:50+08:00 ] 127.0.0.1 /v1.1/order/check_buy_auth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT `sanpack_stock`,`kapack_stock`,`preordain_cycle`,`begin_time`,`end_time`,`open_buy` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_goods_pack` WHERE `id` IN (9,2) AND `status` = 1  [ RunTime:0.0430s ]
+SQL: SELECT `goods_id`,`day_sales` FROM `api_goods_pack_stock` WHERE `date` = 20180510 AND `merchant_id` = 1  [ RunTime:0.0410s ]
+NOTIC: [8] Undefined offset: 2 D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Controller\OrderController.class.php 第 709 行.
+
+[ 2018-05-10T11:50:57+08:00 ] 127.0.0.1 /v1.1/order/check_buy_auth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `sanpack_stock`,`kapack_stock`,`preordain_cycle`,`begin_time`,`end_time`,`open_buy` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_goods_pack` WHERE `id` IN (9,2) AND `status` = 1  [ RunTime:0.0400s ]
+SQL: SELECT `goods_id`,`day_sales` FROM `api_goods_pack_stock` WHERE `date` = 20180510 AND `merchant_id` = 1  [ RunTime:0.0390s ]
+NOTIC: [8] Undefined offset: 2 D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Controller\OrderController.class.php 第 709 行.
+
+[ 2018-05-10T11:51:13+08:00 ] 127.0.0.1 /v1.1/order/check_buy_auth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `sanpack_stock`,`kapack_stock`,`preordain_cycle`,`begin_time`,`end_time`,`open_buy` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_goods_pack` WHERE `id` IN (9,2) AND `status` = 1  [ RunTime:0.0370s ]
+SQL: SELECT `goods_id`,`day_sales` FROM `api_goods_pack_stock` WHERE `date` = 20180510 AND `merchant_id` = 1  [ RunTime:0.0370s ]
+NOTIC: [8] Undefined offset: 2 D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Controller\OrderController.class.php 第 709 行.
+
+[ 2018-05-10T11:52:28+08:00 ] 127.0.0.1 /v1.1/order/check_buy_auth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT `sanpack_stock`,`kapack_stock`,`preordain_cycle`,`begin_time`,`end_time`,`open_buy` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_goods_pack` WHERE `id` IN (9,2) AND `status` = 1  [ RunTime:0.0400s ]
+SQL: SELECT `goods_id`,`day_sales` FROM `api_goods_pack_stock` WHERE `date` = 20180510 AND `merchant_id` = 1  [ RunTime:0.0400s ]
+NOTIC: [8] Undefined offset: 2 D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Controller\OrderController.class.php 第 708 行.
+
+[ 2018-05-10T11:52:58+08:00 ] 127.0.0.1 /v1.1/order/check_buy_auth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `sanpack_stock`,`kapack_stock`,`preordain_cycle`,`begin_time`,`end_time`,`open_buy` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_goods_pack` WHERE `id` IN (9,2) AND `status` = 1  [ RunTime:0.0380s ]
+SQL: SELECT `goods_id`,`day_sales` FROM `api_goods_pack_stock` WHERE `date` = 20180510 AND `merchant_id` = 1  [ RunTime:0.0370s ]
+
+[ 2018-05-10T11:53:33+08:00 ] 127.0.0.1 /v1.1/order/check_buy_auth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `sanpack_stock`,`kapack_stock`,`preordain_cycle`,`begin_time`,`end_time`,`open_buy` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_goods_pack` WHERE `id` IN (9,2) AND `status` = 1  [ RunTime:0.0400s ]
+SQL: SELECT `goods_id`,`day_sales` FROM `api_goods_pack_stock` WHERE `date` = 20180510 AND `merchant_id` = 1  [ RunTime:0.0390s ]
+NOTIC: [8] Undefined offset: 2 D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Controller\OrderController.class.php 第 709 行.
+
+[ 2018-05-10T11:53:51+08:00 ] 127.0.0.1 /v1.1/order/check_buy_auth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT `sanpack_stock`,`kapack_stock`,`preordain_cycle`,`begin_time`,`end_time`,`open_buy` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_goods_pack` WHERE `id` IN (9,2) AND `status` = 1  [ RunTime:0.0420s ]
+SQL: SELECT `goods_id`,`day_sales` FROM `api_goods_pack_stock` WHERE `date` = 20180510 AND `merchant_id` = 1  [ RunTime:0.0410s ]
+NOTIC: [8] Undefined offset: 2 D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Controller\OrderController.class.php 第 709 行.
+
+[ 2018-05-10T11:54:20+08:00 ] 127.0.0.1 /v1.1/order/check_buy_auth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `sanpack_stock`,`kapack_stock`,`preordain_cycle`,`begin_time`,`end_time`,`open_buy` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_goods_pack` WHERE `id` IN (9,2) AND `status` = 1  [ RunTime:0.0370s ]
+SQL: SELECT `goods_id`,`day_sales` FROM `api_goods_pack_stock` WHERE `date` = 20180510 AND `merchant_id` = 1  [ RunTime:0.0380s ]
+
+[ 2018-05-10T11:55:32+08:00 ] 127.0.0.1 /v1.1/order/check_buy_auth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `sanpack_stock`,`kapack_stock`,`preordain_cycle`,`begin_time`,`end_time`,`open_buy` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_goods_pack` WHERE `id` IN (9,2) AND `status` = 1  [ RunTime:0.0390s ]
+SQL: SELECT `goods_id`,`day_sales` FROM `api_goods_pack_stock` WHERE `date` = 20180510 AND `merchant_id` = 1  [ RunTime:0.0390s ]
+NOTIC: [8] Undefined offset: 2 D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Controller\OrderController.class.php 第 710 行.
+NOTIC: [8] Undefined offset: 2 D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Controller\OrderController.class.php 第 712 行.
+
+[ 2018-05-10T11:55:53+08:00 ] 127.0.0.1 /v1.1/order/check_buy_auth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `sanpack_stock`,`kapack_stock`,`preordain_cycle`,`begin_time`,`end_time`,`open_buy` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_goods_pack` WHERE `id` IN (9,2) AND `status` = 1  [ RunTime:0.0410s ]
+SQL: SELECT `goods_id`,`day_sales` FROM `api_goods_pack_stock` WHERE `date` = 20180510 AND `merchant_id` = 1  [ RunTime:0.0400s ]
+NOTIC: [8] Undefined offset: 2 D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Controller\OrderController.class.php 第 708 行.
+NOTIC: [8] Undefined offset: 2 D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Controller\OrderController.class.php 第 710 行.
+
+[ 2018-05-10T11:56:05+08:00 ] 127.0.0.1 /v1.1/order/check_buy_auth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `sanpack_stock`,`kapack_stock`,`preordain_cycle`,`begin_time`,`end_time`,`open_buy` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_goods_pack` WHERE `id` IN (9,2) AND `status` = 1  [ RunTime:0.0390s ]
+SQL: SELECT `goods_id`,`day_sales` FROM `api_goods_pack_stock` WHERE `date` = 20180510 AND `merchant_id` = 1  [ RunTime:0.0390s ]
+NOTIC: [8] Undefined offset: 2 D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Controller\OrderController.class.php 第 708 行.
+
+[ 2018-05-10T11:58:35+08:00 ] 127.0.0.1 /v1.1/order/check_buy_auth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `sanpack_stock`,`kapack_stock`,`preordain_cycle`,`begin_time`,`end_time`,`open_buy` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_goods_pack` WHERE `id` IN (9,2) AND `status` = 1  [ RunTime:0.0380s ]
+SQL: SELECT `goods_id`,`day_sales` FROM `api_goods_pack_stock` WHERE `date` = 20180510 AND `merchant_id` = 1  [ RunTime:0.0390s ]
+
+[ 2018-05-10T12:18:59+08:00 ] 127.0.0.1 /v1.1/order/check_buy_auth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `sanpack_stock`,`kapack_stock`,`preordain_cycle`,`begin_time`,`end_time`,`open_buy` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_goods_pack` WHERE `id` IN (9,2) AND `status` = 1  [ RunTime:0.0400s ]
+SQL: SELECT `goods_id`,`day_sales` FROM `api_goods_pack_stock` WHERE `date` = 20180510 AND `merchant_id` = 1  [ RunTime:0.0390s ]
+
+[ 2018-05-10T12:19:30+08:00 ] 127.0.0.1 /v1.1/order/check_buy_auth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `sanpack_stock`,`kapack_stock`,`preordain_cycle`,`begin_time`,`end_time`,`open_buy` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_goods_pack` WHERE `id` IN (9,2) AND `status` = 1  [ RunTime:0.0420s ]
+SQL: SELECT `goods_id`,`day_sales` FROM `api_goods_pack_stock` WHERE `date` = 20180510 AND `merchant_id` = 1  [ RunTime:0.0410s ]
+
+[ 2018-05-10T12:20:02+08:00 ] 127.0.0.1 /v1.1/order/check_buy_auth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `sanpack_stock`,`kapack_stock`,`preordain_cycle`,`begin_time`,`end_time`,`open_buy` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_goods_pack` WHERE `id` IN (9,2) AND `status` = 1  [ RunTime:0.0400s ]
+SQL: SELECT `goods_id`,`day_sales` FROM `api_goods_pack_stock` WHERE `date` = 20180510 AND `merchant_id` = 1  [ RunTime:0.0390s ]
+
+[ 2018-05-10T12:33:48+08:00 ] 127.0.0.1 /v1.1/order/check_buy_auth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `sanpack_stock`,`kapack_stock`,`preordain_cycle`,`begin_time`,`end_time`,`open_buy` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_goods_pack` WHERE `id` IN (9,2) AND `status` = 1  [ RunTime:0.0420s ]
+SQL: SELECT `goods_id`,`day_sales` FROM `api_goods_pack_stock` WHERE `date` = 20180510 AND `merchant_id` = 1  [ RunTime:0.0410s ]
+
+[ 2018-05-10T12:34:24+08:00 ] 127.0.0.1 /v1.1/order/check_buy_auth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT `sanpack_stock`,`kapack_stock`,`preordain_cycle`,`begin_time`,`end_time`,`open_buy` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_goods_pack` WHERE `id` IN (9,2) AND `status` = 1  [ RunTime:0.0410s ]
+SQL: SELECT `goods_id`,`day_sales` FROM `api_goods_pack_stock` WHERE `date` = 20180510 AND `merchant_id` = 1  [ RunTime:0.0400s ]
+
+[ 2018-05-10T12:34:38+08:00 ] 127.0.0.1 /v1.1/order/check_buy_auth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `sanpack_stock`,`kapack_stock`,`preordain_cycle`,`begin_time`,`end_time`,`open_buy` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_goods_pack` WHERE `id` IN (9,2) AND `status` = 1  [ RunTime:0.0410s ]
+SQL: SELECT `goods_id`,`day_sales` FROM `api_goods_pack_stock` WHERE `date` = 20180510 AND `merchant_id` = 1  [ RunTime:0.0420s ]
+
+[ 2018-05-10T12:34:53+08:00 ] 127.0.0.1 /v1.1/order/check_buy_auth
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT `sanpack_stock`,`kapack_stock`,`preordain_cycle`,`begin_time`,`end_time`,`open_buy` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_goods_pack` WHERE `id` IN (9,2) AND `status` = 1  [ RunTime:0.0360s ]
+SQL: SELECT `goods_id`,`day_sales` FROM `api_goods_pack_stock` WHERE `date` = 20180510 AND `merchant_id` = 1  [ RunTime:0.0360s ]
+SQL: SELECT `id`,`status`,`created_time`,`arrives_time`,`order_type` FROM `api_order` WHERE `member_id` = 37 AND `merchant_id` = 1 AND `order_type` = 3 AND `status` IN (1,2,7) AND `top_order_id` = 0 AND `is_bar` = 0  [ RunTime:0.0360s ]
+
+[ 2018-05-10T15:09:46+08:00 ] 127.0.0.1 /v1.1/member/vipInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0400s ]
+SQL: 
+SELECT api_member.id as member_id, api_member.coin as member_coin,is_auth,age,sex,signature,image, avatar, nickname,is_edit_sex,api_member_privilege.*, consume_money, (give_money + recharge_money) as money ,tel
+FROM `api_member` 
+JOIN `api_member_privilege` ON api_member.level = api_member_privilege.level 
+JOIN `api_member_capital` ON api_member.id = api_member_capital.member_id 
+WHERE api_member.id = 37 [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_member_capital` [ RunTime:0.0410s ]
+SQL: SELECT `password` FROM `api_member_capital` WHERE `member_id` = 37 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0390s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_coupon_member` WHERE `member_id` = 37 AND `card_status` = 0 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_spread_record` [ RunTime:0.0380s ]
+SQL: SELECT sum(money) FROM `api_spread_record` WHERE `account_type` = 1 AND `employee_id` = 37 AND `status` = 1 AND `is_consume` = 1  [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_member_privilege` [ RunTime:0.0370s ]
+SQL: SELECT `quota`,title as next_vip_title FROM `api_member_privilege` WHERE `level` = 2 LIMIT 1   [ RunTime:0.0380s ]
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Controller\MemberController.class.php 第 266 行.
+
+[ 2018-05-10T15:12:03+08:00 ] 127.0.0.1 /v1.1/member/vipInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: 
+SELECT api_member.id as member_id, api_member.coin as member_coin,is_auth,age,sex,signature,image, avatar, nickname,is_edit_sex,api_member_privilege.*, consume_money, (give_money + recharge_money) as money ,tel
+FROM `api_member` 
+JOIN `api_member_privilege` ON api_member.level = api_member_privilege.level 
+JOIN `api_member_capital` ON api_member.id = api_member_capital.member_id 
+WHERE api_member.id = 10 [ RunTime:0.0400s ]
+SQL: SELECT `password` FROM `api_member_capital` WHERE `member_id` = 10 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_coupon_member` WHERE `member_id` = 10 AND `card_status` = 0 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT sum(money) as money FROM `api_spread_record` WHERE `account_type` = 1 AND `employee_id` = 10 AND `status` = 1 AND `is_consume` = 1  [ RunTime:0.0400s ]
+SQL: SELECT `quota`,title as next_vip_title FROM `api_member_privilege` WHERE `level` = 2 LIMIT 1   [ RunTime:0.0400s ]
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Controller\MemberController.class.php 第 266 行.
+
+[ 2018-05-10T15:12:34+08:00 ] 127.0.0.1 /v1.1/member/vipInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: 
+SELECT api_member.id as member_id, api_member.coin as member_coin,is_auth,age,sex,signature,image, avatar, nickname,is_edit_sex,api_member_privilege.*, consume_money, (give_money + recharge_money) as money ,tel
+FROM `api_member` 
+JOIN `api_member_privilege` ON api_member.level = api_member_privilege.level 
+JOIN `api_member_capital` ON api_member.id = api_member_capital.member_id 
+WHERE api_member.id = 10 [ RunTime:0.0410s ]
+SQL: SELECT `password` FROM `api_member_capital` WHERE `member_id` = 10 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_coupon_member` WHERE `member_id` = 10 AND `card_status` = 0 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `api_spread_record` WHERE `account_type` = 1 AND `employee_id` = 10 AND `status` = 1 AND `is_consume` = 1 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT `quota`,title as next_vip_title FROM `api_member_privilege` WHERE `level` = 2 LIMIT 1   [ RunTime:0.0390s ]
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Controller\MemberController.class.php 第 266 行.
+
+[ 2018-05-10T15:15:14+08:00 ] 127.0.0.1 /v1.1/member/vipInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: 
+SELECT api_member.id as member_id, api_member.coin as member_coin,is_auth,age,sex,signature,image, avatar, nickname,is_edit_sex,api_member_privilege.*, consume_money, (give_money + recharge_money) as money ,tel
+FROM `api_member` 
+JOIN `api_member_privilege` ON api_member.level = api_member_privilege.level 
+JOIN `api_member_capital` ON api_member.id = api_member_capital.member_id 
+WHERE api_member.id = 37 [ RunTime:0.0390s ]
+SQL: SELECT `password` FROM `api_member_capital` WHERE `member_id` = 37 LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_coupon_member` WHERE `member_id` = 37 AND `card_status` = 0 LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `api_spread_record` WHERE `account_type` = 1 AND `employee_id` = 37 AND `status` = 1 AND `is_consume` = 1 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT `quota`,title as next_vip_title FROM `api_member_privilege` WHERE `level` = 2 LIMIT 1   [ RunTime:0.0400s ]
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Controller\MemberController.class.php 第 266 行.
+
+[ 2018-05-10T15:16:29+08:00 ] 127.0.0.1 /v1.1/member/vipInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: 
+SELECT api_member.id as member_id, api_member.coin as member_coin,is_auth,age,sex,signature,image, avatar, nickname,is_edit_sex,api_member_privilege.*, consume_money, (give_money + recharge_money) as money ,tel
+FROM `api_member` 
+JOIN `api_member_privilege` ON api_member.level = api_member_privilege.level 
+JOIN `api_member_capital` ON api_member.id = api_member_capital.member_id 
+WHERE api_member.id = 37 [ RunTime:0.0390s ]
+SQL: SELECT `password` FROM `api_member_capital` WHERE `member_id` = 37 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_coupon_member` WHERE `member_id` = 37 AND `card_status` = 0 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `api_spread_record` WHERE `account_type` = 1 AND `employee_id` = 37 AND `status` = 1 AND `is_consume` = 1 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT `quota`,title as next_vip_title FROM `api_member_privilege` WHERE `level` = 2 LIMIT 1   [ RunTime:0.0380s ]
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Controller\MemberController.class.php 第 266 行.
+
+[ 2018-05-10T15:16:54+08:00 ] 127.0.0.1 /v1.1/member/vipInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: 
+SELECT api_member.id as member_id, api_member.coin as member_coin,is_auth,age,sex,signature,image, avatar, nickname,is_edit_sex,api_member_privilege.*, consume_money, (give_money + recharge_money) as money ,tel
+FROM `api_member` 
+JOIN `api_member_privilege` ON api_member.level = api_member_privilege.level 
+JOIN `api_member_capital` ON api_member.id = api_member_capital.member_id 
+WHERE api_member.id = 10 [ RunTime:0.0410s ]
+SQL: SELECT `password` FROM `api_member_capital` WHERE `member_id` = 10 LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_coupon_member` WHERE `member_id` = 10 AND `card_status` = 0 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT SUM(money) AS tp_sum FROM `api_spread_record` WHERE `account_type` = 1 AND `employee_id` = 10 AND `status` = 1 AND `is_consume` = 1 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT `quota`,title as next_vip_title FROM `api_member_privilege` WHERE `level` = 2 LIMIT 1   [ RunTime:0.0420s ]
+NOTIC: [8] Undefined index: id D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Controller\MemberController.class.php 第 266 行.
+

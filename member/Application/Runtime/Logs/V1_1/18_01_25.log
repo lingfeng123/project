@@ -1,0 +1,323 @@
+[ 2018-01-25T11:28:25+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/coupon/indexCardsAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0390s ]
+ERR: 非法操作:indexCardsAdd
+
+[ 2018-01-25T11:29:50+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/coupon/indexCards
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0450s ]
+SQL: SELECT id as card_id,`card_name`,`merchant_id`,`deductible`,`high_amount`,`card_type`,`effective_time`,`is_sex`,`marks`,`start_time`,`end_time`,member_id as have FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id=10  WHERE ( (case when `end_time` !=  0 THEN  `end_time` > 1516850990 END) AND `status`= 1 AND `flag`= 2 ) ORDER BY id desc LIMIT 3   [ RunTime:0.0450s ]
+
+[ 2018-01-25T11:30:53+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/coupon/indexCards
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0390s ]
+SQL: SELECT id as card_id,`card_name`,`merchant_id`,`deductible`,`high_amount`,`card_type`,`effective_time`,`is_sex`,`marks`,`start_time`,`end_time`,member_id as have FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id=10  WHERE ( (case when `end_time` !=  0 THEN  `end_time` > 1516851053 END) AND `status`= 1 AND `flag`= 2 ) ORDER BY id desc LIMIT 3   [ RunTime:0.0390s ]
+
+[ 2018-01-25T11:35:01+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/coupon/indexCards
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0530s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0440s ]
+SQL: SELECT id as card_id,`card_name`,`merchant_id`,`deductible`,`high_amount`,`card_type`,`effective_time`,`is_sex`,`marks`,`start_time`,`end_time`,member_id as have FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id=10  WHERE ( (case when `end_time` <> 0 THEN  `end_time` > 1516851301 END) AND `status`= 1 AND `flag`= 2 ) ORDER BY id desc LIMIT 3   [ RunTime:0.0440s ]
+
+[ 2018-01-25T11:36:21+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/coupon/indexCards
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0400s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'neq 0 THEN  `end_time` > 1516851381 END) AND `status`= 1 AND `flag`= 2 ) ORDER B' at line 1
+ [ SQL语句 ] : SELECT id as card_id,`card_name`,`merchant_id`,`deductible`,`high_amount`,`card_type`,`effective_time`,`is_sex`,`marks`,`start_time`,`end_time`,member_id as have FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id=10  WHERE ( (case when `end_time` neq 0 THEN  `end_time` > 1516851381 END) AND `status`= 1 AND `flag`= 2 ) ORDER BY id desc LIMIT 3  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'neq 0 THEN  `end_time` > 1516851381 END) AND `status`= 1 AND `flag`= 2 ) ORDER B' at line 1
+ [ SQL语句 ] : SELECT id as card_id,`card_name`,`merchant_id`,`deductible`,`high_amount`,`card_type`,`effective_time`,`is_sex`,`marks`,`start_time`,`end_time`,member_id as have FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id=10  WHERE ( (case when `end_time` neq 0 THEN  `end_time` > 1516851381 END) AND `status`= 1 AND `flag`= 2 ) ORDER BY id desc LIMIT 3  
+
+[ 2018-01-25T11:36:52+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/coupon/indexCards
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0390s ]
+SQL: SELECT id as card_id,`card_name`,`merchant_id`,`deductible`,`high_amount`,`card_type`,`effective_time`,`is_sex`,`marks`,`start_time`,`end_time`,member_id as have FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id=10  WHERE ( (case when `end_time` != 0 THEN  `end_time` > 1516851412 END) AND `status`= 1 AND `flag`= 2 ) ORDER BY id desc LIMIT 3   [ RunTime:0.0400s ]
+
+[ 2018-01-25T11:39:21+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/coupon/indexCards
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0400s ]
+SQL: SELECT id as card_id,`card_name`,`merchant_id`,`deductible`,`high_amount`,`card_type`,`effective_time`,`is_sex`,`marks`,`start_time`,`end_time`,member_id as have FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id=10  WHERE ( (case when `end_time` != 0 THEN  `end_time` > 1516851561 END) AND `status`= 1 AND `flag`= 2 ) ORDER BY id desc LIMIT 3   [ RunTime:0.0400s ]
+
+[ 2018-01-25T11:42:55+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/coupon/cardsCenter
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id =10  WHERE ( (case when `end_time` !=  0 THEN  `end_time` > 1516851775 END) AND `status`= 1 AND `flag`= 1 ) LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT id as card_id,`card_name`,`merchant_id`,`deductible`,`high_amount`,`card_type`,`effective_time`,`is_sex`,`marks`,`start_time`,`end_time`,member_id as have FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id =10  WHERE ( (case when `end_time` !=  0 THEN  `end_time` > 1516851775 END) AND `status`= 1 AND `flag`= 1 ) ORDER BY id desc LIMIT 0,20   [ RunTime:0.0430s ]
+
+[ 2018-01-25T11:44:34+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/coupon/cardsCenter
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id =10  WHERE ( (case when `end_time` >  0 THEN  `end_time` > 1516851874 END) AND `status`= 1 AND `flag`= 1 ) LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT id as card_id,`card_name`,`merchant_id`,`deductible`,`high_amount`,`card_type`,`effective_time`,`is_sex`,`marks`,`start_time`,`end_time`,member_id as have FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id =10  WHERE ( (case when `end_time` >  0 THEN  `end_time` > 1516851874 END) AND `status`= 1 AND `flag`= 1 ) ORDER BY id desc LIMIT 0,20   [ RunTime:0.0440s ]
+
+[ 2018-01-25T11:44:55+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/coupon/cardsCenter
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0390s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id =10  WHERE (  `status`= 1 AND `flag`= 1 ) LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT id as card_id,`card_name`,`merchant_id`,`deductible`,`high_amount`,`card_type`,`effective_time`,`is_sex`,`marks`,`start_time`,`end_time`,member_id as have FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id =10  WHERE (  `status`= 1 AND `flag`= 1 ) ORDER BY id desc LIMIT 0,20   [ RunTime:0.0390s ]
+
+[ 2018-01-25T11:45:35+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/coupon/cardsCenter
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0330s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id =10  WHERE ( (case when `end_time` > '0'  THEN  `end_time` > 1516851935 END) AND `status`= 1 AND `flag`= 1 ) LIMIT 1   [ RunTime:0.0340s ]
+SQL: SELECT id as card_id,`card_name`,`merchant_id`,`deductible`,`high_amount`,`card_type`,`effective_time`,`is_sex`,`marks`,`start_time`,`end_time`,member_id as have FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id =10  WHERE ( (case when `end_time` > '0'  THEN  `end_time` > 1516851935 END) AND `status`= 1 AND `flag`= 1 ) ORDER BY id desc LIMIT 0,20   [ RunTime:0.0340s ]
+
+[ 2018-01-25T13:36:50+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/coupon/cardsCenter
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0430s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id =10  WHERE ( `status`= 1 AND `flag`= 1 ) LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT id as card_id,`card_name`,`merchant_id`,`deductible`,`high_amount`,`card_type`,`effective_time`,`is_sex`,`marks`,`start_time`,`end_time`,member_id as have FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id =10  WHERE ( `status`= 1 AND `flag`= 1 ) ORDER BY id desc LIMIT 0,20   [ RunTime:0.0430s ]
+
+[ 2018-01-25T13:39:19+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/coupon/cardsCenter
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0320s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0340s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id =10  WHERE ( (case when `end_time` > '0' THEN  `end_time` > 1516858759 END) AND `status`= 1 AND `flag`= 1 ) LIMIT 1   [ RunTime:0.0340s ]
+SQL: SELECT id as card_id,`card_name`,`merchant_id`,`deductible`,`high_amount`,`card_type`,`effective_time`,`is_sex`,`marks`,`start_time`,`end_time`,member_id as have FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id =10  WHERE ( (case when `end_time` > '0' THEN  `end_time` > 1516858759 END) AND `status`= 1 AND `flag`= 1 ) ORDER BY id desc LIMIT 0,20   [ RunTime:0.0340s ]
+
+[ 2018-01-25T13:39:43+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/coupon/cardsCenter
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0440s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id =10  WHERE ( (case when `end_time` !=0 THEN  `end_time` > 1516858783 END) AND `status`= 1 AND `flag`= 1 ) LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT id as card_id,`card_name`,`merchant_id`,`deductible`,`high_amount`,`card_type`,`effective_time`,`is_sex`,`marks`,`start_time`,`end_time`,member_id as have FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id =10  WHERE ( (case when `end_time` !=0 THEN  `end_time` > 1516858783 END) AND `status`= 1 AND `flag`= 1 ) ORDER BY id desc LIMIT 0,20   [ RunTime:0.0430s ]
+
+[ 2018-01-25T13:53:51+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/coupon/cardsCenter
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0400s ]
+
+[ 2018-01-25T13:54:05+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/coupon/cardsCenter
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0390s ]
+
+[ 2018-01-25T13:55:36+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/coupon/cardsCenter
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0370s ]
+
+[ 2018-01-25T14:33:11+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/coupon/cardsCenter
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0330s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id =10  WHERE ( `status`= 1 AND `flag`= 1 AND IF (end_time != 0 ,end_time>1516861991) ) LIMIT 1  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id =10  WHERE ( `status`= 1 AND `flag`= 1 AND IF (end_time != 0 ,end_time>1516861991) ) LIMIT 1  
+
+[ 2018-01-25T14:34:03+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/coupon/cardsCenter
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0330s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id =10  WHERE ( `status`= 1 AND `flag`= 1 AND IF (`end_time` != 0,`end_time` > 1516862043) ) LIMIT 1  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id =10  WHERE ( `status`= 1 AND `flag`= 1 AND IF (`end_time` != 0,`end_time` > 1516862043) ) LIMIT 1  
+
+[ 2018-01-25T14:38:35+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/coupon/cardsCenter
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0390s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id =10  WHERE ( (case when `end_time` !=0  THEN  `end_time` > 1516862315 END) AND `status`= 1 AND `flag`= 1 ) LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT id as card_id,`card_name`,`merchant_id`,`deductible`,`high_amount`,`card_type`,`effective_time`,`is_sex`,`marks`,`start_time`,`end_time`,member_id as have FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id =10  WHERE ( (case when `end_time` !=0  THEN  `end_time` > 1516862315 END) AND `status`= 1 AND `flag`= 1 ) ORDER BY id desc LIMIT 0,20   [ RunTime:0.0390s ]
+
+[ 2018-01-25T14:43:11+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/coupon/cardsCenter
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0330s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0330s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id =10  WHERE ( (case when `end_time` !=0  THEN  `end_time` > 1516862591 else `effective_time` !=0  END) AND `status`= 1 AND `flag`= 1 ) LIMIT 1   [ RunTime:0.0320s ]
+SQL: SELECT id as card_id,`card_name`,`merchant_id`,`deductible`,`high_amount`,`card_type`,`effective_time`,`is_sex`,`marks`,`start_time`,`end_time`,member_id as have FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id =10  WHERE ( (case when `end_time` !=0  THEN  `end_time` > 1516862591 else `effective_time` !=0  END) AND `status`= 1 AND `flag`= 1 ) ORDER BY id desc LIMIT 0,20   [ RunTime:0.0330s ]
+
+[ 2018-01-25T14:45:10+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/coupon/cardsCenter
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0390s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id =10  WHERE ( (case when `end_time` !=0  THEN  `end_time` > 1516862710 else `effective_time` !=0  END) AND `status`= 1 AND `flag`= 1 ) LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT id as card_id,`card_name`,`merchant_id`,`deductible`,`high_amount`,`card_type`,`effective_time`,`is_sex`,`marks`,`start_time`,`end_time`,member_id as have FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id =10  WHERE ( (case when `end_time` !=0  THEN  `end_time` > 1516862710 else `effective_time` !=0  END) AND `status`= 1 AND `flag`= 1 ) ORDER BY id desc LIMIT 0,20   [ RunTime:0.0400s ]
+
+[ 2018-01-25T15:58:05+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/coupon/indexCards
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0460s ]
+SQL: SELECT `sex` FROM `api_member` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT id as card_id,`card_name`,`merchant_id`,`deductible`,`high_amount`,`card_type`,`effective_time`,`is_sex`,`marks`,`start_time`,`end_time`,member_id as have FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id=10  WHERE ( (case when `end_time` !=0  THEN  `end_time` > 1516867085 else `effective_time` !=0 END) AND ( `is_sex` = 0 OR `is_sex`=1) AND `status`= 1 AND `flag`= 1 ) ORDER BY id desc LIMIT 3   [ RunTime:0.0460s ]
+
+[ 2018-01-25T15:58:13+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/coupon/indexCards
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0400s ]
+SQL: SELECT `sex` FROM `api_member` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT id as card_id,`card_name`,`merchant_id`,`deductible`,`high_amount`,`card_type`,`effective_time`,`is_sex`,`marks`,`start_time`,`end_time`,member_id as have FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id=10  WHERE ( (case when `end_time` !=0  THEN  `end_time` > 1516867093 else `effective_time` !=0 END) AND ( `is_sex` = 0 OR `is_sex`=1) AND `status`= 1 AND `flag`= 1 ) ORDER BY id desc LIMIT 3   [ RunTime:0.0410s ]
+
+[ 2018-01-25T15:59:08+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/coupon/indexCards
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0340s ]
+SQL: SELECT `sex` FROM `api_member` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0340s ]
+SQL: SELECT id as card_id,`card_name`,`merchant_id`,`deductible`,`high_amount`,`card_type`,`effective_time`,`is_sex`,`marks`,`start_time`,`end_time`,member_id as have FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id=10  WHERE ( (case when `end_time` !=0  THEN  `end_time` > 1516867148 else `effective_time` !=0 END) AND ( `is_sex` = 0 OR `is_sex`=1) AND `status`= 1 AND `flag`= 1 ) ORDER BY id desc LIMIT 3   [ RunTime:0.0350s ]
+
+[ 2018-01-25T16:01:24+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/coupon/indexCards
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0320s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0330s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0330s ]
+SQL: SELECT `sex` FROM `api_member` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0330s ]
+SQL: SELECT id as card_id,`card_name`,`merchant_id`,`deductible`,`high_amount`,`card_type`,`effective_time`,`is_sex`,`marks`,`start_time`,`end_time`,member_id as have FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id=10  WHERE ( (case when `end_time` !=0  THEN  `end_time` > 1516867284 else `effective_time` !=0 END) AND ( `is_sex` = 0 OR `is_sex`=1) AND `status`= 1 AND `flag`= 1 ) ORDER BY id desc LIMIT 3   [ RunTime:0.0330s ]
+
+[ 2018-01-25T16:02:22+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/coupon/indexCards
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `api_coupon_member` [ RunTime:0.0330s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0340s ]
+SQL: SELECT `sex` FROM `api_member` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0320s ]
+SQL: SELECT id as card_id,`card_name`,`merchant_id`,`deductible`,`high_amount`,`card_type`,`effective_time`,`is_sex`,`marks`,`start_time`,`end_time`,member_id as have FROM `api_coupon` LEFT JOIN api_coupon_member ON api_coupon_member.card_id = api_coupon.id AND api_coupon_member.member_id=10  WHERE ( (case when `end_time` !=0  THEN  `end_time` > 1516867341 else `effective_time` !=0 END) AND ( `is_sex` = 0 OR `is_sex`=1) AND `status`= 1 AND `flag`= 2 ) ORDER BY id desc LIMIT 3   [ RunTime:0.0340s ]
+

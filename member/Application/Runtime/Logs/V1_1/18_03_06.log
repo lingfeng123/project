@@ -1,0 +1,68 @@
+[ 2018-03-06T11:18:40+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/member/modifyTel
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0400s ]
+SQL: UPDATE `api_member` SET `tel`='18780087200' WHERE `id` = 14 [ RunTime:0.0400s ]
+
+[ 2018-03-06T16:25:01+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0410s ]
+SQL: SELECT api_bar.*,api_member.nickname,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.title,api_comment_barstar.average_star,api_bar_member.is_evaluate,(select count(id) from api_comment_bar where bar_id = api_bar.id ) as comment_count,api_bar_member.pay_status,api_bar_member.is_evaluate FROM `api_bar_member` inner join api_bar ON api_bar.id = api_bar_member.bar_id left join api_member ON api_member.id = api_bar.member_id left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar_member.member_id = '14' AND api_bar.bar_type = '2' LIMIT 0,20   [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` inner join api_bar ON api_bar.id = api_bar_member.bar_id left join api_member ON api_member.id = api_bar.member_id left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar_member.member_id = '14' AND api_bar.bar_type = '2' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 1 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-03-06T16:26:40+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0380s ]
+SQL: SELECT api_bar.*,api_member.nickname,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.title,api_comment_barstar.average_star,api_bar_member.is_evaluate,(select count(id) from api_comment_bar where bar_id = api_bar.id ) as comment_count,api_bar_member.pay_status FROM `api_bar_member` inner join api_bar ON api_bar.id = api_bar_member.bar_id left join api_member ON api_member.id = api_bar.member_id left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar_member.member_id = '14' AND api_bar.bar_type = '2' LIMIT 0,20   [ RunTime:0.0380s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` inner join api_bar ON api_bar.id = api_bar_member.bar_id left join api_member ON api_member.id = api_bar.member_id left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar_member.member_id = '14' AND api_bar.bar_type = '2' LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 1 LIMIT 1   [ RunTime:0.0360s ]
+
+[ 2018-03-06T16:28:36+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0420s ]
+SQL: SELECT api_bar.*,api_member.nickname,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.title,api_comment_barstar.average_star,api_bar_member.is_evaluate,(select count(id) from api_comment_bar where bar_id = api_bar.id ) as comment_count,api_bar_member.pay_status FROM `api_bar_member` inner join api_bar ON api_bar.id = api_bar_member.bar_id left join api_member ON api_member.id = api_bar.member_id left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar_member.member_id = '14' AND api_bar.bar_type = '2' LIMIT 0,20   [ RunTime:0.0420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` inner join api_bar ON api_bar.id = api_bar_member.bar_id left join api_member ON api_member.id = api_bar.member_id left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar_member.member_id = '14' AND api_bar.bar_type = '2' LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-03-06T16:36:27+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0400s ]
+SQL: SELECT api_bar.*,api_member.nickname,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.title,api_comment_barstar.average_star,api_bar_member.is_evaluate,(select count(id) from api_comment_bar where bar_id = api_bar.id ) as comment_count,api_bar_member.pay_status FROM `api_bar_member` inner join api_bar ON api_bar.id = api_bar_member.bar_id left join api_member ON api_member.id = api_bar.member_id left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar_member.member_id = '14' AND api_bar.bar_type = '2' LIMIT 0,20   [ RunTime:0.0420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` inner join api_bar ON api_bar.id = api_bar_member.bar_id left join api_member ON api_member.id = api_bar.member_id left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar_member.member_id = '14' AND api_bar.bar_type = '2' LIMIT 1   [ RunTime:0.0390s ]
+

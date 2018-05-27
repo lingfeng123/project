@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <script src="/Public/activity/20180115/js/lib/flexible.debug.js"></script>
+    <link rel="stylesheet" href="/Public/activity/20180115/dest/collar_wine.css">
+    <title>空瓶子注册送酒</title>
+</head>
+<body>
+<if condition="$wine_lock eq 0">
+
+    <div class="top">
+        <img src="/Public/activity/20180115/img/logo.png" alt="">
+        <p class="top_1">恭喜您</p>
+        <p>您已获得{$activity_goods}</p>
+    </div>
+    <div class="content">
+        <p class="content_1">有效期：2018年1月24日21：00至2018年1月24日24：00。</p>
+        <p class="content_2">使用规则：需要当晚在Vcoco酒吧消费并注册绑定手机号的用户可以领取赠酒。</p>
+        <p class="content_2">请向附近的酒吧服务员出示该酒券，并由服务员点击确认领酒。</p>
+        <p class="content_3">注意：领酒按钮只能由服务员点击确认，用户自行点击则该券作废！</p>
+    </div>
+    <div class="queren_wrap">
+        <button class="queren_btn" id="queren_btn">服务员确认领酒</button>
+    </div>
+    <p style="display: block;color: #fff; padding: .75rem">温馨提示：若点击“服务员确认领酒”无反应请刷新本页面后尝试</p>
+
+    <div class="tankuang_wrap" id="tankuang_wrap" style="display: none">
+        <div class="tan_content_wrap">
+            <div class="title_wrap">
+                <p>领酒确认！</p>
+            </div>
+            <div class="miaosu_wrap">
+                <p>请确认为服务员操作，并输入服务员工号确认操作。如会员误操作请点击取消</p>
+            </div>
+            <div class="input_wrap">
+                <input type="number" id="job_id" placeholder="输入工号以确认领酒">
+            </div>
+            <div class="click_wrap">
+                <button class="btn quxiao" id="quxiao">取消操作</button>
+                <button class="btn submit" id="submit">确认领酒</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/Public/activity/20180115/js/lib/jquery.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var queren_btn = document.getElementById('queren_btn');
+            var tankuang_wrap = document.getElementById('tankuang_wrap');
+            var quxiao = document.getElementById('quxiao');
+            var submit = document.getElementById('submit');
+
+            queren_btn.onclick = function () {
+                tankuang_wrap.style.display = 'flex';
+            };
+
+            quxiao.onclick = function () {
+                tankuang_wrap.style.display = 'none';
+            };
+
+            submit.onclick = function () {
+                tankuang_wrap.style.display = 'none';
+                //ajax请求
+                var member_id = {$act_info['member_id']};
+                var job_id = $('#job_id').val();
+                $.post("{:U('songjiuConfirm')}", {member_id: member_id, job_id: job_id}, function (data) {
+                    if (data.code == 200) {
+                        $('.tankuang_wrap').hide();
+                        location.reload();
+                    } else {
+                        alert(data.msg);
+                    }
+                }, 'json')
+            };
+        };
+    </script>
+</if>
+
+<if condition="$wine_lock eq 1">
+    <if condition="$is_expre">
+
+        <div class="top">
+            <img src="/Public/activity/20180115/img/logo.png" alt="">
+            <p class="top_1"></p>
+            <p>您的酒券已过期！</p>
+        </div>
+        <div class="title_wrap">
+            <p>下单订座，空瓶子还有更多惊喜给到您！</p>
+        </div>
+        <div class="content">
+            <p class="content_2">如有疑问请联系店内服务员或致电空瓶子客服：<a style="color: #fff" href="tel:4001608198">400-160-8198</a></p>
+        </div>
+
+        <else/>
+
+        <div class="top">
+            <img src="/Public/activity/20180115/img/logo.png" alt="">
+            <p class="top_1"></p>
+            <p>您的酒券已经使用！</p>
+        </div>
+        <div class="title_wrap">
+            <p>下单订座，空瓶子还有更多惊喜给到您！</p>
+        </div>
+        <div class="content">
+            <p class="content_1">您的酒券已于 {$act_info['win_time']|date="Y年m月d日 H:i",###} 由服务员 {$act_info['remark']}
+                操作并派酒。</p>
+            <p class="content_2">如有疑问请联系店内服务员或致电空瓶子客服：<a style="color: #fff" href="tel:4001608198">400-160-8198</a></p>
+        </div>
+
+    </if>
+</if>
+</body>
+</html>

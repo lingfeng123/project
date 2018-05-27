@@ -1,0 +1,249 @@
+[ 2018-04-12T10:02:38+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 1054:Unknown column 'pai_order.order_type' in 'field list'
+ [ SQL语句 ] : SELECT api_order.id,api_order.order_no,api_order.is_bar,api_order.merchant_id,pai_order.order_type FROM `api_bar_order` INNER JOIN api_order ON api_order.id = api_bar_order.order_id  WHERE `bar_id` = '62' LIMIT 1  
+
+[ 2018-04-12T10:03:11+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1054:Unknown column 'pai_order.order_type' in 'field list'
+ [ SQL语句 ] : SELECT api_order.id,api_order.order_no,api_order.is_bar,api_order.merchant_id,pai_order.order_type FROM `api_bar_order` INNER JOIN api_order ON api_order.id = api_bar_order.order_id  WHERE `bar_id` = '62' LIMIT 1  
+
+[ 2018-04-12T10:03:52+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-12T10:05:27+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-12T14:54:14+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/goods/seatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-12T14:54:28+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/goods/seatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-12T14:55:42+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/goods/seatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-12T15:01:07+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/goods/seatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-12T15:03:20+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/goods/seatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-12T15:05:00+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/goods/seatList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: val D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\GoodsSeatModel.class.php 第 65 行.
+NOTIC: [8] Undefined variable: val D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\GoodsSeatModel.class.php 第 65 行.
+
+[ 2018-04-12T18:16:50+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-12T18:20:49+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-12T19:17:11+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1052:Column 'id' in field list is ambiguous
+ [ SQL语句 ] : SELECT id as bar_id,`total_price`,`pay_price`,`average_cost`,`created_time`,`description`,`bar_status` FROM `api_bar` left join api_bar_member ON api_bar_member.bar_id = api_bar.id AND api_bar_member.member_id = 2  WHERE `top_bar_id` = '20' AND `is_xu` = 1 ORDER BY id desc LIMIT 0,20  
+
+[ 2018-04-12T19:17:58+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1052:Column 'id' in field list is ambiguous
+ [ SQL语句 ] : SELECT id as bar_id,`total_price`,`pay_price`,`average_cost`,`created_time`,`description`,`bar_status` FROM `api_bar` left join api_bar_member ON api_bar_member.bar_id = api_bar.id AND api_bar_member.member_id = 2  WHERE `top_bar_id` = '20' AND `is_xu` = 1 ORDER BY id desc LIMIT 0,20  
+NOTIC: [8] Undefined index: bar D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Think\Db\Driver.class.php 第 1002 行.
+
+[ 2018-04-12T19:19:10+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 1052:Column 'id' in order clause is ambiguous
+ [ SQL语句 ] : SELECT api_bar.id as bar_id,api_bar.total_price,api_bar.pay_price,api_bar.average_cost,api_bar.created_time,api_bar.description,api_bar.bar_status FROM `api_bar` left join api_bar_member ON api_bar_member.bar_id = api_bar.id AND api_bar_member.member_id = 2  WHERE `top_bar_id` = '20' AND `is_xu` = 1 ORDER BY id desc LIMIT 0,20  
+NOTIC: [8] Undefined index: bar D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Think\Db\Driver.class.php 第 1002 行.
+
+[ 2018-04-12T19:19:41+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 1052:Column 'id' in order clause is ambiguous
+ [ SQL语句 ] : SELECT api_bar.id as bar_id,api_bar.total_price,api_bar.pay_price,api_bar.average_cost,api_bar.created_time,api_bar.description,api_bar.bar_status FROM `api_bar` left join api_bar_member ON api_bar_member.bar_id = api_bar.id AND api_bar_member.member_id = 2  WHERE `top_bar_id` = '20' AND `is_xu` = 1 ORDER BY id desc LIMIT 0,20  
+
+[ 2018-04-12T19:22:45+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-12T19:24:35+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-12T19:24:43+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-12T19:24:46+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-12T19:24:56+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-12T19:26:15+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-12T19:33:34+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 1052:Column 'id' in order clause is ambiguous
+ [ SQL语句 ] : SELECT api_bar_member.bar_id,api_bar.total_price,api_bar.pay_price,api_bar.average_cost,api_bar.created_time,api_bar.description,api_bar.bar_status,api_bar_member.pay_type,api_bar_member.pay_status,api_bar_member.id as order_id FROM `api_bar` left join api_bar_member ON api_bar_member.bar_id = api_bar.id  WHERE `top_bar_id` = '20' AND `is_xu` = 1 AND api_bar_member.member_id = '6' ORDER BY id desc LIMIT 0,20  
+ERR: 1054:Unknown column 'api_bar_member.member_id' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `api_bar` WHERE `top_bar_id` = 20 AND `is_xu` = 1 AND api_bar_member.member_id = '6' LIMIT 1  
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 713 行.
+
+[ 2018-04-12T19:34:14+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 1054:Unknown column 'api_bar_member.member_id' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `api_bar` WHERE `top_bar_id` = 20 AND `is_xu` = 1 AND api_bar_member.member_id = '6' LIMIT 1  
+
+[ 2018-04-12T19:34:21+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 1054:Unknown column 'api_bar_member.member_id' in 'where clause'
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `api_bar` WHERE `top_bar_id` = 20 AND `is_xu` = 1 AND api_bar_member.member_id = '2' LIMIT 1  
+
+[ 2018-04-12T19:35:46+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-12T19:35:54+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-12T19:36:26+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+

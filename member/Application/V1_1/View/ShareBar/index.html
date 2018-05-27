@@ -1,0 +1,752 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no,email=no" name="format-detection"/>
+    <meta content="maximum-dpr=2" name="flexible"/>
+    <meta content="modeName=750-12" name="grid"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <script src="/Public/lib/flexible_css.debug.js"></script>
+    <script src="/Public/lib/flexible.debug.js"></script>
+    <script src="/Public/lib/makegrid.debug.js"></script>
+    <title>就差你了~ 参与拼吧</title>
+    <meta name="description" content="我刚刚在空瓶子上拼到一个萌妹子，你也一起来吧！">
+    <style type="text/css">
+        html, body {
+            width: 100%;
+            height: 100%;
+            color: #fff;
+        }
+
+        .grid-wrap {
+            background-image: url("/Public/bars_details/spell_background.png");
+            background-size: 100% 100%;
+            min-height: 100%;
+            padding: 0 0.32rem;
+        }
+
+        .body {
+            width: 100%;
+            min-height: 100%;
+        }
+
+        .text-p {
+            line-height: 0.6rem;
+        }
+
+        [data-dpr="1"] .text-p {
+            font-size: 0.173333rem;
+        }
+
+        [data-dpr="2"] .text-p {
+            font-size: 0.346667rem;
+        }
+
+        [data-dpr="3"] .text-p {
+            font-size: 0.52rem;
+        }
+
+        .text-bold {
+            font-weight: bold;
+        }
+
+        .text-title {
+            margin: 0.2rem 0;
+        }
+
+        .text-fff {
+            color: #fff;
+        }
+
+        /***********拼吧详情样式************/
+        /*flex 居中*/
+        .flex {
+            display: flex;
+        }
+
+        .flex-center {
+            display: flex;
+            align-items: center;
+        }
+
+        .flex-center2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flex-between {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .flex-col {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        /*内边框和外边框*/
+        .mr10 {
+            margin-right: 0.133333rem;
+        }
+
+        .mr20 {
+            margin-right: 0.266667rem;
+        }
+
+        .mr24 {
+            margin-right: 0.32rem;
+        }
+
+        .mt20 {
+            margin-top: 0.266667rem;
+        }
+
+        .mt30 {
+            margin-top: 0.4rem;
+        }
+
+        .mt11 {
+            margin-top: 0.146667rem;
+        }
+
+        .mb15 {
+            margin-bottom: 0.2rem;
+        }
+
+        .pb40 {
+            padding-bottom: 0.533333rem;
+        }
+
+        .pt30 {
+            padding-top: 0.4rem;
+        }
+
+        /*文本对齐*/
+        .text-c {
+            text-align: center;
+        }
+
+        /*文本颜色*/
+        .cofff {
+            color: #fff;
+        }
+
+        .co7b7b7b {
+            color: #7b7b7b;
+        }
+
+        .eb354a {
+            color: #eb354a;
+        }
+
+        .ffce01 {
+            color: #ffce01;
+        }
+
+        /*icon样式*/
+        .icon {
+            width: 0.4rem;
+            height: 0.4rem;
+        }
+
+        /*头像背景*/
+        .img-bg {
+            background-image: url("/Public/bars_details/headportrait@3x.png");
+            background-size: cover;
+            padding: 0;
+        }
+
+        /*用户头像*/
+        .avatar-warp {
+            position: relative;
+        }
+
+        .avatar {
+            display: inline-block;
+            width: 1.253333rem;
+            height: 1.253333rem;
+            border-radius: 50%;
+        }
+
+        .party {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        /*用户信息*/
+        .grade {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grade img {
+            margin-right: 0.066667rem;
+        }
+
+        .theme {
+            padding: 0.106667rem 0.24rem;
+            border-radius: 0.266667rem;
+            background-color: #ff833f;
+        }
+
+        /*头像列表*/
+        .avatar-list-warp {
+            padding: 0.133333rem 0.533333rem;
+            border-bottom: 0.013333rem solid #364236;
+        }
+
+        .avatar2 {
+            display: inline-block;
+            margin: 0 0.133333rem;
+            margin-bottom: 0.266667rem;
+            border-radius: 50%;
+            width: 1.253333rem;
+            height: 1.253333rem;
+            overflow: hidden;
+        }
+
+        /*拼吧规则*/
+        .button-text {
+            padding: 0.2rem 0.266667rem;
+            background: #4b4345;
+            border-radius: 0.08rem;
+        }
+
+        .rule-liucheng {
+            margin: 0.4rem 0;
+        }
+
+        .rule-tip img {
+            margin-right: 0.053333rem;
+            vertical-align: text-top;
+        }
+
+        .coc42c31 {
+            color: #c42c31;
+        }
+
+        /*酒吧*/
+        .bar-wrap {
+            line-height: 0.666667rem;
+        }
+
+        /*参与拼吧*/
+        .join {
+            margin-top: 0.666667rem;
+            text-align: center;
+        }
+
+        .submit {
+            display: block;
+            margin: 0 auto;
+            width: 50%;
+            height: 1.2rem;
+            line-height: 1.2rem;
+            border-radius: 0.106667rem;
+            border: 0;
+            color: #fff;
+            text-decoration: none;
+            background-color: #9f0e15;
+        }
+
+        .submit:hover {
+            text-decoration: none;
+        }
+
+        [data-dpr="1"] .submit {
+            font-size: 14px;
+        }
+
+        [data-dpr="2"] .submit {
+            font-size: 28px;
+        }
+
+        [data-dpr="3"] .submit {
+            font-size: 42px;
+        }
+
+        /*遮罩*/
+        .mask {
+            position: fixed;
+            top: 0;
+            background: rgba(0, 0, 0, .7);
+            z-index: 1002;
+            left: 0;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mask-modal {
+            width: 100%;
+            height: 100%;
+        }
+
+        .user-agreement {
+            position: relative;
+            width: 90%;
+            height: 70%;
+            padding: 0.533333rem 0.266667rem;
+            border-radius: 0.266667rem;
+            background: #fff;
+        }
+
+        .mask-title {
+            color: #333;
+            text-align: center;
+            margin-top: 0.266667rem;
+            margin-bottom: 0.4rem;
+        }
+
+        [data-dpr="1"] .mask-title {
+            font-size: 16px;
+        }
+
+        [data-dpr="2"] .mask-title {
+            font-size: 32px;
+        }
+
+        [data-dpr="3"] .mask-title {
+            font-size: 48px;
+        }
+
+        .mask-close {
+            position: absolute;
+            top: 0;
+            right: 0.4rem;
+            color: #999;
+        }
+
+        [data-dpr="1"] .mask-close {
+            font-size: 30px;
+        }
+
+        [data-dpr="2"] .mask-close {
+            font-size: 60px;
+        }
+
+        [data-dpr="3"] .mask-close {
+            font-size: 90px;
+        }
+
+        .mask-body {
+            color: #656565;
+            height: 88%;
+            overflow: auto;
+        }
+
+        [data-dpr="1"] .mask-body {
+            font-size: 14px;
+        }
+
+        [data-dpr="2"] .mask-body {
+            font-size: 28px;
+        }
+
+        [data-dpr="3"] .mask-body {
+            font-size: 42px;
+        }
+
+        .tip-mask {
+            position: absolute;
+            top: 0;
+            background: rgba(0, 0, 0, .7);
+            z-index: 1002;
+            left: 0;
+            display: none;
+        }
+
+        .tip-img {
+            margin-top: 0.266667rem;
+            margin-right: 0.266667rem;
+            text-align: right;
+        }
+
+        .tip-text {
+            padding: 0 10%;
+            margin-top: 0.533333rem;
+            line-height: 0.666667rem;
+        }
+
+        [data-dpr="1"] .tip-text {
+            font-size: 16px;
+        }
+
+        [data-dpr="2"] .tip-text {
+            font-size: 32px;
+        }
+
+        [data-dpr="3"] .tip-text {
+            font-size: 48px;
+        }
+
+        .tip-img img {
+            width: 5rem;
+            height: 4rem;
+        }
+
+        .img-size {
+            width: .5rem
+        }
+
+        ;
+        .avatar-size {
+            width: .6rem;
+        }
+
+        .right-size {
+            width: .22rem;
+        }
+
+        .tip-size {
+            width: .35rem;
+        }
+    </style>
+</head>
+<body>
+<div class="grid-wrap" id="grid-html">
+</div>
+
+<!--用户协议-->
+<div id="mask" class="mask" onclick="hideMask()">
+    <div class="flex-center2 mask-modal">
+        <div class="user-agreement">
+            <div class="mask-close">&times;</div>
+            <div class="mask-title">拼吧规则</div>
+            <div class="mask-body">
+                <p>1、拼吧的目的在于为空瓶子平台的用户提供更多线下社交的机会；</p>
+                <p>2、所有的拼吧皆为用户的自发行为，发起者成功发布拼吧信息后，其他用户可以报名参与；</p>
+                <p>3、空瓶子的每一位用户都可以在平台上发起或参与拼吧，也可以分享拼吧信息邀请朋友参与；</p>
+                <p>4、用户参与拼吧一旦支付成功后，即成功报名了拼吧，不能再取消拼吧，若用户不去酒吧消费，则拼吧的费用不会退还；</p>
+                <p>
+                    5、在发起拼吧时，发起人可以设置拼吧的具体规则，如人数限制（需根据酒吧座位人数限制来设定）、费用类型（全员AA制、女士免单男士AA制、男士免单女士AA制三种类型）、活动时间等；人均费用是根据所选套餐价格、发起人设置的参与人数及费用类型，由系统自动生成；</p>
+                <p>6、若拼吧成功，发起者将获得相应的现金奖励（现金奖励可以在空瓶子账户余额中查看、使用或提现）；若拼吧失败，支付的费用将退还到原支付账户；</p>
+                <p>7、在消费拼吧订单的过程中，如果需要续酒，酒水的费用由发起续酒的用户勾选所有参与续酒的用户以AA制的形式支付；</p>
+                <p>8、拼吧皆为线上报名、线下参与的形式，每一位参与者都应有安全防范意识，谨防上当受骗；若活动过程中出现意外，后果皆由参与者自身承担，空瓶子平台不负任何法律责任</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--下载app提示-->
+<div id="tip_mask" class="tip-mask" onclick="hideTipMask()">
+    <div class="tip">
+        <div class="tip-img">
+            <img src="/Public/bars_details/invitation_share@3x.png" alt="">
+        </div>
+        <div class="tip-text">
+            请点击右上角按钮，然后在弹出的菜单中选择<span style="color:#f60;"> [ 在默认浏览器中打开 ] </span>以下载空瓶子APP，<span style="color: #f60;">不支持在第三方浏览器打开</span>
+        </div>
+    </div>
+</div>
+<script src="/Public/lib/jquery.min.js"></script>
+<script>
+
+    $(function () {
+        // hideMask(); //隐藏用户协议
+        // hideTipMask(); //隐藏提示
+        requestData();
+
+
+    });
+
+    function requestData() {
+        var url = '{:U("ShareBar/barDetail")}';
+        var bar_id = {$bar_id};
+        $.ajax({
+            type: 'POST',
+            url: url,
+            dataType: 'json',
+            data: {bar_id: bar_id},
+            success: function (data) {
+                if (data.code == 200) {
+                    var member = data.data.member;
+                    var data = data.data.order;
+
+
+                    // 获取主题名称
+                    var bar_theme = switch_bar_theme(data.bar_theme);
+                    // 获取付费类型
+                    var cost_type = switch_cost_type(data.cost_type);
+                    // 到店时间// 到店日期格式化
+                    var arrives_time = getDateString(new Date(data.arrives_time * 1000))
+                    // 处理头像列表
+                    //console.log(member);
+                    var avatarListHtml = '';
+                    for (var i = 0; i < member.length; i++) {
+                        avatarListHtml += '<img class="avatar2 img-bg" src="' + member[i].avatar + '" alt="">';
+                    }
+                    //console.log(data.member_diff);
+                    if (data.member_diff > 0) {
+                        for (var i = 0; i < data.member_diff; i++) {
+                            avatarListHtml += '<img class="avatar2 img-bg" src="/Public/bars_details/headportrait@3x.png" alt="">';
+                        }
+                    }
+
+                    // console.log(avatarListHtml);
+                    //剩余时间
+                    var statusHtml = '';
+                    if (data.bar_style == 1) {  // 初次渲染倒计时
+                        //console.log(data.total_time);
+                        var nowdate = date_format(data.total_time);//倒计时
+
+
+                        statusHtml = "<div class=\"co7b7b7b\">还差<text class=\"cofff\">" + data.member_diff + "</text>人，赶紧邀请好友一起拼单</div>\n" + "<div class=\"co7b7b7b mt11 mb15\">剩余<text class=\"cofff\">" + nowdate + "</text></div>";
+                    } else if (data.bar_style == 0) {
+                        statusHtml = '<div class="eb354a mt11 mb15">拼吧失败</text></div>';
+                    } else if (data.bar_style == 2) {
+                        statusHtml = '<div class="cofff mt11 mb15">人数拼满</text></div>';
+                    } else if (data.bar_style == 3) {
+                        statusHtml = '<div class="ffce01 mt11 mb15">拼吧成功！</text></div>';
+                    } else if (data.bar_style == 4) {
+                        statusHtml = '<div class="ffce01 mt11 mb15">拼吧成功！</text></div>';
+                    }
+                    var html =
+                        '    <div class="user-msg pt30">' +
+                        '        <div class="flex-between">' +
+                        '            <div class="flex">' +
+                        '                <div class="avatar-warp mr20">' +
+                        '                    <img class="avatar avatar-size" src="' + data.avatar + '" alt="">' +
+                        '                    <img class="party img-size" src="/Public/bars_details/party@2x.png" alt="用户认证">' +
+                        '                </div>' +
+                        '                <div class="user-detail flex-col">' +
+                        '                    <div class="line1 flex">' +
+                        '                        <div class="name mr20">' + data.nickname + '</div>' +
+                        '                        <div class="grade">' +
+                        '                            <img class="icon" src="/Public/bars_details/spellit_score@3x.png" alt="星星">' +
+                        '                            <text>' + data.average_star + '分</text>' +
+                        '                        </div>' +
+                        '                    </div>' +
+                        '                    <div class="line2">' +
+                        '                        <text class="theme">' + bar_theme + '</text>' +
+                        '                    </div>' +
+                        '                </div>' +
+                        '            </div>' +
+
+                        '            <div class="distance">' +
+
+                        '            </div>' +
+                        '        </div>' +
+                        '        <div class="intro mt30">' +
+                        '            介绍：' + data.description +
+                        '        </div>' +
+                        '    </div>' +
+
+                        '    <div class="avatar-list-warp mt30">' +
+                        '        <div class="avatar-list">' +
+                        avatarListHtml +
+                        '        </div>' +
+                        '        <div class="text-c">' +
+                        statusHtml +
+                        '        </div>' +
+                        '    </div>' +
+
+                        '    <div class="bar-rule mt30">' +
+                        '        <div class="flex-between mb15" onclick="showMask()">' +
+                        '            <text>拼吧规则</text>' +
+                        '            <img class="right-size" src="/Public/bars_details/spell_arrow@2x.png" alt="">' +
+                        '        </div>' +
+                        '        <div class="flex-between rule-liucheng">' +
+                        '            <text class="button-text">发起/参与</text>' +
+                        '            <img class="right-size" src="/Public/bars_details/spell_arrow_small@2x.png" alt="">' +
+                        '            <text class="button-text">人数拼满</text>' +
+                        '            <img class="right-size" src="/Public/bars_details/spell_arrow_small@2x.png" alt="">' +
+                        '            <text class="button-text">拼吧成功</text>' +
+                        '            <img class="right-size" src="/Public/bars_details/spell_arrow_small@2x.png" alt="">' +
+                        '            <text class="button-text">到店消费</text>' +
+                        '        </div>' +
+                        '        <div class="rule-tip">' +
+                        '            <img class="tip-size" src="/Public/bars_details/prompt@2x.png" alt="">' +
+                        '            <text class="coc42c31">参与拼吧后不能取消，若自己不去酒吧消费，不会退还费用。</text>' +
+                        '       </div>' +
+                        '   </div>' +
+
+                        '   <div class="bar-wrap mt30">' +
+                        '       <div class="bar-name mb15">' + data.title + '</div>' +
+                        '       <div class="flex-center">' +
+                        '           <img class="mr10 img-size" src="/Public/bars_details/icon_profile@2x.png" alt="">' +
+                        '           <text class="mr24 fs24 co7b7b7b">拼吧人数</text>' +
+                        '            <text class="mr24 fs24 co7b7b7b mr40">男' + data.man_number + '人女' + data.woman_number + '人</text>' +
+                        '            <img class="mr10 img-size" src="/Public/bars_details/icon_tag@2x.png" alt="">' +
+                        '            <text class="mr24 fs24 co7b7b7b">' + cost_type + '</text>' +
+                        '        </div>' +
+                        '        <div class="flex-center">' +
+                        '            <img class="mr10 img-size" src="/Public/bars_details/icon_rmb@2x.png" alt="">' +
+                        '            <text class="mr24 fs24 co7b7b7b">人均￥' + data.average_cost + '</text>' +
+                        '           <img class="mr10 img-size" src="/Public/bars_details/icon_calendar@2x.png" alt="">' +
+                        '           <text class="mr24 fs24 co7b7b7b">' + arrives_time + '</text>' +
+                        '        </div>' +
+                        '        <view class="flex-center">' +
+                        '            <img class="mr10 img-size" src="/Public/bars_details/icon_location@2x.png" alt="">' +
+                        '            <text class="fs24 co7b7b7b">' + data.address + '</text>' +
+                        '        </view>' +
+                        '    </div>' +
+
+                        '    <div class="join pb40">' +
+                        '        <button class="submit" onclick="joinBar();">参与拼吧</button>' +
+                        '    </div>';
+
+                    $("#grid-html").html(html);
+                } else {
+                    alert('该拼吧活动不存在, 请选择有效拼吧活动');
+                }
+            },
+        });
+    }
+
+    function joinBar() {
+        var ua = navigator.userAgent.toLowerCase();//获取判断用的对象
+        var isiOS = navigator.userAgent.match('iPad') || navigator.userAgent.match('iPhone') || navigator.userAgent.match('iPod'),
+            isAndroid = navigator.userAgent.match('Android');
+
+//        //跳转到ios APP
+//        if(isiOS&&(ua.match('micromessenger') !== 'micromessenger' || ua.match('qq') !== 'qq')){
+//            jumpApp("itms-apps://itunes.apple.com/app/空瓶子商户端/id1315962008?mt=8", "kpzscheme://?bar_id={$bar_id}");
+//        }
+//        //跳转到Android APP
+//        if(isAndroid&&ua.match('micromessenger') !== 'micromessenger'){
+//            jumpApp("https://baidu.com", "kpzscheme://openkpz/?bar_id={$bar_id}");
+//        }
+
+
+        if (isiOS) {
+
+            if (ua.match('micromessenger') == 'micromessenger' || ua.match('qq') == 'qq') {
+                $("#tip_mask").css("height", $(document).height());
+                $("#tip_mask").css("width", $(document).width());
+                $("#tip_mask").show();
+            } else {
+                jumpApp("itms-apps://itunes.apple.com/app/空瓶子商户端/id1315962008?mt=8", "kpzscheme://?bar_id={$bar_id}");
+            }
+
+        } else if (isAndroid) {
+
+            if (ua.match('micromessenger') == 'micromessenger') {
+                $("#tip_mask").css("height", $(document).height());
+                $("#tip_mask").css("width", $(document).width());
+                $("#tip_mask").show();
+            } else {
+                jumpApp("http://www.kongpingzi.net/", "kpzscheme://openkpz/?bar_id={$bar_id}")
+            }
+
+        } else {
+            alert('请在移动浏览器中打开本页面!');
+        }
+    }
+
+    //跳转到APP
+    function jumpApp(link, scheme) {
+        var loadDateTime = new Date();
+        window.setTimeout(function() {
+                var timeOutDateTime = new Date();
+                if (timeOutDateTime - loadDateTime < 5000) {
+                    window.location = link;
+                } else {
+                    window.close();
+                }
+            },
+            25);
+        window.location = scheme;
+    }
+
+    //主题切换
+    function switch_bar_theme(a) {
+        switch (a) {
+            case '1':
+                return '同城交友';
+                break;
+            case '2':
+                return '老乡趴';
+                break;
+            case '3':
+                return '单身趴';
+                break;
+            case '4':
+                return '趣味游戏';
+                break;
+            case '5':
+                return '校友趴';
+                break;
+            case '6':
+                return '看球聚会';
+                break;
+        }
+
+    }
+
+    // 付款费用类型数据转换
+    function switch_cost_type(a) {
+        switch (a) {
+            case '1':
+                return '女免单男AA';
+                break;
+            case '2':
+                return '男女AA';
+                break;
+            case '3':
+                return '男免单女AA';
+                break;
+        }
+    }
+
+
+    function formatNumber(n) {
+        n = n.toString();
+        return n[1] ? n : '0' + n
+    }
+
+    // 日期格式化
+    function getDateString(date) {
+        var tempArr = [date.getFullYear(), formatNumber(date.getMonth() + 1), formatNumber(date.getDate())];
+        return tempArr.join("-");
+    }
+
+    // 时间格式化输出，如03:25:19 86。每10ms都会调用一次
+    function date_format(nowdate) {
+        // 秒数
+        // var second = Math.floor(micro_second / 1000);
+        // 小时位
+        var hr = fill_zero_prefix(Math.floor(nowdate / 3600));
+        // 分钟位
+        var min = fill_zero_prefix(Math.floor((nowdate - hr * 3600) / 60));
+        // 秒位
+        var sec = fill_zero_prefix(nowdate - min * 60 - hr * 3600);// equal to => var sec = second % 60;
+        // 毫秒位，保留2位
+        // var micro_sec = fill_zero_prefix(Math.floor((micro_second % 1000) / 10));
+
+        return hr + ":" + min + ":" + sec;
+    }
+
+
+    function fill_zero_prefix(num) {
+        return num < 10 ? "0" + num : num
+    }
+    //隐藏遮罩层
+    function hideTipMask() {
+        $('body').css('overflow', 'visible');
+        $("#tip_mask").hide();
+    }
+
+    //显示遮罩层
+    function showMask() {
+        $("#mask").css("height", $(document).height());
+        $("#mask").css("width", $(document).width());
+        $("#mask").show();
+        $('body').css('overflow', 'hidden');
+    }
+    //隐藏遮罩层
+    function hideMask() {
+        $('body').css('overflow', 'visible');
+        $("#mask").hide();
+    }
+
+</script>
+</body>
+</html>

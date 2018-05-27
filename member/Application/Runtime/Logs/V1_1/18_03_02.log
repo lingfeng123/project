@@ -1,0 +1,160 @@
+[ 2018-03-02T11:11:42+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/reNewBarAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0480s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0470s ]
+SQL: SELECT * FROM `api_bar` WHERE `id` = 74 LIMIT 1   [ RunTime:0.0450s ]
+
+[ 2018-03-02T11:16:24+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/reNewBarAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_bar` WHERE `id` = 74 LIMIT 1   [ RunTime:0.0430s ]
+
+[ 2018-03-02T11:17:25+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/reNewBarAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_bar` WHERE `id` = 74 LIMIT 1   [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0440s ]
+ERR: 1052:Column 'id' in field list is ambiguous
+ [ SQL语句 ] : SELECT `id`,`nickname`,`sex`,`tel`,`avatar`,`age` FROM `api_bar_member` left join api_member ON api_member.id = api_bar_member.member_id  WHERE `member_id` = '11' AND `bar_id` = '74' LIMIT 1  
+ERR: 1052:Column 'id' in field list is ambiguous
+ [ SQL语句 ] : SELECT `id`,`nickname`,`sex`,`tel`,`avatar`,`age` FROM `api_bar_member` left join api_member ON api_member.id = api_bar_member.member_id  WHERE `member_id` = '11' AND `bar_id` = '74' LIMIT 1  
+
+[ 2018-03-02T11:18:32+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/reNewBarAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0480s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0470s ]
+SQL: SELECT * FROM `api_bar` WHERE `id` = 74 LIMIT 1   [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0470s ]
+ERR: 1052:Column 'sex' in field list is ambiguous
+ [ SQL语句 ] : SELECT `member_id`,`nickname`,`sex`,`tel`,`avatar`,`age` FROM `api_bar_member` left join api_member ON api_member.id = api_bar_member.member_id  WHERE `member_id` = '11' AND `bar_id` = '74' LIMIT 1  
+ERR: 1052:Column 'sex' in field list is ambiguous
+ [ SQL语句 ] : SELECT `member_id`,`nickname`,`sex`,`tel`,`avatar`,`age` FROM `api_bar_member` left join api_member ON api_member.id = api_bar_member.member_id  WHERE `member_id` = '11' AND `bar_id` = '74' LIMIT 1  
+
+[ 2018-03-02T11:19:58+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/reNewBarAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0490s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_bar` WHERE `id` = 74 LIMIT 1   [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0450s ]
+SQL: SELECT api_member.id,api_member.nickname,api_member.sex,api_member.tel,api_member.avatar,api_member.age FROM `api_bar_member` left join api_member ON api_member.id = api_bar_member.member_id  WHERE `member_id` = '11' AND `bar_id` = '74' LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT `member_id` FROM `api_bar_member` WHERE `bar_id` = 74  [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_goods_pack` [ RunTime:0.0440s ]
+SQL: SELECT `id`,`merchant_id`,`type`,`price`,`stock`,`xu_stock`,`market_price`,`purchase_price` FROM `api_goods_pack` WHERE `id` IN (1) AND `merchant_id` = 1  [ RunTime:0.0450s ]
+
+[ 2018-03-02T11:23:51+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/reNewBarAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0550s ]
+SQL: SELECT * FROM `api_bar` WHERE `id` = 74 LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0440s ]
+SQL: SELECT api_member.id,api_member.nickname,api_member.sex,api_member.tel,api_member.avatar,api_member.age FROM `api_bar_member` left join api_member ON api_member.id = api_bar_member.member_id  WHERE `member_id` = '11' AND `bar_id` = '74' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT `member_id` FROM `api_bar_member` WHERE `bar_id` = 74  [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_goods_pack` [ RunTime:0.0430s ]
+SQL: SELECT `id`,`merchant_id`,`type`,`price`,`stock`,`xu_stock`,`market_price`,`purchase_price` FROM `api_goods_pack` WHERE `id` IN (1) AND `merchant_id` = 1  [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0450s ]
+SQL: SELECT id as member_id,`nickname`,`sex`,`tel`,`avatar`,`age` FROM `api_member` WHERE `id` IN ('1','11','12')  [ RunTime:0.0430s ]
+
+[ 2018-03-02T11:37:29+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/reNewBarAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0470s ]
+SQL: SELECT * FROM `api_bar` WHERE `id` = 74 LIMIT 1   [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0510s ]
+SQL: SELECT api_member.id,api_member.nickname,api_member.sex,api_member.tel,api_member.avatar,api_member.age FROM `api_bar_member` left join api_member ON api_member.id = api_bar_member.member_id  WHERE `member_id` = '11' AND `bar_id` = '74' LIMIT 1   [ RunTime:0.0460s ]
+SQL: SELECT `member_id` FROM `api_bar_member` WHERE `bar_id` = 74  [ RunTime:0.0540s ]
+SQL: SHOW COLUMNS FROM `api_goods_pack` [ RunTime:0.0450s ]
+SQL: SELECT `id`,`merchant_id`,`type`,`price`,`stock`,`xu_stock`,`market_price`,`purchase_price` FROM `api_goods_pack` WHERE `id` IN (1) AND `merchant_id` = 1  [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0460s ]
+SQL: SELECT id as member_id,`nickname`,`sex`,`tel`,`avatar`,`age` FROM `api_member` WHERE `id` IN ('1','11','12')  [ RunTime:0.0460s ]
+
+[ 2018-03-02T15:10:14+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/reNewBarAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_bar` WHERE `id` = 74 LIMIT 1   [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0450s ]
+SQL: SELECT api_member.id,api_member.nickname,api_member.sex,api_member.tel,api_member.avatar,api_member.age FROM `api_bar_member` left join api_member ON api_member.id = api_bar_member.member_id  WHERE `member_id` = '11' AND `bar_id` = '74' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT `member_id` FROM `api_bar_member` WHERE `bar_id` = 74  [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_goods_pack` [ RunTime:0.0460s ]
+SQL: SELECT `id`,`merchant_id`,`type`,`price`,`stock`,`xu_stock`,`market_price`,`purchase_price` FROM `api_goods_pack` WHERE `id` IN (1) AND `merchant_id` = 1  [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0460s ]
+SQL: SELECT id as member_id,`nickname`,`sex`,`tel`,`avatar`,`age` FROM `api_member` WHERE `id` IN ('1','11','12')  [ RunTime:0.0450s ]
+
+[ 2018-03-02T15:26:14+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/reNewBarAdd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0520s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_bar` WHERE `id` = 74 LIMIT 1   [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0450s ]
+SQL: SELECT api_member.id,api_member.nickname,api_member.sex,api_member.tel,api_member.avatar,api_member.age FROM `api_bar_member` left join api_member ON api_member.id = api_bar_member.member_id  WHERE `member_id` = '11' AND `bar_id` = '74' LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT `member_id` FROM `api_bar_member` WHERE `bar_id` = 74  [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_goods_pack` [ RunTime:0.0440s ]
+SQL: SELECT `id`,`merchant_id`,`type`,`price`,`stock`,`xu_stock`,`market_price`,`purchase_price` FROM `api_goods_pack` WHERE `id` IN (1) AND `merchant_id` = 1  [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0470s ]
+SQL: SELECT id as member_id,`nickname`,`sex`,`tel`,`avatar`,`age` FROM `api_member` WHERE `id` IN ('1','11','12')  [ RunTime:0.0440s ]
+

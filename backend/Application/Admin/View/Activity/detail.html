@@ -1,0 +1,63 @@
+<extend name="Public/common"/>
+<block name="main">
+    <h1 style="font-size: 20px; padding-bottom: 20px; border-bottom: 1px solid #ccc; margin-bottom: 20px;">活动详情</h1>
+    <div class="layui-row">
+        <div class="layui-col-xs3">
+            <div class="grid-demo-bg1">活动名称</div>
+        </div>
+        <div class="layui-col-xs9">
+            <div class="grid-demo">{$detail.title}</div>
+        </div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">
+            <div class="grid-demo-bg1">活动描述</div>
+        </div>
+        <div class="layui-col-xs9">
+            <div class="grid-demo">{$detail.description|htmlspecialchars_decode}</div>
+        </div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">
+            <div class="grid-demo-bg1">活动状态</div>
+        </div>
+        <div class="layui-col-xs9">
+            <div class="grid-demo">
+                <if condition="$detail.type eq 1">已停止<else/>进行中</if>
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">
+            <div class="grid-demo-bg1">活动备注</div>
+        </div>
+        <div class="layui-col-xs9">
+            <div class="grid-demo">{$detail.remark}</div>
+        </div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">
+            <div class="grid-demo-bg1">活动时间</div>
+        </div>
+        <div class="layui-col-xs9">
+            <div class="grid-demo">{$detail.start_time|date="Y-m-d H:i:s",###} - {$detail.end_time|date="Y-m-d H:i:s",###}</div>
+        </div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">
+            <div class="grid-demo-bg1">添加时间</div>
+        </div>
+        <div class="layui-col-xs9">
+            <div class="grid-demo">{$detail.created_time|date="Y-m-d H:i:s",###}</div>
+        </div>
+    </div>
+
+
+</block>
+<block name="myScript">
+</block>

@@ -1,0 +1,294 @@
+[ 2018-04-02T00:49:08+08:00 ] 60.191.38.77 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000128s ]
+ERR: 无法加载控制器:Index
+
+[ 2018-04-02T04:48:54+08:00 ] 60.191.38.77 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000117s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000065s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000131s ]
+ERR: 无法加载控制器:Index
+
+[ 2018-04-02T05:44:32+08:00 ] 60.191.38.78 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000117s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000112s ]
+ERR: 无法加载控制器:Index
+
+[ 2018-04-02T06:52:28+08:00 ] 71.6.202.204 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000133s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000117s ]
+ERR: 无法加载控制器:Index
+
+[ 2018-04-02T07:15:38+08:00 ] 164.132.91.13 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000109s ]
+ERR: 无法加载控制器:Index
+
+[ 2018-04-02T09:35:07+08:00 ] 183.192.201.97 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000111s ]
+ERR: 无法加载控制器:Index
+
+[ 2018-04-02T09:35:08+08:00 ] 223.167.152.124 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000110s ]
+ERR: 无法加载控制器:Index
+
+[ 2018-04-02T09:49:59+08:00 ] 140.207.54.76 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000178s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000165s ]
+SQL: SHOW COLUMNS FROM `api_member_capital` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `api_member_order` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `api_member_order` WHERE `order_no` = '9522633772919307' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `member_id`,`give_money`,`recharge_money` FROM `api_member_capital` WHERE `member_id` = 13 LIMIT 1   [ RunTime:0.0005s ]
+SQL: UPDATE `api_member_capital` SET `give_money`='9996619.47',`recharge_money`='0.01',`updated_time`='1522633799' WHERE `member_id` = 13 [ RunTime:0.0005s ]
+SQL: INSERT INTO `api_member_order` (`member_id`,`recharge_money`,`give_money`,`status`,`order_no`,`create_time`) VALUES ('13','0.01','0.01','1','9522633772919307','1522633799') [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0012s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('13','0','7','9522633772919307','wxa69e89cc7261ae4f','1496908062','JSAPI','0.01','0.01','4200000061201804020373717606','1522633799','2','0','2','1522633799') [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `api_member_record` [ RunTime:0.0013s ]
+SQL: INSERT INTO `api_member_record` (`member_id`,`type`,`change_money`,`trade_time`,`source`,`terminal`,`title`,`order_no`,`order_id`,`before_recharge_money`,`after_recharge_money`,`before_give_money`,`after_give_money`) VALUES ('13','2','0.01','1522633799','微信支付','xcx','钱包余额充值','9522633772919307','7','0.00','0.01','9996619.46','9996619.47') [ RunTime:0.0005s ]
+
+[ 2018-04-02T10:04:45+08:00 ] 110.75.248.201 /pay/alipayNotify
+ERR: exception 'Think\Exception' with message '1048:Column 'mch_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('14','2','20','4522634560954663','2018022302256228',NULL,NULL,'0.01','0',NULL,'1522634685','1','3','2','1522634685')' in /mnt/data/kpzapp/ThinkPHP/Common/functions.php:102
+Stack trace:
+#0 /mnt/data/kpzapp/ThinkPHP/Library/Think/Db/Driver.class.php(349): E('1048:Column 'mc...')
+#1 /mnt/data/kpzapp/ThinkPHP/Library/Think/Db/Driver.class.php(236): Think\Db\Driver->error()
+#2 /mnt/data/kpzapp/ThinkPHP/Library/Think/Db/Driver.class.php(823): Think\Db\Driver->execute('INSERT INTO `ap...', false)
+#3 /mnt/data/kpzapp/ThinkPHP/Library/Think/Model.class.php(320): Think\Db\Driver->insert(Array, Array, false)
+#4 /mnt/data/kpzapp/member/Application/Home/Model/V1_1/BarMemberModel.class.php(98): Think\Model->add(Array)
+#5 /mnt/data/kpzapp/member/Application/Home/Model/V1_1/BarMemberModel.class.php(50): Home\Model\V1_1\BarMemberModel->updateBarStatus(Array, Array, Array)
+#6 /mnt/data/kpzapp/member/Application/Home/Controller/V1_1/AlipayController.class.php(176): Home\Model\V1_1\BarMemberModel->barOrderHandle(Array, Array)
+#7 /mnt/data/kpzapp/member/Application/Home/Controller/V1_1/AlipayController.class.php(70): Home\Controller\V1_1\AlipayController->buyBarOrderHandle(Array, Array)
+#8 /mnt/data/kpzapp/member/Application/Home/Controller/V1_1/AlipayController.class.php(46): Home\Controller\V1_1\AlipayController->consumerHandle(Array, Array)
+#9 /mnt/data/kpzapp/member/Application/Home/Controller/PayController.class.php(212): Home\Controller\V1_1\AlipayController->publicAlipayNotify(Array, Array)
+#10 [internal function]: Home\Controller\PayController->alipayNotify()
+#11 /mnt/data/kpzapp/ThinkPHP/Library/Think/App.class.php(173): ReflectionMethod->invoke(Object(Home\Controller\PayController))
+#12 /mnt/data/kpzapp/ThinkPHP/Library/Think/App.class.php(110): Think\App::invokeAction(Object(Home\Controller\PayController), 'alipayNotify')
+#13 /mnt/data/kpzapp/ThinkPHP/Library/Think/App.class.php(204): Think\App::exec()
+#14 /mnt/data/kpzapp/ThinkPHP/Library/Think/Think.class.php(120): Think\App::run()
+#15 /mnt/data/kpzapp/ThinkPHP/ThinkPHP.php(97): Think\Think::start()
+#16 /mnt/data/kpzapp/member/index.php(25): require('/mnt/data/kpzap...')
+#17 {main}
+[ 2018-04-02T10:04:45+08:00 ] 110.75.248.201 /pay/alipayNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000114s ]
+NOTIC: [8] Undefined index: mch_id /mnt/data/kpzapp/member/Application/Home/Controller/V1_1/AlipayController.class.php 第 163 行.
+NOTIC: [8] Undefined index: trade_type /mnt/data/kpzapp/member/Application/Home/Controller/V1_1/AlipayController.class.php 第 164 行.
+NOTIC: [8] Undefined index: total_fee /mnt/data/kpzapp/member/Application/Home/Controller/V1_1/AlipayController.class.php 第 165 行.
+NOTIC: [8] Undefined index: transaction_id /mnt/data/kpzapp/member/Application/Home/Controller/V1_1/AlipayController.class.php 第 166 行.
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0017s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0014s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '20' LIMIT 1   [ RunTime:0.0006s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='2',`updated_time`='1522634685' WHERE `id` = 20 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0012s ]
+ERR: 1048:Column 'mch_id' cannot be null
+ [ SQL语句 ] : INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('14','2','20','4522634560954663','2018022302256228',NULL,NULL,'0.01','0',NULL,'1522634685','1','3','2','1522634685')
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000123s ]
+
+[ 2018-04-02T10:08:09+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/alipayNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0490s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0460s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '20' LIMIT 1   [ RunTime:0.0460s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='3',`updated_time`='1522634888' WHERE `id` = 20 [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0460s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('14','2','20','4522634560954663','2018022302256228','2088921405419825','APP','0.01','0.01','2018040221001004790248745890','1522634685','1','3','3','1522634889') [ RunTime:0.0440s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 4 AND `pay_status` = 2 LIMIT 1   [ RunTime:0.0510s ]
+
+[ 2018-04-02T10:09:04+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/alipayNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0450s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '20' LIMIT 1   [ RunTime:0.0620s ]
+
+[ 2018-04-02T10:09:47+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/alipayNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0430s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '20' LIMIT 1   [ RunTime:0.0420s ]
+
+[ 2018-04-02T10:10:05+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/alipayNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0440s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '20' LIMIT 1   [ RunTime:0.0430s ]
+
+[ 2018-04-02T10:10:06+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/alipayNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0390s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '20' LIMIT 1   [ RunTime:0.0410s ]
+
+[ 2018-04-02T10:10:30+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/alipayNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0440s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '20' LIMIT 1   [ RunTime:0.0440s ]
+
+[ 2018-04-02T10:10:32+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/alipayNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0420s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '20' LIMIT 1   [ RunTime:0.0420s ]
+
+[ 2018-04-02T10:10:33+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/alipayNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0460s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '20' LIMIT 1   [ RunTime:0.0480s ]
+
+[ 2018-04-02T10:10:34+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/alipayNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0450s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '20' LIMIT 1   [ RunTime:0.0430s ]
+
+[ 2018-04-02T10:10:58+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/alipayNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0420s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '20' LIMIT 1   [ RunTime:0.0430s ]
+
+[ 2018-04-02T10:10:59+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/alipayNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0460s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '20' LIMIT 1   [ RunTime:0.0470s ]
+
+[ 2018-04-02T10:10:59+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/alipayNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0430s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '20' LIMIT 1   [ RunTime:0.0430s ]
+
+[ 2018-04-02T10:11:18+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/alipayNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0430s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '20' LIMIT 1   [ RunTime:0.0430s ]
+
+[ 2018-04-02T10:11:37+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/alipayNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0420s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '20' LIMIT 1   [ RunTime:0.0430s ]
+
+[ 2018-04-02T10:12:18+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/alipayNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0460s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '20' LIMIT 1   [ RunTime:0.0450s ]
+

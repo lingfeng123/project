@@ -1,0 +1,30 @@
+[ 2018-03-23T09:46:19+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_bar` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0440s ]
+ERR: 1054:Unknown column 'api_bar_member.pay_status' in 'where clause'
+ [ SQL语句 ] : SELECT api_bar.*,api_merchant.title,api_merchant.address,api_merchant.begin_time,api_merchant.end_time,api_member.nickname,api_member.sex,api_member.avatar,api_member.signature,api_comment_barstar.average_star,(api_bar.woman_number+api_bar.man_number) as total_number FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_comment_barstar ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.id = '2' AND api_bar_member.pay_status <> 0 LIMIT 1  
+ERR: 1054:Unknown column 'api_bar_member.pay_status' in 'where clause'
+ [ SQL语句 ] : SELECT api_bar.*,api_merchant.title,api_merchant.address,api_merchant.begin_time,api_merchant.end_time,api_member.nickname,api_member.sex,api_member.avatar,api_member.signature,api_comment_barstar.average_star,(api_bar.woman_number+api_bar.man_number) as total_number FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_comment_barstar ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.id = '2' AND api_bar_member.pay_status <> 0 LIMIT 1  
+
+[ 2018-03-23T09:51:21+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_bar` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT api_bar.*,api_merchant.title,api_merchant.address,api_merchant.begin_time,api_merchant.end_time,api_member.nickname,api_member.sex,api_member.avatar,api_member.signature,api_comment_barstar.average_star,(api_bar.woman_number+api_bar.man_number) as total_number FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_comment_barstar ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.id = '2' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT `member_id`,`avatar` FROM `api_bar_member` WHERE `bar_id` = 2 AND `pay_status` <> 0  [ RunTime:0.0430s ]
+

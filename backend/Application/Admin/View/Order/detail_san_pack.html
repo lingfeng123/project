@@ -1,0 +1,310 @@
+<extend name="Public/common"/>
+<block name="main">
+    <style>
+        .tabs-panels{}
+        .misc-info,.addr-note{padding-bottom:10px;margin-bottom:10px;border-bottom:solid 1px #E6E6E6}
+        .tabs-panels h3{font-weight:700; line-height: 24px; }
+        .ncap-order-details .tabs-panels dl{font-size:0;padding-bottom:5px}
+        .tabs-panels dd,.tabs-panels dt{font-size:13px;line-height:24px;vertical-align:top;display:inline-block}
+        .tabs-panels dt{color:#999;width:100px;text-align:right}
+        .tabs-panels dd{color:#333;min-width:200px}
+        .tabs-panels table{border:solid 1px #D7D7D7;width:100%;border-collapse:collapse}
+        .tabs-panels table td,.tabs-panels table th{text-align:center;min-height:20px;padding:9px}
+        .tabs-panels table th{font-weight:normal;background-color:#edfbf8;border-bottom:solid 1px #D7D7D7}
+        .tabs-panels table td{border-bottom:solid 1px #D7D7D7}
+        .tabs-panels h4{ font-size: 14px; line-height: 24px; font-weight: 600; color: #333; margin-bottom: 8px; }
+        .tabs-panels .total-amount { text-align: right; padding: 10px 0; }
+        .tabs-panels .total-amount h3 { font-size: 14px; font-weight: normal; color: #777; line-height: 24px; }
+    </style>
+    <div class="tabs-panels">
+        <div class="misc-info">
+            <h3>基本信息</h3>
+            <dl>
+                <dt>订单ID：</dt>
+                <dd>{$detail.id}</dd>
+                <dt>订单号：</dt>
+                <dd>{$detail.order_no}</dd>
+                <dt>会员：</dt>
+                <dd>{$detail.nickname}  会员ID:{$detail.member_id}</dd>
+            </dl>
+            <dl>
+                <dt>所属商户：</dt>
+                <dd>{$detail.merchant_title}</dd>
+                <dt>支付方式：</dt>
+                <dd>{$payment[$detail['payment']]}</dd>
+                <dt>订单状态：</dt>
+                <dd>{$order_status[$detail['status']]}</dd>
+            </dl>
+            <dl>
+                <dt>应付/订单总价：</dt>
+                <dd>{$detail['total_price']}</dd>
+                <dt>实付金额：</dt>
+                <dd>{$detail['pay_price']}</dd>
+                <dt>下单时间：</dt>
+                <dd>{$detail['created_time']}</dd>
+            </dl>
+        </div>
+
+        <div class="addr-note">
+            <h4>客户信息</h4>
+            <dl>
+                <dt>客户姓名：</dt>
+                <dd>{$detail['contacts_realname']}</dd>
+                <dt>客户电话：</dt>
+                <dd>{$detail['contacts_tel']}</dd>
+            </dl>
+            <dl>
+                <dt>订单备注：</dt>
+                <dd>{$detail['description']}</dd>
+            </dl>
+        </div>
+
+        <div class="goods-info">
+            <h4>商品信息</h4>
+            <table>
+                <thead>
+                <tr>
+                    <th>商品编号</th>
+                    <th colspan="2">商品</th>
+                    <th>规格属性</th>
+                    <th>数量</th>
+                    <th>单品价格</th>
+                    <th>会员折扣价</th>
+                    <th>单品小计</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="w60">TP0000143</td>
+                    <td class="w30"><div class="goods-thumb"><a href="/index.php/Home/Goods/goodsInfo/id/143" target="_blank"><img alt="" src="/public/upload/goods/thumb/143/goods_thumb_143_200_200.jpeg"> </a></div></td>
+                    <td style="text-align: left;"><a href="/index.php/Home/Goods/goodsInfo/id/143" target="_blank">haier海尔 BC-93TMPF 93升单门冰箱</a><br></td>
+                    <td class="w80"></td>
+                    <td class="w60">1</td>
+                    <td class="w100">0.01</td>
+                    <td class="w60">0.01</td>
+                    <td class="w80">0.01</td>
+                </tr>
+                </tbody></table>
+        </div>
+        <div class="total-amount contact-info">
+            <h3>订单总额：￥0.01</h3>
+        </div>
+        <div class="contact-info">
+            <h3>费用信息 </h3>
+            <dl>
+                <dt>小计：</dt>
+                <dd>0.01</dd>
+                <dt>运费：</dt>
+                <dd>+0.00</dd>
+                <dt>积分 (-0)：</dt>
+                <dd>-0.00</dd>
+            </dl>
+            <dl>
+                <dt>余额抵扣：</dt>
+                <dd>-0.00</dd>
+                <dt>优惠券抵扣：</dt>
+                <dd>-0.00</dd>
+                <dt>价格调整：</dt>
+                <dd>减：0.00</dd>
+            </dl>
+            <dl>
+                <dt>应付：</dt>
+                <dd><strong class="red_common">0.01</strong></dd>
+            </dl>
+        </div>
+        <div class="goods-info">
+            <h4>操作记录</h4>
+            <table>
+                <thead>
+                <tr>
+                    <th>操作者</th>
+                    <th>操作时间</th>
+                    <th>订单状态</th>
+                    <th>付款状态</th>
+                    <th>发货状态</th>
+                    <th>描述</th>
+                    <th>备注</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="text-center">管理员：admin</td>
+                    <td class="text-center">2018-01-26 14:13:24</td>
+                    <td class="text-center">待确认</td>
+                    <td class="text-center">未支付</td>
+                    <td class="text-center">未发货</td>
+                    <td class="text-center">作废订单</td>
+                    <td class="text-center"></td>
+                </tr>
+                <tr>
+                    <td class="text-center">用户：hello</td>
+                    <td class="text-center">2018-01-26 14:12:48</td>
+                    <td class="text-center">待确认</td>
+                    <td class="text-center">未支付</td>
+                    <td class="text-center">未发货</td>
+                    <td class="text-center">提交订单</td>
+                    <td class="text-center">您提交了订单，请等待系统确认</td>
+                </tr>
+                </tbody></table>
+        </div>
+    </div>
+
+
+    <hr/>
+    <h4 class="h2">订单信息</h4>
+    <hr/>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">订单ID</div>
+        <div class="layui-col-xs9">{$detail.id}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">订单编号</div>
+        <div class="layui-col-xs9">{$detail.order_no}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">酒吧名称</div>
+        <div class="layui-col-xs9">{$detail.merchant_title}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">用户昵称</div>
+        <div class="layui-col-xs9">{$detail.nickname}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">联系人姓名</div>
+        <div class="layui-col-xs9">{$detail.contacts_realname}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">联系人电话</div>
+        <div class="layui-col-xs9">{$detail.contacts_tel}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">联系人性别</div>
+        <div class="layui-col-xs9">{$sex[$detail['contacts_sex']]}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">订单总价</div>
+        <div class="layui-col-xs9">{$detail['total_price']}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">实付金额</div>
+        <div class="layui-col-xs9">{$detail['pay_price']}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">结算价格</div>
+        <div class="layui-col-xs9">{$detail['purchase_price']}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">优惠金额</div>
+        <div class="layui-col-xs9">{$detail['discount_money']}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">订单状态</div>
+        <div class="layui-col-xs9">{$order_status[$detail['status']]}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">结算状态</div>
+        <div class="layui-col-xs9">{$settlement_status[$detail['settlement_status']]}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">订单类型</div>
+        <div class="layui-col-xs9">{$order_type[$detail['order_type']]}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">支付方式</div>
+        <div class="layui-col-xs9">{$payment[$detail['payment']]}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">订单描述</div>
+        <div class="layui-col-xs9">{$detail['description']}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">到店日期</div>
+        <div class="layui-col-xs9">{$detail['arrives_time']}</div>
+    </div>
+
+    <!--<div class="layui-row">
+        <div class="layui-col-xs3">延期时间</div>
+        <div class="layui-col-xs9">{$detail['incr_time']}</div>
+    </div>-->
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">订单创建时间</div>
+        <div class="layui-col-xs9">{$detail['created_time']}</div>
+    </div>
+
+    <!--<div class="layui-row">
+        <div class="layui-col-xs3">员工姓名</div>
+        <div class="layui-col-xs9">{$detail['employee_realname']}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">员工图片</div>
+        <div class="layui-col-xs9"><if condition="$detail['employee_avatar']"><img src="{$attachment_url}{$detail['employee_avatar']}" height="50" /></if></div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">员工电话</div>
+        <div class="layui-col-xs9">{$detail['employee_tel']}</div>
+    </div>-->
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">订单更新日期</div>
+        <div class="layui-col-xs9">{$detail['updated_time']}</div>
+    </div>
+
+    <!-- <div class="layui-row">
+         <div class="layui-col-xs3">关联逾期卡套</div>
+         <div class="layui-col-xs9"><if condition="$detail['relation_order_no']">{$detail['relation_order_no']}<else />无</if></div>
+     </div>-->
+
+    <hr/>
+    <h4 class="h2">商品信息</h4>
+    <hr/>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">套餐名称</div>
+        <div class="layui-col-xs9">{$detail['pack_title']}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">购买数量</div>
+        <div class="layui-col-xs9">{$detail['amount']}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">套餐价格</div>
+        <div class="layui-col-xs9">{$detail['pack_price']}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">套餐图片</div>
+        <div class="layui-col-xs9">
+            <if condition="$detail['pack_image']"><img src="{$attachment_url}{$detail['pack_image']}" height="50"/></if>
+        </div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">套餐描述</div>
+        <div class="layui-col-xs9">{$detail['pack_description']}</div>
+    </div>
+
+</block>
+<block name="myScript">
+</block>

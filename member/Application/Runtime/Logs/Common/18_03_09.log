@@ -1,0 +1,96 @@
+[ 2018-03-09T10:20:19+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/image/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Image
+
+[ 2018-03-09T10:23:50+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/image/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Image
+
+[ 2018-03-09T10:30:26+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/public/images/backend/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Public
+
+[ 2018-03-09T11:04:13+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/Public/images/backend/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Public
+
+[ 2018-03-09T11:04:33+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/Public/images/backend/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Public
+
+[ 2018-03-09T11:13:35+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/Public/images/backend/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Public
+
+[ 2018-03-09T11:13:40+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/Public/images/backend/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Public
+
+[ 2018-03-09T11:13:42+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/Public/images/backend/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Public
+
+[ 2018-03-09T11:13:43+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/Public/images/backend/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Public
+
+[ 2018-03-09T11:13:43+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/Public/images/backend/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Public
+
+[ 2018-03-09T11:13:44+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/Public/images/backend/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Public
+
+[ 2018-03-09T11:13:52+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/Public/images/backend/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Public
+
+[ 2018-03-09T11:17:14+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/Public/images/backend/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Public
+
+[ 2018-03-09T11:17:47+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/Public/images/backend/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Public
+
+[ 2018-03-09T11:17:49+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/Public/images/backend/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Public
+
+[ 2018-03-09T11:41:42+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/Public/images/backend/logo.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Public
+

@@ -1,0 +1,59 @@
+<extend name="Public/common"/>
+<block name="main">
+    <fieldset class="layui-elem-field">
+        <legend>会员特权列表</legend>
+        <div class="layui-field-box">
+            <a href="{:U('add')}"><span class="layui-btn layui-btn-normal api-add"> <i
+                    class="layui-icon">&#xe608;</i> 新增特权</span></a>
+            <table class="layui-table">
+                <thead>
+                <tr>
+                    <th>特权等级</th>
+                    <th>特权名称</th>
+                    <th>逾期次数</th>
+                    <th>卡套延期天数</th>
+                    <th>生日特权</th>
+                    <th>生日特权内容</th>
+                    <th>赠送K币(积分)</th>
+                    <th>免预定金</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <volist name="lists" id="vo">
+                    <tr>
+                        <td>{$vo['level']}</td>
+                        <td>{$vo['title']}</td>
+                        <td>{$vo['overdue']}次/年</td>
+                        <td>{$vo['delayed']}天</td>
+                        <td>
+                            <if condition="$vo['birthday']">
+                                <div class="layui-icon" style="color: #5FB878" title="有生日特权">&#xe605;</div>
+                            <else/>
+                                <div class="layui-icon" style="color: #FF5722" title="无生日特权">&#x1006;</div>
+                            </if>
+                        </td>
+                        <td>{$vo['birthday_content']}</td>
+                        <td>{$vo['coin']}</td>
+                        <td>
+                            <if condition="$vo['free_seat']">
+                                <div class="layui-icon" style="color: #5FB878" title="有免定金特权">&#xe605;</div>
+                                <else/>
+                                <div class="layui-icon" style="color: #FF5722" title="无免定金特权">&#x1006;</div>
+                            </if>
+                        </td>
+                        <td>
+                            <a href="{:U('edit', array('id' => $vo['id']))}"><span class="layui-btn layui-btn-small edit layui-btn-normal">编辑</span></a>
+                        </td>
+                    </tr>
+                </volist>
+                </tbody>
+            </table>
+        </div>
+    </fieldset>
+</block>
+<block name="myScript">
+<script type="text/javascript">
+
+</script>
+</block>

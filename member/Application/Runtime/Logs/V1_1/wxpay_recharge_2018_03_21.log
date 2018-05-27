@@ -1,0 +1,10 @@
+[ 2018-03-21T14:53:34+08:00 ] 182.139.29.213 /v1.1/recharge/payment
+INFO: {"return_code":"SUCCESS","return_msg":"OK","appid":"wx0937c51aea0bd6c5","mch_id":"1499547812","nonce_str":"pF0McQwUFW5QsWU3","sign":"F0A300AAA715BE03BEEC56D050604F60","result_code":"SUCCESS","prepay_id":"wx20180321145334589bccc9290625319732","trade_type":"APP"}
+[ 2018-03-21T16:58:42+08:00 ] 182.139.29.213 /v1.1/recharge/payment
+INFO: {"return_code":"SUCCESS","return_msg":"OK","appid":"wx0937c51aea0bd6c5","mch_id":"1499547812","nonce_str":"7IiVHrTHhgy8ie5C","sign":"DD32704E09879BCA99C35DC7686225E8","result_code":"SUCCESS","prepay_id":"wx201803211658421010655bef0816358102","trade_type":"APP"}
+[ 2018-03-21T16:59:00+08:00 ] 182.139.29.213 /v1.1/recharge/payment
+INFO: {"return_code":"SUCCESS","return_msg":"OK","appid":"wx0937c51aea0bd6c5","mch_id":"1499547812","nonce_str":"ef9ijd8n23ZvZkfR","sign":"0A5B8D3BA021212B78C9D34B3819DE8A","result_code":"SUCCESS","prepay_id":"wx20180321165900330d09a6d60402736318","trade_type":"APP"}
+[ 2018-03-21T16:59:06+08:00 ] 182.139.29.213 /v1.1/recharge/payment
+INFO: {"return_code":"SUCCESS","return_msg":"OK","appid":"wx0937c51aea0bd6c5","mch_id":"1499547812","nonce_str":"db9fVtX2Lg4P8vk5","sign":"03961700736A6FA9D814DE2342E405C5","result_code":"SUCCESS","prepay_id":"wx20180321165906eec26c7b4d0777037923","trade_type":"APP"}
+[ 2018-03-21T17:14:16+08:00 ] 182.139.29.213 /v1.1/recharge/payment
+INFO: {"return_code":"SUCCESS","return_msg":"OK","appid":"wx0937c51aea0bd6c5","mch_id":"1499547812","nonce_str":"0Sb70lSBBViNU83Y","sign":"3446007ECE024CE843DE6698F5567537","result_code":"SUCCESS","prepay_id":"wx20180321171416ed14bab5410067919174","trade_type":"APP"}

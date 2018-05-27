@@ -1,0 +1,95 @@
+<extend name="Public/base" />
+<block name="main">
+    <fieldset class="layui-elem-field">
+        <legend>系统消息管理 - {:(isset($detail['id'])?'编辑':'新增')}</legend>
+        <div class="layui-field-box">
+            <form class="layui-form" action="">
+                <if condition="isset($detail['id'])">
+                    <input type="hidden" name="id" value="{$detail['id']}">
+                </if>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span style="color:red">*</span> 消息主题</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required value="{:(isset($detail['title'])?$detail['title']:'')}" lay-verify="required" placeholder="请输入消息名称" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">消息内容</label>
+                    <div class="layui-input-block">
+                        <textarea name="content" placeholder="请输入发送消息内容描述" class="layui-textarea">{:(isset($detail['content'])?$detail['content']:'')}</textarea>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span style="color:red">*</span> 发送终端</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="toclient" value="1" title="所有" <if condition="$detail.toclient eq 1">checked="checked"</if> >
+                        <input type="radio" name="toclient" value="2"title="用户端" <if condition="$detail.toclient eq 2">checked="checked"</if>>
+                        <input type="radio" name="toclient" value="3" title="商户端" <if condition="$detail.toclient eq 3">checked="checked"</if>>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="admin-form">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </fieldset>
+</block>
+<block name="myScript">
+    <if condition="isset($detail['id'])">
+        <script>
+            layui.use('form', function(){
+                var form = layui.form();
+                form.on('submit(admin-form)', function(data){
+                    $.ajax({
+                        type: "POST",
+                        url: '{:U("edit")}',
+                        data: data.field,
+                        success: function(msg){
+                            if( msg.status == 1 ){
+                                parent.location.reload();
+                            }else{
+                                parent.layer.msg(msg.info, {
+                                    icon: 5,
+                                    shade: [0.6, '#393D49'],
+                                    time:1500
+                                });
+                            }
+                        }
+                    });
+                    return false;
+                });
+
+            });
+        </script>
+        <else />
+        <script>
+            layui.use('form', function(){
+                var form = layui.form();
+                form.on('submit(admin-form)', function(data){
+                    $.ajax({
+                        type: "POST",
+                        url: '{:U("add")}',
+                        data: data.field,
+                        success: function(msg){
+                            console.log(msg);
+                            if( msg.status == 1 ){
+                                parent.location.reload();
+                            }else{
+                                parent.layer.msg(msg.info, {
+                                    icon: 5,
+                                    shade: [0.6, '#393D49'],
+                                    time:1500
+                                });
+                            }
+                        }
+                    });
+                    return false;
+                });
+
+            });
+        </script>
+    </if>
+</block>

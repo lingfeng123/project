@@ -1,0 +1,314 @@
+[ 2018-04-02T16:27:49+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/goods/seatMap
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_goods_seatmap` [ RunTime:0.0470s ]
+SQL: SELECT `image_client`,`floor` FROM `api_goods_seatmap` WHERE ( merchant_id = '1' )  [ RunTime:0.0410s ]
+
+[ 2018-04-02T16:32:04+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/goods/seatMap
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_goods_seatmap` [ RunTime:0.0390s ]
+SQL: SELECT `image_client`,`floor` FROM `api_goods_seatmap` WHERE ( merchant_id = '1' )  [ RunTime:0.0380s ]
+
+[ 2018-04-02T18:10:48+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/evaluateCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_comment_barstar` [ RunTime:0.0390s ]
+SQL: SELECT `average_star` FROM `api_comment_barstar` WHERE `member_id` = 49 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0400s ]
+SQL: SELECT `tag`,`tags`,count(tag) as total FROM `api_comment_bar` left join api_comment_tags ON api_comment_tags.id = api_comment_bar.tag  WHERE `bar_member_id` = '49' GROUP BY api_comment_bar.tag  [ RunTime:0.0390s ]
+
+[ 2018-04-02T18:11:23+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/evaluateCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_comment_barstar` [ RunTime:0.0380s ]
+SQL: SELECT `average_star` FROM `api_comment_barstar` WHERE `member_id` = 60 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0380s ]
+SQL: SELECT `tag`,`tags`,count(tag) as total FROM `api_comment_bar` left join api_comment_tags ON api_comment_tags.id = api_comment_bar.tag  WHERE `bar_member_id` = '60' GROUP BY api_comment_bar.tag  [ RunTime:0.0370s ]
+
+[ 2018-04-02T19:12:34+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/evaluateCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0480s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0480s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_comment_barstar` [ RunTime:0.0460s ]
+SQL: SELECT `average_star` FROM `api_comment_barstar` WHERE `member_id` = 60 LIMIT 1   [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0470s ]
+SQL: SELECT `tag` FROM `api_comment_bar` WHERE `bar_member_id` = 60  [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0470s ]
+SQL: SELECT * FROM `api_comment_tags` WHERE `id` IN ('2','3','5')  [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_comment_tags` WHERE `id` IN ('')  [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_comment_tags` WHERE `id` IN ('14')  [ RunTime:0.0460s ]
+
+[ 2018-04-02T19:14:17+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/evaluateCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_comment_barstar` [ RunTime:0.0400s ]
+SQL: SELECT `average_star` FROM `api_comment_barstar` WHERE `member_id` = 60 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0400s ]
+SQL: SELECT `tag` FROM `api_comment_bar` WHERE `bar_member_id` = 60  [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_comment_tags` WHERE `id` IN ('2','3','5')  [ RunTime:0.0390s ]
+
+[ 2018-04-02T19:15:47+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/evaluateCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_comment_barstar` [ RunTime:0.0410s ]
+SQL: SELECT `average_star` FROM `api_comment_barstar` WHERE `member_id` = 60 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0420s ]
+SQL: SELECT `tag` FROM `api_comment_bar` WHERE `bar_member_id` = 60  [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_comment_tags` WHERE `id` IN ('2','3','5')  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_comment_tags` WHERE `id` IN ('')  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_comment_tags` WHERE `id` IN ('14')  [ RunTime:0.0410s ]
+
+[ 2018-04-02T19:16:42+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/evaluateCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0480s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_comment_barstar` [ RunTime:0.0430s ]
+SQL: SELECT `average_star` FROM `api_comment_barstar` WHERE `member_id` = 60 LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0430s ]
+SQL: SELECT `tag` FROM `api_comment_bar` WHERE `bar_member_id` = 60  [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_comment_tags` WHERE `id` IN ('2','3','5')  [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_comment_tags` WHERE `id` IN ('2','3','5')  [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_comment_tags` WHERE `id` IN ('14')  [ RunTime:0.0420s ]
+
+[ 2018-04-02T19:17:48+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/evaluateCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_comment_barstar` [ RunTime:0.0450s ]
+SQL: SELECT `average_star` FROM `api_comment_barstar` WHERE `member_id` = 60 LIMIT 1   [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0460s ]
+SQL: SELECT `tag` FROM `api_comment_bar` WHERE `bar_member_id` = 60  [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_comment_tags` WHERE `id` IN ('2','3','5')  [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_comment_tags` WHERE `id` IN ('2','3','5')  [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_comment_tags` WHERE `id` IN ('14')  [ RunTime:0.0450s ]
+
+[ 2018-04-02T19:19:55+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/evaluateCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0520s ]
+SQL: SHOW COLUMNS FROM `api_comment_barstar` [ RunTime:0.0380s ]
+SQL: SELECT `average_star` FROM `api_comment_barstar` WHERE `member_id` = 60 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0390s ]
+SQL: SELECT `tag` FROM `api_comment_bar` WHERE `bar_member_id` = 60  [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0380s ]
+SQL: SELECT `tags` FROM `api_comment_tags` WHERE `id` IN ('2','3','5')  [ RunTime:0.0380s ]
+SQL: SELECT `tags` FROM `api_comment_tags` WHERE `id` IN ('2','3','5')  [ RunTime:0.0380s ]
+SQL: SELECT `tags` FROM `api_comment_tags` WHERE `id` IN ('14')  [ RunTime:0.0380s ]
+
+[ 2018-04-02T19:22:10+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/evaluateCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_comment_barstar` [ RunTime:0.0430s ]
+SQL: SELECT `average_star` FROM `api_comment_barstar` WHERE `member_id` = 60 LIMIT 1   [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0430s ]
+SQL: SELECT `tag` FROM `api_comment_bar` WHERE `bar_member_id` = 60  [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0430s ]
+SQL: SELECT `tags` FROM `api_comment_tags` WHERE `id` IN ('2','3','5')  [ RunTime:0.0410s ]
+SQL: SELECT `tags` FROM `api_comment_tags` WHERE `id` IN ('2','3','5')  [ RunTime:0.0420s ]
+SQL: SELECT `tags` FROM `api_comment_tags` WHERE `id` IN ('14')  [ RunTime:0.0410s ]
+
+[ 2018-04-02T19:22:49+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/evaluateCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_comment_barstar` [ RunTime:0.0410s ]
+SQL: SELECT `average_star` FROM `api_comment_barstar` WHERE `member_id` = 60 LIMIT 1   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0410s ]
+SQL: SELECT `tag` FROM `api_comment_bar` WHERE `bar_member_id` = 60  [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0410s ]
+SQL: SELECT `tags` FROM `api_comment_tags` WHERE `id` IN ('2','3','5')  [ RunTime:0.0410s ]
+SQL: SELECT `tags` FROM `api_comment_tags` WHERE `id` IN ('2','3','5')  [ RunTime:0.0410s ]
+SQL: SELECT `tags` FROM `api_comment_tags` WHERE `id` IN ('14')  [ RunTime:0.0410s ]
+
+[ 2018-04-02T19:43:02+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/evaluateCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_comment_barstar` [ RunTime:0.0430s ]
+SQL: SELECT `average_star` FROM `api_comment_barstar` WHERE `member_id` = 60 LIMIT 1   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0430s ]
+SQL: SELECT `tag` FROM `api_comment_bar` WHERE `bar_member_id` = 60  [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0430s ]
+SQL: SELECT `tags` FROM `api_comment_tags` WHERE `id` IN ('2','3','5')  [ RunTime:0.0420s ]
+SQL: SELECT `tags` FROM `api_comment_tags` WHERE `id` IN ('2','3','5')  [ RunTime:0.0420s ]
+SQL: SELECT `tags` FROM `api_comment_tags` WHERE `id` IN ('14')  [ RunTime:0.0410s ]
+
+[ 2018-04-02T19:43:43+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/evaluateCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_comment_barstar` [ RunTime:0.0400s ]
+SQL: SELECT `average_star` FROM `api_comment_barstar` WHERE `member_id` = 60 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0410s ]
+SQL: SELECT `tag` FROM `api_comment_bar` WHERE `bar_member_id` = 60  [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0400s ]
+SQL: SELECT `tags` FROM `api_comment_tags` WHERE `id` IN ('2','3','5')  [ RunTime:0.0400s ]
+SQL: SELECT `tags` FROM `api_comment_tags` WHERE `id` IN ('2','3','5')  [ RunTime:0.0390s ]
+SQL: SELECT `tags` FROM `api_comment_tags` WHERE `id` IN ('14')  [ RunTime:0.0390s ]
+
+[ 2018-04-02T19:43:46+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/evaluateCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0490s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_comment_barstar` [ RunTime:0.0460s ]
+SQL: SELECT `average_star` FROM `api_comment_barstar` WHERE `member_id` = 60 LIMIT 1   [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0460s ]
+SQL: SELECT `tag` FROM `api_comment_bar` WHERE `bar_member_id` = 60  [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0470s ]
+SQL: SELECT `tags` FROM `api_comment_tags` WHERE `id` IN ('2','3','5')  [ RunTime:0.0450s ]
+SQL: SELECT `tags` FROM `api_comment_tags` WHERE `id` IN ('2','3','5')  [ RunTime:0.0450s ]
+SQL: SELECT `tags` FROM `api_comment_tags` WHERE `id` IN ('14')  [ RunTime:0.0460s ]
+
+[ 2018-04-02T19:44:55+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/evaluateCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_comment_barstar` [ RunTime:0.0430s ]
+SQL: SELECT `average_star` FROM `api_comment_barstar` WHERE `member_id` = 60 LIMIT 1   [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0430s ]
+SQL: SELECT `tag` FROM `api_comment_bar` WHERE `bar_member_id` = 60  [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0430s ]
+SQL: SELECT `tags` FROM `api_comment_tags` WHERE `id` IN ('2','3','5')  [ RunTime:0.0420s ]
+SQL: SELECT `tags` FROM `api_comment_tags` WHERE `id` IN ('2','3','5')  [ RunTime:0.0420s ]
+SQL: SELECT `tags` FROM `api_comment_tags` WHERE `id` IN ('14')  [ RunTime:0.0420s ]
+
+[ 2018-04-02T19:57:46+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/evaluateCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_comment_barstar` [ RunTime:0.0440s ]
+SQL: SELECT `average_star` FROM `api_comment_barstar` WHERE `member_id` = 60 LIMIT 1   [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0440s ]
+SQL: SELECT `tag` FROM `api_comment_bar` WHERE `bar_member_id` = 60  [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0430s ]
+SQL: SELECT `tags` FROM `api_comment_tags` WHERE `id` IN ('2','3','5')  [ RunTime:0.0420s ]
+SQL: SELECT `tags` FROM `api_comment_tags` WHERE `id` IN ('2','3','5')  [ RunTime:0.0420s ]
+SQL: SELECT `tags` FROM `api_comment_tags` WHERE `id` IN ('14')  [ RunTime:0.0430s ]
+
+[ 2018-04-02T19:58:33+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/evaluateCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_comment_barstar` [ RunTime:0.0460s ]
+SQL: SELECT `average_star` FROM `api_comment_barstar` WHERE `member_id` = 60 LIMIT 1   [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0460s ]
+SQL: SELECT `tag` FROM `api_comment_bar` WHERE `bar_member_id` = 60  [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0450s ]
+SQL: SELECT `tags` FROM `api_comment_tags` WHERE `id` IN ('2','3','5')  [ RunTime:0.0450s ]
+SQL: SELECT `tags` FROM `api_comment_tags` WHERE `id` IN ('2','3','5')  [ RunTime:0.0440s ]
+SQL: SELECT `tags` FROM `api_comment_tags` WHERE `id` IN ('14')  [ RunTime:0.0450s ]
+

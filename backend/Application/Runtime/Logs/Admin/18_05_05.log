@@ -1,0 +1,2014 @@
+[ 2018-05-05T14:03:40+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-05-05T14:03:43+08:00 ] 127.0.0.1 /Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `api_user` WHERE `username` = 'kpzadmin  ' AND `password` = '87543278f1315d89849abcc67735def3' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_user_data` WHERE `uid` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: UPDATE `api_user_data` SET `loginTimes`='6',`lastLoginIp`='2130706433',`lastLoginTime`='1525500223' WHERE `uid` = '1' [ RunTime:0.0470s ]
+
+[ 2018-05-05T14:03:46+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0470s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Index/index' LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0420s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-05-05T14:03:46+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525440416 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-05T14:03:46+08:00 ] 127.0.0.1 /Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Index/welcome' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SELECT `order_type`,count(id) as num FROM `api_order` WHERE `arrives_time` = 1525449600 GROUP BY order_type  [ RunTime:0.0340s ]
+
+[ 2018-05-05T14:03:54+08:00 ] 127.0.0.1 /Admin/bar/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0440s ]
+NOTIC: [8] Undefined index: bar_status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\BarModel.class.php 第 40 行.
+NOTIC: [8] Undefined index: bar_type D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\BarModel.class.php 第 45 行.
+NOTIC: [8] Undefined variable: where D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\BarModel.class.php 第 52 行.
+SQL: SELECT api_bar.*,api_merchant.title as merchant_title FROM `api_bar` left join api_merchant ON api_merchant.id =api_bar.merchant_id  ORDER BY id desc LIMIT 0,50   [ RunTime:0.0440s ]
+NOTIC: [8] Undefined variable: where D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\BarModel.class.php 第 57 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar` LIMIT 1   [ RunTime:0.0420s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 83 行.
+NOTIC: [8] Undefined variable: money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 84 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-05-05T14:04:46+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0480s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525500226 LIMIT 1   [ RunTime:0.0350s ]
+
+[ 2018-05-05T14:05:46+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0370s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525500286 LIMIT 1   [ RunTime:0.0350s ]
+
+[ 2018-05-05T14:06:46+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525500346 LIMIT 1   [ RunTime:0.0340s ]
+
+[ 2018-05-05T14:07:34+08:00 ] 127.0.0.1 /Admin/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/index' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  WHERE api_order.order_type = 3 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT SUM(pay_price) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT SUM(discount_money) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT api_order.id,api_merchant.title as merchant_title,api_member.nickname,api_order.order_no,api_order.contacts_realname,api_order.contacts_tel,api_order.contacts_sex,api_order.total_price,api_order.pay_price,api_order.purchase_price,api_order.discount_money,api_order.status,api_order.settlement_status,api_order.order_type,api_order.payment,api_order.description,from_unixtime(api_order.arrives_time,"%Y-%m-%d") as arrives_time,api_order.incr_time,api_order.created_time,from_unixtime(api_order.created_time) as created_time,api_order.employee_id,api_order.employee_realname,api_order.employee_avatar,api_order.employee_tel,api_order.take_time,api_order.relation_order_no,api_order.is_bar,api_order.is_xu FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id LEFT JOIN api_coupon ON api_coupon.id = api_order.card_id  WHERE api_order.order_type = 3 ORDER BY api_order.id desc LIMIT 0,50   [ RunTime:0.0440s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-05-05T14:07:46+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0390s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525500406 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-05T14:08:46+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0470s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525500466 LIMIT 1   [ RunTime:0.0420s ]
+
+[ 2018-05-05T14:09:46+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525500526 LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-05-05T14:10:46+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525500586 LIMIT 1   [ RunTime:0.0440s ]
+
+[ 2018-05-05T14:11:46+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525500646 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-05T14:12:46+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525500706 LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-05-05T14:13:46+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525500766 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-05T14:14:46+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525500826 LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-05-05T14:15:46+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0390s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525500886 LIMIT 1   [ RunTime:0.0370s ]
+
+[ 2018-05-05T14:16:46+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0380s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525500946 LIMIT 1   [ RunTime:0.0350s ]
+
+[ 2018-05-05T14:17:46+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0370s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525501006 LIMIT 1   [ RunTime:0.0330s ]
+
+[ 2018-05-05T14:18:46+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0380s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525501066 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-05T14:19:46+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525501126 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-05T14:20:46+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0370s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525501186 LIMIT 1   [ RunTime:0.0340s ]
+
+[ 2018-05-05T14:21:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525501246 LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-05-05T14:22:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0430s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525501306 LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-05-05T14:23:46+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525501367 LIMIT 1   [ RunTime:0.0380s ]
+
+[ 2018-05-05T14:24:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525501426 LIMIT 1   [ RunTime:0.0380s ]
+
+[ 2018-05-05T14:25:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0430s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525501487 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-05T14:26:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525501547 LIMIT 1   [ RunTime:0.0380s ]
+
+[ 2018-05-05T14:27:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525501607 LIMIT 1   [ RunTime:0.0430s ]
+
+[ 2018-05-05T14:28:46+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525501667 LIMIT 1   [ RunTime:0.0350s ]
+
+[ 2018-05-05T14:29:46+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0340s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525501726 LIMIT 1   [ RunTime:0.0340s ]
+
+[ 2018-05-05T14:30:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525501786 LIMIT 1   [ RunTime:0.0380s ]
+
+[ 2018-05-05T14:31:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525501847 LIMIT 1   [ RunTime:0.0410s ]
+
+[ 2018-05-05T14:32:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525501907 LIMIT 1   [ RunTime:0.0360s ]
+
+[ 2018-05-05T14:33:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525501967 LIMIT 1   [ RunTime:0.0430s ]
+
+[ 2018-05-05T14:34:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525502027 LIMIT 1   [ RunTime:0.0370s ]
+
+[ 2018-05-05T14:35:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525502087 LIMIT 1   [ RunTime:0.0410s ]
+
+[ 2018-05-05T14:36:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0470s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0460s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525502147 LIMIT 1   [ RunTime:0.0430s ]
+
+[ 2018-05-05T14:37:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525502207 LIMIT 1   [ RunTime:0.0440s ]
+
+[ 2018-05-05T14:38:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0460s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525502267 LIMIT 1   [ RunTime:0.0440s ]
+
+[ 2018-05-05T14:39:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525502327 LIMIT 1   [ RunTime:0.0420s ]
+
+[ 2018-05-05T14:40:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0480s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525502387 LIMIT 1   [ RunTime:0.0430s ]
+
+[ 2018-05-05T14:41:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525502447 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-05T14:42:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525502507 LIMIT 1   [ RunTime:0.0340s ]
+
+[ 2018-05-05T14:43:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0340s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0370s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525502567 LIMIT 1   [ RunTime:0.0350s ]
+
+[ 2018-05-05T14:44:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525502627 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-05T14:45:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0370s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525502687 LIMIT 1   [ RunTime:0.0350s ]
+
+[ 2018-05-05T14:46:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0350s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525502747 LIMIT 1   [ RunTime:0.0330s ]
+
+[ 2018-05-05T14:47:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525502807 LIMIT 1   [ RunTime:0.0380s ]
+
+[ 2018-05-05T14:48:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0430s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525502867 LIMIT 1   [ RunTime:0.0430s ]
+
+[ 2018-05-05T14:49:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0370s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525502927 LIMIT 1   [ RunTime:0.0350s ]
+
+[ 2018-05-05T14:50:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525502987 LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-05-05T14:51:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525503047 LIMIT 1   [ RunTime:0.0430s ]
+
+[ 2018-05-05T14:52:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0390s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525503107 LIMIT 1   [ RunTime:0.0380s ]
+
+[ 2018-05-05T14:53:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525503167 LIMIT 1   [ RunTime:0.0370s ]
+
+[ 2018-05-05T14:54:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0370s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525503227 LIMIT 1   [ RunTime:0.0340s ]
+
+[ 2018-05-05T14:55:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525503287 LIMIT 1   [ RunTime:0.0380s ]
+
+[ 2018-05-05T14:56:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525503347 LIMIT 1   [ RunTime:0.0380s ]
+
+[ 2018-05-05T14:57:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525503407 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-05T14:58:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0460s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525503467 LIMIT 1   [ RunTime:0.0410s ]
+
+[ 2018-05-05T14:59:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525503527 LIMIT 1   [ RunTime:0.0380s ]
+
+[ 2018-05-05T15:00:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0430s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525503587 LIMIT 1   [ RunTime:0.0330s ]
+
+[ 2018-05-05T15:01:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525503647 LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-05-05T15:02:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525503707 LIMIT 1   [ RunTime:0.0380s ]
+
+[ 2018-05-05T15:03:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525503767 LIMIT 1   [ RunTime:0.0430s ]
+
+[ 2018-05-05T15:04:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525503827 LIMIT 1   [ RunTime:0.0440s ]
+
+[ 2018-05-05T15:05:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525503887 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-05T15:06:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0470s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525503947 LIMIT 1   [ RunTime:0.0430s ]
+
+[ 2018-05-05T15:07:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0390s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525504007 LIMIT 1   [ RunTime:0.0370s ]
+
+[ 2018-05-05T15:08:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0430s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525504067 LIMIT 1   [ RunTime:0.0430s ]
+
+[ 2018-05-05T15:09:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525504127 LIMIT 1   [ RunTime:0.0370s ]
+
+[ 2018-05-05T15:10:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525504187 LIMIT 1   [ RunTime:0.0410s ]
+
+[ 2018-05-05T15:11:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0350s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525504247 LIMIT 1   [ RunTime:0.0340s ]
+
+[ 2018-05-05T15:12:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525504307 LIMIT 1   [ RunTime:0.0440s ]
+
+[ 2018-05-05T15:13:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0510s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525504367 LIMIT 1   [ RunTime:0.0430s ]
+
+[ 2018-05-05T15:14:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525504427 LIMIT 1   [ RunTime:0.0350s ]
+
+[ 2018-05-05T15:15:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525504487 LIMIT 1   [ RunTime:0.0440s ]
+
+[ 2018-05-05T15:16:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525504547 LIMIT 1   [ RunTime:0.0440s ]
+
+[ 2018-05-05T15:17:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525504607 LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-05-05T15:18:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0470s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0460s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525504667 LIMIT 1   [ RunTime:0.0430s ]
+
+[ 2018-05-05T15:19:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525504727 LIMIT 1   [ RunTime:0.0430s ]
+
+[ 2018-05-05T15:20:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0340s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0330s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0350s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525504787 LIMIT 1   [ RunTime:0.0340s ]
+
+[ 2018-05-05T15:21:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525504847 LIMIT 1   [ RunTime:0.0410s ]
+
+[ 2018-05-05T15:22:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525504907 LIMIT 1   [ RunTime:0.0380s ]
+
+[ 2018-05-05T15:23:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0480s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525504967 LIMIT 1   [ RunTime:0.0450s ]
+
+[ 2018-05-05T15:24:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0460s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525505027 LIMIT 1   [ RunTime:0.0440s ]
+
+[ 2018-05-05T15:25:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0470s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0460s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525505087 LIMIT 1   [ RunTime:0.0440s ]
+
+[ 2018-05-05T15:26:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525505147 LIMIT 1   [ RunTime:0.0380s ]
+
+[ 2018-05-05T15:27:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525505207 LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-05-05T15:28:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525505267 LIMIT 1   [ RunTime:0.0430s ]
+
+[ 2018-05-05T15:29:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0340s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525505327 LIMIT 1   [ RunTime:0.0330s ]
+
+[ 2018-05-05T15:30:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525505387 LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-05-05T15:31:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525505447 LIMIT 1   [ RunTime:0.0440s ]
+
+[ 2018-05-05T15:32:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0480s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0470s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525505507 LIMIT 1   [ RunTime:0.0440s ]
+
+[ 2018-05-05T15:33:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525505567 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-05T15:34:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525505627 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-05T15:35:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525505687 LIMIT 1   [ RunTime:0.0410s ]
+
+[ 2018-05-05T15:36:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525505747 LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-05-05T15:37:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0470s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525505807 LIMIT 1   [ RunTime:0.0440s ]
+
+[ 2018-05-05T15:38:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0560s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525505867 LIMIT 1   [ RunTime:0.0380s ]
+
+[ 2018-05-05T15:39:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525505927 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-05T15:40:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0340s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0350s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525505987 LIMIT 1   [ RunTime:0.0360s ]
+
+[ 2018-05-05T15:41:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0470s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525506047 LIMIT 1   [ RunTime:0.0440s ]
+
+[ 2018-05-05T15:42:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525506107 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-05T15:43:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525506167 LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-05-05T15:44:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525506227 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-05T15:45:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0430s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525506287 LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-05-05T15:46:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0470s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0470s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525506347 LIMIT 1   [ RunTime:0.0430s ]
+
+[ 2018-05-05T15:47:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0330s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0350s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525506407 LIMIT 1   [ RunTime:0.0330s ]
+
+[ 2018-05-05T15:48:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0380s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525506467 LIMIT 1   [ RunTime:0.0380s ]
+
+[ 2018-05-05T15:49:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525506527 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-05T15:50:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0470s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525506587 LIMIT 1   [ RunTime:0.0420s ]
+
+[ 2018-05-05T15:51:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525506647 LIMIT 1   [ RunTime:0.0430s ]
+
+[ 2018-05-05T15:52:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0530s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0580s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525506707 LIMIT 1   [ RunTime:0.0670s ]
+
+[ 2018-05-05T15:53:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525506767 LIMIT 1   [ RunTime:0.0380s ]
+
+[ 2018-05-05T16:16:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0340s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0340s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525506827 LIMIT 1   [ RunTime:0.0330s ]
+
+[ 2018-05-05T16:17:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0480s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0460s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525508207 LIMIT 1   [ RunTime:0.0420s ]
+
+[ 2018-05-05T16:18:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0340s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0350s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525508267 LIMIT 1   [ RunTime:0.0340s ]
+
+[ 2018-05-05T16:19:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0480s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0460s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525508327 LIMIT 1   [ RunTime:0.0440s ]
+
+[ 2018-05-05T16:20:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525508387 LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-05-05T16:21:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525508447 LIMIT 1   [ RunTime:0.0440s ]
+
+[ 2018-05-05T16:22:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525508507 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-05T16:23:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525508567 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-05T16:24:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525508627 LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-05-05T16:25:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0390s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525508687 LIMIT 1   [ RunTime:0.0370s ]
+
+[ 2018-05-05T16:26:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0500s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525508747 LIMIT 1   [ RunTime:0.0450s ]
+
+[ 2018-05-05T16:27:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525508807 LIMIT 1   [ RunTime:0.0380s ]
+
+[ 2018-05-05T16:28:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525508867 LIMIT 1   [ RunTime:0.0430s ]
+
+[ 2018-05-05T16:29:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525508927 LIMIT 1   [ RunTime:0.0410s ]
+
+[ 2018-05-05T16:30:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0390s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525508987 LIMIT 1   [ RunTime:0.0380s ]
+
+[ 2018-05-05T16:31:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525509047 LIMIT 1   [ RunTime:0.0350s ]
+
+[ 2018-05-05T16:32:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0370s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525509107 LIMIT 1   [ RunTime:0.0330s ]
+
+[ 2018-05-05T16:33:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0550s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0470s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525509167 LIMIT 1   [ RunTime:0.0430s ]
+
+[ 2018-05-05T16:34:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0370s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525509227 LIMIT 1   [ RunTime:0.0350s ]
+
+[ 2018-05-05T16:35:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0350s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525509287 LIMIT 1   [ RunTime:0.0340s ]
+
+[ 2018-05-05T16:36:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0470s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525509347 LIMIT 1   [ RunTime:0.0440s ]
+
+[ 2018-05-05T16:37:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525509407 LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-05-05T16:38:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525509467 LIMIT 1   [ RunTime:0.0420s ]
+
+[ 2018-05-05T16:39:47+08:00 ] 127.0.0.1 /Admin/Order/neworder.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/neworder' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` WHERE `status` IN (2,7) AND `created_time` > 1525509527 LIMIT 1   [ RunTime:0.0390s ]
+

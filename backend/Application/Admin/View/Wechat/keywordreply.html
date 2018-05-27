@@ -1,0 +1,97 @@
+<extend name="Public/common"/>
+<block name="main">
+        <div class="page-title">微信关键字回复</div>
+
+        <button class="layui-btn layui-btn-danger layui-btn-sm layui-btn-radius" onclick="location.reload();" style="float: right">
+            <i class="layui-icon layui-anim layui-anim-rotate layui-anim-loop">&#x1002;</i> 刷新
+        </button>
+        <a href="{:U('Wechat/keywordadd')}" class="layui-btn layui-btn-normal layui-btn-sm" style="float: right; margin-right: 15px">添加关键字</a>
+        <form class="layui-form" method="get" action="{:U('Wechat/keywordreply')}">
+            <div class="layui-inline">
+                <input class="layui-input" type="text" placeholder="" name="keywords" value="" />
+            </div>
+            <div class="layui-inline">
+                <button class="layui-btn" type="submit" onclick="alert('搜索维护中'); return false">搜索</button>
+            </div>
+        </form>
+
+
+    <table class="layui-table">
+                <thead>
+                <tr>
+                    <th width="50">ID</th>
+                    <th width="100">匹配关键字</th>
+                    <th width="60">消息类型</th>
+                    <th width="40">状态</th>
+                    <th width="40">图片</th>
+                    <th width="100">连接地址</th>
+                    <th width="500">推送内容</th>
+                    <th width="110">创建时间</th>
+                    <th width="180">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <volist name="list" id="vo">
+                    <tr>
+                        <td>{$vo['id']}</td>
+                        <td>{$vo['keyword']}</td>
+                        <td>{$vo['msg_type']}</td>
+                        <td>
+                            <if condition="$vo['status']">
+                                <i class="layui-icon" style="color: #5FB878">&#xe616;</i>
+                                <else />
+                                <i class="layui-icon" style="color: #FF5722">&#x1006;</i>
+                            </if>
+                        </td>
+                        <td>
+                            <if condition="!empty($vo['image'])">
+                                <a href="{$vo['image']}" target="_blank"> <img src="{$vo['image']}" width="50" height="40"></a>
+                            </if>
+                        </td>
+                        <td style="word-break: break-all">
+                            <if condition="$vo['title']">
+                                <a href="{$vo['url']}" target="_blank" title="{$vo['title']}">[点击打开链接]</a>
+                            </if>
+                        </td>
+                        <td style="word-break: break-all">{$vo['content']}</td>
+                        <td>{$vo['created_time']|date="Y-m-d H:i",###}</td>
+                        <td align="center">
+                            <a href="{:U('Wechat/keywordedit', array('id' => $vo['id']))}"><span class="layui-btn layui-btn-small edit layui-btn-primary">修改</span></a>
+                            <a href="{:U('Wechat/keyworddel', array('id' => $vo['id']))}" onclick="return confirm('是否删除此关键字?')"><span class="layui-btn layui-btn-small edit layui-btn-danger">删除</span></a>
+                        </td>
+                    </tr>
+                </volist>
+                <tr>
+                    <td align="right" nowrap="true" colspan="13">
+                        <div class="pagination">{$pageHtml}</div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+</block>
+<block name="myScript">
+<script type="text/javascript">
+layui.use(['layer', 'form', 'laydate'], function() {
+    var layer = layui.layer, //弹层
+        laydate = layui.laydate,
+        form = layui.form;
+
+    laydate.render({elem: '#start_time', type: 'datetime', format: 'yyyy-MM-dd'});
+    laydate.render({elem: '#stop_time', type: 'datetime', format: 'yyyy-MM-dd'});
+
+    $('.click-show-member').click(function () {
+        var url = $(this).attr('data-url');
+        console.log(url);
+        //显示数据弹窗
+        layer.open({
+            type: 2,
+            title: "查看用户信息",
+            area: ['600px', '500px'],
+            skin: 'layui-layer-rim', //加上边框
+            content: url
+        });
+    });
+
+});
+</script>
+</block>

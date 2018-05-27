@@ -1,0 +1,241 @@
+<extend name="Public/common"/>
+<block name="main">
+<style type="text/css">
+.tabs-panels{}
+.misc-info,.addr-note{padding-bottom:10px;margin-bottom:10px;border-bottom:solid 1px #E6E6E6}
+.tabs-panels h3{font-weight:700; line-height: 24px; }
+.ncap-order-details .tabs-panels dl{font-size:0;padding-bottom:5px}
+.tabs-panels dd,.tabs-panels dt{font-size:13px;line-height:24px;vertical-align:top;display:inline-block}
+.tabs-panels dt{color:#999;width:10%;text-align:right}
+.tabs-panels dd{color:#333;width:22%}
+.tabs-panels table{border:solid 1px #D7D7D7;width:100%;border-collapse:collapse}
+.tabs-panels table td,.tabs-panels table th{text-align:center;min-height:20px;padding:9px}
+.tabs-panels table th{font-weight:normal;background-color:#edfbf8;border-bottom:solid 1px #D7D7D7}
+.tabs-panels table td{border-bottom:solid 1px #D7D7D7}
+.tabs-panels h4{ font-size: 14px; line-height: 24px; font-weight: 600; color: #333; margin-bottom: 8px; }
+.tabs-panels .total-amount { text-align: right; padding: 10px 0; }
+.tabs-panels .total-amount h3 { font-size: 14px; font-weight: normal; color: #777; line-height: 24px; }
+</style>
+<div class="tabs-panels">
+    <div class="misc-info">
+        <h3>基本信息</h3>
+        <dl>
+            <dt>订单ID：</dt>
+            <dd>{$order.id}</dd>
+            <dt>订单号：</dt>
+            <dd>{$order.order_no}</dd>
+            <dt>下单时间：</dt>
+            <dd>{$order['created_time']|date="Y-m-d H:i:s",###}</dd>
+        </dl>
+        <dl>
+            <dt>所属商户：</dt>
+            <dd>{$merchant.title}</dd>
+            <dt>支付方式：</dt>
+            <dd>{$payment[$order['payment']]}</dd>
+            <dt>订单状态：</dt>
+            <dd>{$order_status[$order['status']]}</dd>
+        </dl>
+        <dl>
+            <dt>所属用户：</dt>
+            <dd>{$member.nickname}</dd>
+            <dt>所属用户ID：</dt>
+            <dd>{$member.id}</dd>
+            <dt>结算状态：</dt>
+            <dd>{$settlement_status[$order['settlement_status']]}</dd>
+        </dl>
+        <dl>
+            <dt>订单类型：</dt>
+            <dd>{$order_type[$order['order_type']]}</dd>
+            <dt>到店日期：</dt>
+            <dd>{$order['arrives_time']|date="Y-m-d",###}</dd>
+            <dt>订单延时：</dt>
+            <dd>{$order['incr_time']} 分钟</dd>
+        </dl>
+        <dl>
+            <dt>接单时间：</dt>
+            <dd>{:$order['take_time'] ? date('Y-m-d H:i:s', $order['take_time']) : ''}</dd>
+            <dt>是否已评价：</dt>
+            <dd>{:$order['is_evaluate'] ? '已评价' : '未评价'}</dd>
+            <if condition="$order['status'] eq 6">
+                <dt>拒绝理由：</dt>
+                <dd>{$order['cancel_reason']}</dd>
+            </if>
+        </dl>
+        <dl>
+            <dt>是否续酒：</dt>
+            <dd>{:$order['is_xu'] ? '是' : '否'}</dd>
+            <dt>是否拼吧：</dt>
+            <dd>{:$order['is_bar'] == 1 ? '是' : '否'}</dd>
+        </dl>
+    </div>
+
+    <if condition="$order['employee_id'] neq 0">
+        <div class="addr-note">
+            <h4>员工信息</h4>
+            <if condition="!empty($order['employee_avatar'])">
+                <dl>
+                    <dt>员工头像：</dt>
+                    <dd><img src="{$attachment_url}{$order['employee_avatar']}" width="50" height="50" /> </dd>
+                </dl>
+            </if>
+            <dl>
+                <dt>员工ID：</dt>
+                <dd>{$order['employee_id']}</dd>
+                <dt>员工姓名：</dt>
+                <dd>{$order['employee_realname']}</dd>
+                <dt>员工电话：</dt>
+                <dd>{$order['employee_tel']}</dd>
+            </dl>
+        </div>
+    </if>
+
+    <div class="addr-note">
+        <h4>客户信息</h4>
+        <dl>
+            <dt>客户姓名：</dt>
+            <dd>{$order['contacts_realname']}</dd>
+            <dt>客户电话：</dt>
+            <dd>{$order['contacts_tel']}</dd>
+            <dt>客户性别：</dt>
+            <dd>{$sex[$order['contacts_sex']]}</dd>
+        </dl>
+        <dl>
+            <dt>订单备注：</dt>
+            <dd>{$order['description']}</dd>
+        </dl>
+    </div>
+
+    <div class="goods-info">
+        <h4>商品信息</h4>
+        <table>
+            <if condition="$order['order_type'] eq 1">
+                <tr>
+                    <th>卡座ID</th>
+                    <th>卡座名称</th>
+                    <th>预约到店人数</th>
+                    <th>容纳人数</th>
+                    <th>预定金额</th>
+                    <th>最低消费金额</th>
+                </tr>
+                <tr>
+                    <td>{$seat['goods_seat_id']}</td>
+                    <td>{$seat['seat_number']}</td>
+                    <td>{$seat['total_people']}</td>
+                    <td>1-{$seat['max_people']}</td>
+                    <td>￥{$seat['set_price']}</td>
+                    <td>￥{$seat['floor_price']}</td>
+                </tr>
+            <else />
+                <tr>
+                    <th>商品ID</th>
+                    <th>商品图片</th>
+                    <th>商品名称</th>
+                    <th>购买数量</th>
+                    <th>销售价格</th>
+                    <th>结算价格</th>
+                </tr>
+                <volist name="pack" id="goods">
+                <tr>
+                    <td>{$goods['goods_pack_id']}</td>
+                    <td><img width="50" height="50" src="{$attachment_url}{$goods['image']}"></td>
+                    <td>{$goods['title']}</td>
+                    <td>{$goods['amount']}</td>
+                    <td>￥{$goods['price']}</td>
+                    <td>￥{$goods['purchase_price']}</td>
+                </tr>
+                </volist>
+            </if>
+        </table>
+
+        <if condition="isset($relation_order)">
+            <br />
+            <table>
+                <tr>
+                    <th>逾期订单ID</th>
+                    <th>逾期订单编号</th>
+                    <th>逾期订单结算价格</th>
+                    <th>逾期订单实付金额</th>
+                </tr>
+                <tr>
+                    <td>{$relation_order['id']}</td>
+                    <td>{$relation_order['order_no']}</td>
+                    <td>￥{$relation_order['purchase_price']}</td>
+                    <td>￥{$relation_order['pay_price']}</td>
+                </tr>
+            </table>
+        </if>
+    </div>
+    <div class="total-amount contact-info"></div>
+    <div class="contact-info">
+        <h3>费用信息 </h3>
+        <dl>
+            <dt>市场价格：</dt>
+            <dd>￥{$order['total_price']}</dd>
+            <dt>实付金额：</dt>
+            <dd>￥{$order['pay_price']}</dd>
+            <dt>总优惠金额：</dt>
+            <dd>￥{$order['discount_money']}</dd>
+        </dl>
+        <if condition="isset($card)">
+        <dl>
+            <dt>使用优惠券：</dt>
+            <dd>是 </dd>
+            <dt>优惠券抵扣：</dt>
+            <dd>￥{$card['deductible']}</dd>
+        </dl>
+        <else />
+            <dl>
+                <dt>使用优惠券：</dt>
+                <dd>否</dd>
+            </dl>
+        </if>
+    </div>
+    <div class="total-amount contact-info"></div>
+    <div class="goods-info">
+        <h4>员工操作记录</h4>
+        <table>
+            <tr>
+                <th>操作时间</th>
+                <th>员工ID</th>
+                <th>员工姓名</th>
+                <th>员工电话</th>
+                <th>操作类型</th>
+            </tr>
+            <volist name="operation" id="vo">
+                <tr>
+                    <td class="text-center">{$vo['updated_time']|date="Y-m-d H:i:s",###}</td>
+                    <td class="text-center">{$vo['employee_id']}</td>
+                    <td class="text-center">{$vo['employee_realname']}</td>
+                    <td class="text-center">{$vo['employee_tel']}</td>
+                    <td class="text-center">{$employee_operation[$vo['type']]}</td>
+                </tr>
+            </volist>
+        </table>
+    </div>
+
+    <div class="total-amount contact-info"></div>
+    <div class="goods-info">
+        <h4>管理员操作记录</h4>
+        <table>
+            <tr>
+                <th>操作序号</th>
+                <th>用户姓名</th>
+                <th>用户昵称</th>
+                <th>用户ID</th>
+                <th>操作内容</th>
+                <th>操作时间</th>
+            </tr>
+            <volist name="adminOperate" id="vo" key="key">
+                <tr>
+                    <td class="text-center">{$key}</td>
+                    <td class="text-center">{$vo['username']}</td>
+                    <td class="text-center">{$vo['nickname']}</td>
+                    <td class="text-center">{$vo['user_id']}</td>
+                    <td class="text-center">{$vo['content']}</td>
+                    <td class="text-center">{$vo['created_time']|date="Y-m-d H:i:s",###}</td>
+                </tr>
+            </volist>
+        </table>
+    </div>
+</div>
+</block>

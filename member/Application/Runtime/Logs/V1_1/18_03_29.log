@@ -1,0 +1,255 @@
+[ 2018-03-29T16:48:24+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/lookComment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0420s ]
+SQL: SELECT api_comment_bar.*,api_member.nickname,api_member.sex,api_member.avatar,api_member.age FROM `api_comment_bar` left join api_member ON api_member.id = api_comment_bar.member_id  WHERE `bar_id` = '1' LIMIT 0,20   [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_comment_tags`  [ RunTime:0.0410s ]
+
+[ 2018-03-29T16:49:12+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/lookComment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0440s ]
+SQL: SELECT api_comment_bar.*,api_member.nickname,api_member.sex,api_member.avatar,api_member.age FROM `api_comment_bar` left join api_member ON api_member.id = api_comment_bar.member_id  WHERE `bar_id` = '1' LIMIT 0,20   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_comment_tags`  [ RunTime:0.0430s ]
+
+[ 2018-03-29T16:49:43+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/lookComment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0450s ]
+SQL: SELECT api_comment_bar.*,api_member.nickname,api_member.sex,api_member.avatar,api_member.age FROM `api_comment_bar` left join api_member ON api_member.id = api_comment_bar.member_id  WHERE `bar_id` = '1' LIMIT 0,20   [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_comment_tags`  [ RunTime:0.0450s ]
+
+[ 2018-03-29T17:18:58+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/lookComment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0400s ]
+SQL: SELECT api_comment_bar.*,api_member.nickname,api_member.sex,api_member.avatar,api_member.age FROM `api_comment_bar` left join api_member ON api_member.id = api_comment_bar.member_id  WHERE `bar_id` = '1' LIMIT 0,20   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_comment_tags`  [ RunTime:0.0390s ]
+
+[ 2018-03-29T17:21:59+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/lookComment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0410s ]
+SQL: SELECT api_comment_bar.*,api_member.nickname,api_member.sex,api_member.avatar,api_member.age FROM `api_comment_bar` left join api_member ON api_member.id = api_comment_bar.member_id  WHERE `bar_id` = '1' LIMIT 0,20   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_comment_tags`  [ RunTime:0.0390s ]
+
+[ 2018-03-29T17:22:44+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/lookComment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0430s ]
+SQL: SELECT api_comment_bar.*,api_member.nickname,api_member.sex,api_member.avatar,api_member.age FROM `api_comment_bar` left join api_member ON api_member.id = api_comment_bar.member_id  WHERE `bar_id` = '1' LIMIT 0,20   [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_comment_tags`  [ RunTime:0.0420s ]
+
+[ 2018-03-29T17:23:23+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/lookComment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0390s ]
+SQL: SELECT api_comment_bar.*,api_member.nickname,api_member.sex,api_member.avatar,api_member.age FROM `api_comment_bar` left join api_member ON api_member.id = api_comment_bar.member_id  WHERE `bar_id` = '1' LIMIT 0,20   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_comment_tags`  [ RunTime:0.0390s ]
+
+[ 2018-03-29T17:25:16+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/lookComment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0460s ]
+SQL: SELECT api_comment_bar.*,api_member.nickname,api_member.sex,api_member.avatar,api_member.age FROM `api_comment_bar` left join api_member ON api_member.id = api_comment_bar.member_id  WHERE `bar_id` = '1' LIMIT 0,20   [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0500s ]
+SQL: SELECT * FROM `api_comment_tags`  [ RunTime:0.0430s ]
+
+[ 2018-03-29T17:27:16+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/lookComment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0420s ]
+SQL: SELECT api_comment_bar.*,api_member.nickname,api_member.sex,api_member.avatar,api_member.age FROM `api_comment_bar` left join api_member ON api_member.id = api_comment_bar.member_id  WHERE `bar_id` = '1' LIMIT 0,20   [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_comment_tags`  [ RunTime:0.0410s ]
+
+[ 2018-03-29T17:27:29+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/lookComment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0480s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0450s ]
+SQL: SELECT api_comment_bar.*,api_member.nickname,api_member.sex,api_member.avatar,api_member.age FROM `api_comment_bar` left join api_member ON api_member.id = api_comment_bar.member_id  WHERE `bar_id` = '1' LIMIT 0,20   [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_comment_tags`  [ RunTime:0.0450s ]
+
+[ 2018-03-29T17:29:15+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/lookComment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0460s ]
+SQL: SELECT api_comment_bar.*,api_member.nickname,api_member.sex,api_member.avatar,api_member.age FROM `api_comment_bar` left join api_member ON api_member.id = api_comment_bar.member_id  WHERE `bar_id` = '1' LIMIT 0,20   [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_comment_tags`  [ RunTime:0.0460s ]
+
+[ 2018-03-29T17:36:24+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/lookComment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0380s ]
+SQL: SELECT api_comment_bar.*,api_member.nickname,api_member.sex,api_member.avatar,api_member.age FROM `api_comment_bar` left join api_member ON api_member.id = api_comment_bar.member_id  WHERE `bar_id` = '1' LIMIT 0,20   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_comment_tags`  [ RunTime:0.0380s ]
+
+[ 2018-03-29T17:46:01+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/lookComment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0480s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0460s ]
+SQL: SELECT api_comment_bar.*,api_member.nickname,api_member.sex,api_member.avatar,api_member.age FROM `api_comment_bar` left join api_member ON api_member.id = api_comment_bar.member_id  WHERE `bar_id` = '1' LIMIT 0,20   [ RunTime:0.0326s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0598s ]
+SQL: SELECT * FROM `api_comment_tags`  [ RunTime:0.0460s ]
+
+[ 2018-03-29T17:47:04+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/lookComment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0386s ]
+SQL: SELECT api_comment_bar.*,api_member.nickname,api_member.sex,api_member.avatar,api_member.age FROM `api_comment_bar` left join api_member ON api_member.id = api_comment_bar.member_id  WHERE `bar_id` = '1' LIMIT 0,20   [ RunTime:0.0312s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0562s ]
+SQL: SELECT * FROM `api_comment_tags`  [ RunTime:0.0420s ]
+
+[ 2018-03-29T17:48:55+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/lookComment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0468s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0430s ]
+SQL: SELECT api_comment_bar.*,api_member.nickname,api_member.sex,api_member.avatar,api_member.age FROM `api_comment_bar` left join api_member ON api_member.id = api_comment_bar.member_id  WHERE `bar_id` = '1' LIMIT 0,20   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0310s ]
+SQL: SELECT * FROM `api_comment_tags`  [ RunTime:0.0468s ]
+
+[ 2018-03-29T17:49:09+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/lookComment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0480s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0416s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0468s ]
+SQL: SELECT api_comment_bar.*,api_member.nickname,api_member.sex,api_member.avatar,api_member.age FROM `api_comment_bar` left join api_member ON api_member.id = api_comment_bar.member_id  WHERE `bar_id` = '1' LIMIT 0,20   [ RunTime:0.0516s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_comment_tags`  [ RunTime:0.0460s ]
+
+[ 2018-03-29T17:49:26+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/lookComment
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_comment_bar` [ RunTime:0.0430s ]
+SQL: SELECT api_comment_bar.*,api_member.nickname,api_member.sex,api_member.avatar,api_member.age FROM `api_comment_bar` left join api_member ON api_member.id = api_comment_bar.member_id  WHERE `bar_id` = '1' LIMIT 0,20   [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_comment_tags` [ RunTime:0.0680s ]
+SQL: SELECT * FROM `api_comment_tags`  [ RunTime:0.0420s ]
+

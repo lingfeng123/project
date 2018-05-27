@@ -1,0 +1,158 @@
+[ 2018-04-02T17:30:01+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-02T17:30:02+08:00 ] 127.0.0.1 /Admin/Verification/gt.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-02T17:30:04+08:00 ] 127.0.0.1 /Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `api_user` WHERE `username` = 'kpzadmin  ' AND `password` = '87543278f1315d89849abcc67735def3' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_user_data` WHERE `uid` = '1' LIMIT 1   [ RunTime:0.0420s ]
+SQL: UPDATE `api_user_data` SET `loginTimes`='515',`lastLoginIp`='2130706433',`lastLoginTime`='1522661404' WHERE `uid` = '1' [ RunTime:0.0570s ]
+
+[ 2018-04-02T17:30:06+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Index/index' LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0410s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-02T17:30:07+08:00 ] 127.0.0.1 /Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Index/welcome' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0450s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-02T17:30:10+08:00 ] 127.0.0.1 /Admin/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0490s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0470s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/index' LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0450s ]
+NOTIC: [8] Undefined index: status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 46 行.
+NOTIC: [8] Undefined index: settlement_status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 51 行.
+NOTIC: [8] Undefined index: order_type D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 56 行.
+NOTIC: [8] Undefined index: payment D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 61 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  WHERE `is_bar` = 0 LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT SUM(pay_price) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0460s ]
+SQL: SELECT SUM(discount_money) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT api_order.id,api_merchant.title as merchant_title,api_member.nickname,api_order.order_no,api_order.contacts_realname,api_order.contacts_tel,api_order.contacts_sex,api_order.total_price,api_order.pay_price,api_order.purchase_price,api_order.discount_money,api_order.status,api_order.settlement_status,api_order.order_type,api_order.payment,api_order.description,from_unixtime(api_order.arrives_time,"%Y-%m-%d") as arrives_time,api_order.incr_time,api_order.created_time,from_unixtime(api_order.created_time) as created_time,api_order.employee_id,api_order.employee_realname,api_order.employee_avatar,api_order.employee_tel,api_order.take_time,api_order.relation_order_no,api_order.is_bar FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  WHERE `is_bar` = 0 ORDER BY api_order.id desc LIMIT 0,20   [ RunTime:0.0480s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-02T17:30:12+08:00 ] 127.0.0.1 /Admin/Order/detail/id/43.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0470s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/detail' LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0460s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('订单详情','1','kpzadmin  ','1522661412','Order/detail','{\"id\":\"43\",\"PHPSESSID\":\"ruqg2bp9ot6r6ang135siih0i5\"}') [ RunTime:0.0530s ]
+SQL: SELECT * FROM `api_order` WHERE `id` = 43 LIMIT 1   [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0470s ]
+SQL: SELECT * FROM `api_merchant` LIMIT 1   [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_member` LIMIT 1   [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_order_pack` [ RunTime:0.0470s ]
+SQL: SELECT * FROM `api_order_pack` WHERE `order_id` = 43  [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_order_seat` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_order_seat` WHERE `order_id` = 43 LIMIT 1   [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_employee_operation` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_employee_operation` WHERE `order_id` = 43 ORDER BY updated_time desc  [ RunTime:0.0450s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

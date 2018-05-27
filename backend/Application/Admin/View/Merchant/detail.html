@@ -1,0 +1,122 @@
+<extend name="Public/common"/>
+<block name="main">
+    <div class="layui-row">
+        <div class="layui-col-xs3">
+            <div class="grid-demo-bg1">商户名称</div>
+        </div>
+        <div class="layui-col-xs9">
+            <div class="grid-demo">{$detail.title}</div>
+        </div>
+    </div>
+
+    <div class="layui-row layui-form-item">
+        <div class="layui-col-xs3">
+            <div class="grid-demo-bg1">商户标志</div>
+        </div>
+        <div class="layui-col-xs9">
+            <if condition="isset($detail['logo'])">
+                <img src="{:C('ATTACHMENT_URL')}/{$detail.logo}" width="150">
+            </if>
+        </div>
+    </div>
+
+    <div class="layui-row layui-form-item">
+        <div class="layui-col-xs3">
+            <div class="grid-demo-bg1">商户简介</div>
+        </div>
+        <div class="layui-col-xs9">{$detail.description}</div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">
+            <div class="grid-demo-bg1">电话号码</div>
+        </div>
+        <div class="layui-col-xs9">
+            {$detail.tel}
+        </div>
+    </div>
+
+    <div class="layui-row layui-form-item">
+        <div class="layui-col-xs3">
+            <div class="grid-demo-bg1">商户相册</div>
+        </div>
+        <div class="layui-col-xs9">
+            <if condition="!empty($detail['image'])">
+                <volist name='$detail.image' id='row'>
+                    <img src="//attachment.sc-csj.cn/{$row}" width="150" height="100" />
+                </volist>
+            </if>
+        </div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">
+            <div class="grid-demo-bg1">套餐销售价格</div>
+        </div>
+        <div class="layui-col-xs9">
+            <if condition="$detail['status'] eq 1">待审核</if>
+            <if condition="$detail['status'] eq 2">正常</if>
+            <if condition="$detail['status'] eq 0">封禁</if>
+        </div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">
+            <div class="grid-demo-bg1">商户地址</div>
+        </div>
+        <div class="layui-col-xs9">
+            {$detail.address}
+        </div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">
+            <div class="grid-demo-bg1">营业时间</div>
+        </div>
+        <div class="layui-col-xs9">
+            {$detail.begin_time} - {$detail.end_time}
+        </div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">
+            <div class="grid-demo-bg1">商户标签</div>
+        </div>
+        <div class="layui-col-xs9">
+                <volist name='$detail.tags' id='row'>
+                    {$row}
+                </volist>
+        </div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">
+            <div class="grid-demo-bg1">最低消费</div>
+        </div>
+        <div class="layui-col-xs9">
+            {$detail.avg_consume} 元
+        </div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">
+            <div class="grid-demo-bg1">店铺公告</div>
+        </div>
+        <div class="layui-col-xs9">
+            <div class="grid-demo">{$detail.notice}</div>
+        </div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">
+            <div class="grid-demo-bg1">卡座预定周期</div>
+        </div>
+        <div class="layui-col-xs9">
+            <div class="grid-demo">{$detail.preordain_cycle} 天</div>
+        </div>
+    </div>
+
+
+</block>
+<block name="myScript">
+</block>

@@ -1,0 +1,4 @@
+[2018-03-26 09:27:16] /mnt/data/kpzapp/tasks/delayed/OrderHandlev1.class.php OrderHandlev1::pinBarTimeout
+ERR: {"id":"40","bar_id":"13","pay_no":"4521801064691641","member_id":"20","pay_price":"0.00","pay_status":2,"pay_type":"0","created_time":"1521801064","updated_time":"1521801064","arrives_time":"0","realname":"","sex":"2","tel":"18681272839","avatar":"\/member_20180323154425_znc1521791065ebxa978.jpg","age":"117","is_evaluate":"0"}
+[2018-03-26 15:30:00] /mnt/data/kpzapp/tasks/delayed/OrderHandlev1.class.php OrderHandlev1::pinBarTimeout
+ERR: {"id":"41","bar_id":"14","pay_no":"4522045989407294","member_id":"14","pay_price":"0.01","pay_status":2,"pay_type":"0","created_time":"1522045989","updated_time":"1522046589","arrives_time":"0","realname":"","sex":"1","tel":"18780087200","avatar":"https:\/\/wx.qlogo.cn\/mmopen\/vi_32\/oA8yhGYuVMC9jmPbaAriaibwvcPh09IX06rkPNKuQAynkhQApZQZmwa2fSosMpOcfreeO1sZJUtN5Mss1pU7sD5w\/0","age":"17","is_evaluate":"0"}

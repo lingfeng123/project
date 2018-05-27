@@ -1,0 +1,12 @@
+[ 2018-05-27T17:19:44+08:00 ] 127.0.0.1 /Public/js/shine.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001187s ]
+ERR: 无法加载模块:Public
+
+[ 2018-05-27T17:20:21+08:00 ] 127.0.0.1 /Public/js/shine.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000272s ]
+ERR: 无法加载模块:Public
+

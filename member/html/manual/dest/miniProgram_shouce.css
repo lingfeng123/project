@@ -1,0 +1,37 @@
+.h1 {
+  height: 18.826667rem;
+}
+
+.h2 {
+  height: 18.293333rem;
+}
+
+.h3 {
+  height: 15.36rem;
+}
+
+.h4 {
+  height: 11.013333rem;
+}
+
+.h5 {
+  height: 12.933333rem;
+}
+
+.h6 {
+  height: 16.666667rem;
+}
+
+.h7 {
+  height: 11.626667rem;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+}
+
+.flex img {
+  width: 10rem;
+  background: url(../image/loading.gif) 50% no-repeat;
+}

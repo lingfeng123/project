@@ -1,0 +1,242 @@
+[ 2018-03-27T14:30:51+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/member/delAlbum
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0400s ]
+SQL: SELECT `image` FROM `api_member` WHERE `id` = 20 LIMIT 1   [ RunTime:0.0400s ]
+SQL: UPDATE `api_member` SET `image`='/member_20180327135449_sfi1522130089yjsp782.jpg|/member_20180327141810_kcg1522131490jgmh392.jpg' WHERE `id` = 20 [ RunTime:0.0610s ]
+DEBUG: http://rs.qbox.me/batch?op=/delete/a3B6LXRlc3Q6bWVtYmVyXzIwMTgwMzI3MTQxODEwX29taDE1MjIxMzE0OTBiZmNnMTM0LmpwZw==
+NOTIC: [8] Undefined index: error D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Think\Upload\Driver\Qiniu\QiniuStorage.class.php 第 331 行.
+
+[ 2018-03-27T14:34:01+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/member/delAlbum
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0460s ]
+SQL: SELECT `image` FROM `api_member` WHERE `id` = 20 LIMIT 1   [ RunTime:0.0460s ]
+SQL: UPDATE `api_member` SET `image`='/member_20180327135449_sfi1522130089yjsp782.jpg|/member_20180327141810_kcg1522131490jgmh392.jpg' WHERE `id` = 20 [ RunTime:0.0540s ]
+DEBUG: http://rs.qbox.me/batch?op=/delete/a3B6LXRlc3Q6bWVtYmVyXzIwMTgwMzI3MTQxODEwX29taDE1MjIxMzE0OTBiZmNnMTM0LmpwZw==
+NOTIC: [8] Undefined index: error D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Think\Upload\Driver\Qiniu\QiniuStorage.class.php 第 331 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Controller\MemberController.class.php 第 457 行.
+
+[ 2018-03-27T14:34:28+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/member/delAlbum
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0470s ]
+SQL: SELECT `image` FROM `api_member` WHERE `id` = 20 LIMIT 1   [ RunTime:0.0460s ]
+SQL: UPDATE `api_member` SET `image`='/member_20180327135449_sfi1522130089yjsp782.jpg|/member_20180327141810_kcg1522131490jgmh392.jpg' WHERE `id` = 20 [ RunTime:0.0540s ]
+DEBUG: http://rs.qbox.me/batch?op=/delete/a3B6LXRlc3Q6bWVtYmVyXzIwMTgwMzI3MTQxODEwX29taDE1MjIxMzE0OTBiZmNnMTM0LmpwZw==
+NOTIC: [8] Undefined index: error D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Think\Upload\Driver\Qiniu\QiniuStorage.class.php 第 331 行.
+
+[ 2018-03-27T14:38:14+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0460s ]
+SQL: SELECT id as bar_id,`total_price`,`pay_price`,`average_cost`,`created_time`,`description`,`bar_status` FROM `api_bar` WHERE `top_bar_id` = 1 AND `is_xu` = 1 LIMIT 0,20   [ RunTime:0.0460s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar` WHERE `top_bar_id` = 1 AND `is_xu` = 1 LIMIT 1   [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_bar_member` WHERE `bar_id` = 7 AND `member_id` = 13 LIMIT 1   [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar_pack` [ RunTime:0.0500s ]
+SQL: SELECT `goods_pack_id`,`title`,`amount`,`price`,`image`,`pack_description`,`market_price`,`goods_type` FROM `api_bar_pack` WHERE `bar_id` = 7  [ RunTime:0.0460s ]
+SQL: SELECT `member_id`,`pay_status`,`avatar` FROM `api_bar_member` WHERE `bar_id` = 7  [ RunTime:0.0460s ]
+
+[ 2018-03-27T15:41:10+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0360s ]
+ERR: 1052:Column 'id' in where clause is ambiguous
+ [ SQL语句 ] : SELECT api_bar.id as bar_id,api_bar.total_price,api_bar.pay_price,api_bar.average_cost,api_bar.created_time,api_bar.description,api_bar.bar_status,api_bar_member.pay_type,api_bar_member.pay_status FROM `api_bar` left join api_bar_member ON api_bar_member.member_id =13  WHERE `id` = '1' LIMIT 1  
+ERR: 1052:Column 'id' in where clause is ambiguous
+ [ SQL语句 ] : SELECT api_bar.id as bar_id,api_bar.total_price,api_bar.pay_price,api_bar.average_cost,api_bar.created_time,api_bar.description,api_bar.bar_status,api_bar_member.pay_type,api_bar_member.pay_status FROM `api_bar` left join api_bar_member ON api_bar_member.member_id =13  WHERE `id` = '1' LIMIT 1  
+
+[ 2018-03-27T15:42:55+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0430s ]
+SQL: SELECT api_bar.id as bar_id,api_bar.total_price,api_bar.pay_price,api_bar.average_cost,api_bar.created_time,api_bar.description,api_bar.bar_status,api_bar_member.pay_type,api_bar_member.pay_status FROM `api_bar` left join api_bar_member ON api_bar_member.member_id =13  WHERE api_bar.id = '8' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar_pack` [ RunTime:0.0430s ]
+SQL: SELECT `goods_pack_id`,`title`,`amount`,`price`,`image`,`pack_description`,`market_price`,`goods_type` FROM `api_bar_pack` WHERE `bar_id` = 8  [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0420s ]
+SQL: SELECT `member_id`,`pay_status`,`avatar` FROM `api_bar_member` WHERE `bar_id` = 8  [ RunTime:0.0390s ]
+
+[ 2018-03-27T15:50:31+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0350s ]
+SQL: SELECT id as bar_id,`total_price`,`pay_price`,`average_cost`,`created_time`,`description`,`bar_status` FROM `api_bar` WHERE `top_bar_id` = 1 AND `is_xu` = 1 LIMIT 0,20   [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar` WHERE `top_bar_id` = 1 AND `is_xu` = 1 LIMIT 1   [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_bar_member` WHERE `bar_id` = 8 AND `member_id` = 13 LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_bar_pack` [ RunTime:0.0380s ]
+SQL: SELECT `goods_pack_id`,`title`,`amount`,`price`,`image`,`pack_description`,`market_price`,`goods_type` FROM `api_bar_pack` WHERE `bar_id` = 8  [ RunTime:0.0360s ]
+SQL: SELECT `member_id`,`pay_status`,`avatar` FROM `api_bar_member` WHERE `bar_id` = 8  [ RunTime:0.0350s ]
+
+[ 2018-03-27T15:53:31+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0410s ]
+SQL: SELECT id as bar_id,`total_price`,`pay_price`,`average_cost`,`created_time`,`description`,`bar_status` FROM `api_bar` WHERE `top_bar_id` = 1 AND `is_xu` = 1 LIMIT 0,20   [ RunTime:0.0390s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar` WHERE `top_bar_id` = 1 AND `is_xu` = 1 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_bar_member` WHERE `bar_id` = 8 AND `member_id` = 13 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_bar_pack` [ RunTime:0.0380s ]
+SQL: SELECT `goods_pack_id`,`title`,`amount`,`price`,`image`,`pack_description`,`market_price`,`goods_type` FROM `api_bar_pack` WHERE `bar_id` = 8  [ RunTime:0.0390s ]
+SQL: SELECT `member_id`,`pay_status`,`avatar` FROM `api_bar_member` WHERE `bar_id` = 8  [ RunTime:0.0400s ]
+
+[ 2018-03-27T15:54:34+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0390s ]
+SQL: SELECT id as bar_id,`total_price`,`pay_price`,`average_cost`,`created_time`,`description`,`bar_status` FROM `api_bar` WHERE `top_bar_id` = 1 AND `is_xu` = 1 LIMIT 0,20   [ RunTime:0.0380s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar` WHERE `top_bar_id` = 1 AND `is_xu` = 1 LIMIT 1   [ RunTime:0.0380s ]
+
+[ 2018-03-27T15:57:04+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0430s ]
+SQL: SELECT id as bar_id,`total_price`,`pay_price`,`average_cost`,`created_time`,`description`,`bar_status` FROM `api_bar` WHERE `top_bar_id` = 1 AND `is_xu` = 1 ORDER BY id desc LIMIT 0,20   [ RunTime:0.0420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar` WHERE `top_bar_id` = 1 AND `is_xu` = 1 LIMIT 1   [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_bar_member` WHERE `bar_id` = 10 AND `member_id` = 13 LIMIT 1   [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_bar_pack` [ RunTime:0.0420s ]
+SQL: SELECT `goods_pack_id`,`title`,`amount`,`price`,`image`,`pack_description`,`market_price`,`goods_type` FROM `api_bar_pack` WHERE `bar_id` = 10  [ RunTime:0.0420s ]
+SQL: SELECT `member_id`,`pay_status`,`avatar` FROM `api_bar_member` WHERE `bar_id` = 10  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_bar_member` WHERE `bar_id` = 8 AND `member_id` = 13 LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT `goods_pack_id`,`title`,`amount`,`price`,`image`,`pack_description`,`market_price`,`goods_type` FROM `api_bar_pack` WHERE `bar_id` = 8  [ RunTime:0.0430s ]
+SQL: SELECT `member_id`,`pay_status`,`avatar` FROM `api_bar_member` WHERE `bar_id` = 8  [ RunTime:0.0420s ]
+
+[ 2018-03-27T17:24:46+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0410s ]
+SQL: SELECT api_bar.id as bar_id,api_bar.total_price,api_bar.pay_price,api_bar.average_cost,api_bar.created_time,api_bar.description,api_bar.bar_status,api_bar_member.pay_type,api_bar_member.pay_status,api_bar_member.id as order_id FROM `api_bar` left join api_bar_member ON api_bar_member.member_id =13  WHERE api_bar.id = '8' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_bar_pack` [ RunTime:0.0420s ]
+SQL: SELECT `goods_pack_id`,`title`,`amount`,`price`,`image`,`pack_description`,`market_price`,`goods_type` FROM `api_bar_pack` WHERE `bar_id` = 8  [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0420s ]
+SQL: SELECT `member_id`,`pay_status`,`avatar` FROM `api_bar_member` WHERE `bar_id` = 8  [ RunTime:0.0410s ]
+
+[ 2018-03-27T17:25:01+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0420s ]
+SQL: SELECT api_bar.id as bar_id,api_bar.total_price,api_bar.pay_price,api_bar.average_cost,api_bar.created_time,api_bar.description,api_bar.bar_status,api_bar_member.pay_type,api_bar_member.pay_status,api_bar_member.id as order_id FROM `api_bar` left join api_bar_member ON api_bar_member.member_id =13  WHERE api_bar.id = '10' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar_pack` [ RunTime:0.0400s ]
+SQL: SELECT `goods_pack_id`,`title`,`amount`,`price`,`image`,`pack_description`,`market_price`,`goods_type` FROM `api_bar_pack` WHERE `bar_id` = 10  [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0450s ]
+SQL: SELECT `member_id`,`pay_status`,`avatar` FROM `api_bar_member` WHERE `bar_id` = 10  [ RunTime:0.0440s ]
+
+[ 2018-03-27T17:25:35+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0410s ]
+SQL: SELECT api_bar.id as bar_id,api_bar.total_price,api_bar.pay_price,api_bar.average_cost,api_bar.created_time,api_bar.description,api_bar.bar_status,api_bar_member.pay_type,api_bar_member.pay_status,api_bar_member.id as order_id FROM `api_bar` left join api_bar_member ON api_bar_member.member_id =13  WHERE api_bar.id = '10' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_bar_pack` [ RunTime:0.0400s ]
+SQL: SELECT `goods_pack_id`,`title`,`amount`,`price`,`image`,`pack_description`,`market_price`,`goods_type` FROM `api_bar_pack` WHERE `bar_id` = 10  [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0390s ]
+SQL: SELECT `member_id`,`pay_status`,`avatar` FROM `api_bar_member` WHERE `bar_id` = 10  [ RunTime:0.0390s ]
+
+[ 2018-03-27T17:29:07+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineBarDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0380s ]
+SQL: SELECT api_bar.id as bar_id,api_bar.total_price,api_bar.pay_price,api_bar.average_cost,api_bar.created_time,api_bar.description,api_bar.bar_status,api_bar_member.pay_type,api_bar_member.pay_status,api_bar_member.id as order_id FROM `api_bar` left join api_bar_member ON api_bar_member.bar_id = api_bar.id  WHERE api_bar.id = '10' AND api_bar_member.member_id = '13' LIMIT 1   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_bar_pack` [ RunTime:0.0380s ]
+SQL: SELECT `goods_pack_id`,`title`,`amount`,`price`,`image`,`pack_description`,`market_price`,`goods_type` FROM `api_bar_pack` WHERE `bar_id` = 10  [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0370s ]
+SQL: SELECT `member_id`,`pay_status`,`avatar` FROM `api_bar_member` WHERE `bar_id` = 10  [ RunTime:0.0360s ]
+
+[ 2018-03-27T19:52:13+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/barInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_bar` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT api_bar.*,api_merchant.title,api_merchant.address,api_merchant.begin_time,api_merchant.end_time,api_member.nickname,api_member.sex,api_member.avatar,api_member.signature,api_comment_barstar.average_star,(api_bar.woman_number+api_bar.man_number) as total_number,api_bar_member.pay_status,api_bar_member.pay_type,api_bar_member.id as order_id,api_bar_member.pay_no as order_no,api_bar_member.created_time as pay_time FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id = api_bar.id AND api_bar_member.member_id = 14 left join api_comment_barstar ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.id = '1' LIMIT 1   [ RunTime:0.0410s ]
+

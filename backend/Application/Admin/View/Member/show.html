@@ -1,0 +1,107 @@
+<extend name="Public/common"/>
+<block name="main">
+    <div class="layui-row">
+        <div class="layui-col-xs3">
+            <div class="grid-demo grid-demo-bg1">用户ID</div>
+        </div>
+        <div class="layui-col-xs9">
+            <div class="grid-demo">{$detail.id}</div>
+        </div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">
+            <div class="grid-demo grid-demo-bg1">昵称</div>
+        </div>
+        <div class="layui-col-xs9">
+            <div class="grid-demo">{$detail.nickname}</div>
+        </div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">
+            <div class="grid-demo grid-demo-bg1">姓名</div>
+        </div>
+        <div class="layui-col-xs9">
+            <div class="grid-demo">{$detail.realname}</div>
+        </div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">
+            <div class="grid-demo grid-demo-bg1">性别</div>
+        </div>
+        <div class="layui-col-xs9">
+            <div class="grid-demo">{$detail.sex}</div>
+        </div>
+    </div>
+
+    <div class="layui-row layui-form-item">
+        <div class="layui-col-xs3">
+            <div class="grid-demo grid-demo-bg1">头像</div>
+        </div>
+        <div class="layui-col-xs9">
+            <div class="grid-demo layui-input-inline">
+                <if condition="isset($detail['avatar'])">
+                    <img width="50" src="{$detail.avatar}" class="layui-circle">
+                </if>
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">
+            <div class="grid-demo grid-demo-bg1">积分</div>
+        </div>
+        <div class="layui-col-xs9">
+            <div class="grid-demo">{$detail.coin}</div>
+        </div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">
+            <div class="grid-demo grid-demo-bg1">成长值</div>
+        </div>
+        <div class="layui-col-xs9">
+            <div class="grid-demo">{$detail.growth}</div>
+        </div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">
+            <div class="grid-demo grid-demo-bg1">注册时间</div>
+        </div>
+        <div class="layui-col-xs9">
+            <div class="grid-demo">{$detail.created_time}</div>
+        </div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">
+            <div class="grid-demo grid-demo-bg1">修改时间</div>
+        </div>
+        <div class="layui-col-xs9">
+            <div class="grid-demo">{$detail.updated_time}</div>
+        </div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">
+            <div class="grid-demo grid-demo-bg1">推广码</div>
+        </div>
+        <div class="layui-col-xs9">
+            <div class="grid-demo">{$detail.invite_code}</div>
+        </div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-xs3">
+            <div class="grid-demo grid-demo-bg1">会员等级</div>
+        </div>
+        <div class="layui-col-xs9">
+            <div class="grid-demo">{$detail.level_name}</div>
+        </div>
+    </div>
+</block>
+<block name="myScript">
+</block>

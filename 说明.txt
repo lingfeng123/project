@@ -1,0 +1,37 @@
+1, api_member表中添加新字段 age int(2) 年龄, image(text) 相册, signature varchar(255) 个性签名, is_auth tinyint(1) 派对大使认证标识
+2, 新增api_coupon表与api_coupon_member表
+3, 拼吧数据表
+
+order_id     拼吧订单ID
+bar_type     拼吧类型
+bar_theme           拼吧主题
+cost_type           费用类型
+man_number      男士人数
+woman_number    女士人数
+average_cost   评价费用(拆分之后的每人应支付金额)
+
+拼吧用户订单表
+id  自增ID
+order_id        订单ID
+order_no        订单编号
+member_id       会员ID
+status          订单状态
+payment_type    支付类型
+created_time    创建时间
+updated_time    修改时间
+
+//新建拼吧评论表 api_commment_bar  记录拼吧评论内容
+id               拼吧评论ID
+order_id         订单ID
+member_id        评论人ID
+bar_member_id    拼吧发起人ID
+star             星
+tag              标签
+created_time     评论时间
+is_show          是否匿名
+
+//新建拼吧评论积分表 api_comment_barstar 记录拼吧人对应的评星总数和评星次数,以及平均星数
+member_id          拼吧发起人ID
+total_star         总星数
+total_time         总评价次数
+average_star       平均次数

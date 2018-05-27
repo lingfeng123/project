@@ -1,0 +1,252 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta content="maximum-dpr=2" name="flexible" />
+    <meta content="modeName=750-12" name="grid" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="/Public/lib/flexible_css.debug.js"></script>
+    <script src="/Public/lib/flexible.debug.js"></script>
+    <script src="/Public/lib/makegrid.debug.js"></script>
+    <title>用户协议</title>
+    <style type="text/css">
+        html,body{
+            width:100%;
+            height:100%;
+            color:#fff;
+        }
+        .grid > div,.grid-thin > div,.grid-fat > div {
+            margin-bottom: 0.3rem;
+            color: #fff;
+        }
+        div[class^="col-"] > div {
+            margin-top: 0.04rem;
+        }
+
+        .grid-fat-wrap .bg>div {
+            outline: 1px solid #fff;
+        }
+        .grid-thin-wrap, .grid-wrap, .grid-fat-wrap {
+            width:100%;
+            height:100%;
+            position: relative;
+            background-color: rgba(241,149,36, 0.2);
+            background-color: rgba(0,0,0, 0.05);
+        }
+
+        .grid-thin-wrap .bg,.grid-wrap .bg,.grid-fat-wrap .bg {
+            position: absolute;
+            z-index: -1;
+            top: 0;
+        }
+
+        .grid-thin-wrap .bg > div[class^="col-"],
+        .grid-wrap .bg > div[class^="col-"],
+        .grid-fat-wrap .bg > div[class^="col-"]{
+            height: 14.7rem;
+        }
+
+        .grid-thin-wrap .bg>div,
+        .grid-wrap .bg>div,
+        .grid-fat-wrap .bg>div{
+            background-color: rgba(0,0,0, 0.15);
+        }
+
+        .global button{
+            width: 3.2rem;
+            padding: 0.1rem 0;
+            margin: 0.1rem;
+            font-size: inherit;
+        }
+
+        .grid-config {
+            margin-bottom: 0.2rem;
+        }
+
+        .grid-config label{
+            display: inline-block;
+            padding: 0.4rem 0;
+            width: 5rem;
+            text-align: right;
+            font-size: inherit;
+        }
+
+        .grid-config input {
+            display: inline-block;
+            font-size: inherit;
+        }
+
+        .grid-config button {
+            display: block;
+            width: 2rem;
+            padding: 0.1rem;
+            font-size: inherit;
+            margin: auto;
+        }
+
+        [data-dpr="1"] .grid-config, [data-dpr="1"] .global{
+            font-size: 12px;
+        }
+        [data-dpr="2"] .grid-config, [data-dpr="2"] .global{
+            font-size: 24px;
+        }
+        [data-dpr="3"] .grid-config, [data-dpr="3"] .global{
+            font-size: 36px;
+        }
+
+
+
+        .ua-body {
+            width: 100%;
+            min-height: 100%;
+            background: #292627;
+            color: #7b7b7b;
+            padding-top: 0.533333rem;
+            padding-bottom: 0.533333rem;
+        }
+
+
+        .ua-content {
+            padding: 0 0.266667rem;
+        }
+        /* 段落 */
+        .text-p {
+            text-indent: 0.533333rem;
+            line-height: 0.533333rem;
+        }
+
+        [data-dpr="1"] .text-p {
+            font-size: 13px;
+        }
+
+        [data-dpr="2"] .text-p {
+            font-size: 26px;
+        }
+
+        [data-dpr="3"] .text-p {
+            font-size: 39px;
+        }
+
+        .text-bold {
+            font-weight: bold;
+        }
+        .text-fff{
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+<div class="grid-wrap">
+
+</div>
+<script type="text/template" id="grid-html">
+    <div class="ua-body">
+        <div class="ua-content">
+            <p class="text-p">空瓶子与用户共同确认：</p>
+            <p class="text-p text-bold">1、用户通过空瓶子平台相关软件，包括但不限于：小程序、APP等，点击通过微信授权、绑定手机号时，即视为用户与空瓶子已达成《空瓶子用户协议》。</p>
+            <p class="text-p text-bold">2、空瓶子及用户均已认真阅读《空瓶子用户协议》(下称“本协议”)中全部条款，对本协议已知晓、理解并接受，同意将其作为确定双方权利义务的依据。</p>
+            <p class="text-p text-bold">3、空瓶子《法律声明》为本协议的必要组成部分，用户接受本协议的同时即视为接受空瓶子《法律声明》的全部内容。</p>
+            <br>
+            <p class="text-p text-bold text-fff">一、定义条款</p>
+            <p class="text-p">空瓶子：指由四川创时捷科技有限公司运营和管理的互联网服务平台，本协议下文中，“空瓶子”既指空瓶子微信小程序、空瓶子APP，亦指四川创时捷科技有限公司。</p>
+            <p class="text-p">用户：指接受并同意本协议全部条款及空瓶子发布的其他全部服务条款和操作规则、通过空瓶子进行消费的空瓶子会员。</p>
+            <p class="text-p text-bold text-fff">二、服务规则</p>
+            <p class="text-p">1. 用户应当遵守法律法规、规章、规范性文件及政策要求的规定，不得在空瓶子或利用空瓶子服务从事非法或其他损害空瓶子或第三方权益的活动，如发送或接收任何违法、违规、违反公序良俗、侵犯他人权益的信息，发送或接收传销材料或存在其他危害的信息、言论，未经空瓶子授权使用或伪造空瓶子信息等。</p>
+            <p class="text-p">2. 用户应当遵守法律法规应当谨慎合理使用和妥善保管空瓶子账号及密码，对其空瓶子账号和密码下进行的行为和发生的事件负责。当用户发现空瓶子账号被未经其授权的第三方使用或存在其他账号安全问题时应立即有效通知空瓶子，要求空瓶子暂停该账号的服务，并向公安机关报案。空瓶子有权在合理时间内对用户的该等请求采取行动，但对采取行动前用户已经遭受的损失不承担任何责任。用户在未经空瓶子同意的情况下不得将空瓶子账号以赠与、借用、租用、转让给他人使用。</p>
+            <p class="text-p">3. 用户通过空瓶子与商家进行交易时，应当遵守本协议“交易规则”的全部约定及空瓶子发布的其他关于交易的服务条款和操作规则的全部规定。若不遵守上述规定，用户须自行承担由此造成的所有损失。</p>
+            <p class="text-p">4. 用户在空瓶子对商家/商品/服务进行评价时应当根据实际情况如实进行评价。</p>
+
+            <p class="text-p text-bold text-fff">三、交易规则</p>
+            <p class="text-p">用户承诺在进入空瓶子消费时，应良好遵守如下空瓶子交易规则。</p>
+            <p class="text-p">1. 浏览信息</p>
+            <p class="text-p">用户在空瓶子浏览商家/商品/服务的信息时，应当仔细阅读信息中包含的全部内容，包括但不限于商家/商品/服务的名称、种类、数量、质量、价格、有效期、预约时间、商家地址、营业时间、取消规则、退款规则等内容，用户完全接受信息中包含的全部内容后方可点击购买。</p>
+            <p class="text-p">2. 提交及确认订单</p>
+            <p class="text-p">(1) 用户应当仔细阅读确认订单页面所包含的全部内容，用户完全同意订单详情的全部内容后方可提交订单。</p>
+            <p class="text-p">(2) 用户再次阅读并确认订单详情的全部内容后方可点击确认订单并付款，用户确认订单即视为用户已知晓、同意并接受订单详情中的全部内容，与商家成立了交易合同，用户与商家均应当按照前述合同的约定履行各自的权利义务。</p>
+            <p class="text-p">3. 订单支付</p>
+            <p class="text-p">用户在提交及确认订单后，应根据付款页面的提示选择付款方式，完成订单支付。</p>
+            <p class="text-p">4. 电子消费凭证</p>
+            <p class="text-p">(1) 用户完成订单支付后，空瓶子向用户发送电子消费凭证即订单编号，用户可凭电子消费凭证向商家要求获得相应商品/服务。</p>
+            <p class="text-p">(2) 用户应当妥善保管电子消费凭证，因用户保管不善导致电子消费凭证被他人使用的，后果自负。</p>
+            <p class="text-p">(3) 电子消费凭证于发生以下情形之一时即失效：</p>
+            <p class="text-p">① 凭电子消费凭证已获得商品/服务；</p>
+            <p class="text-p">② 超过交易合同内容中约定的有效期。</p>
+
+            <p class="text-p text-bold text-fff">四、用户的权利和义务</p>
+            <p class="text-p">1. 用户有权按照本协议约定接受空瓶子提供的空瓶子网络交易平台服务。</p>
+            <p class="text-p">2. 如用户要求获得商品/服务的发票、其他付款凭证或服务单据，有权且应当在消费时向商家提出，发票金额以实际支付的价款为准。</p>
+            <p class="text-p">3. 用户在消费商品/服务的过程中，如发现商品/服务与订单内容不符或存在质量、服务态度等其他问题的，应与商家采取协商或其他方式予以解决，空瓶子可向用户提供商家的真实登记信息并积极协助用户与商家解决争议。</p>
+            <p class="text-p">4. 用户有权随时终止使用空瓶子。</p>
+            <p class="text-p">5. 用户应保证其在提交订单时所提供的姓名、联系方式等全部信息真实、完整、准确，并当上述信息发生变更时及时进行更新已提供给空瓶子的信息。</p>
+            <p class="text-p">6. 用户在使用空瓶子时不得恶意干扰交易的正常进行、破坏空瓶子交易秩序。</p>
+            <p class="text-p">7. 用户不得以任何技术手段或其他方式干扰空瓶子的正常运行或干扰其他用户使用空瓶子。</p>
+            <p class="text-p">8. 用户不得以虚构事实等方式恶意诋毁空瓶子或商家的商誉。</p>
+            <p class="text-p">9. 用户不得对商家/商品/服务进行虚假评价或虚假投诉，若出现上述情况，空瓶子平台有权进行追责。</p>
+
+            <p class="text-p text-bold text-fff">五、空瓶子的权利和义务</p>
+            <p class="text-p">1. 空瓶子有权在发现空瓶子上显示的任何信息存在明显错误时，对信息予以更正。</p>
+            <p class="text-p">2. 用户付款成功前，空瓶子有权接受商家委托对订单内容作出变更，如用户接受变更后的内容则用户可确认订单及付款，如用户不接受变更后内容则有权取消订单。用户付款成功后，如确因情况变化导致商家需对订单内容作出变更的，空瓶子有权接受商家委托单方对订单内容作出变更，如用户接受变更则按变更后的订单内容进行消费，如不接受变更则用户有权取消订单并要求全额退款。</p>
+            <p class="text-p">3. 空瓶子保留修改、中止或终止空瓶子服务的权利，空瓶子行使前述权利将按照法律规定的程序及方式告知用户。</p>
+            <p class="text-p">4. 空瓶子应当采取必要的技术手段和管理措施保障空瓶子的正常运行，并提供必要、可靠的交易环境和交易服务，维护交易秩序。</p>
+            <p class="text-p">5. 空瓶子有权在本协议履行期间及本协议终止后保留用户的信息及用户应用空瓶子服务期间的全部交易信息，但不得非法使用该等信息。</p>
+            <p class="text-p">6. 空瓶子有权随时删除空瓶子平台上各类不符合国家法律法规、规范性文件或空瓶子平台上的用户评价等内容信息，空瓶子行使该等权利不需提前通知用户。</p>
+
+            <p class="text-p text-bold text-fff">六、特别声明</p>
+            <p class="text-p">1. 用户未通过空瓶子与商家之间进行的交易不属于空瓶子交易，空瓶子对此类交易事项不承担任何责任，用户不得因其与商家之间发生的任何争议投诉空瓶子或要求空瓶子承担任何责任。不属于空瓶子交易的情况具体包括但不限于：用户未在空瓶子与商家成立订单；用户虽在空瓶子与商家成立订单，但未通过空瓶子而直接向商家支付款项；用户在商家处的额外消费。</p>
+            <p class="text-p">2. 不论在何种情况下，空瓶子对由于信息网络设备维护、信息网络连接故障、电脑、通讯或其他系统的故障、电力故障、罢工、劳动争议、暴乱、起义、骚乱、生产力或生产资料不足、火灾、洪水、风暴、爆炸、战争、政府行为、司法行政机关的命令、其他不可抗力或第三方的不作为而造成的不能服务或延迟服务不承担责任。</p>
+
+            <p class="text-p text-bold text-fff">七、协议的变更和终止</p>
+            <p class="text-p">1. 协议的变更</p>
+            <p class="text-p">空瓶子有权对本协议内容或空瓶子发布的其他服务条款及操作规则的内容进行变更，空瓶子将按照法律规定的程序及方式发布公告。如用户继续使用空瓶子提供的服务即视为用户同意该等内容变更。</p>
+            <p class="text-p">2. 协议的终止</p>
+            <p class="text-p">用户不再使用空瓶子即视为本协议终止。但本协议终止后，用户仍须遵守法律相关规定，不得发生任何有损空瓶子利益、名誉的行为，否则，空瓶子有权对此进行追究。</p>
+
+            <p class="text-p text-bold text-fff">八、法律声明</p>
+            <p class="text-p">空瓶子平台提醒您：在您使用空瓶子平台的各项服务前，请务必仔细阅读并透彻理解本声明。如果您使用空瓶子平台，您的使用行为将被视为对本声明全部内容的认可。</p>
+            <p class="text-p">1. 知识产权声明</p>
+            <p class="text-p">(1) 空瓶子知识产权</p>
+            <p class="text-p">空瓶子平台所有的产品、技术与所有程序均属于空瓶子知识产权，为四川创时捷科技有限公司所有和使用。空瓶子平台独立拥有或与相关内容提供者共同拥有空瓶子平台内相关内容（包括但不限于文字、图片、音频、视频资料及页面设计、编排、软件等）的版权和/或其他相关知识产权。“空瓶子”及空瓶子logo均为注册商标，受中国法律保护。</p>
+            <p class="text-p">除非中国法律另有规定，未经空瓶子平台书面许可，对于空瓶子平台拥有版权和/或其他知识产权的任何内容，任何人不得擅自使用（包括但不限于：以非法的方式复制、传播、展示、镜像、上载、下载）。否则，空瓶子平台将依法追究法律责任。</p>
+            <p class="text-p">(2) 用户知识产权</p>
+            <p class="text-p">任何用户接受《空瓶子酒吧预订平台用户协议》，即表明该用户主动将其在空瓶子平台发表的任何形式的信息的著作财产权，包括并不限于：复制权、发行权、出租权、展览权、表演权、放映权、广播权、信息网络传播权、摄制权、改编权、翻译权、汇编权以及应当由著作权人享有的其他可转让权利无偿独家转让给空瓶子的运营商所有，同时表明该用户许可空瓶子平台有权利就任何主体侵权而单独提起诉讼，并获得全部赔偿。本协议已经构成《著作权法》第二十五条所规定的书面协议，其效力及于用户在空瓶子平台发布的任何受著作权法保护的作品内容，无论该内容形成于本协议签订前还是本协议签订后。</p>
+            <p class="text-p"> 用户同意并明确了解上述条款，不得将已发表于空瓶子平台的信息，以任何形式发布或授权其它网站（及媒体）使用。同时，用户保证己方在空瓶子平台上发布的一切图文信息资料均具有完全知识产权和合法权利，不侵犯任何人人身或财产等一切合法权利。</p>
+            <p class="text-p">为了保证评价的真实性与合法性，如果发现用户上传的图片中含有侵权内容，包括且不限于侵犯他人人身或财产权利，或带有其他网站的logo、图标等标识信息，空瓶子平台保留删除站内各类不符合规定评价而不通知用户的权利。</p>
+            <p class="text-p">(3) 使用许可</p>
+            <p class="text-p">未经四川创时捷科技有限公司的明确书面许可，任何单位或个人不得以任何方式，以任何文字作全部和局部复制、转载、引用和链接。否则四川创时捷科技有限公司将追究其法律责任。</p>
+            <p class="text-p">2. 作弊检测</p>
+            <p class="text-p">若空瓶子平台通过技术检测、人工抽检等手段有合理理由怀疑用户资料信息为错误、不实、失效或不完整，本网站有权暂停或终止用户的账号，并拒绝现在或将来使用本平台服务的全部或部分，同时保留追索用户不当得利返还的权利。</p>
+        </div>
+    </div>
+</script>
+<script src="/Public/lib/jquery.min.js"></script>
+<script>
+    function fillHtml() {
+        var html = document.querySelector('#grid-html').innerHTML;
+        var wrap = document.querySelector('.grid-wrap');
+        wrap.innerHTML = html;
+        var params = lib.flexible.gridParams;
+
+        for (var i = 1; i <= params.columnCount; i++) {
+            (function(j) {
+                Array.prototype.slice.call(wrap.querySelectorAll('.grid .col-' + j)).forEach(function(el) {
+                    var info = el.querySelector('.info');
+                    var a = el.querySelector('.a');
+                    if (info) {
+                        info.innerHTML = 'c' + j;
+                    }
+                    if (a) {
+                        a.innerHTML = (params.columnXUnit * j + params.gutterXUnit * (j - 1)) + 'a';
+                    }
+                });
+            })(i);
+        }
+    }
+
+    fillHtml();
+</script>
+</body>
+</html>

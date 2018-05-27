@@ -1,0 +1,40 @@
+<extend name="Public/common" />
+<block name="main">
+<div class="page-title">添加渠道</div>
+<div class="layui-field-box" style="width: 700px">
+    <form class="layui-form" action="" method="post">
+        <div class="layui-form-item">
+            <label class="layui-form-label"><span style="color:red">*</span> 渠道名称</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" required value="" lay-verify="required" placeholder="" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label"><span style="color:red">*</span> 渠道描述</label>
+            <div class="layui-input-block">
+                <textarea placeholder="" required lay-verify="required" name="description" class="layui-textarea"></textarea>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="admin-form">立即提交</button>
+                <a  href="{:U('qrcodeIndex')}" class="layui-btn layui-btn-danger">返回列表</a>
+            </div>
+        </div>
+    </form>
+</div>
+</block>
+<block name="myScript">
+<script type="text/javascript">
+$(function () {
+    layui.use(['form','upload', 'laydate'], function(){
+        var form = layui.form,
+            layer = layui.layer;
+
+    });
+})
+</script>
+
+</block>

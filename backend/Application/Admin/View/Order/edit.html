@@ -1,0 +1,124 @@
+<extend name="Public/common" />
+<block name="main">
+    <fieldset class="layui-elem-field">
+        <legend>订单修改</legend>
+        <div class="layui-field-box" style="width: 700px">
+            <form class="layui-form" action="{:U('modify')}" method="post">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">订单编号</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="order_no" required value="{$list['order_no']}" lay-verify="required|number" class="layui-input" readonly>
+                        <input type="hidden" name="order_id" required value="{$list['id']}" lay-verify="hidden|number" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">商户名称</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="title" required value="{$list['title']}" lay-verify="required" class="layui-input"  readonly>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">客户姓名</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="contacts_realname" required value="{$list['contacts_realname']}" lay-verify="required" class="layui-input" readonly >
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">客户联系方式</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="contacts_tel" required value="{$list['contacts_tel']}" lay-verify="required" class="layui-input" readonly>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">订单状态</label>
+                    <div class="layui-input-inline">
+
+                        <select name="order_status" lay-filter="aihao" style="width: 75%">
+                            <foreach name="order_status" item="vo" key="k" >
+                                <option value="{$k}" <if condition="$k eq $list['status']">selected</if> >{$vo}</option>
+                            </foreach>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">订单类型</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="order_type" required value="{$order_type[$list['order_type']]}" lay-verify="required" class="layui-input" readonly >
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">结算状态</label>
+                    <div class="layui-input-inline">
+                        <select name="settlement_status" lay-filter="aihao" style="width: 75%">
+                            <foreach name="settlement_status" item="vo" key="k" >
+                                <option name="settlement_status" value="{$k}" <if condition="$k eq $list['settlement_status']">selected</if> >{$vo}</option>
+                            </foreach>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <a  href="{:U('modify')}" class="layui-btn layui-btn-normal" lay-submit lay-filter="layui-form" onclick="return confirm('请确认是否要修改订单')">确认修改</a>
+                        <a  href="{:U('index')}" class="layui-btn layui-btn-danger">返回列表</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </fieldset>
+</block>
+<block name="myScript">
+    <script type="text/javascript">
+        $(function () {
+            layui.use(['form','upload', 'laydate'], function(){
+                var form = layui.form,
+                    layer = layui.layer,
+                    upload = layui.upload,
+                    laydate = layui.laydate;
+
+                form.on('submit(layui-form)', function(data){
+                    $.ajax({
+                        type: "POST",
+                        url: '{:U("modify")}',
+                        data: data.field,
+                        success: function(msg){
+                            if( msg.status == 1 ){
+                                window.location.href='{:U(index)}';
+                            }else{
+                                parent.layer.msg(msg.info, {
+                                    icon: 5,
+                                    shade: [0.6, '#393D49'],
+                                    time:1500
+                                });
+                            }
+                        }
+                    });
+                    return false;
+                });
+
+                //时间选择器
+                laydate.render({
+                    elem: '#start_time'
+                    ,type: 'datetime'
+                    ,format: 'yyyy-MM-dd HH:mm:ss'
+                });
+
+                laydate.render({
+                    elem: '#end_time'
+                    ,type: 'datetime'
+                    ,format: 'yyyy-MM-dd HH:mm:ss'
+                });
+            });
+        })
+    </script>
+    <script>
+        $(function () {
+
+        })
+    </script>
+</block>

@@ -1,0 +1,71 @@
+<extend name="Public/common"/>
+<block name="main">
+    <fieldset class="layui-elem-field">
+        <legend>酒吧评价</legend>
+
+        <div class="layui-field-box">
+            <!--<a href="javascript:;" data-url="{:U('Message/sysMessageAdd')}" class="click-show-member"><span class="layui-btn layui-btn-normal api-add"> <i-->
+                    <!--class="layui-icon">&#xe608;</i> 新增</span></a>-->
+            <table class="layui-table">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>商户名称</th>
+                    <th>会员昵称</th>
+                    <th>酒吧环境评分</th>
+                    <th>音乐氛围评分</th>
+                    <th>服务评分</th>
+                    <th>综合评分</th>
+                    <th>评论内容</th>
+                    <th>评论时间</th>
+                    <!--<th>操作</th>-->
+                </tr>
+                </thead>
+                <tbody>
+                <volist name="comment" id="vo">
+                    <tr>
+                        <td>{$vo['id']}</td>
+                        <td>{$vo['title']}</td>
+                        <td>{$vo['nickname']}</td>
+                        <td>{$vo['environment']}</td>
+                        <td>{$vo['atmosphere']}</td>
+                        <td>{$vo['service']}</td>
+                        <td>{$vo['average']}</td>
+                        <td>{$vo['content']}</td>
+                        <td>{:date('Y-m-d H:i:s',$vo['created_time'])}</td>
+                        <!--<td align="center">-->
+                            <!--<a href="javascript:;" data-url="{:U('merchant/commentInfo', array('id' => $vo['id']))}" class="click-show-member"><span class="layui-btn layui-btn-small edit layui-btn-primary">详情</span></a>-->
+                        <!--</td>-->
+                    </tr>
+                </volist>
+                <tr>
+                    <td align="right" nowrap="true" colspan="11">
+                        <div class="pagination">
+                            {$pageHtml}
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </fieldset>
+</block>
+<block name="myScript">
+    <script type="text/javascript">
+        layui.use(['layer'], function() {
+            var layer = layui.layer //弹层
+            $('.click-show-member').click(function () {
+                var url = $(this).attr('data-url');
+                //显示数据弹窗
+                layer.open({
+                    type: 2,
+                    title: "查看用户信息",
+                    area: ['800px', '600px'],
+                    skin: 'layui-layer-rim', //加上边框
+                    content: url
+                });
+            });
+
+        });
+    </script>
+</block>

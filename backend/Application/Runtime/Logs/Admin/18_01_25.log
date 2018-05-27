@@ -1,0 +1,1410 @@
+[ 2018-01-25T11:55:53+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-25T11:55:53+08:00 ] 127.0.0.1 /Admin/Verification/gt.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-01-25T11:55:56+08:00 ] 127.0.0.1 /Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `api_user` WHERE `username` = 'kpzadmin  ' AND `password` = '87543278f1315d89849abcc67735def3' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_user_data` WHERE `uid` = '1' LIMIT 1   [ RunTime:0.0380s ]
+SQL: UPDATE `api_user_data` SET `loginTimes`='434',`lastLoginIp`='2130706433',`lastLoginTime`='1516852555' WHERE `uid` = '1' [ RunTime:0.0580s ]
+
+[ 2018-01-25T11:55:58+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Index/index' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0380s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-25T11:55:59+08:00 ] 127.0.0.1 /Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Index/welcome' LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0430s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-01-25T11:56:03+08:00 ] 127.0.0.1 /Admin/Merchant/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0390s ]
+NOTIC: [8] Undefined index: status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\MerchantModel.class.php 第 123 行.
+NOTIC: [8] Undefined variable: where D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\MerchantModel.class.php 第 129 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `api_merchant` LIMIT 1   [ RunTime:0.0380s ]
+NOTIC: [8] Undefined variable: where D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\MerchantModel.class.php 第 131 行.
+SQL: SELECT `id`,`title`,`tel`,`status`,`begin_time`,`end_time`,`avg_consume`,`preordain_cycle`,from_unixtime(created_time) as created_time FROM `api_merchant` LIMIT 0,20   [ RunTime:0.0380s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: logo D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\d278e6bf5e2b672db9da7a76be6ae9fd.php 第 50 行.
+NOTIC: [8] Undefined index: logo D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\d278e6bf5e2b672db9da7a76be6ae9fd.php 第 50 行.
+NOTIC: [8] Undefined index: logo D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\d278e6bf5e2b672db9da7a76be6ae9fd.php 第 50 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-25T11:56:05+08:00 ] 127.0.0.1 /Admin/Merchant/edit/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0330s ]
+SQL: SELECT * FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0340s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: tencent_map D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\41e559d53777ed407230270e6f80e4ac.php 第 90 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-25T16:33:41+08:00 ] 127.0.0.1 /Admin/Coupon/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Coupon/index' LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0400s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\CouponModel.class.php 第 28 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Think\Db\Driver.class.php 第 503 行.
+SQL: SELECT api_coupon.*,api_merchant.title FROM `api_coupon` left join api_merchant  ON  api_coupon.merchant_id = api_merchant.id   ORDER BY id asc LIMIT 0,20   [ RunTime:0.0400s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Think\Db\Driver.class.php 第 503 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `api_coupon` left join api_merchant ON api_merchant.id = api_coupon.merchant_id  LIMIT 1   [ RunTime:0.0390s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-25T16:34:33+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Index/index' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0370s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-25T16:34:33+08:00 ] 127.0.0.1 /Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Index/welcome' LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0430s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-25T16:34:35+08:00 ] 127.0.0.1 /Admin/Coupon/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Coupon/index' LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0390s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\CouponModel.class.php 第 28 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Think\Db\Driver.class.php 第 503 行.
+SQL: SELECT api_coupon.*,api_merchant.title FROM `api_coupon` left join api_merchant  ON  api_coupon.merchant_id = api_merchant.id   ORDER BY id asc LIMIT 0,20   [ RunTime:0.0380s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Think\Db\Driver.class.php 第 503 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `api_coupon` left join api_merchant ON api_merchant.id = api_coupon.merchant_id  LIMIT 1   [ RunTime:0.0380s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-01-25T16:35:49+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Index/index' LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-25T16:35:49+08:00 ] 127.0.0.1 /Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Index/welcome' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0380s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-01-25T16:35:51+08:00 ] 127.0.0.1 /Admin/Coupon/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0330s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Coupon/index' LIMIT 1   [ RunTime:0.0310s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0320s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0320s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\CouponModel.class.php 第 28 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Think\Db\Driver.class.php 第 503 行.
+SQL: SELECT api_coupon.*,api_merchant.title FROM `api_coupon` left join api_merchant  ON  api_coupon.merchant_id = api_merchant.id   ORDER BY id asc LIMIT 0,20   [ RunTime:0.0320s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Think\Db\Driver.class.php 第 503 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `api_coupon` left join api_merchant ON api_merchant.id = api_coupon.merchant_id  LIMIT 1   [ RunTime:0.0310s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-01-25T16:45:50+08:00 ] 127.0.0.1 /Admin/Coupon/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Coupon/add' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0390s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('新增优惠券','1','kpzadmin  ','1516869950','Coupon/add','{\"PHPSESSID\":\"5pnnvhle1ruc5qhkddcqvclhp5\"}') [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0390s ]
+SQL: SELECT `id`,`title` FROM `api_merchant` ORDER BY id asc  [ RunTime:0.0390s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 62 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 70 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 79 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 79 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 87 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 88 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 94 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 95 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 102 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 103 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 104 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 121 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 137 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 137 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-25T17:41:06+08:00 ] 127.0.0.1 /Admin/Coupon/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Coupon/index' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0420s ]
+NOTIC: [8] Undefined index: p D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\CouponModel.class.php 第 28 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Think\Db\Driver.class.php 第 503 行.
+SQL: SELECT api_coupon.*,api_merchant.title FROM `api_coupon` left join api_merchant  ON  api_coupon.merchant_id = api_merchant.id   ORDER BY id asc LIMIT 0,20   [ RunTime:0.0450s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Think\Db\Driver.class.php 第 503 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `api_coupon` left join api_merchant ON api_merchant.id = api_coupon.merchant_id  LIMIT 1   [ RunTime:0.0430s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+NOTIC: [2] date() expects parameter 2 to be long, string given D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\38613d26be0d7580d78b3110a175a584.php 第 40 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-25T18:09:01+08:00 ] 127.0.0.1 /Admin/Coupon/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Coupon/add' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0420s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('新增优惠券','1','kpzadmin  ','1516874941','Coupon/add','{\"PHPSESSID\":\"5pnnvhle1ruc5qhkddcqvclhp5\"}') [ RunTime:0.0490s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0430s ]
+SQL: SELECT `id`,`title` FROM `api_merchant` ORDER BY id asc  [ RunTime:0.0420s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 62 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 70 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 79 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 79 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 87 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 88 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 94 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 95 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 102 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 103 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 104 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 121 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 137 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 137 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-01-25T18:18:32+08:00 ] 127.0.0.1 /Admin/Coupon/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0750s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0650s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Coupon/add' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0430s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('新增优惠券','1','kpzadmin  ','1516875512','Coupon/add','{\"PHPSESSID\":\"5pnnvhle1ruc5qhkddcqvclhp5\"}') [ RunTime:0.0540s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0430s ]
+SQL: SELECT `id`,`title` FROM `api_merchant` ORDER BY id asc  [ RunTime:0.0540s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 80 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 88 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 96 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 97 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 103 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 104 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 111 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 112 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 113 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 130 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 146 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 146 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-25T18:19:36+08:00 ] 127.0.0.1 /Admin/Coupon/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0520s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Coupon/add' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0410s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('新增优惠券','1','kpzadmin  ','1516875576','Coupon/add','{\"PHPSESSID\":\"5pnnvhle1ruc5qhkddcqvclhp5\"}') [ RunTime:0.0480s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0390s ]
+SQL: SELECT `id`,`title` FROM `api_merchant` ORDER BY id asc  [ RunTime:0.0380s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 80 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 88 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 96 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 97 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 103 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 104 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 111 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 112 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 113 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 130 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 146 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 146 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-25T18:19:49+08:00 ] 127.0.0.1 /Admin/Coupon/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Coupon/add' LIMIT 1   [ RunTime:0.0580s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0590s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0390s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('新增优惠券','1','kpzadmin  ','1516875589','Coupon/add','{\"PHPSESSID\":\"5pnnvhle1ruc5qhkddcqvclhp5\"}') [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0390s ]
+SQL: SELECT `id`,`title` FROM `api_merchant` ORDER BY id asc  [ RunTime:0.0380s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 80 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 88 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 96 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 97 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 103 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 104 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 111 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 112 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 113 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 130 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 146 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 146 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-25T18:20:04+08:00 ] 127.0.0.1 /Admin/Coupon/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Coupon/add' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0470s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('新增优惠券','1','kpzadmin  ','1516875604','Coupon/add','{\"PHPSESSID\":\"5pnnvhle1ruc5qhkddcqvclhp5\"}') [ RunTime:0.0610s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0770s ]
+SQL: SELECT `id`,`title` FROM `api_merchant` ORDER BY id asc  [ RunTime:0.0510s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 81 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 89 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 97 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 98 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 104 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 105 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 112 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 113 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 114 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 131 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-25T18:21:07+08:00 ] 127.0.0.1 /Admin/Coupon/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0820s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Coupon/add' LIMIT 1   [ RunTime:0.0730s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0670s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0390s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('新增优惠券','1','kpzadmin  ','1516875667','Coupon/add','{\"PHPSESSID\":\"5pnnvhle1ruc5qhkddcqvclhp5\"}') [ RunTime:0.0480s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0400s ]
+SQL: SELECT `id`,`title` FROM `api_merchant` ORDER BY id asc  [ RunTime:0.0380s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 81 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 89 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 97 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 98 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 104 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 105 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 112 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 113 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 114 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 131 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-25T18:26:51+08:00 ] 127.0.0.1 /Admin/Coupon/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Coupon/add' LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0380s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('新增优惠券','1','kpzadmin  ','1516876011','Coupon/add','{\"PHPSESSID\":\"5pnnvhle1ruc5qhkddcqvclhp5\"}') [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0400s ]
+SQL: SELECT `id`,`title` FROM `api_merchant` ORDER BY id asc  [ RunTime:0.0400s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 81 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 89 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 97 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 98 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 104 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 105 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 112 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 113 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 114 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 131 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-25T18:27:18+08:00 ] 127.0.0.1 /Admin/Coupon/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Coupon/add' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0370s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('新增优惠券','1','kpzadmin  ','1516876038','Coupon/add','{\"PHPSESSID\":\"5pnnvhle1ruc5qhkddcqvclhp5\"}') [ RunTime:0.0540s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0380s ]
+SQL: SELECT `id`,`title` FROM `api_merchant` ORDER BY id asc  [ RunTime:0.0360s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 81 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 89 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 97 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 98 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 104 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 105 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 112 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 113 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 114 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 131 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-01-25T18:27:21+08:00 ] 127.0.0.1 /Admin/Coupon/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Coupon/add' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0420s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('新增优惠券','1','kpzadmin  ','1516876041','Coupon/add','{\"PHPSESSID\":\"5pnnvhle1ruc5qhkddcqvclhp5\"}') [ RunTime:0.0520s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0410s ]
+SQL: SELECT `id`,`title` FROM `api_merchant` ORDER BY id asc  [ RunTime:0.0400s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 81 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 89 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 97 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 98 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 104 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 105 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 112 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 113 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 114 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 131 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-25T18:27:28+08:00 ] 127.0.0.1 /Admin/Coupon/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Coupon/add' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0430s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('新增优惠券','1','kpzadmin  ','1516876048','Coupon/add','{\"PHPSESSID\":\"5pnnvhle1ruc5qhkddcqvclhp5\"}') [ RunTime:0.0510s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0440s ]
+SQL: SELECT `id`,`title` FROM `api_merchant` ORDER BY id asc  [ RunTime:0.0410s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 81 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 89 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 97 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 98 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 104 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 105 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 112 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 113 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 114 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 131 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-25T18:27:32+08:00 ] 127.0.0.1 /Admin/Coupon/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Coupon/add' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0440s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('新增优惠券','1','kpzadmin  ','1516876051','Coupon/add','{\"PHPSESSID\":\"5pnnvhle1ruc5qhkddcqvclhp5\"}') [ RunTime:0.0500s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0430s ]
+SQL: SELECT `id`,`title` FROM `api_merchant` ORDER BY id asc  [ RunTime:0.0410s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 81 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 89 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 97 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 98 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 104 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 105 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 112 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 113 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 114 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 131 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-01-25T18:27:44+08:00 ] 127.0.0.1 /Admin/Coupon/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Coupon/add' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0470s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('新增优惠券','1','kpzadmin  ','1516876063','Coupon/add','{\"PHPSESSID\":\"5pnnvhle1ruc5qhkddcqvclhp5\"}') [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0560s ]
+SQL: SELECT `id`,`title` FROM `api_merchant` ORDER BY id asc  [ RunTime:0.0500s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 81 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 89 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 97 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 98 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 104 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 105 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 112 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 113 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 114 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 131 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-25T18:27:51+08:00 ] 127.0.0.1 /Admin/Coupon/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Coupon/add' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0380s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('新增优惠券','1','kpzadmin  ','1516876070','Coupon/add','{\"PHPSESSID\":\"5pnnvhle1ruc5qhkddcqvclhp5\"}') [ RunTime:0.0570s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0400s ]
+SQL: SELECT `id`,`title` FROM `api_merchant` ORDER BY id asc  [ RunTime:0.0410s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 81 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 89 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 97 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 98 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 104 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 105 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 112 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 113 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 114 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 131 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-25T18:28:13+08:00 ] 127.0.0.1 /Admin/Coupon/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Coupon/add' LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0380s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('新增优惠券','1','kpzadmin  ','1516876093','Coupon/add','{\"PHPSESSID\":\"5pnnvhle1ruc5qhkddcqvclhp5\"}') [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0390s ]
+SQL: SELECT `id`,`title` FROM `api_merchant` ORDER BY id asc  [ RunTime:0.0360s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 81 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 89 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 97 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 98 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 104 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 105 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 112 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 113 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 114 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 131 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-25T18:28:22+08:00 ] 127.0.0.1 /Admin/Coupon/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Coupon/add' LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0440s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('新增优惠券','1','kpzadmin  ','1516876102','Coupon/add','{\"PHPSESSID\":\"5pnnvhle1ruc5qhkddcqvclhp5\"}') [ RunTime:0.0540s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0440s ]
+SQL: SELECT `id`,`title` FROM `api_merchant` ORDER BY id asc  [ RunTime:0.0410s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 81 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 89 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 97 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 98 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 104 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 105 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 112 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 113 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 114 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 131 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-01-25T18:28:44+08:00 ] 127.0.0.1 /Admin/Coupon/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Coupon/add' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0380s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('新增优惠券','1','kpzadmin  ','1516876124','Coupon/add','{\"PHPSESSID\":\"5pnnvhle1ruc5qhkddcqvclhp5\"}') [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0390s ]
+SQL: SELECT `id`,`title` FROM `api_merchant` ORDER BY id asc  [ RunTime:0.0360s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 81 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 89 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 97 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 98 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 104 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 105 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 112 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 113 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 114 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 131 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-25T18:28:49+08:00 ] 127.0.0.1 /Admin/Coupon/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Coupon/add' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0390s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('新增优惠券','1','kpzadmin  ','1516876129','Coupon/add','{\"PHPSESSID\":\"5pnnvhle1ruc5qhkddcqvclhp5\"}') [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0410s ]
+SQL: SELECT `id`,`title` FROM `api_merchant` ORDER BY id asc  [ RunTime:0.0400s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 81 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 89 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 97 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 98 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 104 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 105 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 112 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 113 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 114 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 131 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-25T18:29:09+08:00 ] 127.0.0.1 /Admin/Coupon/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0490s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Coupon/add' LIMIT 1   [ RunTime:0.0730s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0700s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0430s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('新增优惠券','1','kpzadmin  ','1516876149','Coupon/add','{\"PHPSESSID\":\"5pnnvhle1ruc5qhkddcqvclhp5\"}') [ RunTime:0.0510s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0380s ]
+SQL: SELECT `id`,`title` FROM `api_merchant` ORDER BY id asc  [ RunTime:0.0380s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/commos.html): failed to open stream: No such file or directory D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-25T18:29:23+08:00 ] 127.0.0.1 /Admin/Coupon/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Coupon/add' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0390s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('新增优惠券','1','kpzadmin  ','1516876163','Coupon/add','{\"PHPSESSID\":\"5pnnvhle1ruc5qhkddcqvclhp5\"}') [ RunTime:0.0480s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0400s ]
+SQL: SELECT `id`,`title` FROM `api_merchant` ORDER BY id asc  [ RunTime:0.0390s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 18 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 18 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 18 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 18 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 27 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 27 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 68 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 76 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 84 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 85 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 91 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 92 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 99 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 100 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 101 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 118 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 133 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 133 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-01-25T18:30:03+08:00 ] 127.0.0.1 /Admin/Coupon/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.1000s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0510s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Coupon/add' LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0350s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('新增优惠券','1','kpzadmin  ','1516876203','Coupon/add','{\"PHPSESSID\":\"5pnnvhle1ruc5qhkddcqvclhp5\"}') [ RunTime:0.0550s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0350s ]
+SQL: SELECT `id`,`title` FROM `api_merchant` ORDER BY id asc  [ RunTime:0.0320s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 18 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 18 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 18 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 18 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 27 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 27 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 69 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 77 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 85 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 86 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 92 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 93 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 100 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 101 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 102 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 119 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 134 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 134 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-01-25T18:31:35+08:00 ] 127.0.0.1 /Admin/Coupon/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_coupon` [ RunTime:0.0320s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0320s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Coupon/add' LIMIT 1   [ RunTime:0.0330s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0330s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0350s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('新增优惠券','1','kpzadmin  ','1516876295','Coupon/add','{\"PHPSESSID\":\"5pnnvhle1ruc5qhkddcqvclhp5\"}') [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0330s ]
+SQL: SELECT `id`,`title` FROM `api_merchant` ORDER BY id asc  [ RunTime:0.0360s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 31 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 40 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 81 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 89 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 97 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 98 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 104 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 105 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 112 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 113 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 114 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 131 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+NOTIC: [8] Undefined variable: list D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\512d025ae7ac8b0f2bfdb2a451549920.php 第 147 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

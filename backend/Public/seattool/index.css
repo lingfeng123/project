@@ -1,0 +1,15 @@
+﻿*{margin: 0;padding: 0;}
+#div1{width:100%;height:100px;line-height: 100px;text-align: center;border:1px solid #aaaaaa;}
+#div2{width: 1300px;height: 890px;background-size:100% 100%;background-repeat: no-repeat;border: 1px solid #aaa;float:left;}
+#div3{width: 150px;height: 100px;float:left;border: 1px solid #aaa;margin-top: 0;margin-left: 0;padding: 20px;background-color: #263748;}
+.box{overflow: hidden;padding-bottom: 100px;}
+.card{width:90px;height:34px;line-height: 43px;text-align: center;background-image: url("./img/booth@2x.png") ;background-size:100% 100%;background-repeat: no-repeat;color: #fff955;}
+.mr100{margin-right: 100px;}
+.tankuang_wrap{display: none;top:0;left: 0;position: fixed;z-index: 10;width: 100%;height:100%;background-color: rgba(0,0,0,.2);}
+.tankuang{position: relative;background-color: #fff;padding: 20px;width:500px;margin: 100px auto 0;}
+.tankuang > div{margin-bottom: 20px; }
+.btn_wrap{text-align: center;}
+.tishi{padding: 50px 0;text-align: center;}
+.close_btn{position: absolute;right: 1px;top: 1px;font-size: 30px;width:30px;text-align:center;}
+.close_btn:hover{background: #f00; color: #fff;}
+.edit_title{margin: 0 0 30px; font-weight: bold;font-family: "Microsoft YaHei"}

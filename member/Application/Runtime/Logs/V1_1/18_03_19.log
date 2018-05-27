@@ -1,0 +1,64 @@
+[ 2018-03-19T15:33:30+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0600s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0590s ]
+SQL: SELECT api_bar.*,api_member.nickname,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.title,api_comment_barstar.average_star,api_bar_member.pay_status,(select count(id) from api_bar as A where A.top_bar_id = api_bar.id) winecount FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id=api_bar.id AND api_bar_member.member_id=14 left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.bar_type = '1' AND api_bar.member_id = '14' AND api_bar.is_xu = 0 LIMIT 0,20   [ RunTime:0.0430s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.bar_type = '1' AND api_bar.member_id = '14' AND api_bar.is_xu = 0 LIMIT 1   [ RunTime:0.0410s ]
+NOTIC: [8] Undefined index: is_evaluate D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 295 行.
+NOTIC: [8] Undefined index: is_evaluate D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 297 行.
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 143 LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-03-19T15:49:20+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0510s ]
+SQL: SELECT api_bar.*,api_member.nickname,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.title,api_comment_barstar.average_star,api_bar_member.pay_status,(select count(id) from api_bar as A where A.top_bar_id = api_bar.id) winecount FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id=api_bar.id AND api_bar_member.member_id=14 left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.bar_type = '1' AND api_bar.member_id = '14' AND api_bar.is_xu = 0 LIMIT 0,20   [ RunTime:0.0490s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.bar_type = '1' AND api_bar.member_id = '14' AND api_bar.is_xu = 0 LIMIT 1   [ RunTime:0.0460s ]
+NOTIC: [8] Undefined index: is_evaluate D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 295 行.
+NOTIC: [8] Undefined index: is_evaluate D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 297 行.
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0500s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 143 LIMIT 1   [ RunTime:0.0450s ]
+
+[ 2018-03-19T15:50:15+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0470s ]
+SQL: SELECT api_bar.*,api_member.nickname,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.title,api_comment_barstar.average_star,api_bar_member.pay_status,(select count(id) from api_bar as A where A.top_bar_id = api_bar.id) winecount FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id=api_bar.id AND api_bar_member.member_id=14 left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.bar_type = '1' AND api_bar.member_id = '14' AND api_bar.is_xu = 0 LIMIT 0,20   [ RunTime:0.0470s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.bar_type = '1' AND api_bar.member_id = '14' AND api_bar.is_xu = 0 LIMIT 1   [ RunTime:0.0450s ]
+NOTIC: [8] Undefined index: is_evaluate D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 295 行.
+NOTIC: [8] Undefined index: is_evaluate D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 297 行.
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0470s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 143 LIMIT 1   [ RunTime:0.0460s ]
+
+[ 2018-03-19T15:53:29+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/v1.1/bar/wineMemberList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0370s ]
+SQL: SELECT `realname`,`sex`,`avatar`,`member_id` FROM `api_bar_member` WHERE `bar_id` = 134  [ RunTime:0.0360s ]
+

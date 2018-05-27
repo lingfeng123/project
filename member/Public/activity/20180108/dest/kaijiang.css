@@ -1,0 +1,32 @@
+body {background-color: #ffdbb8; font-family: -apple-system-font, Helvetica Neue, sans-serif}
+* {margin: 0;padding: 0;}
+.top {position: relative;height: 5.92rem;}
+.banner {width: 100%;height: 5.92rem;position: absolute;top: 0;left: 0;z-index: -10;}
+.clock_wrap {position: absolute;top: 2.093333rem;left: 0;right: 0;width: 4.8rem;height: 1.333333rem;margin: auto;display: flex;justify-content: space-between;}
+.clock {width: 1.173333rem;height: 1.173333rem;background-color: #ffe657;display: flex;justify-content: center;align-items: center;color: #ec1010;border-radius: 0.04rem;box-shadow: 0 -0.106667rem 0.08rem #efb33f inset;}
+[data-dpr="1"] .clock {font-size: 25px;}
+[data-dpr="2"] .clock {font-size: 50px;}
+[data-dpr="3"] .clock {font-size: 75px;}
+.maohao_wrap {display: flex;width: 0.533333rem;flex-direction: column;align-items: center;justify-content: center;}
+.dian {width: 0.133333rem;height: 0.133333rem;border-radius: 50%;background-color: #ffe657;}
+.mb12 {margin-bottom: 0.16rem;}
+.mb16 {margin-bottom: 0.213333rem;}
+.content_wrap {width: 8.693333rem;background-color: #e40001;border: 0.053333rem solid #db0100;margin: auto;margin-top: 0.453333rem;}
+.content_wrap > h1 {height: 0.8rem;color: #fdcf06;text-align: center;line-height: 0.8rem;}
+[data-dpr="1"] .content_wrap > h1 {font-size: 15px;}
+[data-dpr="2"] .content_wrap > h1 {font-size: 30px;}
+[data-dpr="3"] .content_wrap > h1 {font-size: 45px;}
+.content {background-color: #fff;color: #333;display: flex;flex-direction: column;text-align: center; line-height:.6rem; padding: 0.45rem 0;justify-content: center;}
+[data-dpr="1"] .content {font-size: 14px;}
+[data-dpr="2"] .content {font-size: 28px;}
+[data-dpr="3"] .content {font-size: 42px;}
+.content label {color: #d91314;}
+.fangshi_wrap {width: 8rem;border: 0.053333rem solid #db0100;padding: 0 0.346667rem 0.186667rem;margin: auto;margin-top: 0.666667rem;}
+.fangshi_wrap > h1 {color: #e40001;text-align: center;margin: 0.4rem 0 0.32rem;}
+[data-dpr="1"] .fangshi_wrap > h1 {font-size: 15px;}
+[data-dpr="2"] .fangshi_wrap > h1 {font-size: 30px;}
+[data-dpr="3"] .fangshi_wrap > h1 {font-size: 45px;}
+.miaosu p {color: #333;line-height: 0.48rem;}
+[data-dpr="1"] .miaosu p {font-size: 12px;}
+[data-dpr="2"] .miaosu p {font-size: 24px;}
+[data-dpr="3"] .miaosu p {font-size: 36px;}

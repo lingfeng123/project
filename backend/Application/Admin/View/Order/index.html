@@ -1,0 +1,211 @@
+<extend name="Public/common"/>
+<block name="main">
+<div class="page-title">订单列表</div>
+            <button class="layui-btn layui-btn-danger layui-btn-sm layui-btn-radius" onclick="location.reload();" style="float: right">
+                <i class="layui-icon layui-anim layui-anim-rotate layui-anim-loop">&#x1002;</i> 刷新
+            </button>
+            <form class="layui-form" method="get" action="{:U('index')}">
+                <div class="layui-inline" style="width: 115px;">
+                <select name="search_type">
+                    <option value="1">客人电话</option>
+                    <option value="2">客人姓名</option>
+                    <option value="3">员工姓名</option>
+                    <option value="4">员工电话</option>
+                    <option value="5">订单编号</option>
+                </select>
+                </div>
+                <div class="layui-inline" style="margin-left: -10px">
+                <input class="layui-input" type="text" placeholder="请输入精准匹配词" name="keywords" value="" />
+                </div>
+                <div class="layui-inline" style="width: 100px;">
+                <select name="status">
+                    <option value="">订单状态</option>
+                    <foreach name="order_status" item="vo" key="k" >
+                        <option value="{$k}">{$vo}</option>
+                    </foreach>
+                </select>
+                </div>
+                <div class="layui-inline" style="width: 100px;">
+                <select name="settlement_status">
+                    <option value="">结算状态</option>
+                    <foreach name="settlement_status" item="vo" key="k" >
+                        <option value="{$k}">{$vo}</option>
+                    </foreach>
+                </select>
+                </div>
+                <div class="layui-inline" style="width: 100px;">
+                <select name="order_type">
+                    <option value="">订单类型</option>
+                    <foreach name="order_type" item="vo" key="k" >
+                        <option value="{$k}">{$vo}</option>
+                    </foreach>
+                </select>
+                </div>
+                <div class="layui-inline" style="width: 100px;">
+                <select name="payment">
+                    <option value="">支付方式</option>
+                    <foreach name="payment" item="vo" key="k" >
+                        <option value="{$k}">{$vo}</option>
+                    </foreach>
+                </select>
+                </div>
+                <div class="layui-inline">
+                    <div class="layui-input-inline" style="width: 150px;">
+                        <input type="text" id="start_time" name="start_time" placeholder="选择开始时间" autocomplete="off" class="layui-input">
+                    </div>
+                    <div class="layui-input-inline" style="width: 8px">-</div>
+                    <div class="layui-input-inline" style="width: 150px;">
+                        <input type="text" id="stop_time" name="stop_time" placeholder="选择结束时间" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-inline"><button class="layui-btn" type="submit">搜索</button></div>
+            </form>
+
+    <style type="text/css">
+        .order_type{border: 1px solid #ccc; font-size: 12px; line-height: 100%; padding:2px 3px;}
+        .order_type_0{color: #1E9FFF;border-color: #1E9FFF}
+        .order_type_1{color: #fd6eeb;border-color: #fd6eeb}
+        .order_type_2{color: #fd6e72;border-color: #fd6e72}
+        .order_type_3{color: #73bc42;border-color: #73bc42}
+    </style>
+            <table class="layui-table">
+                <thead>
+                <tr>
+                    <th width="130">订单编号</th>
+                    <th width="120">商户</th>
+                    <th width="80">客人姓名</th>
+                    <th width="40">性别</th>
+                    <th width="100">客人电话</th>
+                    <th width="80">订单类型</th>
+                    <th width="60">是否拼吧</th>
+                    <th width="60">是否续酒</th>
+                    <th width="100">实付金额</th>
+                    <th width="80">到店日期</th>
+                    <th width="60">订单状态</th>
+                    <th width="60">结算状态</th>
+                    <th width="60">支付方式</th>
+                    <th width="135">创建时间</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <volist name="list" id="vo">
+                    <tr>
+                        <td>{$vo['order_no']}</td>
+                        <td>{$vo['merchant_title']}</td>
+                        <td>{$vo['contacts_realname']}</td>
+                        <td><img src="__PUBLIC__/images/sex_{$vo['contacts_sex']}.png" /></td>
+                        <td>{$vo['contacts_tel']}</td>
+                        <td><span class="order_type order_type_{$vo['order_type']}">{$order_type[$vo['order_type']]}</span></td>
+                        <td align="center"><if condition="$vo['is_bar'] eq 1"><i class="layui-icon" style="color:#00AA00;">&#x1005;</i><else />--</if>
+                        <td align="center"><if condition="$vo['is_xu'] eq 1"><i class="layui-icon" style="color:#00AA00;">&#x1005;</i><else />--</if>
+                        </td>
+                        <td align="right">{$vo['pay_price']}</td>
+                        <td>{$vo['arrives_time']}</td>
+                        <td class="order_{$vo['status']}">{$order_status[$vo['status']]}</td>
+                        <!--<td>{$settlement_status[$vo['settlement_status']]}</td>-->
+                        <td align="center">
+                            <if condition="$vo['settlement_status'] eq 1">
+                                <i class="layui-icon" style="color:#0a0;" title="已结算">&#x1005;</i>
+                                <else />
+                                <i class="layui-icon" style="color:#f00;" title="未结算">&#xe60e;</i>
+                            </if>
+                        <td align="center"><img src="__PUBLIC__/images/pay_{$vo['payment']}.png"  /></td>
+                        <td>{$vo['created_time']}</td>
+                        <td>
+                            <a href="javascript:;" data-url="{:U('detail', array('id' => $vo['id']))}" class="click-show"><span class="layui-btn layui-btn-small edit layui-btn-primary">查看</span></a>
+                            <!--<a href="{:U('Order/edit',array('id'=>$vo['id']))}" ><span class="layui-btn layui-btn-small edit layui-btn-primary">修改</span></a>-->
+                            <if condition="in_array($vo['status'], $successStatus)">
+                                <a href="{:U('Order/complete', array('id' => $vo['id']))}" onclick="return confirm('是否执行完成操作');"><span class="layui-btn order-success layui-btn-small edit layui-btn-normal">完成</span></a>
+                            </if>
+                            <if condition="!in_array($vo['status'],$disallowStatus)">
+                                <a href="javascript:;" data-ajax-url="{:U('Refund/cancelOrder', array('order_id' => $vo['id']))}" class="click-refund">
+                                    <span class="layui-btn layui-btn-small edit layui-btn-danger">拒绝</span>
+                                </a>
+                            </if>
+                        </td>
+                    </tr>
+                </volist>
+                <tr>
+                    <td colspan="23" align="right">
+                        <!--总支付金额: {$money['pay_prices']}
+                        总优惠金额: {$money['discount_prices']}-->
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right" nowrap="true" colspan="23">
+                        <div class="pagination">
+                            {$pageHtml}
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+</block>
+<block name="myScript">
+<script type="text/javascript">
+layui.use(['layer','form', 'laydate'], function() {
+    var layer = layui.layer //弹层
+        ,laydate = layui.laydate
+        ,form = layui.form;
+
+    laydate.render({elem: '#start_time', type: 'datetime', format: 'yyyy-MM-dd'});
+    laydate.render({elem: '#stop_time', type: 'datetime', format: 'yyyy-MM-dd'});
+
+    $('.click-show').click(function () {
+        var url = $(this).attr('data-url');
+        //显示数据弹窗
+        layer.open({
+            type: 2,
+            title: "订单详情",
+            area: ['960px', '600px'],
+            skin: 'layui-layer-rim', //加上边框
+            content: url
+        });
+    });
+
+    $('.click-refund').click(function () {
+        var url = $(this).attr('data-ajax-url');
+        var reasons = $('.cancellation_reasons').html();
+        var This = $(this);
+
+        layer.open({
+            type: 1
+            ,title: '取消订单原因' //不显示标题栏
+            ,closeBtn: false
+            ,area: '400px;'
+            ,shade: 0.8
+            ,id: 'LAY_refund' //设定一个id，防止重复弹出
+            ,resize: false
+            ,btn: ['确定取消并退款', '取消']
+            ,btnAlign: 'c'
+            ,moveType: 1 //拖拽模式，0或者1
+            ,content: '<div  style="padding: 40px 0; margin: 0 auto; width: 260px;">' +
+                        '<select name="reasons" id="reasons" style="padding: 10px; width: 260px; border: 1px solid #ccc">' +
+                        <volist name="cancellation_reasons" id="v">
+                        '<option value="{$v}">{$v}</option>' +
+                        </volist>
+                        '</select>' +
+                        '</div>'
+            ,success: function(layero){
+                layero.find('.layui-layer-btn0').click(function () {
+                    var values = $('#reasons option:selected').val();
+                    $.get(url, {cancel_reason:values}, function (data) {
+                        if (data.code == 1){
+                            layer.msg(data.msg);
+                            This.remove();
+                            setTimeout(function () {
+                                location.reload()
+                            }, 600)
+                        } else {
+                            layer.msg(data.msg);
+                        }
+                    })
+                });
+            }
+        });
+    });
+});
+</script>
+</block>

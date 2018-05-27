@@ -1,0 +1,113 @@
+<extend name="Public/common"/>
+<block name="main">
+        <div class="page-title">{$merchant_name}商品列表</div>
+        <form class="layui-form" method="get" action="{:U('index')}">
+            <input type="hidden" name="merchant_id" value="{:I('get.merchant_id')}" />
+            <div class="layui-inline">
+                <input class="layui-input" name="keywords" value="" placeholder="请输入商品关键词">
+            </div>
+            <!--<div class="layui-inline" style="width: 100px">
+                <select name="type">
+                    <option value="">全部分类</option>
+                    <option value="1">炒菜</option>
+                    <option value="2">汤</option>
+                </select>
+            </div>-->
+            <div class="layui-inline" style="width: 100px">
+                <select name="status">
+                    <option value="">全部状态</option>
+                    <option value="0">下架</option>
+                    <option value="1">上架</option>
+                </select>
+            </div>
+            <button type="submit" class="layui-btn">搜索</button>
+            <a href="{:U('add', ['merchant_id' => $merchant_id])}" style="float: right"><span class="layui-btn layui-btn-normal api-add"> <i class="layui-icon">&#xe608;</i> 添加商品</span></a>
+        </form>
+        <table class="layui-table">
+            <thead>
+            <tr>
+                <th>商品ID</th>
+                <th>商品名称</th>
+                <th>商品分类</th>
+                <th>参考售价</th>
+                <th>市场价格</th>
+                <th>商品状态</th>
+                <th>商品库存</th>
+                <th>添加时间</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <volist name="lists" id="vo">
+                <tr>
+                    <td>{$vo['id']}</td>
+                    <td>{$vo['title']}</td>
+                    <td align="center">
+                        <if condition="$vo['type'] eq 1">
+                            优惠套餐
+                            <elseif condition="$vo['type'] eq 2"/>
+                            卡座套餐
+                            <elseif condition="$vo['type'] eq 3"/>
+                            单品酒水
+                        </if>
+                    </td>
+                    <td>{$vo['price']}</td>
+                    <td>{$vo['market_price']}</td>
+                    <td>
+                        <if condition="$vo['status']">
+                            销售中
+                            <else/>
+                            已下架
+                        </if>
+                    </td>
+                    <td>{$vo['stock']}</td>
+                    <td>{$vo['created_time']|date="Y-m-d h:i:s",###}</td>
+                    <td>
+                        <a href="javascript:;" data-url="{:U('detail', array('id' => $vo['id']))}" class="click-show"><span class="layui-btn layui-btn-small edit layui-btn-primary">查看</span></a>
+                        <a href="{:U('edit', array('id' => $vo['id'],'merchant_id' => $vo['merchant_id']))}"><span class="layui-btn layui-btn-small edit layui-btn-normal">编辑</span></a>
+                        <a href="{:U('delete', array('id'=> $vo['id'],'merchant_id' => $vo['merchant_id']))}" onclick="return confirm('你确定删除吗?'); return false"><span class="layui-btn layui-btn-small layui-btn-danger confirm">删除</span></a>
+                    </td>
+                </tr>
+            </volist>
+            <tr>
+                <td align="right" nowrap="true" colspan="13">
+                    <div class="pagination">
+                        {$pageHtml}
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+</block>
+<block name="myScript">
+<script type="text/javascript">
+layui.use(['layer','form'], function() {
+    var layer = layui.layer //弹层
+        ,form = layui.form;
+    $('.click-show').click(function () {
+        var url = $(this).attr('data-url');
+        console.log(url);
+        //显示数据弹窗
+        layer.open({
+            type: 2,
+            title: "商品信息",
+            area: ['700px', '500px'],
+            skin: 'layui-layer-rim', //加上边框
+            content: url
+        });
+    });
+    $('.click-set').click(function () {
+        var url = $(this).attr('data-url');
+        console.log(url);
+        //显示数据弹窗
+        layer.open({
+            type: 2,
+            title: "商品价格设置",
+            area: ['362px', '520px'],
+            skin: 'layui-layer-rim', //加上边框
+            content: url
+        });
+    });
+});
+</script>
+</block>

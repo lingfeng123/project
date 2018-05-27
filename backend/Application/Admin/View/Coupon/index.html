@@ -1,0 +1,64 @@
+<extend name="Public/common"/>
+<block name="main">
+    <h1>优惠券列表</h1>
+    <div class="layui-field-box">
+        <a href="{:U('Coupon/add')}"><span class="layui-btn layui-btn-normal api-add"> <i class="layui-icon">&#xe608;</i> 添加优惠券</span></a>
+        <table class="layui-table">
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>领取类型</th>
+                <th>名称</th>
+                <th>所属商户</th>
+                <th>优惠类型</th>
+                <th>有效天数</th>
+                <th>有效期</th>
+                <th>性别券</th>
+                <th>领取时间段</th>
+                <th>状态</th>
+                <th>优惠券总数</th>
+                <th>创建时间</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <volist name="list" id="vo">
+                <tr>
+                    <td>{$vo['id']}</td>
+                    <td>{$flag[$vo['flag']]}</td>
+                    <td>{$vo['card_name']}</td>
+                    <td>{$vo['title']}</td>
+                    <td>{$type[$vo['card_type']]}</td>
+                    <td>{$vo['effective_time']}</td>
+                    <td>{$vo['start_time']>0 ? $vo['start_time']|date="Y-m-d",### :''} ~ {$vo['end_time']>0 ? $vo['end_time']|date="Y-m-d",### :''}</td>
+                    <td>{$is_sex[$vo['is_sex']]}</td>
+                    <td>{$vo['get_start_time']> 0 ? $vo['get_start_time']|date="Y-m-d",### :''} ~ {$vo['get_end_time']>0 ? $vo['get_end_time']|date="Y-m-d",### :''}</td>
+                    <td>{$status[$vo['status']]}</td>
+                    <td>{$vo['total']}</td>
+                    <td>{$vo['created_time']|date="Y-m-d",###}</td>
+                    <td>
+                        <if condition="$vo['status'] eq 0">
+                            <a href="{:U('Coupon/cardActivation', array('id'=> $vo['id'],'status'=>1))}" ><span class="layui-btn layui-btn-normal confirm">激活</span></a>
+                        </if>
+                        <if condition="$vo['status'] eq 1">
+                            <a href="{:U('Coupon/cardActivation', array('id'=> $vo['id'],'status'=>0))}" ><span class="layui-btn layui-btn-danger confirm">封禁</span></a>
+                        </if>
+                        <a href="{:U('Coupon/edit', array('id'=> $vo['id']))}" ><span class="layui-btn confirm">编辑</span></a>
+
+                    </td>
+                </tr>
+            </volist>
+            <tr>
+                <td align="right" nowrap="true" colspan="13">
+                    <div class="pagination">
+                        {$pageHtml}
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</block>
+<block name="myScript">
+</block>

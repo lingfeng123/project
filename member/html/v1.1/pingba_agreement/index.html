@@ -1,0 +1,112 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta content="maximum-dpr=2" name="flexible" />
+    <meta content="modeName=750-12" name="grid" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="js/lib/flexible.debug.js"></script>
+    <script src="js/lib/flexible_css.debug.js"></script>
+    <title>拼吧规则</title>
+    <style type="text/css">
+        html,body{
+            width:100%;
+            height:100%;
+        }
+        .grid-wrap{
+            background-color: #F7F4F8;
+            min-height:100%;
+        }
+        .body{
+            width: 100%;
+            min-height: 100%;
+        }
+        .message{
+            padding: 0.233333rem 0.266667rem;
+        }
+        .text-p {
+            line-height: 0.6rem;
+        }
+        [data-dpr="1"] .text-p {
+            font-size: 13px;
+        }
+
+        [data-dpr="2"] .text-p {
+            font-size: 26px;
+        }
+
+        [data-dpr="3"] .text-p {
+            font-size: 39px;
+        }
+
+        .text-bold {
+            font-weight: bold;
+        }
+        .text-title{
+            margin: 0.2rem 0;
+        }
+        .text-fff{
+            color:#fff;
+        }
+        ..rule-process{
+            width: 100%;
+        }
+        .rule-process img{
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+<div class="grid-wrap">
+</div>
+<script type="text/template" id="grid-html">
+    <div class="body">
+        <div class="message">
+        	<p class="text-p text-title text-bold">什么是拼吧？</p>
+            <p class="text-p">拼吧是指由多人一起参与拼酒吧，由一人发起，其他人参与，通过拼吧参与者不仅可以享受更低的价格，还能线下社交结识更多朋友。</p>
+
+            <p class="text-p text-title text-bold">拼吧有哪些类型？</p>
+            <p class="text-p">拼吧分为酒局和派对两种类型，酒局是用户自行发布，空瓶子的每一位用户都可以发布，然后分享给自己的朋友一起参与。派对由空瓶子平台组织发布，所有用户都可以参与，通过参与派对可以到酒吧玩转社交、认识更多朋友。</p>
+
+            <p class="text-p text-title text-bold">拼吧有哪些属性？</p>
+            <p class="text-p">在发起拼吧时，发起人可以设置拼吧的具体属性，如人数限制（可选择需参与的男士人数和女士人数）、费用类型（全员AA制、女士免单男士AA制、男士免单女士AA制三种类型）、活动日期、人均费用（根据所选套餐价格、发起人设置的参与人数及费用类型，由系统自动生成）、介绍（拼吧的详细介绍）等。</p>
+
+            <p class="text-p text-title text-bold">怎么算拼吧成功？</p>
+            <p class="text-p">在拼吧有效期内参与人数拼满了，若是酒局，酒吧接单后则拼吧成功；若是派对，人数拼满即拼吧成功。</p>
+
+            <p class="text-p text-title text-bold">拼吧失败，怎么退款？</p>
+            <p class="text-p">在拼吧有效期内，如果人数没有拼满，则拼吧失败。系统会自动将用户已支付的费用原路退回，具体到账时间以各第三方支付平台和银行为准。</p>
+
+            <p class="text-p text-title text-bold">若需要续酒，怎么续酒？</p>
+            <p class="text-p">在酒吧消费拼吧过程中，参与的酒局可在空瓶子平台进行续酒，点击拼吧列表里的“续酒”按钮即可续酒。如果需要续酒，酒水的费用由发起续酒者选择参与续酒的用户以AA制的形式支付。</p>
+
+            <p class="text-p text-title text-bold">发起或参与拼吧后，能取消吗？</p>
+            <p class="text-p">一旦在空瓶子平台发起或参与拼吧后，不能取消拼吧。</p>
+
+            <p class="text-p text-title text-bold">能发起或参与多个拼吧吗？</p>
+            <p class="text-p">已经发起一个酒局，并且该酒局还在进行中时，不能再发起第二个酒局，但是可以同时参与多个酒局。发起一个派对或参与一个派对后，可以再发布或者参与多个派对。参与拼吧前或参与后，可以联系拼吧发起人沟通具体拼吧玩耍的细节。</p>
+
+            <p class="text-p text-title text-bold">责任声明！</p>
+            <p class="text-p">拼吧皆为线上报名、线下参与的形式，每一位参与者都应有安全防范意识，谨防上当受骗；若活动过程中出现意外，后果皆由参与者自身承担，空瓶子平台不负任何法律责任。</p>
+        </div>
+        <div class="rule-process">
+            <img src="image/process.png" alt="">
+        </div>
+    </div>
+</script>
+<script src="js/lib/jquery.min.js"></script>
+<script>
+    function fillHtml() {
+        var html = document.querySelector('#grid-html').innerHTML;
+        var wrap = document.querySelector('.grid-wrap');
+        wrap.innerHTML = html;
+    }
+
+    fillHtml();
+</script>
+</body>
+</html>
+

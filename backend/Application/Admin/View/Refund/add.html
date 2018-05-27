@@ -1,0 +1,67 @@
+<extend name="Public/common" />
+<block name="main">
+    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">退款操作</li>
+        </ul>
+    </div>
+
+    <div class="layui-field-box" style="width: 700px">
+
+        <form class="layui-form" action="" method="post">
+            <div class="layui-form-item">
+                <label class="layui-form-label">退款类型</label>
+                <div class="layui-input-block">
+                    <input type="radio" name="refund_type" value="1" title="微信退款" checked="checked">
+                    <input type="radio" name="refund_type" value="2" title="会员钱包退款">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">商户订单号</label>
+                <div class="layui-input-block">
+                    <input type="text" required  lay-verify="number" placeholder="请填写需要退款的订单编号" class="layui-input" name="order_no" />
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">退款金额(元)</label>
+                <div class="layui-input-block">
+                    <input type="text" required  lay-verify="money" placeholder="请输入金额,单位为元" class="layui-input" name="refund_fee" />
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">退款备注</label>
+                <div class="layui-input-block">
+                    <textarea name="refund_desc" placeholder="请输入退款原因或备注" required  lay-verify="required" class="layui-textarea"></textarea>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="admin-form">提交退款</button>
+                </div>
+            </div>
+        </form>
+
+
+    </div>
+
+</block>
+<block name="myScript">
+    <script type="text/javascript">
+        $(function () {
+            layui.use(['form','element'], function(){
+                var form = layui.form,
+                    layer = layui.layer,
+                    element = layui.element;
+
+                form.verify({
+                    money: [/^[0-9]+(\.[0-9]{1,2})?$/, '金额填写不正确']
+                });
+
+            });
+        })
+    </script>
+</block>

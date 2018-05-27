@@ -1,0 +1,156 @@
+[ 2018-04-13T18:23:10+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-13T18:23:22+08:00 ] 127.0.0.1 /Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `api_user` WHERE `username` = 'kpzadmin  ' AND `password` = '87543278f1315d89849abcc67735def3' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_user_data` WHERE `uid` = '1' LIMIT 1   [ RunTime:0.0440s ]
+SQL: UPDATE `api_user_data` SET `loginTimes`='557',`lastLoginIp`='2130706433',`lastLoginTime`='1523615002' WHERE `uid` = '1' [ RunTime:0.0530s ]
+
+[ 2018-04-13T18:23:25+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Index/index' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0390s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-04-13T18:23:25+08:00 ] 127.0.0.1 /Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Index/welcome' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0380s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-13T18:31:52+08:00 ] 127.0.0.1 /Admin/bar/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0350s ]
+NOTIC: [8] Undefined index: bar_status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\BarModel.class.php 第 40 行.
+NOTIC: [8] Undefined index: bar_type D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\BarModel.class.php 第 45 行.
+NOTIC: [8] Undefined variable: where D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\BarModel.class.php 第 53 行.
+SQL: SELECT api_bar.*,api_merchant.title as merchant_title FROM `api_bar` left join api_merchant ON api_merchant.id =api_bar.merchant_id  ORDER BY id desc LIMIT 1,20   [ RunTime:0.0340s ]
+NOTIC: [8] Undefined variable: where D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\BarModel.class.php 第 58 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar` LIMIT 1   [ RunTime:0.0330s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: discount_money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 68 行.
+NOTIC: [8] Undefined index: discount_money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 68 行.
+NOTIC: [8] Undefined index: discount_money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 68 行.
+NOTIC: [8] Undefined index: discount_money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 68 行.
+NOTIC: [8] Undefined index: discount_money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 68 行.
+NOTIC: [8] Undefined index: discount_money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 68 行.
+NOTIC: [8] Undefined index: discount_money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 68 行.
+NOTIC: [8] Undefined index: discount_money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 68 行.
+NOTIC: [8] Undefined index: discount_money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 68 行.
+NOTIC: [8] Undefined index: discount_money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 68 行.
+NOTIC: [8] Undefined index: discount_money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 68 行.
+NOTIC: [8] Undefined index: discount_money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 68 行.
+NOTIC: [8] Undefined index: discount_money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 68 行.
+NOTIC: [8] Undefined index: discount_money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 68 行.
+NOTIC: [8] Undefined index: discount_money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 68 行.
+NOTIC: [8] Undefined index: discount_money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 68 行.
+NOTIC: [8] Undefined index: discount_money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 68 行.
+NOTIC: [8] Undefined index: discount_money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 68 行.
+NOTIC: [8] Undefined index: discount_money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 68 行.
+NOTIC: [8] Undefined index: discount_money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 68 行.
+NOTIC: [8] Undefined variable: money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 78 行.
+NOTIC: [8] Undefined variable: money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 79 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-13T18:33:19+08:00 ] 127.0.0.1 /Admin/Bar/barDetail/bar_id/46.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0400s ]
+SQL: SELECT api_bar.*,api_merchant.title FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id  WHERE api_bar.id = '46' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0380s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `bar_id` = '46'' at line 1
+ [ SQL语句 ] : SELECT * FROM `api_bar_member` left join   WHERE `bar_id` = '46' 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `bar_id` = '46'' at line 1
+ [ SQL语句 ] : SELECT * FROM `api_bar_member` left join   WHERE `bar_id` = '46' 
+
+[ 2018-04-13T18:37:38+08:00 ] 127.0.0.1 /Admin/Bar/barDetail/bar_id/43.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0390s ]
+SQL: SELECT api_bar.*,api_merchant.title FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id  WHERE api_bar.id = '43' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0400s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `bar_id` = '43'' at line 1
+ [ SQL语句 ] : SELECT * FROM `api_bar_member` left join   WHERE `bar_id` = '43' 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE `bar_id` = '43'' at line 1
+ [ SQL语句 ] : SELECT * FROM `api_bar_member` left join   WHERE `bar_id` = '43' 
+

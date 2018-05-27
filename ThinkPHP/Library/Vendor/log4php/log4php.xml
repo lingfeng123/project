@@ -1,0 +1,78 @@
+<configuration xmlns="http://logging.apache.org/log4php/">
+    <appender name="default" class="LoggerAppenderConsole"/>
+
+    <appender name="basic_file_appender" class="LoggerAppenderDailyFile">
+        <layout class="LoggerLayoutPattern">
+            <param name="conversionPattern" value="%date [%logger] %message%newline"/>
+        </layout>
+        <param name="file" value="logs/log4php.%s.log"/>
+        <param name="datePattern" value="Y-m-d"/>
+    </appender>
+
+    <root>
+        <level value="debug"/>
+        <appender_ref ref="basic_file_appender"/>
+    </root>
+
+    <appender name="route_file_appender" class="LoggerAppenderDailyFile">
+        <layout class="LoggerLayoutPattern">
+            <param name="conversionPattern" value="%date %p [%logger] %message%newline"/>
+        </layout>
+        <param name="file" value="logs/route.%s.log"/>
+        <param name="threshold" value="error"/>
+        <param name="append" value="true"/>
+        <param name="datePattern" value="Y-m-d"/>
+    </appender>
+    <logger name="Route">
+        <level value="debug"/>
+        <appender_ref ref="route_file_appender"/>
+    </logger>
+
+    <appender name="session_file_appender" class="LoggerAppenderDailyFile">
+        <layout class="LoggerLayoutPattern">
+            <param name="conversionPattern" value="%date [%logger] %message%newline"/>
+        </layout>
+        <param name="file" value="logs/session.%s.log"/>
+        <param name="datePattern" value="Y-m-d"/>
+    </appender>
+    <logger name="Session">
+        <level value="debug"/>
+        <appender_ref ref="session_file_appender"/>
+    </logger>
+
+    <appender name="InventoryTransaction_file_appender" class="LoggerAppenderDailyFile">
+        <layout class="LoggerLayoutPattern">
+            <param name="conversionPattern" value="%date [%logger] %message%newline"/>
+        </layout>
+        <param name="file" value="logs/InventoryTransaction.%s.log"/>
+        <param name="datePattern" value="Y-m-d"/>
+    </appender>
+    <logger name="InventoryTransaction">
+        <level value="debug"/>
+        <appender_ref ref="InventoryTransaction_file_appender"/>
+    </logger>
+
+    <appender name="Reserve_file_appender" class="LoggerAppenderDailyFile">
+        <layout class="LoggerLayoutPattern">
+            <param name="conversionPattern" value="%date [%logger] %message%newline"/>
+        </layout>
+        <param name="file" value="logs/Reserve.%s.log"/>
+        <param name="datePattern" value="Y-m-d.H"/>
+    </appender>
+    <logger name="Reserve">
+        <level value="debug"/>
+        <appender_ref ref="Reserve_file_appender"/>
+    </logger>
+
+    <appender name="Exception_file_appender" class="LoggerAppenderDailyFile">
+        <layout class="LoggerLayoutPattern">
+            <param name="conversionPattern" value="%date [%logger] %message%newline"/>
+        </layout>
+        <param name="file" value="logs/exception.%s.log"/>
+        <param name="datePattern" value="Y-m-d"/>
+    </appender>
+    <logger name="Exception">
+        <level value="error"/>
+        <appender_ref ref="Exception_file_appender"/>
+    </logger>
+</configuration>

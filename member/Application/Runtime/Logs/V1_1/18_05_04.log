@@ -1,0 +1,35 @@
+[ 2018-05-04T14:22:39+08:00 ] 127.0.0.1 /v1.1/bar/wineBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-05-04T14:23:02+08:00 ] 127.0.0.1 /v1.1/bar/wineBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0430s ]
+SQL: SELECT api_bar_member.bar_id,api_bar.total_price,api_bar.pay_price,api_bar.average_cost,api_bar.created_time,api_bar.description,api_bar.bar_status,api_bar_member.pay_type,api_bar_member.pay_status,api_bar_member.id as order_id FROM `api_bar` left join api_bar_member ON api_bar_member.bar_id = api_bar.id  WHERE `top_bar_id` = '15' AND `is_xu` = 1 AND api_bar_member.member_id = '16' ORDER BY bar_id desc LIMIT 0,20   [ RunTime:0.0440s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar` left join api_bar_member ON api_bar_member.bar_id = api_bar.id  WHERE `top_bar_id` = '15' AND `is_xu` = 1 AND api_bar_member.member_id = '16' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_bar_pack` [ RunTime:0.0430s ]
+SQL: SELECT `goods_pack_id`,`title`,`amount`,`price`,`image`,`pack_description`,`market_price`,`goods_type` FROM `api_bar_pack` WHERE `bar_id` = 25  [ RunTime:0.0430s ]
+SQL: SELECT `member_id`,`pay_status`,`avatar` FROM `api_bar_member` WHERE `bar_id` = 25  [ RunTime:0.0420s ]
+SQL: SELECT `goods_pack_id`,`title`,`amount`,`price`,`image`,`pack_description`,`market_price`,`goods_type` FROM `api_bar_pack` WHERE `bar_id` = 24  [ RunTime:0.0430s ]
+SQL: SELECT `member_id`,`pay_status`,`avatar` FROM `api_bar_member` WHERE `bar_id` = 24  [ RunTime:0.0420s ]
+SQL: SELECT `goods_pack_id`,`title`,`amount`,`price`,`image`,`pack_description`,`market_price`,`goods_type` FROM `api_bar_pack` WHERE `bar_id` = 22  [ RunTime:0.0430s ]
+SQL: SELECT `member_id`,`pay_status`,`avatar` FROM `api_bar_member` WHERE `bar_id` = 22  [ RunTime:0.0420s ]
+SQL: SELECT `goods_pack_id`,`title`,`amount`,`price`,`image`,`pack_description`,`market_price`,`goods_type` FROM `api_bar_pack` WHERE `bar_id` = 21  [ RunTime:0.0440s ]
+SQL: SELECT `member_id`,`pay_status`,`avatar` FROM `api_bar_member` WHERE `bar_id` = 21  [ RunTime:0.0430s ]
+SQL: SELECT `goods_pack_id`,`title`,`amount`,`price`,`image`,`pack_description`,`market_price`,`goods_type` FROM `api_bar_pack` WHERE `bar_id` = 18  [ RunTime:0.0430s ]
+SQL: SELECT `member_id`,`pay_status`,`avatar` FROM `api_bar_member` WHERE `bar_id` = 18  [ RunTime:0.0470s ]
+SQL: SELECT `goods_pack_id`,`title`,`amount`,`price`,`image`,`pack_description`,`market_price`,`goods_type` FROM `api_bar_pack` WHERE `bar_id` = 16  [ RunTime:0.0420s ]
+SQL: SELECT `member_id`,`pay_status`,`avatar` FROM `api_bar_member` WHERE `bar_id` = 16  [ RunTime:0.0420s ]
+NOTIC: [8] Undefined index: created_time D:\phpStudy\WWW\csj\trunk\php\project\member\Application\V1_1\Model\BarModel.class.php 第 823 行.
+

@@ -1,0 +1,52 @@
+<extend name="Public/common"/>
+<block name="main">
+<h1>活动列表</h1>
+<div class="layui-field-box">
+    <a href="{:U('Activity/add')}"><span class="layui-btn layui-btn-normal api-add"> <i class="layui-icon">&#xe608;</i> 添加活动</span></a>
+    <table class="layui-table">
+        <thead>
+        <tr>
+            <th width="60">活动ID</th>
+            <th width="170">活动名称</th>
+            <th width="150">开始时间</th>
+            <th width="150">结束时间</th>
+            <th width="80">活动状态</th>
+            <th width="320">活动地址</th>
+            <th width="150">创建时间</th>
+            <th width="230">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <volist name="list" id="vo">
+            <tr>
+                <td>{$vo['id']}</td>
+                <td>{$vo['title']}</td>
+                <td>{$vo['start_time']|date="Y-m-d H:i:s",###}</td>
+                <td>{$vo['end_time']|date="Y-m-d H:i:s",###}</td>
+                <td>
+                    <if condition="$vo['status'] = 2">进行中<else />已停止</if>
+                </td>
+                <td><?php echo 'https://member.app.sc-csj.com'.U('Home/'.$vo['url']) ?></td>
+                <td>{$vo['created_time']|date="Y-m-d H:i:s",###}</td>
+                <td>
+                    <a href="{:U('Activity/record', array('id'=> $vo['id']))}" ><span class="layui-btn layui-btn-small layui-btn-primary confirm">中奖记录</span></a>
+                    <a href="{:U('Activity/detail', array('id'=> $vo['id']))}" ><span class="layui-btn layui-btn-small layui-btn-primary confirm">查看</span></a>
+                    <a href="{:U('Activity/edit', array('id' => $vo['id']))}"><span class="layui-btn layui-btn-small edit layui-btn-normal">编辑</span></a>
+                    <a href="{:U('Activity/del', array('id'=> $vo['id']))}" onclick="return confirm('你确定删除此活动吗?'); return false"><span class="layui-btn layui-btn-small layui-btn-danger confirm">删除</span></a>
+                </td>
+            </tr>
+        </volist>
+        <tr>
+            <td align="right" nowrap="true" colspan="10">
+                <div class="pagination">
+                    {$pageHtml}
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</block>
+<block name="myScript">
+</block>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <script src="/Public/activity/20180108/js/lib/flexible.debug.js"></script>
+    <link rel="stylesheet" href="/Public/activity/20180108/dest/kaijiang.css">
+    <title>空瓶子新年整点抽奖</title>
+</head>
+<body>
+<div class="top">
+    <img src="/Public/activity/20180108/image/banner@2x.png" alt="" class="banner">
+    <div class="clock_wrap">
+        <div class="clock">
+            <label for="" id="min">00</label>
+        </div>
+        <div class="maohao_wrap">
+            <div class="dian mb12"></div>
+            <div class="dian"></div>
+        </div>
+        <div class="clock">
+            <label for="" id="sec">00</label>
+        </div>
+        <div class="maohao_wrap">
+            <div class="dian mb12"></div>
+            <div class="dian"></div>
+        </div>
+        <div class="clock">
+            <label for="" id="micro_sec">00</label>
+        </div>
+    </div>
+</div>
+<if condition="$member_is_reg eq 0">
+    <div class="mb18" style="text-align: center">
+        只有活动时间内注册并已绑定手机的新用户才能参与活动
+        <br/>
+        <a href="{:U('Home/Wechat/register')}">立即去注册</a>
+    </div>
+    <elseif condition="$member_is_reg eq 2"/>
+    <div class="mb18" style="text-align: center">
+        您还未绑定手机号码, 暂时无法参与活动!
+    </div>
+</if>
+
+<div class="content_wrap">
+    <h1>中奖公布</h1>
+    <div class="content">
+        <volist name="list" id="vo" empty="暂未开奖">
+            <div class="mb16">{$vo.win_time}中奖用户 <label for="">{$vo.nickname}
+                {:substr_replace($vo['member_tel'],'****',3,4)}</label></div>
+        </volist>
+    </div>
+</div>
+<div class="fangshi_wrap">
+    <h1>活动方式</h1>
+    <div class="miaosu">
+        {$activity_content|htmlspecialchars_decode}
+    </div>
+</div>
+</body>
+
+<script src="/Public/activity/20180108/js/lib/jquery.min.js"></script>
+<script>
+    $(function () {
+        setTimeout(function () {
+            console.log(1);
+        }, 1000);
+
+        var now_time = {$now_time};
+        var next_open_time = {$next_open_time};
+        var total_time = next_open_time - now_time;
+        total_time = total_time > 0 ? total_time : 0;
+
+        var start_time = {$start_time};
+        var stop_time = {$stop_time};
+
+        var clock = '';
+        var Timeout;
+        var nowdate = total_time * 100;
+        var local_time = parseInt(now_time);
+
+        //当前时间小于活动开始时间,计算时间并且按秒递减到点后自动刷新页面一次
+        if (start_time > now_time) {
+            setInterval(increatxTime, 1000);
+        }
+
+        //执行时间递减
+        if (now_time > start_time && now_time < stop_time) {
+            count_down();
+        }
+
+        function increatxTime() {
+            local_time += 1;
+            if (local_time == start_time) {
+                window.location.reload();
+            }
+        }
+
+        // 时间格式化输出，如03:25:19 86。每10ms都会调用一次
+        function date_format(nowdate) {
+            // 分钟位
+            var min = fill_zero_prefix(Math.floor((nowdate / 60 / 100)));
+            // 秒位
+            var sec = fill_zero_prefix((Math.floor((nowdate - min * 60 * 100) / 100)));// equal to => var sec = second % 60;
+            // 毫秒位，保留2位
+            var micro_sec = fill_zero_prefix(Math.floor((nowdate - min * 60 * 100 - sec * 100 )));
+            console.log();
+            $('#min').text(min);
+            $('#sec').text(sec);
+            $('#micro_sec').text(micro_sec)
+        }
+
+        // 位数不足补零
+        function fill_zero_prefix(num) {
+            return num < 10 ? "0" + num : num
+        }
+
+        function count_down() {
+            // 渲染倒计时时钟
+            clock = date_format(nowdate);
+            if (nowdate <= 0) {
+                nowdate = total_time * 100;
+                if (now_time < stop_time) {
+                    window.location.reload();
+                }
+            }
+            Timeout = setTimeout(function () {
+                    // 放在最后--
+                    nowdate -= 1;
+                    count_down();
+                },
+                10
+            )
+        }
+
+    })
+</script>
+
+</html>

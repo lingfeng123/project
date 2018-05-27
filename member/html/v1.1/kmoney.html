@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta content="maximum-dpr=2" name="flexible" />
+    <meta content="modeName=750-12" name="grid" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="js/lib/flexible_css.debug.js"></script>
+    <script src="js/lib/flexible.debug.js"></script>
+    <script src="js/lib/makegrid.debug.js"></script>
+    <title>K币规则</title>
+    <style type="text/css">
+        html,body{
+            width:100%;
+            height:100%;
+            color:#fff;
+        }
+        .grid-wrap{
+            background: #292627;
+            color: #7b7b7b;
+            min-height:100%;
+        }
+        .body{
+            width: 100%;
+            min-height: 100%;
+        }
+        .message{
+            padding: 0.533333rem 0.266667rem;
+        }
+        .text-p {
+            line-height: 0.6rem;
+        }
+
+        [data-dpr="1"] .text-p {
+            font-size: 13px;
+        }
+
+        [data-dpr="2"] .text-p {
+            font-size: 26px;
+        }
+
+        [data-dpr="3"] .text-p {
+            font-size: 39px;
+        }
+
+        .text-bold {
+            font-weight: bold;
+        }
+        .text-title{
+            margin: 0.2rem 0;
+        }
+        .text-fff{
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+<div class="grid-wrap">
+</div>
+<script type="text/template" id="grid-html">
+    <div class="body">
+        <div class="message">
+            <p class="text-p text-title text-fff">一、如何获得K币</p>
+            <p class="text-p">K币是空瓶子平台的虚拟币，在空瓶子平台上完成消费后获得相应K币，比例为10：1，即每消费10元获得1枚K币。</p>
+            <p class="text-p text-title text-fff">二、如何使用</p>
+            <p class="text-p">1、K币仅可在空瓶子平台使用，不可转送、转卖他们、不可提现；</p>
+            <p class="text-p">2、K币用于在空瓶子平台的K币商城里兑换商品使用（K币商城目前暂未开通，后续即将开放，尽情期待）。</p>
+            <p class="text-p">3、K币的最终解释权归空瓶子平台所有。</p>
+        </div>
+    </div>
+</script>
+<script src="js/lib/jquery.min.js"></script>
+<script>
+    function fillHtml() {
+        var html = document.querySelector('#grid-html').innerHTML;
+        var wrap = document.querySelector('.grid-wrap');
+        wrap.innerHTML = html;
+        var params = lib.flexible.gridParams;
+
+        for (var i = 1; i <= params.columnCount; i++) {
+            (function(j) {
+                Array.prototype.slice.call(wrap.querySelectorAll('.grid .col-' + j)).forEach(function(el) {
+                    var info = el.querySelector('.info');
+                    var a = el.querySelector('.a');
+                    if (info) {
+                        info.innerHTML = 'c' + j;
+                    }
+                    if (a) {
+                        a.innerHTML = (params.columnXUnit * j + params.gutterXUnit * (j - 1)) + 'a';
+                    }
+                });
+            })(i);
+        }
+    }
+
+    fillHtml();
+</script>
+</body>
+</html>
+

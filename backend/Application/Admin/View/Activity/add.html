@@ -1,0 +1,107 @@
+<extend name="Public/common" />
+<block name="main">
+    <fieldset class="layui-elem-field">
+        <legend>{:(isset($detail['id'])?'编辑活动':'添加活动')}</legend>
+        <div class="layui-field-box" style="width: 700px">
+            <form class="layui-form" action="" method="post">
+                <if condition="isset($detail['id'])">
+                    <input type="hidden" name="id" value="{$detail['id']}">
+                </if>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span style="color:red">*</span> 活动名称</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required value="{:(isset($detail['title']) ? $detail['title']:'')}" lay-verify="required" placeholder="活动名称" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span style="color:red">*</span> 活动描述</label>
+                    <div class="layui-input-block">
+                        <textarea class="layui-textarea" name="description" id="description" placeholder="活动描述">{:(isset($detail['description']) ? $detail['description']:'')}</textarea>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span style="color:red">*</span> 活动状态</label>
+                    <div class="layui-input-block adstatus">
+                        <input type="radio" name="status" value="1" title="已停止">
+                        <input type="radio" name="status" value="2" title="进行中">
+                    </div>
+                </div>
+
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">活动地址</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="url" value="{:(isset($detail['url']) ? $detail['url']:'')}" placeholder="活动地址" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label"><span style="color:red">*</span> 开始日期</label>
+                        <div class="layui-inline">
+                            <input type="text" name="start_time" id="start_time" lay-verify="required" placeholder="yyyy-MM-dd HH:mm:ss" value="{:(isset($detail['start_time']) ? $detail['start_time']:'')}" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <label class="layui-form-label"><span style="color:red">*</span> 结束日期</label>
+                        <div class="layui-inline">
+                            <input type="text" name="end_time" id="end_time" lay-verify="required" placeholder="yyyy-MM-dd HH:mm:ss" value="{:(isset($detail['end_time']) ? $detail['end_time']:'')}" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">附加数据</label>
+                    <div class="layui-input-block">
+                        <textarea class="layui-textarea" name="additional" id="additional" placeholder="附加数据格式请与开发人员联系获取">{:(isset($detail['additional']) ? $detail['additional']:'')}</textarea>
+                    </div>
+                </div>
+
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">活动备注</label>
+                    <div class="layui-input-block">
+                        <textarea class="layui-textarea" name="remark" id="remark" placeholder="活动描述">{:(isset($detail['remark']) ? $detail['remark']:'')}</textarea>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" type="submit" lay-submit lay-filter="admin-form">立即提交</button>
+                        <a  href="{:U('Activity/index')}" class="layui-btn layui-btn-danger">返回活动列表</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </fieldset>
+</block>
+<block name="myScript">
+<script type="text/javascript">
+$(function () {
+    $('.adstatus input').val([{$detail['status']|default=1}]);
+
+    layui.use(['form','upload', 'laydate', 'layedit'], function(){
+        var form = layui.form,
+            layer = layui.layer,
+            layedit = layui.layedit;
+            laydate = layui.laydate;
+
+
+        layedit.build('description'); //建立编辑器
+        //时间选择器
+        laydate.render({
+            elem: '#start_time'
+            ,type: 'datetime'
+            ,format: 'yyyy-MM-dd HH:mm:ss'
+        });
+
+        laydate.render({
+            elem: '#end_time'
+            ,type: 'datetime'
+            ,format: 'yyyy-MM-dd HH:mm:ss'
+        });
+    });
+})
+</script>
+
+</block>

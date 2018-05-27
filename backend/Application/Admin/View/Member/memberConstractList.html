@@ -1,0 +1,37 @@
+<extend name="Public/common"/>
+<block name="main">
+    <fieldset class="layui-elem-field">
+        <legend>会员联系人列表</legend>
+        <div class="layui-field-box">
+            <table class="layui-table">
+                <thead>
+                <tr>
+                    <th>联系人ID</th>
+                    <th>昵称</th>
+                    <th>性别</th>
+                    <th>联系方式</th>
+                    <th>是否为默认联系人</th>
+                </tr>
+                </thead>
+                <tbody>
+                <volist name="link" id="vo">
+                    <tr>
+                        <td>{$vo['id']}</td>
+                        <td>{$vo['realname']}</td>
+                        <td><if condition="$vo['sex'] eq 1">男<else />女</if></td>
+                        <td>{$vo['tel']}</td>
+                        <td><if condition="$vo['is_default'] eq 1">是<else />否</if></td>
+                    </tr>
+                </volist>
+                <tr>
+                    <td align="right" nowrap="true" colspan="11">
+                        <div class="pagination">
+                            {$pageHtml}
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </fieldset>
+</block>

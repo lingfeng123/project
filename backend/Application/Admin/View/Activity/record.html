@@ -1,0 +1,54 @@
+<extend name="Public/common"/>
+<block name="main">
+    <h1>中奖信息</h1>
+    <div class="layui-field-box">
+        <table class="layui-table">
+            <thead>
+            <tr>
+                <th width="60">中奖ID</th>
+                <th width="60">活动ID</th>
+                <th width="150">用户姓名</th>
+                <th width="150">用户昵称</th>
+                <th width="80">手机号码</th>
+                <th width="350">中奖信息</th>
+                <th width="80">发放状态</th>
+                <th width="180">备注</th>
+                <th width="130">中奖时间</th>
+                <th width="130">中奖活动点</th>
+                <th width="150">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <volist name="list" id="vo">
+                <tr>
+                    <td>{$vo['id']}</td>
+                    <td>{$vo['activity_id']}</td>
+                    <td>{$vo['member_name']}</td>
+                    <td>{$vo['nickname']}</td>
+                    <td>{$vo['member_tel']}</td>
+                    <td>{$vo['prize']}</td>
+                    <td><if condition="$vo['status'] eq 2">已发放<else />未发放</if></td>
+                    <td>{$vo['remark']}</td>
+                    <td>{$vo['created_time']|date="Y-m-d H:i:s",###}</td>
+                    <td>{$vo['win_time']|date="Y-m-d H:i:s",###}</td>
+                    <td>
+                        <!--<a href="{:U('Activity/detail', array('id'=> $vo['id']))}" ><span class="layui-btn layui-btn-small layui-btn-primary confirm">查看</span></a>-->
+                        <!--<a href="{:U('Activity/edit', array('id' => $vo['id']))}"><span class="layui-btn layui-btn-small edit layui-btn-normal">编辑</span></a>-->
+                        <a href="{:U('Activity/delRecord', array('id'=> $vo['id'], 'activity_id' => $vo['activity_id']))}" onclick="return confirm('确定删除此中奖记录吗?'); return false"><span class="layui-btn layui-btn-small layui-btn-danger confirm">删除</span></a>
+                    </td>
+                </tr>
+            </volist>
+            <tr>
+                <td align="right" nowrap="true" colspan="11">
+                    <div class="pagination">
+                        {$pageHtml}
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</block>
+<block name="myScript">
+</block>

@@ -1,0 +1,1333 @@
+[ 2018-04-08T00:04:12+08:00 ] 104.236.22.98 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000108s ]
+ERR: 无法加载控制器:Index
+
+[ 2018-04-08T03:25:24+08:00 ] 58.35.35.2 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000118s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000104s ]
+ERR: 无法加载控制器:Index
+
+[ 2018-04-08T03:54:58+08:00 ] 168.1.128.53 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000118s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000110s ]
+ERR: 无法加载控制器:Index
+
+[ 2018-04-08T04:40:27+08:00 ] 5.188.9.100 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000061s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000128s ]
+ERR: 无法加载控制器:Index
+
+[ 2018-04-08T08:29:25+08:00 ] 60.191.38.77 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000077s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000183s ]
+ERR: 无法加载控制器:Index
+
+[ 2018-04-08T09:52:04+08:00 ] 140.207.54.75 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000130s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000108s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '84' LIMIT 1   [ RunTime:0.0006s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='2',`updated_time`='1523152324' WHERE `id` = 84 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0012s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('49','1','84','4523152211005903','wxa69e89cc7261ae4f','1496908062','JSAPI','0.01','0.01','4200000069201804084323976112','1523152323','1','3','2','1523152324') [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 48 AND `pay_status` = 2 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0012s ]
+SQL: UPDATE `api_bar` SET `bar_status`='2',`updated_time`='1523152324' WHERE `id` = 48 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0013s ]
+SQL: INSERT INTO `api_order` (`order_no`,`merchant_id`,`member_id`,`contacts_realname`,`contacts_tel`,`contacts_sex`,`total_price`,`pay_price`,`purchase_price`,`settlement_status`,`order_type`,`payment`,`description`,`arrives_time`,`created_time`,`updated_time`,`take_time`,`top_order_id`,`is_evaluate`,`is_bar`,`is_xu`,`status`) VALUES ('3523152211002574','1','49','','15883700780','1','0.01','0.01','0.00','0','3','0','酒吧','1523116800','1523152211','1523152324','1523116800','0','0','1','0','2') [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `api_bar_order` [ RunTime:0.0011s ]
+SQL: INSERT INTO `api_bar_order` (`order_id`,`bar_id`) VALUES ('39','48') [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `api_bar_pack` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `api_bar_pack` WHERE `bar_id` = 48 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `api_order_pack` [ RunTime:0.0011s ]
+SQL: INSERT INTO `api_order_pack` (`order_id`,`goods_pack_id`,`title`,`amount`,`price`,`image`,`merchant_id`,`member_id`,`pack_description`,`purchase_price`,`market_price`,`goods_type`) VALUES ('39','1','优惠套餐1','1','0.01','/goods_20180328_dpn1522202017utca750.jpg','1','49','优惠套餐1','0.01','0.01','1') [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `api_message_employee` [ RunTime:0.0012s ]
+SQL: INSERT INTO `api_message_employee` (`employee_id`,`content`,`order_no`,`order_id`,`created_time`,`type`,`merchant_id`,`msg_type`) VALUES ('0','拼吧支付新订单|客人：，拼购了优惠套餐。','3523152211002574','39','1523152324','3','1','1') [ RunTime:0.0004s ]
+SQL: SELECT * FROM `api_bar_member` WHERE `bar_id` = 48 AND `pay_status` = 2  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: nickname /mnt/data/kpzapp/member/Application/Home/Model/V1_1/BarMemberModel.class.php 第 343 行.
+
+[ 2018-04-08T09:52:16+08:00 ] 140.207.54.76 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000108s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0011s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '84' LIMIT 1   [ RunTime:0.0005s ]
+
+[ 2018-04-08T09:52:34+08:00 ] 140.207.54.74 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000118s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000121s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '84' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-08T09:53:06+08:00 ] 140.207.54.73 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000117s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000117s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0011s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '84' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-08T09:56:08+08:00 ] 140.207.54.76 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000124s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '84' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-08T10:00:37+08:00 ] 182.139.30.141 /index.php?m=Home&c=Source&a=userqrcode&url=https%3A%2F%2Fmember.app.sc-csj.com%2Fwechat%2Fregister%3Freferrer%3Dh5%26flag%3Dmember_android%26invite_code%3D1000000056
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000108s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000087s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000177s ]
+
+[ 2018-04-08T10:04:25+08:00 ] 139.207.87.45 /index.php?m=Home&c=Source&a=orderQrcode&order_id=43&order_no=1523152938882573&order_type=2&merchant_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000111s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000095s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000202s ]
+
+[ 2018-04-08T10:10:04+08:00 ] 140.207.54.74 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000128s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '85' LIMIT 1   [ RunTime:0.0006s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='2',`updated_time`='1523153404' WHERE `id` = 85 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0014s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('49','1','85','4523153348965124','wxa69e89cc7261ae4f','1496908062','JSAPI','0.01','0.01','4200000059201804084397417836','1523153404','1','4','2','1523153404') [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 49 AND `pay_status` = 2 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2018-04-08T10:10:14+08:00 ] 140.207.54.73 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000115s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0013s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '85' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-08T10:10:31+08:00 ] 140.207.54.76 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000109s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '85' LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2018-04-08T10:11:02+08:00 ] 140.207.54.75 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000117s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000109s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '85' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-08T10:14:05+08:00 ] 140.207.54.76 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000134s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000110s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '85' LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2018-04-08T10:17:20+08:00 ] 182.139.30.141 /index.php?m=Home&c=Source&a=orderQrcode&order_id=43&order_no=1523152938882573&order_type=2&merchant_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000117s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000090s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000086s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000177s ]
+
+[ 2018-04-08T10:18:12+08:00 ] 182.139.30.141 /index.php?m=Home&c=Source&a=orderQrcode&order_id=44&order_no=1523153584039268&order_type=3&merchant_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000107s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000092s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000178s ]
+
+[ 2018-04-08T10:18:21+08:00 ] 182.139.30.141 /index.php?m=Home&c=Source&a=orderQrcode&order_id=44&order_no=1523153584039268&order_type=3&merchant_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000111s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000099s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000198s ]
+
+[ 2018-04-08T10:19:12+08:00 ] 140.207.54.74 /wxpay/wxRefund
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000117s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000055s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000133s ]
+SQL: SHOW COLUMNS FROM `api_refund` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `api_refund` WHERE `transaction_id` = '4200000059201804084397417836' LIMIT 1   [ RunTime:0.0005s ]
+SQL: UPDATE `api_refund` SET `status`='5',`updated_time`='1523153952' WHERE `status` = 1 AND `transaction_id` = '4200000059201804084397417836' [ RunTime:0.0004s ]
+
+[ 2018-04-08T10:26:11+08:00 ] 140.207.54.75 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000117s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000110s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0013s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '84' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-08T10:44:06+08:00 ] 140.207.54.73 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000108s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0014s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '85' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-08T10:56:14+08:00 ] 140.207.54.73 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000115s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0011s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '84' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-08T11:04:15+08:00 ] 140.207.54.75 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000118s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000108s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0011s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '87' LIMIT 1   [ RunTime:0.0006s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='2',`updated_time`='1523156655' WHERE `id` = 87 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0011s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('49','1','87','4523156639814663','wxa69e89cc7261ae4f','1496908062','JSAPI','0.01','0.01','4200000078201804084423000403','1523156655','1','4','2','1523156655') [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 51 AND `pay_status` = 2 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2018-04-08T11:04:26+08:00 ] 140.207.54.73 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000112s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '87' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-08T11:04:42+08:00 ] 140.207.54.74 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000117s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0011s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '87' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-08T11:05:13+08:00 ] 140.207.54.73 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000144s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '87' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-08T11:08:14+08:00 ] 140.207.54.75 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000113s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '87' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-08T11:13:46+08:00 ] 140.207.54.76 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000137s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '88' LIMIT 1   [ RunTime:0.0006s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='2',`updated_time`='1523157226' WHERE `id` = 88 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0011s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('49','1','88','4523157217877884','wxa69e89cc7261ae4f','1496908062','JSAPI','0.01','0.01','4200000067201804084490306570','1523157226','1','4','2','1523157226') [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 52 AND `pay_status` = 2 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2018-04-08T11:14:00+08:00 ] 140.207.54.76 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000112s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000106s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '88' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-08T11:14:08+08:00 ] 140.207.54.76 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000106s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0016s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '85' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-08T11:14:17+08:00 ] 140.207.54.76 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000148s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000051s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000165s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '88' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-08T11:14:48+08:00 ] 140.207.54.76 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000125s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '88' LIMIT 1   [ RunTime:0.0008s ]
+
+[ 2018-04-08T11:17:51+08:00 ] 140.207.54.76 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000111s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0011s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '88' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-08T11:19:02+08:00 ] 140.207.54.75 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000102s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '89' LIMIT 1   [ RunTime:0.0006s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='2',`updated_time`='1523157542' WHERE `id` = 89 [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0012s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('14','1','89','4523157503252456','wxa69e89cc7261ae4f','1496908062','JSAPI','0.01','0.01','4200000059201804084454191565','1523157541','1','3','2','1523157542') [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 53 AND `pay_status` = 2 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0068s ]
+SQL: UPDATE `api_bar` SET `bar_status`='2',`updated_time`='1523157542' WHERE `id` = 53 [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0014s ]
+SQL: INSERT INTO `api_order` (`order_no`,`merchant_id`,`member_id`,`contacts_realname`,`contacts_tel`,`contacts_sex`,`total_price`,`pay_price`,`purchase_price`,`settlement_status`,`order_type`,`payment`,`description`,`arrives_time`,`created_time`,`updated_time`,`take_time`,`top_order_id`,`is_evaluate`,`is_bar`,`is_xu`,`status`) VALUES ('3523157503249278','1','14','','18780087200','1','0.01','0.01','0.00','0','2','0','LOL莫咯LOL哦LOL哦咯哦咯了','1523116800','1523157503','1523157542','1523116800','0','0','1','0','2') [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `api_bar_order` [ RunTime:0.0024s ]
+SQL: INSERT INTO `api_bar_order` (`order_id`,`bar_id`) VALUES ('49','53') [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `api_bar_pack` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `api_bar_pack` WHERE `bar_id` = 53 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `api_order_pack` [ RunTime:0.0011s ]
+SQL: INSERT INTO `api_order_pack` (`order_id`,`goods_pack_id`,`title`,`amount`,`price`,`image`,`merchant_id`,`member_id`,`pack_description`,`purchase_price`,`market_price`,`goods_type`) VALUES ('49','4','卡座套餐1','1','0.01','/goods_20180328_bhy1522202117ehzk262.jpg','1','14','卡座套餐1','0.03','0.05','2') [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `api_message_employee` [ RunTime:0.0011s ]
+SQL: INSERT INTO `api_message_employee` (`employee_id`,`content`,`order_no`,`order_id`,`created_time`,`type`,`merchant_id`,`msg_type`) VALUES ('0','拼吧支付新订单|客人：，拼购了卡座套餐。','3523157503249278','49','1523157542','3','1','1') [ RunTime:0.0004s ]
+SQL: SELECT * FROM `api_bar_member` WHERE `bar_id` = 53 AND `pay_status` = 2  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: nickname /mnt/data/kpzapp/member/Application/Home/Model/V1_1/BarMemberModel.class.php 第 343 行.
+
+[ 2018-04-08T11:19:16+08:00 ] 140.207.54.75 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000130s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000044s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000110s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '89' LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2018-04-08T11:19:32+08:00 ] 140.207.54.76 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000110s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '89' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-08T11:20:03+08:00 ] 140.207.54.75 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000126s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000110s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0013s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '89' LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2018-04-08T11:20:35+08:00 ] 140.207.54.75 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000106s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `api_order` WHERE `id` = 50 LIMIT 1   [ RunTime:0.0006s ]
+SQL: UPDATE `api_order` SET `status`='2',`payment`='2',`updated_time`='1523157635' WHERE `id` = 50 [ RunTime:0.0079s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0012s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('49','1','50','1523157579898570','wxa69e89cc7261ae4f','1496908062','JSAPI','0.01','0.01','4200000071201804084481295118','1523157635','1','1','2','1523157635') [ RunTime:0.0073s ]
+SQL: SHOW COLUMNS FROM `api_message_employee` [ RunTime:0.0011s ]
+SQL: INSERT INTO `api_message_employee` (`employee_id`,`content`,`order_no`,`order_id`,`created_time`,`type`,`merchant_id`,`msg_type`) VALUES ('0','新支付订单|客人：昆卡，购买了卡座套餐。','1523157579898570','50','1523157635','3','1','1') [ RunTime:0.0078s ]
+SQL: SHOW COLUMNS FROM `api_employee_job_permission` [ RunTime:0.0012s ]
+SQL: SELECT DISTINCT  `employee_id` FROM `api_employee_job_permission` INNER JOIN api_employee_andjob ON api_employee_andjob.job_id = api_employee_job_permission.job_id  WHERE `permission_id` IN (23,24) AND api_employee_job_permission.merchant_id = '1'  [ RunTime:0.0006s ]
+
+[ 2018-04-08T11:21:26+08:00 ] 182.139.30.141 /index.php?m=Home&c=Source&a=orderQrcode&order_id=50&order_no=1523157579898570&order_type=2&merchant_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000081s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000169s ]
+
+[ 2018-04-08T11:23:05+08:00 ] 140.207.54.76 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000047s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000113s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0013s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '89' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-08T11:26:15+08:00 ] 140.207.54.75 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000170s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '84' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-08T11:31:28+08:00 ] 182.139.30.141 /index.php?m=Home&c=Source&a=orderQrcode&order_id=52&order_no=1523158249851738&order_type=1&merchant_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000124s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000084s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000179s ]
+
+[ 2018-04-08T11:38:15+08:00 ] 140.207.54.76 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000128s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '87' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-08T11:42:02+08:00 ] 140.207.54.75 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000117s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000107s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0006s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='2',`updated_time`='1523158922' WHERE `id` = 90 [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0012s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('14','1','90','4523158893591931','wxa69e89cc7261ae4f','1496908062','JSAPI','0.01','0.01','4200000070201804084497643891','1523158921','1','4','2','1523158922') [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 AND `pay_status` = 2 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2018-04-08T11:42:13+08:00 ] 140.207.54.76 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000058s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000123s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-08T11:42:30+08:00 ] 140.207.54.75 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000108s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-08T11:43:01+08:00 ] 140.207.54.75 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000134s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0014s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2018-04-08T11:44:09+08:00 ] 140.207.54.74 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000115s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '85' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-08T11:46:04+08:00 ] 140.207.54.76 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000118s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000150s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2018-04-08T11:47:52+08:00 ] 140.207.54.73 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000105s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '88' LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2018-04-08T11:48:58+08:00 ] 140.207.54.74 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000155s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000042s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000106s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '91' LIMIT 1   [ RunTime:0.0006s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='2',`updated_time`='1523159338' WHERE `id` = 91 [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0012s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('49','1','91','4523159326017677','wxa69e89cc7261ae4f','1496908062','JSAPI','0.01','0.01','4200000069201804084497285630','1523159338','1','4','2','1523159338') [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 55 AND `pay_status` = 2 LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2018-04-08T11:49:14+08:00 ] 140.207.54.73 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000122s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '91' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-08T11:49:31+08:00 ] 140.207.54.76 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000133s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '91' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-08T11:50:02+08:00 ] 140.207.54.75 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000115s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '91' LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2018-04-08T11:52:22+08:00 ] 140.207.54.76 /wxpay/wxRefund
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000119s ]
+SQL: SHOW COLUMNS FROM `api_refund` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `api_refund` WHERE `transaction_id` = '4200000070201804084497643891' LIMIT 1   [ RunTime:0.0005s ]
+SQL: UPDATE `api_refund` SET `status`='5',`updated_time`='1523159542' WHERE `status` = 1 AND `transaction_id` = '4200000070201804084497643891' [ RunTime:0.0004s ]
+
+[ 2018-04-08T11:53:05+08:00 ] 140.207.54.75 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000117s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0013s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '91' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-08T11:53:07+08:00 ] 140.207.54.76 /pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000109s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000041s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000108s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0012s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '89' LIMIT 1   [ RunTime:0.0006s ]
+
+[ 2018-04-08T13:45:03+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/alipayNotify
+ERR: validate sign fail: []
+[ 2018-04-08T13:45:03+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/alipayNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: sign D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Vendor\alipay\AopClient.php 第 649 行.
+
+[ 2018-04-08T13:46:32+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] ksort() expects parameter 1 to be array, boolean given D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Org\Util\Tools.class.php 第 404 行.
+NOTIC: [2] http_build_query(): Parameter 1 expected to be Array or Object.  Incorrect value given D:\phpStudy\WWW\csj\trunk\php\project\ThinkPHP\Library\Org\Util\Tools.class.php 第 405 行.
+
+[ 2018-04-08T13:51:35+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0410s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-04-08T13:52:20+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-08T13:52:36+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-08T13:53:02+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-08T13:53:51+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-08T13:54:09+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-08T13:54:25+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-08T13:54:58+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-08T13:55:27+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0370s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0370s ]
+
+[ 2018-04-08T13:57:55+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-08T13:58:25+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0410s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0420s ]
+
+[ 2018-04-08T14:00:16+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0370s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0380s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='2',`updated_time`='1523167215' WHERE `id` = 90 [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0380s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('14','1','90','4523158893591931','wxa69e89cc7261ae4f','1496908062','JSAPI','0.01','0.01','4200000070201804084497643891','1523158921','1','4','2','1523167215') [ RunTime:0.0360s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 AND `pay_status` = 2 LIMIT 1   [ RunTime:0.0350s ]
+
+[ 2018-04-08T14:00:37+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0370s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0370s ]
+
+[ 2018-04-08T14:00:38+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0420s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-04-08T14:00:38+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0410s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-04-08T14:00:38+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0420s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0420s ]
+
+[ 2018-04-08T14:01:05+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0360s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-04-08T14:02:08+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0410s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0420s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='2',`updated_time`='1523167328' WHERE `id` = 90 [ RunTime:0.0410s ]
+
+[ 2018-04-08T14:02:30+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0410s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0410s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='2',`updated_time`='1523167350' WHERE `id` = 90 [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0400s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('14','1','90','4523158893591931','wxa69e89cc7261ae4f','1496908062','JSAPI','0.01','0.01','4200000070201804084497643891','1523158921','1','4','2','1523167350') [ RunTime:0.0390s ]
+
+[ 2018-04-08T14:02:31+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0420s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0430s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='2',`updated_time`='1523167351' WHERE `id` = 90 [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0420s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('14','1','90','4523158893591931','wxa69e89cc7261ae4f','1496908062','JSAPI','0.01','0.01','4200000070201804084497643891','1523158921','1','4','2','1523167351') [ RunTime:0.0400s ]
+
+[ 2018-04-08T14:03:12+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0440s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0440s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='2',`updated_time`='1523167391' WHERE `id` = 90 [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0440s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('14','1','90','4523158893591931','wxa69e89cc7261ae4f','1496908062','JSAPI','0.01','0.01','4200000070201804084497643891','1523158921','1','4','2','1523167391') [ RunTime:0.0430s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 AND `pay_status` = 2 LIMIT 1   [ RunTime:0.0450s ]
+
+[ 2018-04-08T14:03:37+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0420s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0400s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='2',`updated_time`='1523167417' WHERE `id` = 90 [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0430s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('14','1','90','4523158893591931','wxa69e89cc7261ae4f','1496908062','JSAPI','0.01','0.01','4200000070201804084497643891','1523158921','1','4','2','1523167417') [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 AND `pay_status` = 2 LIMIT 1   [ RunTime:0.0450s ]
+
+[ 2018-04-08T14:07:15+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0450s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0450s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='2',`updated_time`='1523167635' WHERE `id` = 90 [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0460s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('14','1','90','4523158893591931','wxa69e89cc7261ae4f','1496908062','JSAPI','0.01','0.01','4200000070201804084497643891','1523158921','1','4','2','1523167635') [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 AND `pay_status` = 1 LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 AND `pay_status` = 2 LIMIT 1   [ RunTime:0.0440s ]
+
+[ 2018-04-08T14:08:55+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0420s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0420s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='2',`updated_time`='1523167735' WHERE `id` = 90 [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0410s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('14','1','90','4523158893591931','wxa69e89cc7261ae4f','1496908062','JSAPI','0.01','0.01','4200000070201804084497643891','1523158921','1','4','2','1523167735') [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 AND `pay_status` = 1 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 AND `pay_status` = 2 LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-04-08T14:09:19+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0400s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0410s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='2',`updated_time`='1523167758' WHERE `id` = 90 [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0400s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('14','1','90','4523158893591931','wxa69e89cc7261ae4f','1496908062','JSAPI','0.01','0.01','4200000070201804084497643891','1523158921','1','4','2','1523167759') [ RunTime:0.0390s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 AND `pay_status` = 1 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 AND `pay_status` = 2 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-04-08T14:09:43+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0410s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0400s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='2',`updated_time`='1523167783' WHERE `id` = 90 [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0420s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('14','1','90','4523158893591931','wxa69e89cc7261ae4f','1496908062','JSAPI','0.01','0.01','4200000070201804084497643891','1523158921','1','4','2','1523167783') [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 AND `pay_status` = 2 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-04-08T14:10:36+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0450s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0450s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='2',`updated_time`='1523167835' WHERE `id` = 90 [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0450s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('14','1','90','4523158893591931','wxa69e89cc7261ae4f','1496908062','JSAPI','0.01','0.01','4200000070201804084497643891','1523158921','1','4','2','1523167835') [ RunTime:0.0440s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 AND `pay_status` = 2 LIMIT 1   [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_bar_order` [ RunTime:0.0470s ]
+SQL: SELECT `order_id` FROM `api_bar_order` WHERE `bar_id` = 53 LIMIT 1   [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0470s ]
+SQL: SELECT * FROM `api_order` WHERE `id` = 49 LIMIT 1   [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0440s ]
+SQL: UPDATE `api_bar` SET `bar_status`='7',`updated_time`='1523167836' WHERE `id` = 54 [ RunTime:0.0450s ]
+SQL: INSERT INTO `api_order` (`order_no`,`merchant_id`,`member_id`,`contacts_realname`,`contacts_tel`,`contacts_sex`,`total_price`,`pay_price`,`purchase_price`,`settlement_status`,`order_type`,`payment`,`description`,`arrives_time`,`created_time`,`updated_time`,`take_time`,`top_order_id`,`is_evaluate`,`is_bar`,`status`,`is_xu`,`employee_id`,`employee_realname`,`employee_avatar`,`employee_tel`) VALUES ('3523158893586895','1','14','凌风','18780087200','1','0.01','0.01','0.01','0','0','0','家里可口可乐了看看了','1523116800','1523158893','1523167835','1523116800','49','0','1','7','1','23','袁康','/employee_20180129_aps1517210288puqa098.jpg','15184454658') [ RunTime:0.0440s ]
+SQL: INSERT INTO `api_bar_order` (`order_id`,`bar_id`) VALUES ('58','54') [ RunTime:0.0440s ]
+
+[ 2018-04-08T14:11:52+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0380s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0380s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='2',`updated_time`='1523167912' WHERE `id` = 90 [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0370s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('14','1','90','4523158893591931','wxa69e89cc7261ae4f','1496908062','JSAPI','0.01','0.01','4200000070201804084497643891','1523158921','1','4','2','1523167912') [ RunTime:0.0350s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 AND `pay_status` = 2 LIMIT 1   [ RunTime:0.0360s ]
+
+[ 2018-04-08T14:12:19+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0380s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0380s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='2',`updated_time`='1523167939' WHERE `id` = 90 [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0360s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('14','1','90','4523158893591931','wxa69e89cc7261ae4f','1496908062','JSAPI','0.01','0.01','4200000070201804084497643891','1523158921','1','4','2','1523167939') [ RunTime:0.0360s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 AND `pay_status` = 2 LIMIT 1   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_bar_order` [ RunTime:0.0370s ]
+SQL: SELECT `order_id` FROM `api_bar_order` WHERE `bar_id` = 53 LIMIT 1   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_order` WHERE `id` = 49 LIMIT 1   [ RunTime:0.0420s ]
+
+[ 2018-04-08T14:12:41+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0450s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0450s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='2',`updated_time`='1523167961' WHERE `id` = 90 [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0450s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('14','1','90','4523158893591931','wxa69e89cc7261ae4f','1496908062','JSAPI','0.01','0.01','4200000070201804084497643891','1523158921','1','4','2','1523167961') [ RunTime:0.0430s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 AND `pay_status` = 2 LIMIT 1   [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar_order` [ RunTime:0.0450s ]
+SQL: SELECT `order_id` FROM `api_bar_order` WHERE `bar_id` = 53 LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_order` WHERE `id` = 49 LIMIT 1   [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0440s ]
+SQL: UPDATE `api_bar` SET `bar_status`='7',`updated_time`='1523167961' WHERE `id` = 54 [ RunTime:0.0440s ]
+
+[ 2018-04-08T14:13:02+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0390s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0390s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='2',`updated_time`='1523167982' WHERE `id` = 90 [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0400s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('14','1','90','4523158893591931','wxa69e89cc7261ae4f','1496908062','JSAPI','0.01','0.01','4200000070201804084497643891','1523158921','1','4','2','1523167982') [ RunTime:0.0390s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 AND `pay_status` = 2 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_bar_order` [ RunTime:0.0400s ]
+SQL: SELECT `order_id` FROM `api_bar_order` WHERE `bar_id` = 53 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_order` WHERE `id` = 49 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0380s ]
+SQL: UPDATE `api_bar` SET `bar_status`='7',`updated_time`='1523167982' WHERE `id` = 54 [ RunTime:0.0380s ]
+SQL: INSERT INTO `api_order` (`order_no`,`merchant_id`,`member_id`,`contacts_realname`,`contacts_tel`,`contacts_sex`,`total_price`,`pay_price`,`purchase_price`,`settlement_status`,`order_type`,`payment`,`description`,`arrives_time`,`created_time`,`updated_time`,`take_time`,`top_order_id`,`is_evaluate`,`is_bar`,`status`,`is_xu`,`employee_id`,`employee_realname`,`employee_avatar`,`employee_tel`) VALUES ('3523158893586895','1','14','凌风','18780087200','1','0.01','0.01','0.01','0','0','0','家里可口可乐了看看了','1523116800','1523158893','1523167982','1523116800','49','0','1','7','1','23','袁康','/employee_20180129_aps1517210288puqa098.jpg','15184454658') [ RunTime:0.0390s ]
+
+[ 2018-04-08T14:13:39+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0450s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0450s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='2',`updated_time`='1523168018' WHERE `id` = 90 [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0460s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('14','1','90','4523158893591931','wxa69e89cc7261ae4f','1496908062','JSAPI','0.01','0.01','4200000070201804084497643891','1523158921','1','4','2','1523168018') [ RunTime:0.0440s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 AND `pay_status` = 2 LIMIT 1   [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar_order` [ RunTime:0.0450s ]
+SQL: SELECT `order_id` FROM `api_bar_order` WHERE `bar_id` = 53 LIMIT 1   [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_order` WHERE `id` = 49 LIMIT 1   [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0450s ]
+SQL: UPDATE `api_bar` SET `bar_status`='7',`updated_time`='1523168019' WHERE `id` = 54 [ RunTime:0.0430s ]
+SQL: INSERT INTO `api_order` (`order_no`,`merchant_id`,`member_id`,`contacts_realname`,`contacts_tel`,`contacts_sex`,`total_price`,`pay_price`,`purchase_price`,`settlement_status`,`order_type`,`payment`,`description`,`arrives_time`,`created_time`,`updated_time`,`take_time`,`top_order_id`,`is_evaluate`,`is_bar`,`status`,`is_xu`,`employee_id`,`employee_realname`,`employee_avatar`,`employee_tel`) VALUES ('3523158893586895','1','14','凌风','18780087200','1','0.01','0.01','0.01','0','0','0','家里可口可乐了看看了','1523116800','1523158893','1523168018','1523116800','49','0','1','7','1','23','袁康','/employee_20180129_aps1517210288puqa098.jpg','15184454658') [ RunTime:0.0440s ]
+SQL: INSERT INTO `api_bar_order` (`order_id`,`bar_id`) VALUES ('60','54') [ RunTime:0.0570s ]
+
+[ 2018-04-08T14:13:48+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0470s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0450s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='2',`updated_time`='1523168027' WHERE `id` = 90 [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0650s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('14','1','90','4523158893591931','wxa69e89cc7261ae4f','1496908062','JSAPI','0.01','0.01','4200000070201804084497643891','1523158921','1','4','2','1523168027') [ RunTime:0.0440s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 LIMIT 1   [ RunTime:0.0460s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 AND `pay_status` = 2 LIMIT 1   [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_bar_order` [ RunTime:0.0450s ]
+SQL: SELECT `order_id` FROM `api_bar_order` WHERE `bar_id` = 53 LIMIT 1   [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_order` WHERE `id` = 49 LIMIT 1   [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0450s ]
+SQL: UPDATE `api_bar` SET `bar_status`='7',`updated_time`='1523168028' WHERE `id` = 54 [ RunTime:0.0430s ]
+SQL: INSERT INTO `api_order` (`order_no`,`merchant_id`,`member_id`,`contacts_realname`,`contacts_tel`,`contacts_sex`,`total_price`,`pay_price`,`purchase_price`,`settlement_status`,`order_type`,`payment`,`description`,`arrives_time`,`created_time`,`updated_time`,`take_time`,`top_order_id`,`is_evaluate`,`is_bar`,`status`,`is_xu`,`employee_id`,`employee_realname`,`employee_avatar`,`employee_tel`) VALUES ('3523158893586895','1','14','凌风','18780087200','1','0.01','0.01','0.01','0','0','0','家里可口可乐了看看了','1523116800','1523158893','1523168028','1523116800','49','0','1','7','1','23','袁康','/employee_20180129_aps1517210288puqa098.jpg','15184454658') [ RunTime:0.0450s ]
+SQL: INSERT INTO `api_bar_order` (`order_id`,`bar_id`) VALUES ('61','54') [ RunTime:0.0440s ]
+
+[ 2018-04-08T14:14:33+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0370s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0370s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='2',`updated_time`='1523168072' WHERE `id` = 90 [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0370s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('14','1','90','4523158893591931','wxa69e89cc7261ae4f','1496908062','JSAPI','0.01','0.01','4200000070201804084497643891','1523158921','1','4','2','1523168072') [ RunTime:0.0350s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 AND `pay_status` = 2 LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_bar_order` [ RunTime:0.0360s ]
+SQL: SELECT `order_id` FROM `api_bar_order` WHERE `bar_id` = 53 LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_order` WHERE `id` = 49 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0360s ]
+SQL: UPDATE `api_bar` SET `bar_status`='7',`updated_time`='1523168072' WHERE `id` = 54 [ RunTime:0.0350s ]
+SQL: INSERT INTO `api_order` (`order_no`,`merchant_id`,`member_id`,`contacts_realname`,`contacts_tel`,`contacts_sex`,`total_price`,`pay_price`,`purchase_price`,`settlement_status`,`order_type`,`payment`,`description`,`arrives_time`,`created_time`,`updated_time`,`take_time`,`top_order_id`,`is_evaluate`,`is_bar`,`status`,`is_xu`,`employee_id`,`employee_realname`,`employee_avatar`,`employee_tel`) VALUES ('3523158893586895','1','14','凌风','18780087200','1','0.01','0.01','0.01','0','0','0','家里可口可乐了看看了','1523116800','1523158893','1523168072','1523116800','49','0','1','7','1','23','袁康','/employee_20180129_aps1517210288puqa098.jpg','15184454658') [ RunTime:0.0350s ]
+SQL: INSERT INTO `api_bar_order` (`order_id`,`bar_id`) VALUES ('62','54') [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_day` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_merchant_balance_day` WHERE `merchant_id` = 1 AND `date` = 1523116800 LIMIT 1   [ RunTime:0.0350s ]
+SQL: UPDATE `api_merchant_balance_day` SET `order_total`='14',`purchase_money`='4395.32',`created_time`='1523168072' WHERE `id` = 3 [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_month` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_merchant_balance_month` WHERE `merchant_id` = 1 AND `month` = 1522512000 LIMIT 1   [ RunTime:0.0370s ]
+SQL: UPDATE `api_merchant_balance_month` SET `order_total`='37',`purchase_money`='9110.1',`created_time`='1523168072' WHERE `id` = 1 [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_year` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_merchant_balance_year` WHERE `merchant_id` = 1 AND `year` = 1514736000 LIMIT 1   [ RunTime:0.0360s ]
+SQL: UPDATE `api_merchant_balance_year` SET `order_total`='37',`purchase_money`='9110.1',`created_time`='1523168072' WHERE `id` = 1 [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_total` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_merchant_balance_total` WHERE `merchant_id` = 1 LIMIT 1   [ RunTime:0.0360s ]
+SQL: UPDATE `api_merchant_balance_total` SET `order_total`='37',`purchase_money`='9110.1',`last_time`='1523168072' WHERE `id` = 1 [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_order_everyday` [ RunTime:0.0370s ]
+SQL: UPDATE `api_order_everyday` SET `amount`=amount+1 WHERE `merchant_id` = 1 AND `time` = 1523116800 [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_order_total` [ RunTime:0.0360s ]
+SQL: UPDATE `api_order_total` SET `order_total`=order_total+1 WHERE `merchant_id` = 1 [ RunTime:0.0360s ]
+SQL: SELECT `member_id`,`pay_price` FROM `api_bar_member` WHERE `bar_id` = 14 AND `pay_status` = 2  [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_member_capital` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_member_capital` WHERE `member_id` = 6 LIMIT 1   [ RunTime:0.0350s ]
+SQL: UPDATE `api_member_capital` SET `consume_money`=consume_money+0.04 WHERE `member_id` = 6 [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_member` WHERE `id` = 6 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_member_kcoin_record` [ RunTime:0.0370s ]
+SQL: INSERT INTO `api_member_kcoin_record` (`member_id`,`record_name`,`number`,`type`,`before_number`,`after_number`,`created_time`) VALUES ('6','购买了拼吧续酒','0','1','1240','1240','1523168073') [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_member_privilege` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_member_privilege` WHERE `level` = 2 LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT `level`,`quota` FROM `api_member_privilege`  [ RunTime:0.0370s ]
+SQL: UPDATE `api_member` SET `coin`='1258',`level`='2' WHERE `id` = 6 [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_message_employee` [ RunTime:0.0370s ]
+SQL: INSERT INTO `api_message_employee` (`employee_id`,`content`,`order_no`,`order_id`,`created_time`,`type`,`merchant_id`,`msg_type`) VALUES ('23','拼吧支付新订单|客人：凌风，拼够了续酒。','3523158893586895','62','1523168073','3','1','1') [ RunTime:0.0360s ]
+
+[ 2018-04-08T14:14:45+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0430s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0420s ]
+SQL: UPDATE `api_bar_member` SET `pay_status`='2',`pay_type`='2',`updated_time`='1523168083' WHERE `id` = 90 [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_payment_record` [ RunTime:0.0430s ]
+SQL: INSERT INTO `api_payment_record` (`member_id`,`merchant_id`,`order_id`,`order_no`,`appid`,`mch_id`,`trade_type`,`order_fee`,`receipt_fee`,`trade_no`,`end_time`,`pay_type`,`buy_type`,`payment`,`created_time`) VALUES ('14','1','90','4523158893591931','wxa69e89cc7261ae4f','1496908062','JSAPI','0.01','0.01','4200000070201804084497643891','1523158921','1','4','2','1523168083') [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 54 AND `pay_status` = 2 LIMIT 1   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar_order` [ RunTime:0.0420s ]
+SQL: SELECT `order_id` FROM `api_bar_order` WHERE `bar_id` = 53 LIMIT 1   [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_order` WHERE `id` = 49 LIMIT 1   [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0420s ]
+SQL: UPDATE `api_bar` SET `bar_status`='7',`updated_time`='1523168083' WHERE `id` = 54 [ RunTime:0.0410s ]
+SQL: INSERT INTO `api_order` (`order_no`,`merchant_id`,`member_id`,`contacts_realname`,`contacts_tel`,`contacts_sex`,`total_price`,`pay_price`,`purchase_price`,`settlement_status`,`order_type`,`payment`,`description`,`arrives_time`,`created_time`,`updated_time`,`take_time`,`top_order_id`,`is_evaluate`,`is_bar`,`status`,`is_xu`,`employee_id`,`employee_realname`,`employee_avatar`,`employee_tel`) VALUES ('3523158893586895','1','14','凌风','18780087200','1','0.01','0.01','0.01','0','0','0','家里可口可乐了看看了','1523116800','1523158893','1523168083','1523116800','49','0','1','7','1','23','袁康','/employee_20180129_aps1517210288puqa098.jpg','15184454658') [ RunTime:0.0410s ]
+SQL: INSERT INTO `api_bar_order` (`order_id`,`bar_id`) VALUES ('63','54') [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_day` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_merchant_balance_day` WHERE `merchant_id` = 1 AND `date` = 1523116800 LIMIT 1   [ RunTime:0.0410s ]
+SQL: UPDATE `api_merchant_balance_day` SET `order_total`='14',`purchase_money`='4395.32',`created_time`='1523168083' WHERE `id` = 3 [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_month` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_merchant_balance_month` WHERE `merchant_id` = 1 AND `month` = 1522512000 LIMIT 1   [ RunTime:0.0410s ]
+SQL: UPDATE `api_merchant_balance_month` SET `order_total`='37',`purchase_money`='9110.1',`created_time`='1523168083' WHERE `id` = 1 [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_year` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_merchant_balance_year` WHERE `merchant_id` = 1 AND `year` = 1514736000 LIMIT 1   [ RunTime:0.0410s ]
+SQL: UPDATE `api_merchant_balance_year` SET `order_total`='37',`purchase_money`='9110.1',`created_time`='1523168084' WHERE `id` = 1 [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_total` [ RunTime:0.0490s ]
+SQL: SELECT * FROM `api_merchant_balance_total` WHERE `merchant_id` = 1 LIMIT 1   [ RunTime:0.0420s ]
+SQL: UPDATE `api_merchant_balance_total` SET `order_total`='37',`purchase_money`='9110.1',`last_time`='1523168084' WHERE `id` = 1 [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_order_everyday` [ RunTime:0.0420s ]
+SQL: UPDATE `api_order_everyday` SET `amount`=amount+1 WHERE `merchant_id` = 1 AND `time` = 1523116800 [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_order_total` [ RunTime:0.0430s ]
+SQL: UPDATE `api_order_total` SET `order_total`=order_total+1 WHERE `merchant_id` = 1 [ RunTime:0.0410s ]
+SQL: SELECT `member_id`,`pay_price` FROM `api_bar_member` WHERE `bar_id` = 14 AND `pay_status` = 2  [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_member_capital` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_member_capital` WHERE `member_id` = 6 LIMIT 1   [ RunTime:0.0420s ]
+SQL: UPDATE `api_member_capital` SET `consume_money`=consume_money+0.04 WHERE `member_id` = 6 [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_member` WHERE `id` = 6 LIMIT 1   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_member_kcoin_record` [ RunTime:0.0420s ]
+SQL: INSERT INTO `api_member_kcoin_record` (`member_id`,`record_name`,`number`,`type`,`before_number`,`after_number`,`created_time`) VALUES ('6','购买了拼吧续酒','0','1','1240','1240','1523168084') [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_member_privilege` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_member_privilege` WHERE `level` = 2 LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT `level`,`quota` FROM `api_member_privilege`  [ RunTime:0.0420s ]
+SQL: UPDATE `api_member` SET `coin`='1258',`level`='2' WHERE `id` = 6 [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_message_employee` [ RunTime:0.0430s ]
+SQL: INSERT INTO `api_message_employee` (`employee_id`,`content`,`order_no`,`order_id`,`created_time`,`type`,`merchant_id`,`msg_type`) VALUES ('23','拼吧支付新订单|客人：凌风，拼够了续酒。','3523158893586895','63','1523168084','3','1','1') [ RunTime:0.0410s ]
+
+[ 2018-04-08T14:15:36+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0460s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0460s ]
+
+[ 2018-04-08T14:15:38+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0420s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0420s ]
+
+[ 2018-04-08T14:15:39+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0380s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0370s ]
+
+[ 2018-04-08T14:15:56+08:00 ] 127.0.0.1 /csj/trunk/php/project/member/index.php/pay/wxXcxNotify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0400s ]
+SQL: SELECT api_bar.*,api_bar_member.pay_status,api_bar_member.member_id as current_member_id,api_bar_member.pay_price as order_price FROM `api_bar_member` join api_bar ON api_bar.id=api_bar_member.bar_id  WHERE api_bar_member.id = '90' LIMIT 1   [ RunTime:0.0390s ]
+

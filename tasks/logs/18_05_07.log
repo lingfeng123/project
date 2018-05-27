@@ -1,0 +1,18 @@
+[2018-05-07 12:36:26] /data/www/kpzapp/tasks/delayed/delayedServer.php delayedServer::messageHandler
+INFO: {"version":"v1.1","order_id":"44","order_no":"1525667486816400","buy_type":1,"exc_type":1}
+[2018-05-07 13:55:20] /data/www/kpzapp/tasks/delayed/delayedServer.php delayedServer::messageHandler
+INFO: {"version":"v1.1","order_id":"158","order_no":"4525672220605547","buy_type":3,"exc_type":4}
+[2018-05-07 15:34:08] /data/www/kpzapp/tasks/delayed/delayedServer.php delayedServer::messageHandler
+INFO: {"version":"v1.1","order_id":"45","order_no":"1525678148825994","buy_type":1,"exc_type":1}
+[2018-05-07 16:50:57] /data/www/kpzapp/tasks/delayed/delayedServer.php delayedServer::messageHandler
+INFO: {"version":"v1.1","order_id":"46","order_no":"1525682757733802","buy_type":1,"exc_type":1}
+[2018-05-07 16:54:03] /data/www/kpzapp/tasks/delayed/delayedServer.php delayedServer::messageHandler
+INFO: {"version":"v1.1","order_id":"47","order_no":"1525682943432697","buy_type":1,"exc_type":1}
+[2018-05-07 17:01:56] /data/www/kpzapp/tasks/delayed/delayedServer.php delayedServer::messageHandler
+INFO: {"version":"v1.1","order_id":"48","order_no":"1525683416619672","buy_type":1,"exc_type":1}
+[2018-05-07 20:00:00] /data/www/kpzapp/tasks/delayed/delayedServer.php delayedServer::messageHandler
+INFO: {"version":"v1.1","order_id":"49","order_no":"3525672220603816","buy_type":3,"exc_type":1}
+[2018-05-07 20:00:00] /data/www/kpzapp/tasks/delayed/OrderHandlev1.class.php OrderHandlev1::pinBarTimeout
+MEMBER: [{"id":"158","bar_id":"49","pay_no":"4525672220605547","member_id":"249","pay_price":"0.00","pay_status":"1","pay_type":"0","created_time":"1525672220","updated_time":"1525672220","arrives_time":"0","realname":"\u963f\u514b","sex":"2","tel":"17381909915","avatar":"https:\/\/wx.qlogo.cn\/mmopen\/vi_32\/UGlZYKCQ8YKUevib9QM4GljdhrLkFL46LemA49DBkXpKcUtnDTgu4YlmLXibmA6kfZzL0xSJnQyCgwpiaHfyLK1MA\/132","age":"48","is_evaluate":"0"}]
+[2018-05-07 20:22:19] /data/www/kpzapp/tasks/delayed/delayedServer.php delayedServer::messageHandler
+INFO: {"version":"v1.1","order_id":46,"order_no":"1525682757733802","buy_type":1,"exc_type":2}

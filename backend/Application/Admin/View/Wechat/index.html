@@ -1,0 +1,365 @@
+<extend name="Public/common"/>
+<block name="main">
+    <h3>微信菜单管理</h3>
+    <!--主菜单-->
+    <div class="layui-field-box">
+        <span class="layui-btn layui-btn-normal api-add" id="create_data"> <i class="layui-icon"></i> 生成微信菜单</span>
+        <table class="layui-table">
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>菜单名称</th>
+                <th>菜单类型</th>
+                <th>跳转地址</th>
+                <th>APPID</th>
+                <th>页面路径</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="main-button">
+            </tbody>
+        </table>
+
+    </div>
+
+    <!--子菜单-->
+    <div class="layui-field-box">
+        <table class="layui-table">
+            <tbody id="sub-button">
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="addoredit">
+        <h3 id="menu-title">新增菜单</h3>
+        <form class="layui-form layui-form-pane">
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">菜单标题</label>
+                    <div class="layui-input-inline"><input id="main_name" type="text" name="name" lay-verify="required" autocomplete="off" class="layui-input"></div>
+                </div>
+                <div class="layui-inline" style="color: #888">菜单标题，不超过16个字节，子菜单不超过60个字节</div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">菜单类型</label>
+                    <div class="layui-input-inline"><input id="main_type" type="text" name="type" lay-verify="required" autocomplete="off" class="layui-input"></div>
+                </div>
+                <div class="layui-inline" style="color: #888">菜单的响应动作类型，view表示网页类型，click表示点击类型，miniprogram表示小程序类型</div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">网页链接</label>
+                    <div class="layui-input-inline"><input id="main_url" type="text" name="url" lay-verify="required" autocomplete="off" class="layui-input"></div>
+                </div>
+                <div class="layui-inline" style="color: #888">用户点击菜单可打开链接，不超过1024字节。 type为miniprogram时，不支持小程序的老版本客户端将打开本url。</div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">APPID</label>
+                    <div class="layui-input-inline"><input id="main_appid" type="text" name="appid" lay-verify="required" autocomplete="off" class="layui-input"></div>
+                </div>
+                <div class="layui-inline" style="color: #888">小程序的appid（仅认证公众号可配置）</div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">页面路径</label>
+                    <div class="layui-input-inline"><input id="main_pagepath" type="text" name="pagepath" lay-verify="required" autocomplete="off" class="layui-input"></div>
+                </div>
+                <div class="layui-inline" style="color: #888">小程序的页面路径</div>
+            </div>
+
+            <div>
+                <div class="layui-input-block">
+                    <button class="layui-btn" type="button" id="add_main_menu">新增菜单</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</block>
+<block name="myScript">
+    <script type="text/javascript">
+        layui.use(['form', 'layedit', 'laydate'], function () {
+            var form = layui.form
+                , layer = layui.layer
+        });
+
+    </script>
+    <script>
+        $(function () {
+            var Data = {
+                /*menu: {
+                    button: [
+                        {
+                            name: "\u6211\u8981\u8ba2\u5ea7",
+                            type: "miniprogram",
+                            url: "http:\/\/mp.weixin.qq.com",
+                            appid: "wxe7eb76f1aa81417a",
+                            pagepath: "pages\/index\/index",
+                            sub_button: [],
+                        },
+                        {
+                            name: "\u4f1a\u5458\u670d\u52a1",
+                            type: "miniprogram",
+                            url: "http:\/\/mp.weixin.qq.com",
+                            appid: "wxe7eb76f1aa81417a",
+                            pagepath: "pages\/index\/index",
+                            sub_button: [{
+                                type: "miniprogram",
+                                name: "\u6211\u7684\u8ba2\u5355",
+                                url: "http:\/\/www.baidu.com",
+                                appid: "wxe7eb76f1aa81417a",
+                                pagepath: "pages\/order\/order"
+                            },
+                                {
+                                    type: "miniprogram",
+                                    name: "\u4e2a\u4eba\u4e2d\u5fc3",
+                                    url: "http:\/\/www.baidu.com",
+                                    appid: "wxe7eb76f1aa81417a",
+                                    pagepath: "pages\/mine\/mine"
+                                }]
+                        }
+                    ]
+                },*/
+                type: 1,  //弹框的类型，1添加主菜单，2添加子菜单，3修改主菜单，4修改子菜单
+                main_index: '',  //当前选中的主菜单序号
+                sub_index: '',  //当前选中的子菜单序号
+            };
+
+            //加载菜单列表
+            $.get('{:U("Wechat/getWechatMenu")}',function (data) {
+                console.log(data.data);
+                Data.menu = data.data.menu;
+
+                console.log(Data);
+                //初始化
+                update();
+            });
+
+            //更换为添加主菜单的弹框
+            $('.add_main').on('click', function () {
+                Data.type = 1
+            });
+
+
+            //添加提交主菜单
+            $('#add_main_menu').on("click", function () {
+                console.log(Data.main_index);
+                console.log(Data.type);
+                switch (Data.type) {
+                    case 1:
+                        var obj = get_data();
+                        Data.menu.button.push(obj);
+                        update();
+                        empty_main();
+                        break;
+                    case 2:
+                        var obj = get_data();
+                        Data.menu.button[Data.main_index].sub_button.push(obj);
+                        setData_sub();
+                        empty_main();
+                        break;
+                    case 3:
+                        var obj = get_data()
+                        Data.menu.button.splice(Data.main_index, 1, obj)
+                        update()
+                        empty_main()
+                        break;
+                    case 4:
+                        var obj = get_data()
+                        Data.menu.button[Data.main_index].sub_button.splice(Data.sub_index, 1, obj)
+                        setData_sub()
+                        empty_main()
+                        break;
+                }
+
+
+            })
+
+//      获取弹框的数据
+            function get_data() {
+                var obj = {}
+                obj.name = $('#main_name').val()
+                obj.type = $('#main_type').val()
+                obj.url = $('#main_url').val()
+                obj.appid = $('#main_appid').val()
+                obj.pagepath = $('#main_pagepath').val()
+                obj.sub_button = []
+                return obj
+            }
+
+//          更新主菜单
+            function update() {
+
+                //          先清空主菜单
+                $('#main-button').html("");
+                console.log(Data);
+                Data.menu.button.forEach(function (item, index) {
+                    if (item.name == undefined){
+                        item.name = '';
+                    }
+                    if (item.type == undefined){
+                        item.type = '';
+                    }
+                    if (item.url == undefined){
+                        item.url = '';
+                    }
+                    if (item.appid == undefined){
+                        item.appid = '';
+                    }
+                    if (item.pagepath == undefined){
+                        item.pagepath = '';
+                    }
+                    $('#main-button').append(
+                        `<tr>
+                <td>${index + 1}</td>
+                <td>${item.name}</td>
+                <td>${item.type}</td>
+                <td>${item.url}</td>
+                <td>${item.appid}</td>
+                <td>${item.pagepath}</td>
+                <td class="menu_control">
+                    <a href="javascript:void(0)" class="layui-btn layui-btn-small layui-btn-primary look">查看子菜单</a>
+                    <a href="javascript:void(0)" class="layui-btn layui-btn-small layui-btn-primary add_sub">添加子菜单</a>
+                    <a href="javascript:void(0)" class="layui-btn layui-btn-small edit layui-btn-normal update_main">修改</a>
+                    <a href="javascript:void(0)" class="layui-btn layui-btn-small layui-btn-danger del_main">删除</a>
+                </td>
+            </tr>`
+                    )
+                });
+
+//          修改主菜单
+                $('.update_main').on('click', function () {
+                    var index = $(this).parent().parent().index()
+                    Data.main_index = index
+                    var obj = Data.menu.button[index]
+                    $('#main_name').val(obj.name)
+                    $('#main_type').val(obj.type)
+                    $('#main_url').val(obj.url)
+                    $('#main_appid').val(obj.appid)
+                    $('#main_pagepath').val(obj.pagepath)
+                    Data.type = 3
+//
+                })
+
+                //          删除主菜单
+                $('.del_main').on('click', function () {
+                    var index = $(this).parent().parent().index()
+                    Data.main_index = index
+                    if (confirm("确定删除吗？")) {
+                        Data.menu.button.splice(index, 1)
+                        update()
+                        setData_sub()
+                    } else {
+
+                    }
+
+                })
+
+//          弹出添加子菜单的框
+                $('.add_sub').on('click', function () {
+                    var index = $(this).parent().parent().index();
+                    var menuName = $(this).parent().parent().find('td').eq(1).text();
+                    console.log(menuName);
+                    Data.main_index = index;
+                    console.log(Data.main_index);
+                    Data.type = 2;
+                    $('#menu-title').text('添加 ' + menuName + ' 子菜单');
+                });
+
+//          查看子菜单
+                $('.look').on('click', function () {
+                    var index = $(this).parent().parent().index()
+                    Data.main_index = index;
+                    setData_sub()
+
+                })
+            }
+
+            //          更新子菜单
+            function setData_sub() {
+                //          先清空子菜单
+                $('#sub-button').html("")
+                Data.menu.button[Data.main_index].sub_button.forEach(function (item, index) {
+                    $('#sub-button').append(
+                        `
+                     <tr>
+                <td>${index + 1}</td>
+                <td>${item.name}</td>
+                <td>${item.type}</td>
+                <td>${item.url}</td>
+                <td>${item.appid}</td>
+                <td>${item.pagepath}</td>
+                <td class="menu_control">
+                    <a href="javascript:void(0)" class="layui-btn layui-btn-small edit layui-btn-normal update_sub">修改</a>
+                    <a href="javascript:void(0)" class="layui-btn layui-btn-small layui-btn-danger del_sub">删除</a>
+                </td>
+            </tr>
+                  `
+                    )
+                });
+
+
+                //          修改子菜单
+                $('.update_sub').on('click', function () {
+                    var index = $(this).parent().parent().index();
+
+                    Data.sub_index = index;
+                    var obj = Data.menu.button[Data.main_index].sub_button[index];
+                    $('#main_name').val(obj.name);
+                    $('#main_type').val(obj.type);
+                    $('#main_url').val(obj.url);
+                    $('#main_appid').val(obj.appid);
+                    $('#main_pagepath').val(obj.pagepath);
+                    Data.type = 4;
+//
+//                    var menuName = $(this).parent().parent().find('td').eq(1).text();
+                    //$('#menu-title').html('修改 '+$('#main_name').val(obj.name));
+                    console.log($('#menu-title'));
+//                    console.log(menuName);
+                })
+
+                //          删除子菜单
+                $('.del_sub').on('click', function () {
+                    var index = $(this).parent().parent().index()
+                    Data.sub_index = index
+                    if (confirm("确定删除吗？")) {
+                        Data.menu.button[Data.main_index].sub_button.splice(index, 1)
+                        setData_sub()
+                    } else {
+
+                    }
+
+                })
+
+            }
+
+
+//      清空主弹框
+            function empty_main() {
+                $('#main_name').val('')
+                $('#main_type').val('')
+                $('#main_url').val('')
+                $('#main_appid').val('')
+                $('#main_pagepath').val('')
+            }
+
+            $('#create_data').on('click', function () {
+                $.post("{:U('Wechat/add')}", {menu: Data.menu}, function (data) {
+                        if (data.code == 200) {
+                            alert('生成菜单成功')
+                        } else {
+                            alert(data.msg);
+                        }
+                    }, "json");
+            })
+
+        });
+    </script>
+</block>

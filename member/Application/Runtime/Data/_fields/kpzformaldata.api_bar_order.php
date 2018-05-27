@@ -1,0 +1,1 @@
+a:3:{i:0;s:6:"bar_id";i:1;s:8:"order_id";s:5:"_type";a:2:{s:6:"bar_id";s:16:"int(11) unsigned";s:8:"order_id";s:16:"int(11) unsigned";}}

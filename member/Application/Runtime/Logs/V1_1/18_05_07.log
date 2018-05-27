@@ -1,0 +1,227 @@
+[ 2018-05-07T10:52:35+08:00 ] 127.0.0.1 /v1.1/bar/wineBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-05-07T10:53:44+08:00 ] 127.0.0.1 /v1.1/bar/wineBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT api_bar_member.bar_id,api_bar.total_price,api_bar.pay_price,api_bar.average_cost,api_bar.created_time,api_bar.description,api_bar.bar_status,api_bar_member.pay_type,api_bar_member.pay_status,api_bar_member.id as order_id FROM `api_bar` left join api_bar_member ON api_bar_member.bar_id = api_bar.id  WHERE `top_bar_id` = '10' AND `is_xu` = 1 AND api_bar_member.member_id = '18' ORDER BY bar_id desc LIMIT 0,20   [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar` left join api_bar_member ON api_bar_member.bar_id = api_bar.id  WHERE `top_bar_id` = '10' AND `is_xu` = 1 AND api_bar_member.member_id = '18' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT `goods_pack_id`,`title`,`amount`,`price`,`image`,`pack_description`,`market_price`,`goods_type` FROM `api_bar_pack` WHERE `bar_id` = 14  [ RunTime:0.0400s ]
+SQL: SELECT `member_id`,`pay_status`,`avatar` FROM `api_bar_member` WHERE `bar_id` = 14  [ RunTime:0.0400s ]
+SQL: SELECT `goods_pack_id`,`title`,`amount`,`price`,`image`,`pack_description`,`market_price`,`goods_type` FROM `api_bar_pack` WHERE `bar_id` = 13  [ RunTime:0.0410s ]
+SQL: SELECT `member_id`,`pay_status`,`avatar` FROM `api_bar_member` WHERE `bar_id` = 13  [ RunTime:0.0400s ]
+SQL: SELECT `goods_pack_id`,`title`,`amount`,`price`,`image`,`pack_description`,`market_price`,`goods_type` FROM `api_bar_pack` WHERE `bar_id` = 12  [ RunTime:0.0400s ]
+SQL: SELECT `member_id`,`pay_status`,`avatar` FROM `api_bar_member` WHERE `bar_id` = 12  [ RunTime:0.0390s ]
+SQL: SELECT `goods_pack_id`,`title`,`amount`,`price`,`image`,`pack_description`,`market_price`,`goods_type` FROM `api_bar_pack` WHERE `bar_id` = 11  [ RunTime:0.0400s ]
+SQL: SELECT `member_id`,`pay_status`,`avatar` FROM `api_bar_member` WHERE `bar_id` = 11  [ RunTime:0.0400s ]
+
+[ 2018-05-07T11:05:41+08:00 ] 127.0.0.1 /v1.1/bar/wineBarDetail
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `api_bar_member` WHERE `bar_id` = 17 AND `member_id` = 18 LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT api_bar.id as bar_id,api_bar.total_price,api_bar.pay_price,api_bar.average_cost,api_bar.created_time,api_bar.description,api_bar.bar_status,api_bar_member.pay_type,api_bar_member.pay_status,api_bar_member.id as order_id FROM `api_bar` left join api_bar_member ON api_bar_member.bar_id = api_bar.id  WHERE api_bar.id = '17' AND api_bar_member.member_id = '18' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT `goods_pack_id`,`title`,`amount`,`price`,`image`,`pack_description`,`market_price`,`goods_type` FROM `api_bar_pack` WHERE `bar_id` = 17  [ RunTime:0.0410s ]
+SQL: SELECT `member_id`,`pay_status`,`avatar` FROM `api_bar_member` WHERE `bar_id` = 17  [ RunTime:0.0400s ]
+
+[ 2018-05-07T11:28:48+08:00 ] 127.0.0.1 /v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '} where A.top_bar_id = api_bar.id) winecount FROM `api_bar` left join api_mercha' at line 1
+ [ SQL语句 ] : SELECT api_bar.*,api_member.nickname,api_member.is_auth,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.title,api_merchant.end_time,api_comment_barstar.average_star,api_bar_member.id as order_id,api_bar_member.pay_status,api_bar_member.is_evaluate,(select count(id) from api_bar as A inner join api_bar_member as B ON B.bar_id = A.id AND B.member_id ={$member_id} where A.top_bar_id = api_bar.id) winecount FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id=api_bar.id AND api_bar_member.pay_status in (1,2) AND api_bar_member.member_id=18 left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.member_id = '18' AND api_bar.is_xu = 0 ORDER BY id desc LIMIT 0,20  
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '} where A.top_bar_id = api_bar.id) winecount FROM `api_bar` left join api_mercha' at line 1
+ [ SQL语句 ] : SELECT api_bar.*,api_member.nickname,api_member.is_auth,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.title,api_merchant.end_time,api_comment_barstar.average_star,api_bar_member.id as order_id,api_bar_member.pay_status,api_bar_member.is_evaluate,(select count(id) from api_bar as A inner join api_bar_member as B ON B.bar_id = A.id AND B.member_id ={$member_id} where A.top_bar_id = api_bar.id) winecount FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id=api_bar.id AND api_bar_member.pay_status in (1,2) AND api_bar_member.member_id=18 left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.member_id = '18' AND api_bar.is_xu = 0 ORDER BY id desc LIMIT 0,20  
+
+[ 2018-05-07T11:29:57+08:00 ] 127.0.0.1 /v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1052:Column 'id' in field list is ambiguous
+ [ SQL语句 ] : SELECT api_bar.*,api_member.nickname,api_member.is_auth,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.title,api_merchant.end_time,api_comment_barstar.average_star,api_bar_member.id as order_id,api_bar_member.pay_status,api_bar_member.is_evaluate,(select count(id) from api_bar as A inner join api_bar_member as B ON B.bar_id = A.id AND B.member_id =18 where A.top_bar_id = api_bar.id) winecount FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id=api_bar.id AND api_bar_member.pay_status in (1,2) AND api_bar_member.member_id=18 left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.member_id = '18' AND api_bar.is_xu = 0 ORDER BY id desc LIMIT 0,20  
+ERR: 1052:Column 'id' in field list is ambiguous
+ [ SQL语句 ] : SELECT api_bar.*,api_member.nickname,api_member.is_auth,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.title,api_merchant.end_time,api_comment_barstar.average_star,api_bar_member.id as order_id,api_bar_member.pay_status,api_bar_member.is_evaluate,(select count(id) from api_bar as A inner join api_bar_member as B ON B.bar_id = A.id AND B.member_id =18 where A.top_bar_id = api_bar.id) winecount FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id=api_bar.id AND api_bar_member.pay_status in (1,2) AND api_bar_member.member_id=18 left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.member_id = '18' AND api_bar.is_xu = 0 ORDER BY id desc LIMIT 0,20  
+
+[ 2018-05-07T11:31:05+08:00 ] 127.0.0.1 /v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 1052:Column 'id' in field list is ambiguous
+ [ SQL语句 ] : SELECT api_bar.*,api_member.nickname,api_member.is_auth,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.title,api_merchant.end_time,api_comment_barstar.average_star,api_bar_member.id as order_id,api_bar_member.pay_status,api_bar_member.is_evaluate,(select count(id) from api_bar as A inner join api_bar_member as B ON B.bar_id = api_bar.id AND B.member_id =18 where A.top_bar_id = api_bar.id) winecount FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id=api_bar.id AND api_bar_member.pay_status in (1,2) AND api_bar_member.member_id=18 left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.member_id = '18' AND api_bar.is_xu = 0 ORDER BY id desc LIMIT 0,20  
+ERR: 1052:Column 'id' in field list is ambiguous
+ [ SQL语句 ] : SELECT api_bar.*,api_member.nickname,api_member.is_auth,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.title,api_merchant.end_time,api_comment_barstar.average_star,api_bar_member.id as order_id,api_bar_member.pay_status,api_bar_member.is_evaluate,(select count(id) from api_bar as A inner join api_bar_member as B ON B.bar_id = api_bar.id AND B.member_id =18 where A.top_bar_id = api_bar.id) winecount FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id=api_bar.id AND api_bar_member.pay_status in (1,2) AND api_bar_member.member_id=18 left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.member_id = '18' AND api_bar.is_xu = 0 ORDER BY id desc LIMIT 0,20  
+
+[ 2018-05-07T11:31:56+08:00 ] 127.0.0.1 /v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT api_bar.*,api_member.nickname,api_member.is_auth,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.title,api_merchant.end_time,api_comment_barstar.average_star,api_bar_member.id as order_id,api_bar_member.pay_status,api_bar_member.is_evaluate,(select count(id) from api_bar as A where A.top_bar_id = api_bar.id) winecount FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id=api_bar.id AND api_bar_member.pay_status in (1,2) AND api_bar_member.member_id=18 left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.member_id = '18' AND api_bar.is_xu = 0 ORDER BY id desc LIMIT 0,20   [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.member_id = '18' AND api_bar.is_xu = 0 LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-05-07T11:32:45+08:00 ] 127.0.0.1 /v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT api_bar.*,api_member.nickname,api_member.is_auth,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.title,api_merchant.end_time,api_comment_barstar.average_star,api_bar_member.id as order_id,api_bar_member.pay_status,api_bar_member.is_evaluate,(select count(A.id) from api_bar as A inner join api_bar_member as B ON B.bar_id = A.id AND B.member_id =18 where A.top_bar_id = api_bar.id) winecount FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id=api_bar.id AND api_bar_member.pay_status in (1,2) AND api_bar_member.member_id=18 left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.member_id = '18' AND api_bar.is_xu = 0 ORDER BY id desc LIMIT 0,20   [ RunTime:0.0360s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.member_id = '18' AND api_bar.is_xu = 0 LIMIT 1   [ RunTime:0.0340s ]
+
+[ 2018-05-07T11:33:15+08:00 ] 127.0.0.1 /v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT api_bar.*,api_member.nickname,api_member.is_auth,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.title,api_merchant.end_time,api_comment_barstar.average_star,api_bar_member.id as order_id,api_bar_member.pay_status,api_bar_member.is_evaluate,(select count(A.id) from api_bar as A inner join api_bar_member as B ON B.bar_id = A.id AND B.member_id =15 where A.top_bar_id = api_bar.id) winecount FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id=api_bar.id AND api_bar_member.pay_status in (1,2) AND api_bar_member.member_id=15 left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.member_id = '15' AND api_bar.is_xu = 0 ORDER BY id desc LIMIT 0,20   [ RunTime:0.0460s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.member_id = '15' AND api_bar.is_xu = 0 LIMIT 1   [ RunTime:0.0440s ]
+
+[ 2018-05-07T11:33:28+08:00 ] 127.0.0.1 /v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 1052:Column 'id' in field list is ambiguous
+ [ SQL语句 ] : SELECT api_bar.*,api_member.nickname,api_member.is_auth,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.end_time,api_merchant.title,api_comment_barstar.average_star,api_bar_member.id as order_id,api_bar_member.is_evaluate,(select count(id) from api_comment_bar where bar_id = api_bar.id ) as comment_count,api_bar_member.pay_status,(select count(id) from api_bar as A inner join api_bar_member as B ON B.bar_id = A.id AND B.member_id =15 where A.top_bar_id = api_bar.id) winecount FROM `api_bar_member` inner join api_bar ON api_bar.id = api_bar_member.bar_id AND api_bar.member_id <>15 left join api_member ON api_member.id = api_bar.member_id left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar_member.member_id = '15' AND api_bar.is_xu = 0 AND api_bar_member.pay_status IN (1,2) ORDER BY id desc LIMIT 0,20  
+ERR: 1052:Column 'id' in field list is ambiguous
+ [ SQL语句 ] : SELECT api_bar.*,api_member.nickname,api_member.is_auth,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.end_time,api_merchant.title,api_comment_barstar.average_star,api_bar_member.id as order_id,api_bar_member.is_evaluate,(select count(id) from api_comment_bar where bar_id = api_bar.id ) as comment_count,api_bar_member.pay_status,(select count(id) from api_bar as A inner join api_bar_member as B ON B.bar_id = A.id AND B.member_id =15 where A.top_bar_id = api_bar.id) winecount FROM `api_bar_member` inner join api_bar ON api_bar.id = api_bar_member.bar_id AND api_bar.member_id <>15 left join api_member ON api_member.id = api_bar.member_id left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar_member.member_id = '15' AND api_bar.is_xu = 0 AND api_bar_member.pay_status IN (1,2) ORDER BY id desc LIMIT 0,20  
+
+[ 2018-05-07T11:33:51+08:00 ] 127.0.0.1 /v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT api_bar.*,api_member.nickname,api_member.is_auth,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.end_time,api_merchant.title,api_comment_barstar.average_star,api_bar_member.id as order_id,api_bar_member.is_evaluate,(select count(id) from api_comment_bar where bar_id = api_bar.id ) as comment_count,api_bar_member.pay_status,(select count(A.id) from api_bar as A inner join api_bar_member as B ON B.bar_id = A.id AND B.member_id =15 where A.top_bar_id = api_bar.id) winecount FROM `api_bar_member` inner join api_bar ON api_bar.id = api_bar_member.bar_id AND api_bar.member_id <>15 left join api_member ON api_member.id = api_bar.member_id left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar_member.member_id = '15' AND api_bar.is_xu = 0 AND api_bar_member.pay_status IN (1,2) ORDER BY id desc LIMIT 0,20   [ RunTime:0.0420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` inner join api_bar ON api_bar.id = api_bar_member.bar_id AND api_bar.member_id <>15 left join api_member ON api_member.id = api_bar.member_id left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar_member.member_id = '15' AND api_bar.is_xu = 0 AND api_bar_member.pay_status IN (1,2) LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-07T11:34:48+08:00 ] 127.0.0.1 /v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT api_bar.*,api_member.nickname,api_member.is_auth,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.end_time,api_merchant.title,api_comment_barstar.average_star,api_bar_member.id as order_id,api_bar_member.is_evaluate,(select count(id) from api_comment_bar where bar_id = api_bar.id ) as comment_count,api_bar_member.pay_status,(select count(A.id) from api_bar as A inner join api_bar_member as B ON B.bar_id = A.id AND B.member_id =6 where A.top_bar_id = api_bar.id) winecount FROM `api_bar_member` inner join api_bar ON api_bar.id = api_bar_member.bar_id AND api_bar.member_id <>6 left join api_member ON api_member.id = api_bar.member_id left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar_member.member_id = '6' AND api_bar.is_xu = 0 AND api_bar_member.pay_status IN (1,2) ORDER BY id desc LIMIT 0,20   [ RunTime:0.0420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` inner join api_bar ON api_bar.id = api_bar_member.bar_id AND api_bar.member_id <>6 left join api_member ON api_member.id = api_bar.member_id left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar_member.member_id = '6' AND api_bar.is_xu = 0 AND api_bar_member.pay_status IN (1,2) LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-07T16:20:55+08:00 ] 127.0.0.1 /v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT api_bar.*,api_member.nickname,api_member.is_auth,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.end_time,api_merchant.title,api_comment_barstar.average_star,api_bar_member.id as order_id,api_bar_member.is_evaluate,(select count(id) from api_comment_bar where bar_id = api_bar.id ) as comment_count,api_bar_member.pay_status,(select count(A.id) from api_bar as A inner join api_bar_member as B ON B.bar_id = A.id AND B.member_id =6 where A.top_bar_id = api_bar.id) winecount FROM `api_bar_member` inner join api_bar ON api_bar.id = api_bar_member.bar_id AND api_bar.member_id <>6 left join api_member ON api_member.id = api_bar.member_id left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar_member.member_id = '6' AND api_bar.is_xu = 0 AND api_bar_member.pay_status IN (1,2) ORDER BY id desc LIMIT 0,20   [ RunTime:0.0380s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` inner join api_bar ON api_bar.id = api_bar_member.bar_id AND api_bar.member_id <>6 left join api_member ON api_member.id = api_bar.member_id left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar_member.member_id = '6' AND api_bar.is_xu = 0 AND api_bar_member.pay_status IN (1,2) LIMIT 1   [ RunTime:0.0350s ]
+
+[ 2018-05-07T16:21:26+08:00 ] 127.0.0.1 /v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT api_bar.*,api_member.nickname,api_member.is_auth,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.title,api_merchant.end_time,api_comment_barstar.average_star,api_bar_member.id as order_id,api_bar_member.pay_status,api_bar_member.is_evaluate,(select count(A.id) from api_bar as A inner join api_bar_member as B ON B.bar_id = A.id AND B.member_id =6 where A.top_bar_id = api_bar.id) winecount FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id=api_bar.id AND api_bar_member.pay_status in (1,2) AND api_bar_member.member_id=6 left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.member_id = '6' AND api_bar.is_xu = 0 ORDER BY id desc LIMIT 0,20   [ RunTime:0.0430s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.member_id = '6' AND api_bar.is_xu = 0 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 31 AND `pay_status` <> 0 AND `sex` = 1 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 31 AND `pay_status` <> 0 AND `sex` = 2 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 30 AND `pay_status` <> 0 AND `sex` = 1 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 30 AND `pay_status` <> 0 AND `sex` = 2 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 29 AND `pay_status` <> 0 AND `sex` = 1 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 29 AND `pay_status` <> 0 AND `sex` = 2 LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 27 AND `pay_status` <> 0 AND `sex` = 1 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 27 AND `pay_status` <> 0 AND `sex` = 2 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-05-07T16:22:44+08:00 ] 127.0.0.1 /v1.1/bar/myBarList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT api_bar.*,api_member.nickname,api_member.is_auth,api_member.sex,api_member.avatar,api_merchant.begin_time,api_merchant.title,api_merchant.end_time,api_comment_barstar.average_star,api_bar_member.id as order_id,api_bar_member.pay_status,api_bar_member.is_evaluate,(select count(A.id) from api_bar as A inner join api_bar_member as B ON B.bar_id = A.id AND B.member_id =6 where A.top_bar_id = api_bar.id) winecount FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id=api_bar.id AND api_bar_member.pay_status in (1,2) AND api_bar_member.member_id=6 left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.member_id = '6' AND api_bar.is_xu = 0 ORDER BY id desc LIMIT 0,20   [ RunTime:0.0390s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_comment_barstar  ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.member_id = '6' AND api_bar.is_xu = 0 LIMIT 1   [ RunTime:0.0340s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 31 AND `pay_status` <> 0 AND `sex` = 1 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 31 AND `pay_status` <> 0 AND `sex` = 2 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 30 AND `pay_status` <> 0 AND `sex` = 1 LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 30 AND `pay_status` <> 0 AND `sex` = 2 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 29 AND `pay_status` <> 0 AND `sex` = 1 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 29 AND `pay_status` <> 0 AND `sex` = 2 LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 27 AND `pay_status` <> 0 AND `sex` = 1 LIMIT 1   [ RunTime:0.0340s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar_member` WHERE `bar_id` = 27 AND `pay_status` <> 0 AND `sex` = 2 LIMIT 1   [ RunTime:0.0360s ]
+
+[ 2018-05-07T16:32:00+08:00 ] 127.0.0.1 /v1.1/bar/barInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `api_bar` WHERE `id` = 31 LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT api_bar.*,api_merchant.title,api_merchant.address,api_merchant.begin_time,api_merchant.end_time,api_member.nickname,api_member.sex,api_member.is_auth,api_member.avatar,api_member.signature,api_comment_barstar.average_star,(api_bar.woman_number+api_bar.man_number) as total_number,api_bar_member.pay_status,api_bar_member.pay_type,api_bar_member.id as order_id,api_bar_member.pay_no as order_no,api_bar_member.created_time as pay_time,api_bar_member.is_evaluate FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id = api_bar.id AND api_bar_member.member_id = 25 left join api_comment_barstar ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.id = '31' LIMIT 1   [ RunTime:0.0430s ]
+
+[ 2018-05-07T16:34:13+08:00 ] 127.0.0.1 /v1.1/bar/barInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `api_bar` WHERE `id` = 31 LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT api_bar.*,api_merchant.title,api_merchant.address,api_merchant.begin_time,api_merchant.end_time,api_member.nickname,api_member.sex,api_member.is_auth,api_member.avatar,api_member.signature,api_comment_barstar.average_star,(api_bar.woman_number+api_bar.man_number) as total_number,api_bar_member.pay_status,api_bar_member.pay_type,api_bar_member.id as order_id,api_bar_member.pay_no as order_no,api_bar_member.created_time as pay_time,api_bar_member.is_evaluate FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id = api_bar.id AND api_bar_member.member_id = 25 left join api_comment_barstar ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.id = '31' LIMIT 1   [ RunTime:0.0380s ]
+
+[ 2018-05-07T16:36:56+08:00 ] 127.0.0.1 /v1.1/bar/barInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `api_bar` WHERE `id` = 20 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT api_bar.*,api_merchant.title,api_merchant.address,api_merchant.begin_time,api_merchant.end_time,api_member.nickname,api_member.sex,api_member.is_auth,api_member.avatar,api_member.signature,api_comment_barstar.average_star,(api_bar.woman_number+api_bar.man_number) as total_number,api_bar_member.pay_status,api_bar_member.pay_type,api_bar_member.id as order_id,api_bar_member.pay_no as order_no,api_bar_member.created_time as pay_time,api_bar_member.is_evaluate FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id = api_bar.id AND api_bar_member.member_id = 25 left join api_comment_barstar ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.id = '20' LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2018-05-07T16:37:30+08:00 ] 127.0.0.1 /v1.1/bar/barInfo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `api_bar` WHERE `id` = 43 LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT api_bar.*,api_merchant.title,api_merchant.address,api_merchant.begin_time,api_merchant.end_time,api_member.nickname,api_member.sex,api_member.is_auth,api_member.avatar,api_member.signature,api_comment_barstar.average_star,(api_bar.woman_number+api_bar.man_number) as total_number,api_bar_member.pay_status,api_bar_member.pay_type,api_bar_member.id as order_id,api_bar_member.pay_no as order_no,api_bar_member.created_time as pay_time,api_bar_member.is_evaluate FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id left join api_member ON api_member.id = api_bar.member_id left join api_bar_member ON api_bar_member.bar_id = api_bar.id AND api_bar_member.member_id = 25 left join api_comment_barstar ON api_comment_barstar.member_id = api_bar.member_id  WHERE api_bar.id = '43' LIMIT 1   [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_bar_order` [ RunTime:0.0380s ]
+SQL: SELECT `order_id` FROM `api_bar_order` WHERE `bar_id` = 43 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT `employee_id`,`employee_realname`,`employee_avatar`,`employee_tel` FROM `api_order` WHERE `id` = 47 LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_order_seat` [ RunTime:0.0400s ]
+SQL: SELECT `seat_number`,`goods_seat_id`,`max_people`,`floor_price`,`set_price`,`total_people` FROM `api_order_seat` WHERE `order_id` = 47 LIMIT 1   [ RunTime:0.0390s ]
+

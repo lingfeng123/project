@@ -1,0 +1,1755 @@
+[ 2018-04-18T09:44:56+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-18T09:44:58+08:00 ] 127.0.0.1 /Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `api_user` WHERE `username` = 'kpzadmin  ' AND `password` = '87543278f1315d89849abcc67735def3' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_user_data` WHERE `uid` = '1' LIMIT 1   [ RunTime:0.0370s ]
+SQL: UPDATE `api_user_data` SET `loginTimes`='579',`lastLoginIp`='2130706433',`lastLoginTime`='1524015898' WHERE `uid` = '1' [ RunTime:0.0460s ]
+
+[ 2018-04-18T09:45:01+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Index/index' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0390s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-18T09:45:01+08:00 ] 127.0.0.1 /Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Index/welcome' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0380s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-18T09:45:13+08:00 ] 127.0.0.1 /Admin/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/index' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0390s ]
+NOTIC: [8] Undefined index: status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 47 行.
+NOTIC: [8] Undefined index: settlement_status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 52 行.
+NOTIC: [8] Undefined index: order_type D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 57 行.
+NOTIC: [8] Undefined index: payment D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 62 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT SUM(pay_price) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT SUM(discount_money) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT api_order.id,api_merchant.title as merchant_title,api_member.nickname,api_order.order_no,api_order.contacts_realname,api_order.contacts_tel,api_order.contacts_sex,api_order.total_price,api_order.pay_price,api_order.purchase_price,api_order.discount_money,api_order.status,api_order.settlement_status,api_order.order_type,api_order.payment,api_order.description,from_unixtime(api_order.arrives_time,"%Y-%m-%d") as arrives_time,api_order.incr_time,api_order.created_time,from_unixtime(api_order.created_time) as created_time,api_order.employee_id,api_order.employee_realname,api_order.employee_avatar,api_order.employee_tel,api_order.take_time,api_order.relation_order_no,api_order.is_bar FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id LEFT JOIN api_coupon ON api_coupon.id = api_order.card_id  ORDER BY api_order.id desc LIMIT 0,50   [ RunTime:0.0420s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-18T09:45:27+08:00 ] 127.0.0.1 /Admin/Order/complete/id/31.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0470s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/complete' LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0440s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('订单完成操作','1','kpzadmin  ','1524015927','Order/complete','{\"id\":\"31\",\"PHPSESSID\":\"hllcdggoq8j67hmetkmsaia1i3\"}') [ RunTime:0.0500s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT api_order.member_id,api_order.id,api_order.order_no,api_order.employee_id,api_order.merchant_id,api_order.order_type,api_member.level,api_order.status,api_order.is_bar,api_order.is_xu,`wx_openid`,api_member.tel,`contacts_tel`,`contacts_sex`,`contacts_realname`,api_order.pay_price,api_order.created_time,api_order.relation_order_no,api_member_privilege.delayed,api_order.arrives_time,api_merchant.title as merchant_title FROM `api_order` INNER JOIN api_member ON api_member.id = api_order.member_id INNER JOIN api_member_privilege ON api_member.level = api_member_privilege.level INNER JOIN api_merchant ON api_merchant.id = api_order.merchant_id  WHERE api_order.id = '31' LIMIT 1   [ RunTime:0.0440s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-18T09:49:19+08:00 ] 127.0.0.1 /Admin/bar/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Bar/index' LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0370s ]
+NOTIC: [8] Undefined index: bar_status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\BarModel.class.php 第 40 行.
+NOTIC: [8] Undefined index: bar_type D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\BarModel.class.php 第 45 行.
+NOTIC: [8] Undefined variable: where D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\BarModel.class.php 第 52 行.
+SQL: SELECT api_bar.*,api_merchant.title as merchant_title FROM `api_bar` left join api_merchant ON api_merchant.id =api_bar.merchant_id  ORDER BY id desc LIMIT 0,50   [ RunTime:0.0380s ]
+NOTIC: [8] Undefined variable: where D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\BarModel.class.php 第 57 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar` LIMIT 1   [ RunTime:0.0360s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 78 行.
+NOTIC: [8] Undefined variable: money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 79 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-18T09:49:33+08:00 ] 127.0.0.1 /Admin/Bar/barDetail/bar_id/25.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Bar/barDetail' LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0410s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('拼吧订单详情','1','kpzadmin  ','1524016173','bar/barDetail','{\"bar_id\":\"25\",\"PHPSESSID\":\"hllcdggoq8j67hmetkmsaia1i3\"}') [ RunTime:0.0490s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0420s ]
+SQL: SELECT api_bar.*,api_merchant.title FROM `api_bar` left join api_merchant ON api_merchant.id = api_bar.merchant_id  WHERE api_bar.id = '25' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0410s ]
+SQL: SELECT api_member.nickname,api_member.sex,api_member.avatar,api_member.tel FROM `api_bar_member` left join api_member ON api_member.id = api_bar_member.member_id  WHERE `bar_id` = '25'  [ RunTime:0.0390s ]
+NOTIC: [8] Undefined index: employee D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Controller\BarController.class.php 第 91 行.
+NOTIC: [8] Undefined index: employee_op D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Controller\BarController.class.php 第 92 行.
+NOTIC: [8] Undefined index: goods_pack D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Controller\BarController.class.php 第 93 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-18T10:43:27+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Index/index' LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0420s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2018-04-18T10:43:28+08:00 ] 127.0.0.1 /Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Index/welcome' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-18T10:43:31+08:00 ] 127.0.0.1 /Admin/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/index' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0380s ]
+NOTIC: [8] Undefined index: status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 47 行.
+NOTIC: [8] Undefined index: settlement_status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 52 行.
+NOTIC: [8] Undefined index: order_type D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 57 行.
+NOTIC: [8] Undefined index: payment D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 62 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT SUM(pay_price) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT SUM(discount_money) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT api_order.id,api_merchant.title as merchant_title,api_member.nickname,api_order.order_no,api_order.contacts_realname,api_order.contacts_tel,api_order.contacts_sex,api_order.total_price,api_order.pay_price,api_order.purchase_price,api_order.discount_money,api_order.status,api_order.settlement_status,api_order.order_type,api_order.payment,api_order.description,from_unixtime(api_order.arrives_time,"%Y-%m-%d") as arrives_time,api_order.incr_time,api_order.created_time,from_unixtime(api_order.created_time) as created_time,api_order.employee_id,api_order.employee_realname,api_order.employee_avatar,api_order.employee_tel,api_order.take_time,api_order.relation_order_no,api_order.is_bar FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id LEFT JOIN api_coupon ON api_coupon.id = api_order.card_id  ORDER BY api_order.id desc LIMIT 0,50   [ RunTime:0.0420s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-18T10:44:17+08:00 ] 127.0.0.1 /Admin/Order/complete/id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/complete' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0370s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('订单完成操作','1','kpzadmin  ','1524019457','Order/complete','{\"id\":\"19\",\"PHPSESSID\":\"hllcdggoq8j67hmetkmsaia1i3\"}') [ RunTime:0.0550s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SELECT api_order.member_id,api_order.id,api_order.order_no,api_order.employee_id,api_order.merchant_id,api_order.order_type,api_member.level,api_order.status,api_order.is_bar,api_order.is_xu,`wx_openid`,api_member.tel,`contacts_tel`,`contacts_sex`,`contacts_realname`,api_order.pay_price,api_order.created_time,api_order.relation_order_no,api_member_privilege.delayed,api_order.arrives_time,api_merchant.title as merchant_title FROM `api_order` INNER JOIN api_member ON api_member.id = api_order.member_id INNER JOIN api_member_privilege ON api_member.level = api_member_privilege.level INNER JOIN api_merchant ON api_merchant.id = api_order.merchant_id  WHERE api_order.id = '19' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0370s ]
+SQL: SELECT `begin_time` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0340s ]
+SQL: UPDATE `api_order` SET `updated_time`='1524019457',`status`='4' WHERE ( `id` = 19 AND `status` = 7 ) [ RunTime:0.0350s ]
+
+[ 2018-04-18T10:44:33+08:00 ] 127.0.0.1 /Admin/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/index' LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0420s ]
+NOTIC: [8] Undefined index: status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 47 行.
+NOTIC: [8] Undefined index: settlement_status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 52 行.
+NOTIC: [8] Undefined index: order_type D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 57 行.
+NOTIC: [8] Undefined index: payment D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 62 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT SUM(pay_price) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT SUM(discount_money) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT api_order.id,api_merchant.title as merchant_title,api_member.nickname,api_order.order_no,api_order.contacts_realname,api_order.contacts_tel,api_order.contacts_sex,api_order.total_price,api_order.pay_price,api_order.purchase_price,api_order.discount_money,api_order.status,api_order.settlement_status,api_order.order_type,api_order.payment,api_order.description,from_unixtime(api_order.arrives_time,"%Y-%m-%d") as arrives_time,api_order.incr_time,api_order.created_time,from_unixtime(api_order.created_time) as created_time,api_order.employee_id,api_order.employee_realname,api_order.employee_avatar,api_order.employee_tel,api_order.take_time,api_order.relation_order_no,api_order.is_bar FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id LEFT JOIN api_coupon ON api_coupon.id = api_order.card_id  ORDER BY api_order.id desc LIMIT 0,50   [ RunTime:0.0460s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-18T10:44:57+08:00 ] 127.0.0.1 /Admin/Order/complete/id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/complete' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0360s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('订单完成操作','1','kpzadmin  ','1524019496','Order/complete','{\"id\":\"19\",\"PHPSESSID\":\"hllcdggoq8j67hmetkmsaia1i3\"}') [ RunTime:0.0480s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0370s ]
+SQL: SELECT api_order.member_id,api_order.id,api_order.order_no,api_order.employee_id,api_order.merchant_id,api_order.order_type,api_member.level,api_order.status,api_order.is_bar,api_order.is_xu,`wx_openid`,api_member.tel,`contacts_tel`,`contacts_sex`,`contacts_realname`,api_order.pay_price,api_order.created_time,api_order.relation_order_no,api_member_privilege.delayed,api_order.arrives_time,api_merchant.title as merchant_title FROM `api_order` INNER JOIN api_member ON api_member.id = api_order.member_id INNER JOIN api_member_privilege ON api_member.level = api_member_privilege.level INNER JOIN api_merchant ON api_merchant.id = api_order.merchant_id  WHERE api_order.id = '19' LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0380s ]
+SQL: SELECT `begin_time` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0330s ]
+SQL: UPDATE `api_order` SET `updated_time`='1524019496',`status`='4' WHERE ( `id` = 19 AND `status` = 7 ) [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_bar_order` [ RunTime:0.0340s ]
+SQL: SELECT `bar_id` FROM `api_bar_order` WHERE `order_id` = 19 LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0370s ]
+SQL: UPDATE `api_bar` SET `bar_status`='4',`updated_time`='1524019496' WHERE `id` = 2 [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_order_operate_record` [ RunTime:0.0360s ]
+SQL: INSERT INTO `api_order_operate_record` (`user_id`,`order_id`,`order_no`,`content`,`created_time`) VALUES ('1','19','3523948089684527','订单完成操作','1524019497') [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_message_employee` [ RunTime:0.0360s ]
+SQL: DELETE FROM `api_message_employee` WHERE `order_no` = '3523948089684527' [ RunTime:0.0350s ]
+
+[ 2018-04-18T10:45:06+08:00 ] 127.0.0.1 /Admin/bar/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Bar/index' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0390s ]
+NOTIC: [8] Undefined index: bar_status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\BarModel.class.php 第 40 行.
+NOTIC: [8] Undefined index: bar_type D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\BarModel.class.php 第 45 行.
+NOTIC: [8] Undefined variable: where D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\BarModel.class.php 第 52 行.
+SQL: SELECT api_bar.*,api_merchant.title as merchant_title FROM `api_bar` left join api_merchant ON api_merchant.id =api_bar.merchant_id  ORDER BY id desc LIMIT 0,50   [ RunTime:0.0420s ]
+NOTIC: [8] Undefined variable: where D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\BarModel.class.php 第 57 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `api_bar` LIMIT 1   [ RunTime:0.0380s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 78 行.
+NOTIC: [8] Undefined variable: money D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\dcd804752547b8c0ca2ebae9a8a408ea.php 第 79 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-18T10:45:09+08:00 ] 127.0.0.1 /Admin/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/index' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0440s ]
+NOTIC: [8] Undefined index: status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 47 行.
+NOTIC: [8] Undefined index: settlement_status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 52 行.
+NOTIC: [8] Undefined index: order_type D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 57 行.
+NOTIC: [8] Undefined index: payment D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 62 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT SUM(pay_price) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT SUM(discount_money) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT api_order.id,api_merchant.title as merchant_title,api_member.nickname,api_order.order_no,api_order.contacts_realname,api_order.contacts_tel,api_order.contacts_sex,api_order.total_price,api_order.pay_price,api_order.purchase_price,api_order.discount_money,api_order.status,api_order.settlement_status,api_order.order_type,api_order.payment,api_order.description,from_unixtime(api_order.arrives_time,"%Y-%m-%d") as arrives_time,api_order.incr_time,api_order.created_time,from_unixtime(api_order.created_time) as created_time,api_order.employee_id,api_order.employee_realname,api_order.employee_avatar,api_order.employee_tel,api_order.take_time,api_order.relation_order_no,api_order.is_bar FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id LEFT JOIN api_coupon ON api_coupon.id = api_order.card_id  ORDER BY api_order.id desc LIMIT 0,50   [ RunTime:0.0450s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-18T10:45:56+08:00 ] 127.0.0.1 /Admin/Order/complete/id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/complete' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0360s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('订单完成操作','1','kpzadmin  ','1524019555','Order/complete','{\"id\":\"19\",\"PHPSESSID\":\"hllcdggoq8j67hmetkmsaia1i3\"}') [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0380s ]
+SQL: SELECT api_order.member_id,api_order.id,api_order.order_no,api_order.employee_id,api_order.merchant_id,api_order.order_type,api_member.level,api_order.status,api_order.is_bar,api_order.is_xu,`wx_openid`,api_member.tel,`contacts_tel`,`contacts_sex`,`contacts_realname`,api_order.pay_price,api_order.created_time,api_order.relation_order_no,api_member_privilege.delayed,api_order.arrives_time,api_merchant.title as merchant_title FROM `api_order` INNER JOIN api_member ON api_member.id = api_order.member_id INNER JOIN api_member_privilege ON api_member.level = api_member_privilege.level INNER JOIN api_merchant ON api_merchant.id = api_order.merchant_id  WHERE api_order.id = '19' LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0370s ]
+SQL: SELECT `begin_time` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0360s ]
+SQL: UPDATE `api_order` SET `updated_time`='1524019556',`status`='4' WHERE ( `id` = 19 AND `status` = 7 ) [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_bar_order` [ RunTime:0.0360s ]
+SQL: SELECT `bar_id` FROM `api_bar_order` WHERE `order_id` = 19 LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0360s ]
+SQL: UPDATE `api_bar` SET `bar_status`='4',`updated_time`='1524019556' WHERE `id` = 2 [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `api_order_operate_record` [ RunTime:0.0360s ]
+SQL: INSERT INTO `api_order_operate_record` (`user_id`,`order_id`,`order_no`,`content`,`created_time`) VALUES ('1','19','3523948089684527','订单完成操作','1524019556') [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_message_employee` [ RunTime:0.0360s ]
+SQL: DELETE FROM `api_message_employee` WHERE `order_no` = '3523948089684527' [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_order_everyday` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_order_everyday` WHERE `merchant_id` = 1 AND `time` = 1523980800 LIMIT 1   [ RunTime:0.0350s ]
+SQL: INSERT INTO `api_order_everyday` (`merchant_id`,`amount`,`time`) VALUES ('1','1','1523980800') [ RunTime:0.0350s ]
+
+[ 2018-04-18T10:46:34+08:00 ] 127.0.0.1 /Admin/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/index' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0340s ]
+NOTIC: [8] Undefined index: status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 47 行.
+NOTIC: [8] Undefined index: settlement_status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 52 行.
+NOTIC: [8] Undefined index: order_type D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 57 行.
+NOTIC: [8] Undefined index: payment D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 62 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT SUM(pay_price) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0340s ]
+SQL: SELECT SUM(discount_money) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT api_order.id,api_merchant.title as merchant_title,api_member.nickname,api_order.order_no,api_order.contacts_realname,api_order.contacts_tel,api_order.contacts_sex,api_order.total_price,api_order.pay_price,api_order.purchase_price,api_order.discount_money,api_order.status,api_order.settlement_status,api_order.order_type,api_order.payment,api_order.description,from_unixtime(api_order.arrives_time,"%Y-%m-%d") as arrives_time,api_order.incr_time,api_order.created_time,from_unixtime(api_order.created_time) as created_time,api_order.employee_id,api_order.employee_realname,api_order.employee_avatar,api_order.employee_tel,api_order.take_time,api_order.relation_order_no,api_order.is_bar FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id LEFT JOIN api_coupon ON api_coupon.id = api_order.card_id  ORDER BY api_order.id desc LIMIT 0,50   [ RunTime:0.0380s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-18T10:46:41+08:00 ] 127.0.0.1 /Admin/Order/complete/id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/complete' LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0440s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('订单完成操作','1','kpzadmin  ','1524019600','Order/complete','{\"id\":\"19\",\"PHPSESSID\":\"hllcdggoq8j67hmetkmsaia1i3\"}') [ RunTime:0.0500s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT api_order.member_id,api_order.id,api_order.order_no,api_order.employee_id,api_order.merchant_id,api_order.order_type,api_member.level,api_order.status,api_order.is_bar,api_order.is_xu,`wx_openid`,api_member.tel,`contacts_tel`,`contacts_sex`,`contacts_realname`,api_order.pay_price,api_order.created_time,api_order.relation_order_no,api_member_privilege.delayed,api_order.arrives_time,api_merchant.title as merchant_title FROM `api_order` INNER JOIN api_member ON api_member.id = api_order.member_id INNER JOIN api_member_privilege ON api_member.level = api_member_privilege.level INNER JOIN api_merchant ON api_merchant.id = api_order.merchant_id  WHERE api_order.id = '19' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0450s ]
+SQL: SELECT `begin_time` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0430s ]
+SQL: UPDATE `api_order` SET `updated_time`='1524019600',`status`='4' WHERE ( `id` = 19 AND `status` = 7 ) [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_bar_order` [ RunTime:0.0430s ]
+SQL: SELECT `bar_id` FROM `api_bar_order` WHERE `order_id` = 19 LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0440s ]
+SQL: UPDATE `api_bar` SET `bar_status`='4',`updated_time`='1524019600' WHERE `id` = 2 [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_order_operate_record` [ RunTime:0.0440s ]
+SQL: INSERT INTO `api_order_operate_record` (`user_id`,`order_id`,`order_no`,`content`,`created_time`) VALUES ('1','19','3523948089684527','订单完成操作','1524019600') [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_message_employee` [ RunTime:0.0440s ]
+SQL: DELETE FROM `api_message_employee` WHERE `order_no` = '3523948089684527' [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_order_everyday` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_order_everyday` WHERE `merchant_id` = 1 AND `time` = 1523980800 LIMIT 1   [ RunTime:0.0430s ]
+SQL: INSERT INTO `api_order_everyday` (`merchant_id`,`amount`,`time`) VALUES ('1','1','1523980800') [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_order_total` [ RunTime:0.0430s ]
+SQL: UPDATE `api_order_total` SET `order_total`=order_total+1 WHERE `merchant_id` = 1 [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_day` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_merchant_balance_day` WHERE `merchant_id` = 1 AND `date` = 1523894400 LIMIT 1   [ RunTime:0.0720s ]
+SQL: UPDATE `api_merchant_balance_day` SET `order_total`='28',`purchase_money`='6590.88',`created_time`='1524019601' WHERE `id` = 4 [ RunTime:0.0620s ]
+
+[ 2018-04-18T10:47:08+08:00 ] 127.0.0.1 /Admin/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/index' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+NOTIC: [8] Undefined index: status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 47 行.
+NOTIC: [8] Undefined index: settlement_status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 52 行.
+NOTIC: [8] Undefined index: order_type D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 57 行.
+NOTIC: [8] Undefined index: payment D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 62 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT SUM(pay_price) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT SUM(discount_money) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT api_order.id,api_merchant.title as merchant_title,api_member.nickname,api_order.order_no,api_order.contacts_realname,api_order.contacts_tel,api_order.contacts_sex,api_order.total_price,api_order.pay_price,api_order.purchase_price,api_order.discount_money,api_order.status,api_order.settlement_status,api_order.order_type,api_order.payment,api_order.description,from_unixtime(api_order.arrives_time,"%Y-%m-%d") as arrives_time,api_order.incr_time,api_order.created_time,from_unixtime(api_order.created_time) as created_time,api_order.employee_id,api_order.employee_realname,api_order.employee_avatar,api_order.employee_tel,api_order.take_time,api_order.relation_order_no,api_order.is_bar FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id LEFT JOIN api_coupon ON api_coupon.id = api_order.card_id  ORDER BY api_order.id desc LIMIT 0,50   [ RunTime:0.0430s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-18T10:47:14+08:00 ] 127.0.0.1 /Admin/Order/complete/id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/complete' LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0440s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('订单完成操作','1','kpzadmin  ','1524019633','Order/complete','{\"id\":\"19\",\"PHPSESSID\":\"hllcdggoq8j67hmetkmsaia1i3\"}') [ RunTime:0.0510s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0430s ]
+SQL: SELECT api_order.member_id,api_order.id,api_order.order_no,api_order.employee_id,api_order.merchant_id,api_order.order_type,api_member.level,api_order.status,api_order.is_bar,api_order.is_xu,`wx_openid`,api_member.tel,`contacts_tel`,`contacts_sex`,`contacts_realname`,api_order.pay_price,api_order.created_time,api_order.relation_order_no,api_member_privilege.delayed,api_order.arrives_time,api_merchant.title as merchant_title FROM `api_order` INNER JOIN api_member ON api_member.id = api_order.member_id INNER JOIN api_member_privilege ON api_member.level = api_member_privilege.level INNER JOIN api_merchant ON api_merchant.id = api_order.merchant_id  WHERE api_order.id = '19' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0440s ]
+SQL: SELECT `begin_time` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0420s ]
+SQL: UPDATE `api_order` SET `updated_time`='1524019633',`status`='4' WHERE ( `id` = 19 AND `status` = 7 ) [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_bar_order` [ RunTime:0.0440s ]
+SQL: SELECT `bar_id` FROM `api_bar_order` WHERE `order_id` = 19 LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0430s ]
+SQL: UPDATE `api_bar` SET `bar_status`='4',`updated_time`='1524019633' WHERE `id` = 2 [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_order_operate_record` [ RunTime:0.0430s ]
+SQL: INSERT INTO `api_order_operate_record` (`user_id`,`order_id`,`order_no`,`content`,`created_time`) VALUES ('1','19','3523948089684527','订单完成操作','1524019633') [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_message_employee` [ RunTime:0.0540s ]
+SQL: DELETE FROM `api_message_employee` WHERE `order_no` = '3523948089684527' [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_order_everyday` [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_order_everyday` WHERE `merchant_id` = 1 AND `time` = 1523980800 LIMIT 1   [ RunTime:0.0410s ]
+SQL: INSERT INTO `api_order_everyday` (`merchant_id`,`amount`,`time`) VALUES ('1','1','1523980800') [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_order_total` [ RunTime:0.0430s ]
+SQL: UPDATE `api_order_total` SET `order_total`=order_total+1 WHERE `merchant_id` = 1 [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_day` [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_merchant_balance_day` WHERE `merchant_id` = 1 AND `date` = 1523894400 LIMIT 1   [ RunTime:0.0430s ]
+SQL: UPDATE `api_merchant_balance_day` SET `order_total`='28',`purchase_money`='6590.88',`created_time`='1524019634' WHERE `id` = 4 [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_month` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_merchant_balance_month` WHERE `merchant_id` = 1 AND `month` = 1522512000 LIMIT 1   [ RunTime:0.0430s ]
+SQL: UPDATE `api_merchant_balance_month` SET `order_total`='102',`purchase_money`='45416.08',`created_time`='1524019634' WHERE `id` = 1 [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_year` [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_merchant_balance_year` WHERE `merchant_id` = 1 AND `year` = 1514736000 LIMIT 1   [ RunTime:0.0420s ]
+SQL: UPDATE `api_merchant_balance_year` SET `order_total`='102',`purchase_money`='45416.08',`created_time`='1524019634' WHERE `id` = 1 [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_total` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_merchant_balance_total` WHERE `merchant_id` = 1 LIMIT 1   [ RunTime:0.0430s ]
+SQL: UPDATE `api_merchant_balance_total` SET `order_total`='102',`purchase_money`='45416.08',`last_time`='1524019634' WHERE `id` = 1 [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0430s ]
+SQL: SELECT `member_id`,`pay_price`,`realname` FROM `api_bar_member` WHERE `bar_id` = 2 AND `pay_status` = 2  [ RunTime:0.0420s ]
+
+[ 2018-04-18T10:47:51+08:00 ] 127.0.0.1 /Admin/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/index' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+NOTIC: [8] Undefined index: status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 47 行.
+NOTIC: [8] Undefined index: settlement_status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 52 行.
+NOTIC: [8] Undefined index: order_type D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 57 行.
+NOTIC: [8] Undefined index: payment D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 62 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT SUM(pay_price) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT SUM(discount_money) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT api_order.id,api_merchant.title as merchant_title,api_member.nickname,api_order.order_no,api_order.contacts_realname,api_order.contacts_tel,api_order.contacts_sex,api_order.total_price,api_order.pay_price,api_order.purchase_price,api_order.discount_money,api_order.status,api_order.settlement_status,api_order.order_type,api_order.payment,api_order.description,from_unixtime(api_order.arrives_time,"%Y-%m-%d") as arrives_time,api_order.incr_time,api_order.created_time,from_unixtime(api_order.created_time) as created_time,api_order.employee_id,api_order.employee_realname,api_order.employee_avatar,api_order.employee_tel,api_order.take_time,api_order.relation_order_no,api_order.is_bar FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id LEFT JOIN api_coupon ON api_coupon.id = api_order.card_id  ORDER BY api_order.id desc LIMIT 0,50   [ RunTime:0.0420s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-18T10:47:57+08:00 ] 127.0.0.1 /Admin/Order/complete/id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/complete' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0420s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('订单完成操作','1','kpzadmin  ','1524019675','Order/complete','{\"id\":\"19\",\"PHPSESSID\":\"hllcdggoq8j67hmetkmsaia1i3\"}') [ RunTime:0.0480s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT api_order.member_id,api_order.id,api_order.order_no,api_order.employee_id,api_order.merchant_id,api_order.order_type,api_member.level,api_order.status,api_order.is_bar,api_order.is_xu,`wx_openid`,api_member.tel,`contacts_tel`,`contacts_sex`,`contacts_realname`,api_order.pay_price,api_order.created_time,api_order.relation_order_no,api_member_privilege.delayed,api_order.arrives_time,api_merchant.title as merchant_title FROM `api_order` INNER JOIN api_member ON api_member.id = api_order.member_id INNER JOIN api_member_privilege ON api_member.level = api_member_privilege.level INNER JOIN api_merchant ON api_merchant.id = api_order.merchant_id  WHERE api_order.id = '19' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0410s ]
+SQL: SELECT `begin_time` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0410s ]
+SQL: UPDATE `api_order` SET `updated_time`='1524019676',`status`='4' WHERE ( `id` = 19 AND `status` = 7 ) [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_bar_order` [ RunTime:0.0410s ]
+SQL: SELECT `bar_id` FROM `api_bar_order` WHERE `order_id` = 19 LIMIT 1   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0420s ]
+SQL: UPDATE `api_bar` SET `bar_status`='4',`updated_time`='1524019676' WHERE `id` = 2 [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_order_operate_record` [ RunTime:0.0420s ]
+SQL: INSERT INTO `api_order_operate_record` (`user_id`,`order_id`,`order_no`,`content`,`created_time`) VALUES ('1','19','3523948089684527','订单完成操作','1524019676') [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_message_employee` [ RunTime:0.0410s ]
+SQL: DELETE FROM `api_message_employee` WHERE `order_no` = '3523948089684527' [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_order_everyday` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_order_everyday` WHERE `merchant_id` = 1 AND `time` = 1523980800 LIMIT 1   [ RunTime:0.0410s ]
+SQL: INSERT INTO `api_order_everyday` (`merchant_id`,`amount`,`time`) VALUES ('1','1','1523980800') [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_order_total` [ RunTime:0.0410s ]
+SQL: UPDATE `api_order_total` SET `order_total`=order_total+1 WHERE `merchant_id` = 1 [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_day` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_merchant_balance_day` WHERE `merchant_id` = 1 AND `date` = 1523894400 LIMIT 1   [ RunTime:0.0400s ]
+SQL: UPDATE `api_merchant_balance_day` SET `order_total`='28',`purchase_money`='6590.88',`created_time`='1524019676' WHERE `id` = 4 [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_month` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_merchant_balance_month` WHERE `merchant_id` = 1 AND `month` = 1522512000 LIMIT 1   [ RunTime:0.0400s ]
+SQL: UPDATE `api_merchant_balance_month` SET `order_total`='102',`purchase_money`='45416.08',`created_time`='1524019676' WHERE `id` = 1 [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_year` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_merchant_balance_year` WHERE `merchant_id` = 1 AND `year` = 1514736000 LIMIT 1   [ RunTime:0.0400s ]
+SQL: UPDATE `api_merchant_balance_year` SET `order_total`='102',`purchase_money`='45416.08',`created_time`='1524019677' WHERE `id` = 1 [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_total` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_merchant_balance_total` WHERE `merchant_id` = 1 LIMIT 1   [ RunTime:0.0410s ]
+SQL: UPDATE `api_merchant_balance_total` SET `order_total`='102',`purchase_money`='45416.08',`last_time`='1524019677' WHERE `id` = 1 [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0420s ]
+SQL: SELECT `member_id`,`pay_price`,`realname` FROM `api_bar_member` WHERE `bar_id` = 2 AND `pay_status` = 2  [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `api_member_capital` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_member_capital` WHERE `member_id` = 1 LIMIT 1   [ RunTime:0.0410s ]
+SQL: UPDATE `api_member_capital` SET `consume_money`=consume_money+399.00 WHERE `member_id` = 1 [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_member` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_member_capital` WHERE `member_id` = 12 LIMIT 1   [ RunTime:0.0390s ]
+SQL: UPDATE `api_member_capital` SET `consume_money`=consume_money+0.00 WHERE `member_id` = 12 [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_member` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0420s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-18T10:47:59+08:00 ] 127.0.0.1 /Admin/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/index' LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0360s ]
+NOTIC: [8] Undefined index: status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 47 行.
+NOTIC: [8] Undefined index: settlement_status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 52 行.
+NOTIC: [8] Undefined index: order_type D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 57 行.
+NOTIC: [8] Undefined index: payment D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 62 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT SUM(pay_price) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT SUM(discount_money) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT api_order.id,api_merchant.title as merchant_title,api_member.nickname,api_order.order_no,api_order.contacts_realname,api_order.contacts_tel,api_order.contacts_sex,api_order.total_price,api_order.pay_price,api_order.purchase_price,api_order.discount_money,api_order.status,api_order.settlement_status,api_order.order_type,api_order.payment,api_order.description,from_unixtime(api_order.arrives_time,"%Y-%m-%d") as arrives_time,api_order.incr_time,api_order.created_time,from_unixtime(api_order.created_time) as created_time,api_order.employee_id,api_order.employee_realname,api_order.employee_avatar,api_order.employee_tel,api_order.take_time,api_order.relation_order_no,api_order.is_bar FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id LEFT JOIN api_coupon ON api_coupon.id = api_order.card_id  ORDER BY api_order.id desc LIMIT 0,50   [ RunTime:0.0380s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-18T10:53:09+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0470s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Index/index' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0440s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-18T10:53:10+08:00 ] 127.0.0.1 /Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Index/welcome' LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-18T10:53:14+08:00 ] 127.0.0.1 /Admin/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/index' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0380s ]
+NOTIC: [8] Undefined index: status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 47 行.
+NOTIC: [8] Undefined index: settlement_status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 52 行.
+NOTIC: [8] Undefined index: order_type D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 57 行.
+NOTIC: [8] Undefined index: payment D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 62 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT SUM(pay_price) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT SUM(discount_money) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT api_order.id,api_merchant.title as merchant_title,api_member.nickname,api_order.order_no,api_order.contacts_realname,api_order.contacts_tel,api_order.contacts_sex,api_order.total_price,api_order.pay_price,api_order.purchase_price,api_order.discount_money,api_order.status,api_order.settlement_status,api_order.order_type,api_order.payment,api_order.description,from_unixtime(api_order.arrives_time,"%Y-%m-%d") as arrives_time,api_order.incr_time,api_order.created_time,from_unixtime(api_order.created_time) as created_time,api_order.employee_id,api_order.employee_realname,api_order.employee_avatar,api_order.employee_tel,api_order.take_time,api_order.relation_order_no,api_order.is_bar FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id LEFT JOIN api_coupon ON api_coupon.id = api_order.card_id  ORDER BY api_order.id desc LIMIT 0,50   [ RunTime:0.0410s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-18T10:53:20+08:00 ] 127.0.0.1 /Admin/Order/complete/id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/complete' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0390s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('订单完成操作','1','kpzadmin  ','1524019998','Order/complete','{\"id\":\"19\",\"PHPSESSID\":\"hllcdggoq8j67hmetkmsaia1i3\"}') [ RunTime:0.0520s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0380s ]
+SQL: SELECT api_order.member_id,api_order.id,api_order.order_no,api_order.employee_id,api_order.merchant_id,api_order.order_type,api_member.level,api_order.status,api_order.is_bar,api_order.is_xu,`wx_openid`,api_member.tel,`contacts_tel`,`contacts_sex`,`contacts_realname`,api_order.pay_price,api_order.created_time,api_order.relation_order_no,api_member_privilege.delayed,api_order.arrives_time,api_merchant.title as merchant_title FROM `api_order` INNER JOIN api_member ON api_member.id = api_order.member_id INNER JOIN api_member_privilege ON api_member.level = api_member_privilege.level INNER JOIN api_merchant ON api_merchant.id = api_order.merchant_id  WHERE api_order.id = '19' LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0360s ]
+SQL: SELECT `begin_time` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0340s ]
+SQL: UPDATE `api_order` SET `updated_time`='1524019999',`status`='4' WHERE ( `id` = 19 AND `status` = 7 ) [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_bar_order` [ RunTime:0.0360s ]
+SQL: SELECT `bar_id` FROM `api_bar_order` WHERE `order_id` = 19 LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0360s ]
+SQL: UPDATE `api_bar` SET `bar_status`='4',`updated_time`='1524019999' WHERE `id` = 2 [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_order_operate_record` [ RunTime:0.0360s ]
+SQL: INSERT INTO `api_order_operate_record` (`user_id`,`order_id`,`order_no`,`content`,`created_time`) VALUES ('1','19','3523948089684527','订单完成操作','1524019999') [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_message_employee` [ RunTime:0.0370s ]
+SQL: DELETE FROM `api_message_employee` WHERE `order_no` = '3523948089684527' [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `api_order_everyday` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_order_everyday` WHERE `merchant_id` = 1 AND `time` = 1523980800 LIMIT 1   [ RunTime:0.0350s ]
+SQL: UPDATE `api_order_everyday` SET `amount`=amount+1 WHERE `merchant_id` = 1 AND `time` = 1523980800 [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_order_total` [ RunTime:0.0370s ]
+SQL: UPDATE `api_order_total` SET `order_total`=order_total+1 WHERE `merchant_id` = 1 [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_day` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_merchant_balance_day` WHERE `merchant_id` = 1 AND `date` = 1523894400 LIMIT 1   [ RunTime:0.0340s ]
+SQL: UPDATE `api_merchant_balance_day` SET `order_total`='29',`purchase_money`='6989.88',`created_time`='1524019999' WHERE `id` = 4 [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_month` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_merchant_balance_month` WHERE `merchant_id` = 1 AND `month` = 1522512000 LIMIT 1   [ RunTime:0.0360s ]
+SQL: UPDATE `api_merchant_balance_month` SET `order_total`='103',`purchase_money`='45815.08',`created_time`='1524019999' WHERE `id` = 1 [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_year` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_merchant_balance_year` WHERE `merchant_id` = 1 AND `year` = 1514736000 LIMIT 1   [ RunTime:0.0350s ]
+SQL: UPDATE `api_merchant_balance_year` SET `order_total`='103',`purchase_money`='45815.08',`created_time`='1524019999' WHERE `id` = 1 [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_total` [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_merchant_balance_total` WHERE `merchant_id` = 1 LIMIT 1   [ RunTime:0.0360s ]
+SQL: UPDATE `api_merchant_balance_total` SET `order_total`='103',`purchase_money`='45815.08',`last_time`='1524019999' WHERE `id` = 1 [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0360s ]
+SQL: SELECT `member_id`,`pay_price`,`realname` FROM `api_bar_member` WHERE `bar_id` = 2 AND `pay_status` = 2  [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_member_capital` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_member_capital` WHERE `member_id` = 1 LIMIT 1   [ RunTime:0.0360s ]
+SQL: UPDATE `api_member_capital` SET `consume_money`=consume_money+399.00 WHERE `member_id` = 1 [ RunTime:0.0330s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_member` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_member_capital` WHERE `member_id` = 12 LIMIT 1   [ RunTime:0.0360s ]
+SQL: UPDATE `api_member_capital` SET `consume_money`=consume_money+0.00 WHERE `member_id` = 12 [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_member` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0360s ]
+
+[ 2018-04-18T10:54:11+08:00 ] 127.0.0.1 /Admin/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/index' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0440s ]
+NOTIC: [8] Undefined index: status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 47 行.
+NOTIC: [8] Undefined index: settlement_status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 52 行.
+NOTIC: [8] Undefined index: order_type D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 57 行.
+NOTIC: [8] Undefined index: payment D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 62 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT SUM(pay_price) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT SUM(discount_money) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT api_order.id,api_merchant.title as merchant_title,api_member.nickname,api_order.order_no,api_order.contacts_realname,api_order.contacts_tel,api_order.contacts_sex,api_order.total_price,api_order.pay_price,api_order.purchase_price,api_order.discount_money,api_order.status,api_order.settlement_status,api_order.order_type,api_order.payment,api_order.description,from_unixtime(api_order.arrives_time,"%Y-%m-%d") as arrives_time,api_order.incr_time,api_order.created_time,from_unixtime(api_order.created_time) as created_time,api_order.employee_id,api_order.employee_realname,api_order.employee_avatar,api_order.employee_tel,api_order.take_time,api_order.relation_order_no,api_order.is_bar FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id LEFT JOIN api_coupon ON api_coupon.id = api_order.card_id  ORDER BY api_order.id desc LIMIT 0,50   [ RunTime:0.0460s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-18T10:54:15+08:00 ] 127.0.0.1 /Admin/Order/complete/id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/complete' LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0360s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('订单完成操作','1','kpzadmin  ','1524020054','Order/complete','{\"id\":\"19\",\"PHPSESSID\":\"hllcdggoq8j67hmetkmsaia1i3\"}') [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SELECT api_order.member_id,api_order.id,api_order.order_no,api_order.employee_id,api_order.merchant_id,api_order.order_type,api_member.level,api_order.status,api_order.is_bar,api_order.is_xu,`wx_openid`,api_member.tel,`contacts_tel`,`contacts_sex`,`contacts_realname`,api_order.pay_price,api_order.created_time,api_order.relation_order_no,api_member_privilege.delayed,api_order.arrives_time,api_merchant.title as merchant_title FROM `api_order` INNER JOIN api_member ON api_member.id = api_order.member_id INNER JOIN api_member_privilege ON api_member.level = api_member_privilege.level INNER JOIN api_merchant ON api_merchant.id = api_order.merchant_id  WHERE api_order.id = '19' LIMIT 1   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0380s ]
+SQL: SELECT `begin_time` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0360s ]
+SQL: UPDATE `api_order` SET `updated_time`='1524020054',`status`='4' WHERE ( `id` = 19 AND `status` = 7 ) [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_bar_order` [ RunTime:0.0370s ]
+SQL: SELECT `bar_id` FROM `api_bar_order` WHERE `order_id` = 19 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0370s ]
+SQL: UPDATE `api_bar` SET `bar_status`='4',`updated_time`='1524020054' WHERE `id` = 2 [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_order_operate_record` [ RunTime:0.0360s ]
+SQL: INSERT INTO `api_order_operate_record` (`user_id`,`order_id`,`order_no`,`content`,`created_time`) VALUES ('1','19','3523948089684527','订单完成操作','1524020054') [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_message_employee` [ RunTime:0.0350s ]
+SQL: DELETE FROM `api_message_employee` WHERE `order_no` = '3523948089684527' [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_order_everyday` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_order_everyday` WHERE `merchant_id` = 1 AND `time` = 1523980800 LIMIT 1   [ RunTime:0.0360s ]
+SQL: UPDATE `api_order_everyday` SET `amount`=amount+1 WHERE `merchant_id` = 1 AND `time` = 1523980800 [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_order_total` [ RunTime:0.0360s ]
+SQL: UPDATE `api_order_total` SET `order_total`=order_total+1 WHERE `merchant_id` = 1 [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_day` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_merchant_balance_day` WHERE `merchant_id` = 1 AND `date` = 1523894400 LIMIT 1   [ RunTime:0.0360s ]
+SQL: UPDATE `api_merchant_balance_day` SET `order_total`='29',`purchase_money`='6989.88',`created_time`='1524020055' WHERE `id` = 4 [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_month` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_merchant_balance_month` WHERE `merchant_id` = 1 AND `month` = 1522512000 LIMIT 1   [ RunTime:0.0350s ]
+SQL: UPDATE `api_merchant_balance_month` SET `order_total`='103',`purchase_money`='45815.08',`created_time`='1524020055' WHERE `id` = 1 [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_year` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_merchant_balance_year` WHERE `merchant_id` = 1 AND `year` = 1514736000 LIMIT 1   [ RunTime:0.0360s ]
+SQL: UPDATE `api_merchant_balance_year` SET `order_total`='103',`purchase_money`='45815.08',`created_time`='1524020055' WHERE `id` = 1 [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_total` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_merchant_balance_total` WHERE `merchant_id` = 1 LIMIT 1   [ RunTime:0.0350s ]
+SQL: UPDATE `api_merchant_balance_total` SET `order_total`='103',`purchase_money`='45815.08',`last_time`='1524020055' WHERE `id` = 1 [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0360s ]
+SQL: SELECT `member_id`,`pay_price`,`realname` FROM `api_bar_member` WHERE `bar_id` = 2 AND `pay_status` = 2  [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_member_capital` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_member_capital` WHERE `member_id` = 1 LIMIT 1   [ RunTime:0.0360s ]
+SQL: UPDATE `api_member_capital` SET `consume_money`=consume_money+399.00 WHERE `member_id` = 1 [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_member` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_member_capital` WHERE `member_id` = 12 LIMIT 1   [ RunTime:0.0350s ]
+SQL: UPDATE `api_member_capital` SET `consume_money`=consume_money+0.00 WHERE `member_id` = 12 [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_member` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0370s ]
+
+[ 2018-04-18T10:55:13+08:00 ] 127.0.0.1 /Admin/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/index' LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0350s ]
+NOTIC: [8] Undefined index: status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 47 行.
+NOTIC: [8] Undefined index: settlement_status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 52 行.
+NOTIC: [8] Undefined index: order_type D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 57 行.
+NOTIC: [8] Undefined index: payment D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 62 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT SUM(pay_price) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT SUM(discount_money) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0340s ]
+SQL: SELECT api_order.id,api_merchant.title as merchant_title,api_member.nickname,api_order.order_no,api_order.contacts_realname,api_order.contacts_tel,api_order.contacts_sex,api_order.total_price,api_order.pay_price,api_order.purchase_price,api_order.discount_money,api_order.status,api_order.settlement_status,api_order.order_type,api_order.payment,api_order.description,from_unixtime(api_order.arrives_time,"%Y-%m-%d") as arrives_time,api_order.incr_time,api_order.created_time,from_unixtime(api_order.created_time) as created_time,api_order.employee_id,api_order.employee_realname,api_order.employee_avatar,api_order.employee_tel,api_order.take_time,api_order.relation_order_no,api_order.is_bar FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id LEFT JOIN api_coupon ON api_coupon.id = api_order.card_id  ORDER BY api_order.id desc LIMIT 0,50   [ RunTime:0.0380s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-18T10:55:18+08:00 ] 127.0.0.1 /Admin/Order/complete/id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/complete' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0410s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('订单完成操作','1','kpzadmin  ','1524020116','Order/complete','{\"id\":\"19\",\"PHPSESSID\":\"hllcdggoq8j67hmetkmsaia1i3\"}') [ RunTime:0.0480s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0410s ]
+SQL: SELECT api_order.member_id,api_order.id,api_order.order_no,api_order.employee_id,api_order.merchant_id,api_order.order_type,api_member.level,api_order.status,api_order.is_bar,api_order.is_xu,`wx_openid`,api_member.tel,`contacts_tel`,`contacts_sex`,`contacts_realname`,api_order.pay_price,api_order.created_time,api_order.relation_order_no,api_member_privilege.delayed,api_order.arrives_time,api_merchant.title as merchant_title FROM `api_order` INNER JOIN api_member ON api_member.id = api_order.member_id INNER JOIN api_member_privilege ON api_member.level = api_member_privilege.level INNER JOIN api_merchant ON api_merchant.id = api_order.merchant_id  WHERE api_order.id = '19' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0410s ]
+SQL: SELECT `begin_time` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0400s ]
+SQL: UPDATE `api_order` SET `updated_time`='1524020117',`status`='4' WHERE ( `id` = 19 AND `status` = 7 ) [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_bar_order` [ RunTime:0.0410s ]
+SQL: SELECT `bar_id` FROM `api_bar_order` WHERE `order_id` = 19 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0410s ]
+SQL: UPDATE `api_bar` SET `bar_status`='4',`updated_time`='1524020117' WHERE `id` = 2 [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_order_operate_record` [ RunTime:0.0410s ]
+SQL: INSERT INTO `api_order_operate_record` (`user_id`,`order_id`,`order_no`,`content`,`created_time`) VALUES ('1','19','3523948089684527','订单完成操作','1524020117') [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_message_employee` [ RunTime:0.0410s ]
+SQL: DELETE FROM `api_message_employee` WHERE `order_no` = '3523948089684527' [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_order_everyday` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_order_everyday` WHERE `merchant_id` = 1 AND `time` = 1523980800 LIMIT 1   [ RunTime:0.0410s ]
+SQL: UPDATE `api_order_everyday` SET `amount`=amount+1 WHERE `merchant_id` = 1 AND `time` = 1523980800 [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_order_total` [ RunTime:0.0400s ]
+SQL: UPDATE `api_order_total` SET `order_total`=order_total+1 WHERE `merchant_id` = 1 [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_day` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_merchant_balance_day` WHERE `merchant_id` = 1 AND `date` = 1523894400 LIMIT 1   [ RunTime:0.0400s ]
+SQL: UPDATE `api_merchant_balance_day` SET `order_total`='29',`purchase_money`='6989.88',`created_time`='1524020117' WHERE `id` = 4 [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_month` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_merchant_balance_month` WHERE `merchant_id` = 1 AND `month` = 1522512000 LIMIT 1   [ RunTime:0.0400s ]
+SQL: UPDATE `api_merchant_balance_month` SET `order_total`='103',`purchase_money`='45815.08',`created_time`='1524020118' WHERE `id` = 1 [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_year` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_merchant_balance_year` WHERE `merchant_id` = 1 AND `year` = 1514736000 LIMIT 1   [ RunTime:0.0400s ]
+SQL: UPDATE `api_merchant_balance_year` SET `order_total`='103',`purchase_money`='45815.08',`created_time`='1524020118' WHERE `id` = 1 [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_total` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_merchant_balance_total` WHERE `merchant_id` = 1 LIMIT 1   [ RunTime:0.0400s ]
+SQL: UPDATE `api_merchant_balance_total` SET `order_total`='103',`purchase_money`='45815.08',`last_time`='1524020118' WHERE `id` = 1 [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0410s ]
+SQL: SELECT `member_id`,`pay_price`,`realname` FROM `api_bar_member` WHERE `bar_id` = 2 AND `pay_status` = 2  [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_member_capital` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_member_capital` WHERE `member_id` = 1 LIMIT 1   [ RunTime:0.0390s ]
+SQL: UPDATE `api_member_capital` SET `consume_money`=consume_money+399.00 WHERE `member_id` = 1 [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_member` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT * FROM `api_member_capital` WHERE `member_id` = 12 LIMIT 1   [ RunTime:0.0390s ]
+SQL: UPDATE `api_member_capital` SET `consume_money`=consume_money+0.00 WHERE `member_id` = 12 [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_member` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0410s ]
+
+[ 2018-04-18T10:56:44+08:00 ] 127.0.0.1 /Admin/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/index' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0390s ]
+NOTIC: [8] Undefined index: status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 47 行.
+NOTIC: [8] Undefined index: settlement_status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 52 行.
+NOTIC: [8] Undefined index: order_type D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 57 行.
+NOTIC: [8] Undefined index: payment D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 62 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT SUM(pay_price) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT SUM(discount_money) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT api_order.id,api_merchant.title as merchant_title,api_member.nickname,api_order.order_no,api_order.contacts_realname,api_order.contacts_tel,api_order.contacts_sex,api_order.total_price,api_order.pay_price,api_order.purchase_price,api_order.discount_money,api_order.status,api_order.settlement_status,api_order.order_type,api_order.payment,api_order.description,from_unixtime(api_order.arrives_time,"%Y-%m-%d") as arrives_time,api_order.incr_time,api_order.created_time,from_unixtime(api_order.created_time) as created_time,api_order.employee_id,api_order.employee_realname,api_order.employee_avatar,api_order.employee_tel,api_order.take_time,api_order.relation_order_no,api_order.is_bar FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id LEFT JOIN api_coupon ON api_coupon.id = api_order.card_id  ORDER BY api_order.id desc LIMIT 0,50   [ RunTime:0.0390s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-18T10:56:50+08:00 ] 127.0.0.1 /Admin/Order/complete/id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/complete' LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0390s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('订单完成操作','1','kpzadmin  ','1524020208','Order/complete','{\"id\":\"19\",\"PHPSESSID\":\"hllcdggoq8j67hmetkmsaia1i3\"}') [ RunTime:0.0480s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0400s ]
+SQL: SELECT api_order.member_id,api_order.id,api_order.order_no,api_order.employee_id,api_order.merchant_id,api_order.order_type,api_member.level,api_order.status,api_order.is_bar,api_order.is_xu,`wx_openid`,api_member.tel,`contacts_tel`,`contacts_sex`,`contacts_realname`,api_order.pay_price,api_order.created_time,api_order.relation_order_no,api_member_privilege.delayed,api_order.arrives_time,api_merchant.title as merchant_title FROM `api_order` INNER JOIN api_member ON api_member.id = api_order.member_id INNER JOIN api_member_privilege ON api_member.level = api_member_privilege.level INNER JOIN api_merchant ON api_merchant.id = api_order.merchant_id  WHERE api_order.id = '19' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0400s ]
+SQL: SELECT `begin_time` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0380s ]
+SQL: UPDATE `api_order` SET `updated_time`='1524020208',`status`='4' WHERE ( `id` = 19 AND `status` = 7 ) [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_bar_order` [ RunTime:0.0400s ]
+SQL: SELECT `bar_id` FROM `api_bar_order` WHERE `order_id` = 19 LIMIT 1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0400s ]
+SQL: UPDATE `api_bar` SET `bar_status`='4',`updated_time`='1524020208' WHERE `id` = 2 [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_order_operate_record` [ RunTime:0.0380s ]
+SQL: INSERT INTO `api_order_operate_record` (`user_id`,`order_id`,`order_no`,`content`,`created_time`) VALUES ('1','19','3523948089684527','订单完成操作','1524020209') [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_message_employee` [ RunTime:0.0390s ]
+SQL: DELETE FROM `api_message_employee` WHERE `order_no` = '3523948089684527' [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_order_everyday` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_order_everyday` WHERE `merchant_id` = 1 AND `time` = 1523980800 LIMIT 1   [ RunTime:0.0380s ]
+SQL: UPDATE `api_order_everyday` SET `amount`=amount+1 WHERE `merchant_id` = 1 AND `time` = 1523980800 [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_order_total` [ RunTime:0.0380s ]
+SQL: UPDATE `api_order_total` SET `order_total`=order_total+1 WHERE `merchant_id` = 1 [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_day` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_merchant_balance_day` WHERE `merchant_id` = 1 AND `date` = 1523894400 LIMIT 1   [ RunTime:0.0380s ]
+SQL: UPDATE `api_merchant_balance_day` SET `order_total`='29',`purchase_money`='6989.88',`created_time`='1524020209' WHERE `id` = 4 [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_month` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_merchant_balance_month` WHERE `merchant_id` = 1 AND `month` = 1522512000 LIMIT 1   [ RunTime:0.0380s ]
+SQL: UPDATE `api_merchant_balance_month` SET `order_total`='103',`purchase_money`='45815.08',`created_time`='1524020209' WHERE `id` = 1 [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_year` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_merchant_balance_year` WHERE `merchant_id` = 1 AND `year` = 1514736000 LIMIT 1   [ RunTime:0.0370s ]
+SQL: UPDATE `api_merchant_balance_year` SET `order_total`='103',`purchase_money`='45815.08',`created_time`='1524020209' WHERE `id` = 1 [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_total` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_merchant_balance_total` WHERE `merchant_id` = 1 LIMIT 1   [ RunTime:0.0380s ]
+SQL: UPDATE `api_merchant_balance_total` SET `order_total`='103',`purchase_money`='45815.08',`last_time`='1524020209' WHERE `id` = 1 [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0460s ]
+SQL: SELECT `member_id`,`pay_price`,`realname` FROM `api_bar_member` WHERE `bar_id` = 2 AND `pay_status` = 2  [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_member_capital` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_member_capital` WHERE `member_id` = 1 LIMIT 1   [ RunTime:0.0380s ]
+SQL: UPDATE `api_member_capital` SET `consume_money`=consume_money+399.00 WHERE `member_id` = 1 [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_member` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `api_member_privilege` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_member_privilege` WHERE `level` = 2 LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT `level`,`quota` FROM `api_member_privilege`  [ RunTime:0.0370s ]
+SQL: UPDATE `api_member` SET `coin`='471',`level`='2' WHERE `id` = 1 [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_member_kcoin_record` [ RunTime:0.0380s ]
+SQL: INSERT INTO `api_member_kcoin_record` (`member_id`,`record_name`,`number`,`type`,`before_number`,`after_number`,`created_time`) VALUES ('1','参与拼吧','39','1','414','453','1524020210') [ RunTime:0.0380s ]
+SQL: SELECT `promoter_code` FROM `api_member` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `api_spread_record` [ RunTime:0.0400s ]
+SQL: UPDATE `api_spread_record` SET `profit_time`='1524020210',`money`=NULL,`is_consume`='1',`member_realname`='孙大圣' WHERE `account_type` = 1 AND `member_id` = 1 AND `profit_time` = 0 [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_member_capital` WHERE `member_id` = 12 LIMIT 1   [ RunTime:0.0380s ]
+SQL: UPDATE `api_member_capital` SET `consume_money`=consume_money+0.00 WHERE `member_id` = 12 [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_member` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0390s ]
+
+[ 2018-04-18T11:02:32+08:00 ] 127.0.0.1 /Admin/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/index' LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0400s ]
+NOTIC: [8] Undefined index: status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 47 行.
+NOTIC: [8] Undefined index: settlement_status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 52 行.
+NOTIC: [8] Undefined index: order_type D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 57 行.
+NOTIC: [8] Undefined index: payment D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 62 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0410s ]
+SQL: SELECT SUM(pay_price) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT SUM(discount_money) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0400s ]
+SQL: SELECT api_order.id,api_merchant.title as merchant_title,api_member.nickname,api_order.order_no,api_order.contacts_realname,api_order.contacts_tel,api_order.contacts_sex,api_order.total_price,api_order.pay_price,api_order.purchase_price,api_order.discount_money,api_order.status,api_order.settlement_status,api_order.order_type,api_order.payment,api_order.description,from_unixtime(api_order.arrives_time,"%Y-%m-%d") as arrives_time,api_order.incr_time,api_order.created_time,from_unixtime(api_order.created_time) as created_time,api_order.employee_id,api_order.employee_realname,api_order.employee_avatar,api_order.employee_tel,api_order.take_time,api_order.relation_order_no,api_order.is_bar FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id LEFT JOIN api_coupon ON api_coupon.id = api_order.card_id  ORDER BY api_order.id desc LIMIT 0,50   [ RunTime:0.0430s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-18T11:02:39+08:00 ] 127.0.0.1 /Admin/Order/complete/id/19.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0470s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/complete' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0450s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('订单完成操作','1','kpzadmin  ','1524020557','Order/complete','{\"id\":\"19\",\"PHPSESSID\":\"hllcdggoq8j67hmetkmsaia1i3\"}') [ RunTime:0.0630s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0450s ]
+SQL: SELECT api_order.member_id,api_order.id,api_order.order_no,api_order.employee_id,api_order.merchant_id,api_order.order_type,api_member.level,api_order.status,api_order.is_bar,api_order.is_xu,`wx_openid`,api_member.tel,`contacts_tel`,`contacts_sex`,`contacts_realname`,api_order.pay_price,api_order.created_time,api_order.relation_order_no,api_member_privilege.delayed,api_order.arrives_time,api_merchant.title as merchant_title FROM `api_order` INNER JOIN api_member ON api_member.id = api_order.member_id INNER JOIN api_member_privilege ON api_member.level = api_member_privilege.level INNER JOIN api_merchant ON api_merchant.id = api_order.merchant_id  WHERE api_order.id = '19' LIMIT 1   [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0450s ]
+SQL: SELECT `begin_time` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0440s ]
+SQL: UPDATE `api_order` SET `updated_time`='1524020557',`status`='4' WHERE ( `id` = 19 AND `status` = 7 ) [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar_order` [ RunTime:0.0450s ]
+SQL: SELECT `bar_id` FROM `api_bar_order` WHERE `order_id` = 19 LIMIT 1   [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar` [ RunTime:0.0450s ]
+SQL: UPDATE `api_bar` SET `bar_status`='4',`updated_time`='1524020557' WHERE `id` = 2 [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_order_operate_record` [ RunTime:0.0440s ]
+SQL: INSERT INTO `api_order_operate_record` (`user_id`,`order_id`,`order_no`,`content`,`created_time`) VALUES ('1','19','3523948089684527','订单完成操作','1524020557') [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_message_employee` [ RunTime:0.0450s ]
+SQL: DELETE FROM `api_message_employee` WHERE `order_no` = '3523948089684527' [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_order_everyday` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_order_everyday` WHERE `merchant_id` = 1 AND `time` = 1523980800 LIMIT 1   [ RunTime:0.0440s ]
+SQL: UPDATE `api_order_everyday` SET `amount`=amount+1 WHERE `merchant_id` = 1 AND `time` = 1523980800 [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_order_total` [ RunTime:0.0450s ]
+SQL: UPDATE `api_order_total` SET `order_total`=order_total+1 WHERE `merchant_id` = 1 [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_day` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_merchant_balance_day` WHERE `merchant_id` = 1 AND `date` = 1523894400 LIMIT 1   [ RunTime:0.0440s ]
+SQL: UPDATE `api_merchant_balance_day` SET `order_total`='29',`purchase_money`='6989.88',`created_time`='1524020558' WHERE `id` = 4 [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_month` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_merchant_balance_month` WHERE `merchant_id` = 1 AND `month` = 1522512000 LIMIT 1   [ RunTime:0.0440s ]
+SQL: UPDATE `api_merchant_balance_month` SET `order_total`='103',`purchase_money`='45815.08',`created_time`='1524020558' WHERE `id` = 1 [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_year` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_merchant_balance_year` WHERE `merchant_id` = 1 AND `year` = 1514736000 LIMIT 1   [ RunTime:0.0440s ]
+SQL: UPDATE `api_merchant_balance_year` SET `order_total`='103',`purchase_money`='45815.08',`created_time`='1524020558' WHERE `id` = 1 [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_merchant_balance_total` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_merchant_balance_total` WHERE `merchant_id` = 1 LIMIT 1   [ RunTime:0.0440s ]
+SQL: UPDATE `api_merchant_balance_total` SET `order_total`='103',`purchase_money`='45815.08',`last_time`='1524020558' WHERE `id` = 1 [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_bar_member` [ RunTime:0.0450s ]
+SQL: SELECT `member_id`,`pay_price`,`realname` FROM `api_bar_member` WHERE `bar_id` = 2 AND `pay_status` = 2  [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_member_capital` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `api_member_capital` WHERE `member_id` = 1 LIMIT 1   [ RunTime:0.0440s ]
+SQL: UPDATE `api_member_capital` SET `consume_money`=consume_money+399.00 WHERE `member_id` = 1 [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_member` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `api_member` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `api_member_privilege` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_member_privilege` WHERE `level` = 2 LIMIT 1   [ RunTime:0.0430s ]
+SQL: SELECT `level`,`quota` FROM `api_member_privilege`  [ RunTime:0.0440s ]
+SQL: UPDATE `api_member` SET `coin`='471',`level`='2' WHERE `id` = 1 [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_member_kcoin_record` [ RunTime:0.0440s ]
+SQL: INSERT INTO `api_member_kcoin_record` (`member_id`,`record_name`,`number`,`type`,`before_number`,`after_number`,`created_time`) VALUES ('1','参与拼吧','39','1','414','453','1524020559') [ RunTime:0.0440s ]
+SQL: SELECT `promoter_code` FROM `api_member` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `api_spread_record` [ RunTime:0.0450s ]
+SQL: UPDATE `api_spread_record` SET `profit_time`='1524020559',`money`=NULL,`is_consume`='1',`member_realname`='孙大圣' WHERE `account_type` = 1 AND `member_id` = 1 AND `profit_time` = 0 [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_member_capital` WHERE `member_id` = 12 LIMIT 1   [ RunTime:0.0440s ]
+SQL: UPDATE `api_member_capital` SET `consume_money`=consume_money+0.00 WHERE `member_id` = 12 [ RunTime:0.0430s ]
+SQL: SELECT * FROM `api_member` WHERE `id` = 12 LIMIT 1   [ RunTime:0.0460s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-18T11:02:41+08:00 ] 127.0.0.1 /Admin/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/index' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0350s ]
+NOTIC: [8] Undefined index: status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 47 行.
+NOTIC: [8] Undefined index: settlement_status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 52 行.
+NOTIC: [8] Undefined index: order_type D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 57 行.
+NOTIC: [8] Undefined index: payment D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 62 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT SUM(pay_price) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT SUM(discount_money) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT api_order.id,api_merchant.title as merchant_title,api_member.nickname,api_order.order_no,api_order.contacts_realname,api_order.contacts_tel,api_order.contacts_sex,api_order.total_price,api_order.pay_price,api_order.purchase_price,api_order.discount_money,api_order.status,api_order.settlement_status,api_order.order_type,api_order.payment,api_order.description,from_unixtime(api_order.arrives_time,"%Y-%m-%d") as arrives_time,api_order.incr_time,api_order.created_time,from_unixtime(api_order.created_time) as created_time,api_order.employee_id,api_order.employee_realname,api_order.employee_avatar,api_order.employee_tel,api_order.take_time,api_order.relation_order_no,api_order.is_bar FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id LEFT JOIN api_coupon ON api_coupon.id = api_order.card_id  ORDER BY api_order.id desc LIMIT 0,50   [ RunTime:0.0380s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-18T15:29:04+08:00 ] 127.0.0.1 /Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Index/index' LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0390s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-18T15:29:04+08:00 ] 127.0.0.1 /Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0390s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Index/welcome' LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0360s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-18T15:29:08+08:00 ] 127.0.0.1 /Admin/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/index' LIMIT 1   [ RunTime:0.0340s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0350s ]
+NOTIC: [8] Undefined index: status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 47 行.
+NOTIC: [8] Undefined index: settlement_status D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 52 行.
+NOTIC: [8] Undefined index: order_type D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 57 行.
+NOTIC: [8] Undefined index: payment D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Admin\Model\OrderModel.class.php 第 62 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT SUM(pay_price) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT SUM(discount_money) AS tp_sum FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id  LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT api_order.id,api_merchant.title as merchant_title,api_member.nickname,api_order.order_no,api_order.contacts_realname,api_order.contacts_tel,api_order.contacts_sex,api_order.total_price,api_order.pay_price,api_order.purchase_price,api_order.discount_money,api_order.status,api_order.settlement_status,api_order.order_type,api_order.payment,api_order.description,from_unixtime(api_order.arrives_time,"%Y-%m-%d") as arrives_time,api_order.incr_time,api_order.created_time,from_unixtime(api_order.created_time) as created_time,api_order.employee_id,api_order.employee_realname,api_order.employee_avatar,api_order.employee_tel,api_order.take_time,api_order.relation_order_no,api_order.is_bar FROM `api_order` LEFT JOIN api_merchant ON api_merchant.id = api_order.merchant_id LEFT JOIN api_member ON api_member.id = api_order.member_id LEFT JOIN api_coupon ON api_coupon.id = api_order.card_id  ORDER BY api_order.id desc LIMIT 0,50   [ RunTime:0.0430s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\csj\trunk\php\project\backend\Application\Runtime\Cache\Admin\18bc66a7b6334412ab8e61a2539ecfbd.php 第 88 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2018-04-18T15:29:32+08:00 ] 127.0.0.1 /Admin/Order/complete/id/45.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0440s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/complete' LIMIT 1   [ RunTime:0.0420s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0430s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('订单完成操作','1','kpzadmin  ','1524036572','Order/complete','{\"id\":\"45\",\"PHPSESSID\":\"hllcdggoq8j67hmetkmsaia1i3\"}') [ RunTime:0.0540s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0420s ]
+SQL: SELECT api_order.member_id,api_order.id,api_order.order_no,api_order.employee_id,api_order.merchant_id,api_order.order_type,api_member.level,api_order.status,api_order.is_bar,api_order.is_xu,`wx_openid`,api_member.tel,`contacts_tel`,`contacts_sex`,`contacts_realname`,api_order.pay_price,api_order.created_time,api_order.relation_order_no,api_member_privilege.delayed,api_order.arrives_time,api_merchant.title as merchant_title FROM `api_order` INNER JOIN api_member ON api_member.id = api_order.member_id INNER JOIN api_member_privilege ON api_member.level = api_member_privilege.level INNER JOIN api_merchant ON api_merchant.id = api_order.merchant_id  WHERE api_order.id = '45' LIMIT 1   [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `api_merchant` [ RunTime:0.0440s ]
+SQL: SELECT `begin_time` FROM `api_merchant` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0400s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2018-04-18T15:29:43+08:00 ] 127.0.0.1 /Admin/Order/complete/id/44.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_menu` ORDER BY sort asc  [ RunTime:0.0370s ]
+SQL: SELECT * FROM `api_menu` WHERE `url` = 'Order/complete' LIMIT 1   [ RunTime:0.0340s ]
+SQL: SELECT * FROM `api_user` WHERE `id` = '1' LIMIT 1   [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `api_user_action` [ RunTime:0.0360s ]
+SQL: INSERT INTO `api_user_action` (`actionName`,`uid`,`nickname`,`addTime`,`url`,`data`) VALUES ('订单完成操作','1','kpzadmin  ','1524036582','Order/complete','{\"id\":\"44\",\"PHPSESSID\":\"hllcdggoq8j67hmetkmsaia1i3\"}') [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `api_order` [ RunTime:0.0380s ]
+SQL: SELECT api_order.member_id,api_order.id,api_order.order_no,api_order.employee_id,api_order.merchant_id,api_order.order_type,api_member.level,api_order.status,api_order.is_bar,api_order.is_xu,`wx_openid`,api_member.tel,`contacts_tel`,`contacts_sex`,`contacts_realname`,api_order.pay_price,api_order.created_time,api_order.relation_order_no,api_member_privilege.delayed,api_order.arrives_time,api_merchant.title as merchant_title FROM `api_order` INNER JOIN api_member ON api_member.id = api_order.member_id INNER JOIN api_member_privilege ON api_member.level = api_member_privilege.level INNER JOIN api_merchant ON api_merchant.id = api_order.merchant_id  WHERE api_order.id = '44' LIMIT 1   [ RunTime:0.0360s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+

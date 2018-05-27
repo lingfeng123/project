@@ -1,0 +1,211 @@
+<extend name="Public/common" />
+<block name="main">
+    <style>fieldset{border: 1px dashed #ddd; margin-bottom: 10px; padding-top: 10px;}fieldset legend{ padding: 0 10px; font-weight: bold; color: #009688}</style>
+    <div class="page-title">{:(isset($list['id'])?'修改卡券':'添加卡券')}</div>
+    <div class="layui-field-box" style="width: 900px">
+        <form class="layui-form" action="" method="post">
+            <if condition="isset($list['id'])">
+                <input type="hidden" name="id" value="{$list['id']}">
+            </if>
+
+            <fieldset>
+                <legend>基本信息</legend>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span style="color:red">*</span> 优惠券名称</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="card_name" required value="{$list['card_name']|default=''}" lay-verify="required" placeholder="优惠券名称1-10字" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item ">
+                    <label class="layui-form-label"><span style="color:red">*</span> 优惠券说明</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="marks" id="marks" placeholder="优惠券说明1-18字" required value="{$list['marks']|default=''}" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span style="color:red">*</span> 优惠券状态</label>
+                    <div class="layui-input-block yhj_status">
+                        <input type="radio" name="status" value="0" title="删除">
+                        <input type="radio" name="status" value="1" title="正常">
+                        <input type="radio" name="status" value="2" title="不可领取">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>领取发布限制</legend>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span style="color:red">*</span> 优惠券领取类型</label>
+                    <div class="layui-input-inline yhj_flag">
+                        <select name="flag" lay-filter="flag" style="width: 75%" >
+                            <foreach name="flag" item="vo" key="k" >
+                                <option value="{$k}" <if condition="$k eq $list['flag']">selected</if> >{$vo}</option>
+                            </foreach>
+                        </select>
+                    </div>
+                    <div class="layui-form-mid layui-word-aux" style="color: #f00!important;">必须指定此类型, 特别是活动领券</div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">优惠券数量</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="total" id="total" lay-verify="money" required value="0" class="layui-input">
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">非活动优惠券请勿填写</div>
+                </div>
+
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">领取时间范围</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="get_start_time" id="get_start_time" placeholder="开始时间" value="{$list['get_start_time'] > 0 ? date('Y-m-d',$list['get_start_time']):''}" class="layui-input time-kj">
+                        </div>
+                        <div class="layui-form-mid"> - </div>
+                        <div class="layui-input-inline">
+                            <input type="text" name="get_end_time" id="get_end_time" placeholder="结束时间" value="{$list['get_end_time'] > 0 ? date('Y-m-d',$list['get_end_time']):''}" class="layui-input time-kj">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">若无限制请留空</div>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">截止时间</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="attach_time" id="attach_time" placeholder="请选择日期" value="{$list['attach_time'] > 0 ? date('Y-m-d',$list['attach_time']):''}" class="layui-input time-kj">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux" style="color: #f00!important;">根据需求填写: 领取限制时间点,如(新用户判断范围,老用户判断范围)</div>
+                    </div>
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>使用限制</legend>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span style="color:red">*</span> 所属商户</label>
+                    <div class="layui-input-inline">
+                        <select name="merchant_id">
+                            <foreach name="merchant" item="vo" key="k" >
+                                <option value="{$vo['id']}" <if condition="$k eq $list['merchant_id']">selected</if> >{$vo['title']}</option>
+                            </foreach>
+                        </select>
+                    </div>
+
+                    <label class="layui-form-label"><span style="color:red">*</span> 优惠方式</label>
+                    <div class="layui-input-inline">
+                        <select name="card_type" lay-filter="card_type" style="width: 75%" >
+                            <foreach name="card_type" item="vo" key="k" >
+                                <option value="{$k}" <if condition="$k eq $list['card_type']">selected</if> >{$vo}</option>
+                            </foreach>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span style="color:red">*</span> 抵扣金额</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="deductible"  lay-verify="money" required value="{$list['deductible']|default=0}" placeholder="卡券抵扣" class="layui-input">
+                    </div>
+
+                    <label class="layui-form-label">最低消费金额</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="high_amount" id="high_amount"  lay-verify="money" required placeholder="消费达到金额" value="{$list['high_amount']|default=0}" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span style="color:red">*</span> 使用限定类型</label>
+                    <div class="layui-input-inline merhcant_type">
+                        <select name="merchant_type" lay-filter="flag" style="width: 75%" >
+                            <foreach name="merchant_type" item="vo" key="k" >
+                                <option value="{$k}" <if condition="$k eq $list['merchant_type']">selected</if> >{$vo}</option>
+                            </foreach>
+                        </select>
+                    </div>
+                    <div class="layui-form-mid layui-word-aux"> 请根据实际情况选择</div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span style="color:red">*</span> 商品类型限定</label>
+                    <div class="layui-input-inline goods_type">
+                        <select name="goods_type" lay-filter="flag" style="width: 75%" >
+                            <foreach name="goods_type" item="vo" key="k" >
+                                <option value="{$k}" <if condition="$k eq $list['goods_type']">selected</if> >{$vo}</option>
+                            </foreach>
+                        </select>
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">何种商品能够使用此优惠券</div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span style="color:red">*</span> 是否男女券</label>
+                    <div class="layui-input-block is_sex">
+                        <input type="radio" name="is_sex" value="0"  title="无限制">
+                        <input type="radio" name="is_sex" value="1"  title="男">
+                        <input type="radio" name="is_sex" value="2"  title="女">
+                    </div>
+                </div>
+
+                <blockquote class="layui-elem-quote" style="color: #f00">"使用有效天数" 与 "有效时间范围" 二选一填写, 若"使用有效天数"已填写,"有效时间范围"留空即可反之亦然</blockquote>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">使用有效天数</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="effective_time" id="effective_time" placeholder="使用有效天数" value="{$list['effective_time']|default=''}" lay-verify="number" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">有效时间范围</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="start_time" id="start_time" placeholder="开始时间" value="{$list['start_time'] >0 ? date('Y-m-d',$list['start_time']):''}" autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid">-</div>
+                        <div class="layui-input-inline">
+                            <input type="text" name="end_time" id="end_time" placeholder="结束时间" value="{$list['end_time'] >0 ? date('Y-m-d',$list['end_time']):''}" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </fieldset>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" type="submit" lay-submit lay-filter="admin-form">立即提交</button>
+                    <a  href="{:U('index')}" class="layui-btn layui-btn-danger">返回列表</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</block>
+<block name="myScript">
+<script type="text/javascript">
+$(function () {
+    $('.yhj_status input').val([{$list['status']|default=1}]);
+    $('.is_sex input').val([{$list['is_sex']|default=0}]);
+
+    layui.use(['form','upload', 'laydate', 'element'], function(){
+        var form = layui.form,
+            layer = layui.layer,
+            element = layui.element;
+            laydate = layui.laydate;
+
+        form.verify({
+            money: [/^[0-9]+(\.[0-9]{0,2})?$/, '金额填写不正确']
+        });
+
+        laydate.render({elem: '#start_time', type: 'date', format: 'yyyy-MM-dd'});
+        laydate.render({elem: '#end_time', type: 'date', format: 'yyyy-MM-dd'});
+        laydate.render({elem: '#get_start_time', type: 'date', format: 'yyyy-MM-dd'});
+        laydate.render({elem: '#get_end_time', type: 'date', format: 'yyyy-MM-dd'});
+        laydate.render({elem: '#attach_time', type: 'date', format: 'yyyy-MM-dd'});
+    });
+});
+</script>
+</block>

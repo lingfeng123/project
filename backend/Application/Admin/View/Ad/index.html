@@ -1,0 +1,66 @@
+<extend name="Public/common"/>
+<block name="main">
+    <fieldset class="layui-elem-field">
+        <legend>广告管理 - 广告列表</legend>
+        <div class="layui-field-box">
+            <a href="{:U('Ad/add')}"><span class="layui-btn layui-btn-normal api-add"> <i
+                    class="layui-icon">&#xe608;</i> 新增</span></a>
+            <table class="layui-table">
+                <thead>
+                <tr>
+                    <th>广告名称</th>
+                    <th>广告位标识</th>
+                    <th>广告类型</th>
+                    <th>广告状态</th>
+                    <th>连接地址</th>
+                    <th>投放时间</th>
+                    <th>结束时间</th>
+                    <th>广告单价 元/月</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <volist name="lists" id="vo">
+                    <tr>
+                        <td>{$vo['title']}</td>
+                        <td>{$vo['flag']}</td>
+                        <td>
+                            <if condition="$vo['type'] eq 1"> 图文
+                                <else/>
+                                文字
+                            </if>
+                        </td>
+                        <td align="center">
+                            <if condition="$vo['status']">
+                                <div class="layui-icon" style="color: #5FB878" title="正常">&#xe605;</div>
+                                <else/>
+                                <div class="layui-icon" style="color: #FF5722" title="停放">&#x1006;</div>
+                            </if>
+                        </td>
+                        <td>{$vo['url']}</td>
+                        <td>{$vo['start_time']|date="Y-m-d h:i:s",###}</td>
+                        <td>{$vo['end_time']|date="Y-m-d h:i:s",###}</td>
+                        <td>¥{$vo['price']}</td>
+                        <td>
+                            <a href="{:U('edit', array('id' => $vo['id']))}"><span class="layui-btn layui-btn-small edit layui-btn-normal">编辑</span></a>
+                            <a href="{:U('del', array('id'=> $vo['id']))}" onclick="return confirm('你确定删除此广告吗?'); return false"><span class="layui-btn layui-btn-small layui-btn-danger confirm">删除</span></a>
+                        </td>
+                    </tr>
+                </volist>
+                <tr>
+                    <td align="right" nowrap="true" colspan="10">
+                        <div class="pagination">
+                            {$pageHtml}
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </fieldset>
+</block>
+<block name="myScript">
+<script type="text/javascript">
+
+</script>
+</block>

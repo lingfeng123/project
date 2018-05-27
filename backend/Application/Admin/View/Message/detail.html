@@ -1,0 +1,25 @@
+<extend name="Public/base"/>
+<block name="main">
+    <fieldset class="layui-elem-field">
+        <div class="layui-field-box">
+            <div class="layui-form-item">
+                <label class="layui-form-label">消息主题</label>
+                <div class="layui-input-block">{$detail['title']}</div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">消息内容</label>
+                <div class="layui-input-block">{:(isset($detail['content'])?$detail['content']:'')}</div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">发送终端</label>
+                <div class="layui-input-block">
+                    <if condition="$detail.toclient eq 1">所有</if>
+                    <if condition="$detail.toclient eq 2">用户端</if>
+                    <if condition="$detail.toclient eq 3">商户端</if>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</block>
+<block name="myScript">
+</block>

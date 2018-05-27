@@ -1,0 +1,18 @@
+[2018-05-02 10:20:03] /mnt/data/kpzapp/tasks/delayed/delayedServer.php delayedServer::messageHandler
+INFO: {"version":"v1.1","order_id":"1","order_no":"4525226246137635","buy_type":3,"exc_type":4}
+[2018-05-02 10:20:03] /mnt/data/kpzapp/tasks/delayed/OrderHandlev1.class.php OrderHandlev1::memberBarTimeOut
+bar: {"member_id":"3","bar_status":"1"}
+[2018-05-02 10:20:03] /mnt/data/kpzapp/tasks/delayed/OrderHandlev1.class.php OrderHandlev1::memberBarTimeOut
+bar: {"id":"1","bar_id":"1","pay_no":"4525226246137635","member_id":"3","pay_price":"100.00","pay_status":"1","pay_type":"0","created_time":"1525227303","updated_time":"1525227303","arrives_time":"0","realname":"\u51cc\u98ce","sex":"1","tel":"18780087200","avatar":"https:\/\/wx.qlogo.cn\/mmopen\/vi_32\/t0D4UNicXicfQ67pcQ4ZNx8s6c2GR7B0JmRe9nXbbLuC4BB5bflL5Gyzw6eCgR8qL5JpebIRpM1iaUZwMQIkc6ibFw\/0","age":"48","is_evaluate":"0"}
+[2018-05-02 10:28:01] /mnt/data/kpzapp/tasks/delayed/delayedServer.php delayedServer::messageHandler
+INFO: {"version":"v1.1","order_id":"1","order_no":"4525226246137635","buy_type":3,"exc_type":4}
+[2018-05-02 10:28:01] /mnt/data/kpzapp/tasks/delayed/OrderHandlev1.class.php OrderHandlev1::memberBarTimeOut
+bar: {"member_id":"3","bar_status":"1"}
+[2018-05-02 10:28:01] /mnt/data/kpzapp/tasks/delayed/OrderHandlev1.class.php OrderHandlev1::memberBarTimeOut
+bar: {"id":"1","bar_id":"1","pay_no":"4525226246137635","member_id":"3","pay_price":"100.00","pay_status":"1","pay_type":"0","created_time":"1525227781","updated_time":"1525227781","arrives_time":"0","realname":"\u51cc\u98ce","sex":"1","tel":"18780087200","avatar":"https:\/\/wx.qlogo.cn\/mmopen\/vi_32\/t0D4UNicXicfQ67pcQ4ZNx8s6c2GR7B0JmRe9nXbbLuC4BB5bflL5Gyzw6eCgR8qL5JpebIRpM1iaUZwMQIkc6ibFw\/0","age":"48","is_evaluate":"0"}
+[2018-05-02 10:28:01] /mnt/data/kpzapp/tasks/delayed/OrderHandlev1.class.php OrderHandlev1::memberBarTimeOut
+bar: 1
+[2018-05-02 10:28:01] /mnt/data/kpzapp/tasks/delayed/OrderHandlev1.class.php OrderHandlev1::memberBarTimeOut
+bar: 
+[2018-05-02 10:36:17] /mnt/data/kpzapp/tasks/delayed/delayedServer.php delayedServer::messageHandler
+INFO: {"version":"v1.1","order_id":"1","order_no":"4525226246137635","buy_type":3,"exc_type":4}

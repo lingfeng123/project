@@ -1,0 +1,80 @@
+<extend name="Public/base" />
+<block name="main">
+    <fieldset class="layui-elem-field">
+        <legend>权限管理 - 权限组列表</legend>
+        <div class="layui-field-box">
+            <span class="layui-btn layui-btn-normal api-add"><i class="layui-icon">&#xe608;</i> 新增</span>
+            <table class="layui-table" lay-even>
+                <thead>
+                <tr>
+                    <th width="50">权限ID</th>
+                    <th>权限名称</th>
+                    <th width="60">父级权限</th>
+                    <th width="130">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <volist name="list" id="vo">
+                    <tr>
+                        <td align="center">{$vo['id']}</td>
+                        <td>|—<?php echo str_repeat('—', $vo['deep'] * 2); ?> {$vo['name']}</td>
+                        <td>{$vo['parent_id'] ? $vo['parent_id'] : '无'}</td>
+                        <td>
+                            <a href="javascript:void(0);" data-url="{:U('edit', array('id' => $vo['id']))}" class="layui-btn layui-btn-small layui-btn-normal click-show">编辑</a>
+                            <a href="{:U('delete', array('id' => $vo['id']))}" onclick="return confirm('删除权限可能会造成系统故障,你确定删除此权限吗?'); return false" class="layui-btn  layui-btn-small layui-btn-danger">删除</a>
+                        </td>
+                    </tr>
+                </volist>
+                </tbody>
+            </table>
+        </div>
+    </fieldset>
+</block>
+<block name="myScript">
+    <script>
+        layui.use(['layer'], function() {
+           $('.api-add').on('click', function () {
+                layer.open({
+                    title: '添加权限',
+                    type: 2,
+                    area: ['500px', '460px'],
+                    maxmin: true,
+                    content: '{:U("add")}'
+                });
+            });
+            $('.click-show').on('click', function () {
+                var ownObj = $(this);
+                layer.open({
+                    title: '修改权限',
+                    type: 2,
+                    area: ['500px', '460px'],
+                    maxmin: true,
+                    content: ownObj.attr('data-url')
+                });
+            });
+            /*$('.confirm').on('click', function () {
+                var ownObj = $(this);
+                layer.confirm(ownObj.attr('data-info'), {
+                    btn: ['确定','取消'] //按钮
+                }, function(){
+                    $.ajax({
+                        type: "POST",
+                        url: ownObj.attr('data-url'),
+                        data: {id:ownObj.attr('data-id')},
+                        success: function(msg){
+                            if( msg.code == 1 ){
+                                location.reload();
+                            }else{
+                                layer.msg(msg.msg, {
+                                    icon: 5,
+                                    shade: [0.6, '#393D49'],
+                                    time:1500
+                                });
+                            }
+                        }
+                    });
+                });
+            });*/
+        });
+    </script>
+</block>

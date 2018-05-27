@@ -1,0 +1,63 @@
+.logo_img {
+  width: 1.733333rem;
+  height: 1.733333rem;
+}
+
+.title {
+  margin: 0.186667rem 0 0.213333rem;
+}
+
+.version {
+  color: #656565;
+}
+
+.top {
+  background-color: #f5f8fa;
+}
+
+.top_wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0.64rem;
+  padding-bottom: 0.4rem;
+}
+
+.describe_wrap {
+  padding: 0 0.32rem 0.4rem;
+}
+
+[data-dpr="1"] .describe_wrap > p {
+  line-height: 19px;
+}
+
+[data-dpr="2"] .describe_wrap > p {
+  line-height: 38px;
+}
+
+[data-dpr="3"] .describe_wrap > p {
+  line-height: 57px;
+}
+
+.common_wrap {
+  height: 1.173333rem;
+  padding: 0 0.32rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.right_bar {
+  width: 0.24rem;
+  height: 0.4rem;
+}
+
+body {
+  height: 100%;
+  background-color: #f5f8fa;
+}

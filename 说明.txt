@@ -36,3 +36,4 @@ total_star         总星数
 total_time         总评价次数
 average_star       平均次数么么么么
 //发现提莫是个月抛的
+曾经的我们唱过去，后来的我们长后来
